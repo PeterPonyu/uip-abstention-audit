@@ -1,0 +1,136 @@
+#!/usr/bin/env Rscript
+# ==========================================================================
+# F5_committee_variance.R -- paper Fig. 5: committee-variance abstention vs
+# the single-model |hull-margin| signal.
+# (a) matched-yield DAF gain (median) per anion stratum, committee signal;
+# (b) the 15 stratum-pair committee interactions (median, 95% bootstrap CI);
+#     highlighted = committee CI excludes 0 (7/15); asterisk = the
+#     single-model consensus also fired on that pair.
+#
+# REGENERATE-ONLY-FROM-JSON RULE: reads EXCLUSIVELY the frozen result JSON
+# below; never hardcode arrays, never hand-edit the JSON.
+#
+# Input : ../research/results/MT29/mt29_committee_variance.json
+# Output: figures/F5_committee_variance.pdf and .png
+# ==========================================================================
+
+suppressPackageStartupMessages({
+  library(jsonlite)
+  library(ggplot2)
+  library(patchwork)
+})
+
+# Serif family (JCIM/ACS Times-like), set at theme + device + geom defaults so
+# every embedded glyph (incl. the Unicode minus in pair labels and plotmath
+# Delta/subscripts) stays in one serif family with no sans/CJK fallback fonts.
+# Panel identity is carried by (a)/(b) tags (plain weight per the
+# no-decorative-bold typography rule); interpretation lives in the caption,
+# not in-plot titles.
+ff <- "TeX Gyre Termes"
+update_geom_defaults("text", list(family = ff))
+update_geom_defaults("label", list(family = ff))
+
+input_json <- "../research/results/MT29/mt29_committee_variance.json"
+out_stem <- "figures/F5_committee_variance"
+
+if (!file.exists(input_json)) {
+  stop(sprintf(
+    "Result JSON not found: %s\nFigures regenerate ONLY from on-disk result JSONs; run the analysis first.",
+    input_json
+  ))
+}
+
+res <- fromJSON(input_json)
+
+strata <- c("oxide", "intermetallic", "chalcogenide", "halide", "pnictide", "other")
+stratum_labels <- c(
+  oxide = "Oxide", intermetallic = "Intermetallic", chalcogenide = "Chalcogenide",
+  halide = "Halide", pnictide = "Pnictide", other = "Other"
+)
+strata_colors <- c(
+  oxide = "#E69F00", halide = "#56B4E9", chalcogenide = "#009E73",
+  pnictide = "#F0E442", other = "#CC79A7", intermetallic = "#0072B2"
+)
+
+# ---- panel (a): committee gain median per stratum ---------------------------
+gain <- res$committee_gain_median
+df_a <- data.frame(
+  stratum = factor(stratum_labels[strata], levels = stratum_labels[strata]),
+  gain = vapply(strata, function(s) gain[[s]], numeric(1)),
+  col = strata_colors[strata]
+)
+
+p_a <- ggplot(df_a, aes(x = stratum, y = gain, fill = stratum)) +
+  geom_col(width = 0.68, colour = "grey25", linewidth = 0.3) +
+  geom_hline(yintercept = 0, colour = "black", linewidth = 0.4) +
+  geom_text(aes(label = sprintf("%+.3f", gain),
+                vjust = ifelse(gain >= 0, -0.5, 1.4)), size = 3.0) +
+  scale_fill_manual(values = setNames(df_a$col, levels(df_a$stratum)), guide = "none") +
+  scale_y_continuous(expand = expansion(mult = c(0.12, 0.14))) +
+  labs(
+    x = NULL,
+    y = "committee-variance\nabstention benefit\n(DAF gain, median)"
+  ) +
+  theme_minimal(base_size = 10, base_family = ff) +
+  theme(
+    axis.text.x = element_text(angle = 40, hjust = 1, size = 8.5),
+    panel.grid.minor = element_blank(), panel.grid.major.x = element_blank()
+  )
+
+# ---- panel (b): 15 stratum-pair committee interactions ----------------------
+pp <- res$gate$per_pair # data.frame; interaction_ci95 is a list column
+ci <- do.call(rbind, pp$interaction_ci95)
+df_b <- data.frame(
+  pair = paste0(stratum_labels[pp$stratumA], " − ", stratum_labels[pp$stratumB]),
+  med = pp$interaction_med,
+  lo = ci[, 1], hi = ci[, 2],
+  fired = pp$excludes_0,
+  single_fired = pp$single_consensus_excl0
+)
+df_b$pair <- factor(df_b$pair, levels = df_b$pair[order(df_b$med)])
+n_fired <- sum(df_b$fired)
+
+p_b <- ggplot(df_b, aes(x = med, y = pair, colour = fired)) +
+  geom_vline(xintercept = 0, linetype = "dashed", colour = "black",
+             linewidth = 0.4, alpha = 0.7) +
+  geom_errorbar(aes(xmin = lo, xmax = hi), orientation = "y",
+                width = 0.28, linewidth = 0.7) +
+  geom_point(size = 2.1) +
+  geom_text(
+    data = subset(df_b, single_fired),
+    aes(x = max(df_b$hi) + 0.06, label = "*"),
+    colour = "grey20", size = 4.5, vjust = 0.75
+  ) +
+  scale_colour_manual(
+    values = c(`TRUE` = "#D55E00", `FALSE` = "#999999"),
+    labels = c(
+      `TRUE` = sprintf("CI excludes 0 (%d/%d)", n_fired, nrow(df_b)),
+      `FALSE` = "CI includes 0"
+    ),
+    name = NULL
+  ) +
+  scale_x_continuous(expand = expansion(mult = c(0.06, 0.14))) +
+  labs(
+    x = expression(atop("interaction " * gain[A] - gain[B],
+                         "(committee-variance; median, 95% CI)")),
+    y = NULL
+  ) +
+  theme_minimal(base_size = 10, base_family = ff) +
+  theme(
+    axis.text.y = element_text(size = 8.5),
+    legend.position = "bottom", legend.text = element_text(size = 8.5),
+    panel.grid.minor = element_blank()
+  )
+
+p <- (p_a + p_b + plot_layout(widths = c(1.2, 1.15))) +
+  plot_annotation(tag_levels = "a", tag_prefix = "(", tag_suffix = ")") &
+  theme(plot.tag = element_text(size = 10, family = ff))
+
+# Canvas sized so the included width (\textwidth, ~6.5in) scales base_size=10
+# to ~8.5pt effective (typography audit 2026-07-16: the previous 11.5x4.2in
+# canvas rendered at ~5.7pt effective).
+ggsave(paste0(out_stem, ".pdf"), p, width = 7.65, height = 2.79, device = cairo_pdf, family = ff)
+ggsave(paste0(out_stem, ".png"), p, width = 7.65, height = 2.79, dpi = 300,
+       device = ragg::agg_png)
+
+cat(sprintf("Wrote %s.pdf and %s.png from %s\n", out_stem, out_stem, input_json))

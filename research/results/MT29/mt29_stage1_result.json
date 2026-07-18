@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "story": "G007-s1-materials-mt29-real-chemistry",
+    "stage": "Stage-1 GATE",
+    "date": "2026-06-22",
+    "seed": 20260621,
+    "n_boot": 1000,
+    "n_rows": 256963,
+    "models": [
+      "chgnet",
+      "m3gnet",
+      "mace",
+      "orb"
+    ],
+    "data_inputs": {
+      "wbm_summary": "~/mt_stage0/data/2023-12-13-wbm-summary.csv.gz",
+      "uip_preds": "~/mt_uip/{chgnet,m3gnet,mace,orb}_pred.csv"
+    },
+    "stable_definition": "e_above_hull < 0",
+    "pred_hull_recipe": "hull_pred = hull_true + (e_form_pred - e_form_true_mp2020_corrected)",
+    "confidence_signal": "|predicted hull margin|"
+  },
+  "preregistered_gate": {
+    "success": "interaction stays CI-excluding-0 under BOTH genuine chemical-family strata AND matched stable-call yield, shuffle-null clean",
+    "kill": "interaction collapses (CI includes 0) once real strata + matched-yield applied"
+  },
+  "strata_genuine_chemistry": {
+    "definition": "anion-class family by electronegativity priority: halide>oxide>chalcogenide(S/Se/Te)>pnictide(N/P/As/Sb/Bi)>intermetallic(all-metal)>other(main-group); derived from composition, NOT element count",
+    "counts": {
+      "intermetallic": 119012,
+      "pnictide": 34614,
+      "other": 27947,
+      "halide": 26523,
+      "oxide": 25020,
+      "chalcogenide": 23847
+    },
+    "base_rate_stable": {
+      "oxide": 0.12422,
+      "intermetallic": 0.14178,
+      "chalcogenide": 0.20522,
+      "halide": 0.27832,
+      "pnictide": 0.1708,
+      "other": 0.1666
+    }
+  },
+  "result_coverage_matched": {
+    "precision_interaction_excl0": "47/60",
+    "daf_interaction_excl0": "47/60",
+    "shuffle_null_excl0": "0/60",
+    "note": "coverage-matched (Stage-0 Part B definition) under genuine anion strata"
+  },
+  "result_matched_yield_CONTROL": {
+    "definition": "MT28 control: common ABSOLUTE stable-call yield Y across strata; DAF(top Y_tight)-DAF(top Y_loose), Y_tight=Y_loose//2, Y identical across strata",
+    "interaction_excl0": "48/60",
+    "shuffle_null_excl0": "0/60",
+    "shuffle_null_clean": true,
+    "per_model_excl0": {
+      "chgnet": "13/15",
+      "m3gnet": "11/15",
+      "mace": "13/15",
+      "orb": "11/15"
+    },
+    "max_interaction": "chgnet oxide vs halide +0.9009 CI[0.774,1.042]",
+    "physical_direction": "oxide = highest abstention benefit (3/4 models); halide/intermetallic = lowest. Consistent with UIP oxide-formation-energy miscalibration."
+  },
+  "vacuous_control_note": "First yield pass (in mt29_stage1_chem_yield.py, key precision_matched_yield) was numerically identical to coverage (mean |diff|=0.0005, 0 status flips) because top-cov and top-Y-called were nested in the same |margin| order. CORRECTED in mt29_stage1_matched_yield_fix.py via a COMMON ABSOLUTE yield budget across strata.",
+  "gate_verdict": "SUCCESS",
+  "gate_reasoning": "Interaction CI-excludes-0 under genuine anion-class strata (47/60 coverage, 48/60 corrected matched-yield) with shuffle-null perfectly clean (0/60 both). Survives the exact matched-yield control that KILLed MT28.",
+  "files": {
+    "genuine_strata_coverage+vacuous_yield": "mt29_stage1_chem_yield_result.json",
+    "corrected_matched_yield": "mt29_stage1_matched_yield_result.json",
+    "scripts": [
+      "mt29_stage1_chem_yield.py",
+      "mt29_stage1_matched_yield_fix.py"
+    ],
+    "manifest": "mt29_stage1_chem_yield_manifest.json"
+  }
+}

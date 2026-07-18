@@ -1,0 +1,36 @@
+# materials-mlip-research (MT29) — Python dependencies
+# Pinned to the versions present in the environment used for packaging (2026-07-02),
+# read via `python3 -c "import x; print(x.__version__)"`. Python 3.13.
+#
+# These five cover the entire headline MT29 analysis pipeline
+# (research/results/MT29/*.py) and the figure generator
+# (manuscripts/figures/render_figures.py, F5_committee_variance.py).
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.8.0
+scipy==1.17.1
+matplotlib==3.10.8
+
+# Local sibling package — provides relmetrics.multiplicity (BH-FDR / Holm) and
+# relmetrics.provenance used by mt29_multiplicity_correction.py. Install editable:
+#   pip install -e ../reliability-commons
+# (declares its own numpy>=1.22, scipy>=1.8 deps; version 0.1.0)
+# relmetrics @ file://../reliability-commons
+
+# ---------------------------------------------------------------------------
+# OPTIONAL — NOT required for the MT29 headline results, figures, or the new-arm
+# pytest suite (tests/test_hull_math.py, test_uip_inference.py, test_stage1_oam_arm.py,
+# test_hull_recompute_validation.py all run --smoke/mocked, CPU-only, no installs
+# below needed). Only the deferred GPU molecular-dynamics probes
+# (research/mt_gpu_*.py), the MEEP inverse-crime script
+# (research/mt23_meep_invcrime.py), and a REAL (non-smoke) run of the
+# NEXT-EXPERIMENTS.md decisive arms on the AutoDL container (RUNME_CONTAINER.md) need
+# these. Left unpinned/commented so a CPU-only reproducer is not forced to install
+# them.
+#   ase                  # ASE — atomic structures for GPU MD scripts + Arm 1 UIP inference
+#   torch                # PyTorch — GPU MD + UIP inference (env had 2.12.0+cu130 / cu128 on AutoDL)
+#   meep                 # FDTD (mt23_meep_invcrime.py only)
+#   fairchem-core        # Arm 1 (mt29_uip_inference.py): eSEN-30M-OAM checkpoint (gated, HF click-through)
+#   sevenn               # Arm 1 (mt29_uip_inference.py): SevenNet-MF-ompa checkpoint (un-gated fallback)
+#   pymatgen             # Arm 2 (mt29_hull_recompute_validation.py): MP reference-entry parsing
+#   matbench-discovery   # Arm 1 + Arm 2: WBM initial structures + MP computed-structure-entries fetch (fetch_data.sh)

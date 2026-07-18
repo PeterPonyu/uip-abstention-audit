@@ -1,0 +1,68 @@
+{
+  "threshold_abs_eV": 1000.0,
+  "models": {
+    "grace_2l_mptrj": {
+      "n_outlier_rows": 13,
+      "n_total_rows": 256862,
+      "outlier_values": [
+        -1.35580585375e+22,
+        -2069604720114.294,
+        -3389268234.4125,
+        -1457403726.0936,
+        -43769932.499,
+        -20618089.8631,
+        -8949028.7886,
+        -82939.159,
+        -51567.9239,
+        -34448.3689,
+        -7084.1709,
+        -2134.5875,
+        -1723.2343
+      ],
+      "mae_form_naive": 5.2783434449527464e+16,
+      "mae_form_trimmed": 0.05719,
+      "I_oxhal_orig": 0.90883,
+      "I_oxhal_trimmed": 0.92208,
+      "delta_I": 0.01325,
+      "ci95_orig": [
+        0.75555,
+        1.06373
+      ],
+      "ci_width": 0.30818,
+      "argmax_orig": "oxide",
+      "argmax_trimmed": "oxide",
+      "excl0_orig": true,
+      "excl0_trimmed": true,
+      "robust": true
+    },
+    "sevennet_0": {
+      "n_outlier_rows": 1,
+      "n_total_rows": 256963,
+      "outlier_values": [
+        -2.468124136e+33
+      ],
+      "mae_form_naive": 9.604978677864128e+27,
+      "mae_form_trimmed": 0.04642,
+      "I_oxhal_orig": 0.47607,
+      "I_oxhal_trimmed": 0.47801,
+      "delta_I": 0.00194,
+      "ci95_orig": [
+        0.33797,
+        0.6078
+      ],
+      "ci_width": 0.26983,
+      "argmax_orig": "oxide",
+      "argmax_trimmed": "oxide",
+      "excl0_orig": true,
+      "excl0_trimmed": true,
+      "robust": true
+    }
+  },
+  "conclusion": "naive MAE is corrupted only by a handful of published-v25 outlier rows; rank-based oxide-halide interaction is robust (|delta_I| < CI width, argmax & CI-exclusion unchanged); both models retained with disclosure.",
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3"
+  },
+  "generated_utc": "2026-07-13T12:02:10.516288+00:00"
+}

@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "Si_strain_0",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 0.85,
+    "e_chg_init": -3.4617342948913574,
+    "e_mace_init": -3.604768753051758,
+    "e_orb_init": -3.5168955326080322,
+    "disagreement": 0.05890040675093135,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 509.7158203125,
+        "time_per_step_ms": 54.57567811012268,
+        "drift_per_step": -0.00011429323236100686,
+        "std_energy": 0.010112296428844557,
+        "initial_energy": -227.8632003858593,
+        "final_energy": -227.8860590323315
+      },
+      "CHGNet": {
+        "vram_peak_mb": 970.3662109375,
+        "time_per_step_ms": 116.58307075500488,
+        "drift_per_step": -0.0005448166594905501,
+        "std_energy": 0.04622648922658,
+        "initial_energy": -219.2023263308563,
+        "final_energy": -219.3112896627544
+      },
+      "ORB": {
+        "vram_peak_mb": 606.97900390625,
+        "time_per_step_ms": 77.97047138214111,
+        "drift_per_step": 0.046209096767342,
+        "std_energy": 3.84404197858536,
+        "initial_energy": -222.07883706030177,
+        "final_energy": -212.83701770683336
+      }
+    }
+  },
+  {
+    "id": "Si_strain_1",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 0.8833333333333333,
+    "e_chg_init": -4.246403694152832,
+    "e_mace_init": -4.354841232299805,
+    "e_orb_init": -4.344364404678345,
+    "disagreement": 0.048836193776348145,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 461.3017578125,
+        "time_per_step_ms": 68.14288973808289,
+        "drift_per_step": -6.295867806329625e-06,
+        "std_energy": 0.003968453916458134,
+        "initial_energy": -275.7162435915933,
+        "final_energy": -275.71750276515456
+      },
+      "CHGNet": {
+        "vram_peak_mb": 820.54248046875,
+        "time_per_step_ms": 84.14007544517517,
+        "drift_per_step": -0.0002167149065792273,
+        "std_energy": 0.020277718053147438,
+        "initial_energy": -269.3793716224294,
+        "final_energy": -269.42271460374525
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 48.02791714668274,
+        "drift_per_step": 0.026653835365198688,
+        "std_energy": 2.2897664015587638,
+        "initial_energy": -275.3610251347194,
+        "final_energy": -270.03025806167966
+      }
+    }
+  },
+  {
+    "id": "Si_strain_2",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 0.9166666666666666,
+    "e_chg_init": -4.765796661376953,
+    "e_mace_init": -4.8754472732543945,
+    "e_orb_init": -4.876083195209503,
+    "disagreement": 0.05184033246059855,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 408.79931640625,
+        "time_per_step_ms": 48.656243085861206,
+        "drift_per_step": -2.1558495373596997e-05,
+        "std_energy": 0.00339517607116058,
+        "initial_energy": -309.70209732397666,
+        "final_energy": -309.7064090230514
+      },
+      "CHGNet": {
+        "vram_peak_mb": 674.1357421875,
+        "time_per_step_ms": 69.81889605522156,
+        "drift_per_step": 4.714672405413012e-05,
+        "std_energy": 0.008881047714896615,
+        "initial_energy": -302.266020792922,
+        "final_energy": -302.2565914481112
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 49.74395155906677,
+        "drift_per_step": 0.014959139339297848,
+        "std_energy": 1.3372200367629892,
+        "initial_energy": -309.4041772658857,
+        "final_energy": -306.41234939802615
+      }
+    }
+  },
+  {
+    "id": "Si_strain_3",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 0.95,
+    "e_chg_init": -5.1223955154418945,
+    "e_mace_init": -5.183917999267578,
+    "e_orb_init": -5.220646381378174,
+    "disagreement": 0.04053424166440045,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 370.23828125,
+        "time_per_step_ms": 59.83126163482666,
+        "drift_per_step": 4.4399235372338806e-05,
+        "std_energy": 0.0023113988429673124,
+        "initial_energy": -328.9116877898804,
+        "final_energy": -328.9028079428059
+      },
+      "CHGNet": {
+        "vram_peak_mb": 435.66259765625,
+        "time_per_step_ms": 60.68353772163391,
+        "drift_per_step": 2.4815606953154656e-05,
+        "std_energy": 0.008383949077997442,
+        "initial_energy": -325.3254574161317,
+        "final_energy": -325.3204942947411
+      },
+      "ORB": {
+        "vram_peak_mb": 315.7802734375,
+        "time_per_step_ms": 31.349210739135742,
+        "drift_per_step": 0.0016446878789238895,
+        "std_energy": 0.11155049117052734,
+        "initial_energy": -331.8049011421765,
+        "final_energy": -331.4759635663917
+      }
+    }
+  },
+  {
+    "id": "Si_strain_4",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 0.9833333333333333,
+    "e_chg_init": -5.2855544090271,
+    "e_mace_init": -5.320563316345215,
+    "e_orb_init": -5.386505544185638,
+    "disagreement": 0.04185309320038934,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 363.7451171875,
+        "time_per_step_ms": 66.57838106155396,
+        "drift_per_step": -5.5916917636977816e-06,
+        "std_energy": 0.001799972698131934,
+        "initial_energy": -337.64584489105187,
+        "final_energy": -337.6469632294046
+      },
+      "CHGNet": {
+        "vram_peak_mb": 421.765625,
+        "time_per_step_ms": 100.85300922393799,
+        "drift_per_step": 0.00010749623969871891,
+        "std_energy": 0.005342069910873245,
+        "initial_energy": -335.94121257395847,
+        "final_energy": -335.9197133260187
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 123.70637774467468,
+        "drift_per_step": 0.003161974624628101,
+        "std_energy": 0.17909953301847764,
+        "initial_energy": -342.0354111787732,
+        "final_energy": -341.40301625384757
+      }
+    }
+  },
+  {
+    "id": "Si_strain_5",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 1.0166666666666666,
+    "e_chg_init": -5.31014347076416,
+    "e_mace_init": -5.335866928100586,
+    "e_orb_init": -5.41926646232605,
+    "disagreement": 0.04657730235709649,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 336.84521484375,
+        "time_per_step_ms": 148.2780134677887,
+        "drift_per_step": -9.929729093869355e-06,
+        "std_energy": 0.0015178086025112493,
+        "initial_energy": -338.81533835927456,
+        "final_energy": -338.81732430509334
+      },
+      "CHGNet": {
+        "vram_peak_mb": 390.9912109375,
+        "time_per_step_ms": 195.61067938804626,
+        "drift_per_step": -9.300717435110073e-06,
+        "std_energy": 0.004682655635694271,
+        "initial_energy": -337.8110212798113,
+        "final_energy": -337.81288142329834
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 193.48975658416748,
+        "drift_per_step": 0.003434227429847283,
+        "std_energy": 0.17040146089586924,
+        "initial_energy": -344.0725876450627,
+        "final_energy": -343.38574215909324
+      }
+    }
+  },
+  {
+    "id": "Si_strain_6",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 1.0499999999999998,
+    "e_chg_init": -5.258449554443359,
+    "e_mace_init": -5.269083023071289,
+    "e_orb_init": -5.338812232017517,
+    "disagreement": 0.03564234869149638,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 317.490234375,
+        "time_per_step_ms": 200.24848222732544,
+        "drift_per_step": 1.4387330927547738e-05,
+        "std_energy": 0.0015826575129155897,
+        "initial_energy": -334.7300176009746,
+        "final_energy": -334.72714013478907
+      },
+      "CHGNet": {
+        "vram_peak_mb": 366.46484375,
+        "time_per_step_ms": 198.14205288887024,
+        "drift_per_step": 3.358620373006715e-05,
+        "std_energy": 0.004948481373058243,
+        "initial_energy": -334.10226344941833,
+        "final_energy": -334.0955462086723
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 192.77414441108704,
+        "drift_per_step": 0.0019554184062300804,
+        "std_energy": 0.09344803472168216,
+        "initial_energy": -339.07559902957934,
+        "final_energy": -338.6845153483333
+      }
+    }
+  },
+  {
+    "id": "Si_strain_7",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 1.0833333333333333,
+    "e_chg_init": -5.143127918243408,
+    "e_mace_init": -5.1384124755859375,
+    "e_orb_init": -5.189588308334351,
+    "disagreement": 0.023093455312302905,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 317.02783203125,
+        "time_per_step_ms": 158.60146760940552,
+        "drift_per_step": -2.7376365426334816e-06,
+        "std_energy": 0.0015129686777973965,
+        "initial_energy": -326.4889797995635,
+        "final_energy": -326.489527326872
+      },
+      "CHGNet": {
+        "vram_peak_mb": 364.2626953125,
+        "time_per_step_ms": 218.87843489646912,
+        "drift_per_step": -2.0087286916350422e-05,
+        "std_energy": 0.005576800192197008,
+        "initial_energy": -326.84296171121105,
+        "final_energy": -326.8469791685943
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 190.97439050674438,
+        "drift_per_step": 0.0021648372922788896,
+        "std_energy": 0.08337552752130858,
+        "initial_energy": -329.8465920387052,
+        "final_energy": -329.4136245802494
+      }
+    }
+  },
+  {
+    "id": "Si_strain_8",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 1.1166666666666667,
+    "e_chg_init": -4.8720598220825195,
+    "e_mace_init": -4.954039573669434,
+    "e_orb_init": -4.99630481004715,
+    "disagreement": 0.05157933146635754,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 299.77880859375,
+        "time_per_step_ms": 162.97862768173218,
+        "drift_per_step": 2.1158476010896264e-05,
+        "std_energy": 0.0016300577084983746,
+        "initial_energy": -314.17087294325006,
+        "final_energy": -314.1666412480479
+      },
+      "CHGNet": {
+        "vram_peak_mb": 345.09716796875,
+        "time_per_step_ms": 157.35592365264893,
+        "drift_per_step": 9.429213577618611e-06,
+        "std_energy": 0.006483286866259684,
+        "initial_energy": -309.1630587597026,
+        "final_energy": -309.1611729169871
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 114.26019310951233,
+        "drift_per_step": 0.0019354584456485213,
+        "std_energy": 0.06789332542652149,
+        "initial_energy": -317.35244350346255,
+        "final_energy": -316.96535181433285
+      }
+    }
+  },
+  {
+    "id": "Si_strain_9",
+    "symbol": "Si",
+    "type": "strain",
+    "param": 1.15,
+    "e_chg_init": -4.601925849914551,
+    "e_mace_init": -4.719892501831055,
+    "e_orb_init": -4.773678779602051,
+    "disagreement": 0.07173110552386884,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 293.60205078125,
+        "time_per_step_ms": 147.23422408103943,
+        "drift_per_step": 4.874097425329182e-06,
+        "std_energy": 0.001764149130107034,
+        "initial_energy": -299.8028149739866,
+        "final_energy": -299.8018401545015
+      },
+      "CHGNet": {
+        "vram_peak_mb": 335.068359375,
+        "time_per_step_ms": 158.95057320594788,
+        "drift_per_step": -6.537686097061623e-05,
+        "std_energy": 0.010433552202168303,
+        "initial_energy": -291.79599220734735,
+        "final_energy": -291.8090675795415
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 120.73992609977722,
+        "drift_per_step": 0.0015417728168870327,
+        "std_energy": 0.06221397407011729,
+        "initial_energy": -303.4831028667965,
+        "final_energy": -303.1747483034191
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_0",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.02,
+    "e_chg_init": -5.306404113769531,
+    "e_mace_init": -5.336238861083984,
+    "e_orb_init": -5.406521886587143,
+    "disagreement": 0.04197007433233273,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 363.7451171875,
+        "time_per_step_ms": 140.72561621665955,
+        "drift_per_step": 1.4650339903710119e-06,
+        "std_energy": 0.0018863464700006414,
+        "initial_energy": -338.8533166030391,
+        "final_energy": -338.85302359624103
+      },
+      "CHGNet": {
+        "vram_peak_mb": 421.765625,
+        "time_per_step_ms": 144.81106281280518,
+        "drift_per_step": 2.7995601116685974e-05,
+        "std_energy": 0.004606618658675483,
+        "initial_energy": -337.42050318823055,
+        "final_energy": -337.4149040680072
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 124.92095708847046,
+        "drift_per_step": 0.004018573741816454,
+        "std_energy": 0.17233479226293097,
+        "initial_energy": -343.49130012216233,
+        "final_energy": -342.68758537379904
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_1",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.04555555555555556,
+    "e_chg_init": -5.287686347961426,
+    "e_mace_init": -5.316854476928711,
+    "e_orb_init": -5.367603302001953,
+    "disagreement": 0.03302009916009486,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 360.74560546875,
+        "time_per_step_ms": 111.41638278961182,
+        "drift_per_step": 7.661484350478531e-06,
+        "std_energy": 0.0017631599622820564,
+        "initial_energy": -337.56776511100617,
+        "final_energy": -337.5662328141361
+      },
+      "CHGNet": {
+        "vram_peak_mb": 417.3740234375,
+        "time_per_step_ms": 96.33437156677246,
+        "drift_per_step": -4.1374638997240253e-05,
+        "std_energy": 0.007104421425540594,
+        "initial_energy": -335.99638979577685,
+        "final_energy": -336.0046647235763
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 50.81625699996948,
+        "drift_per_step": 0.0008420169415779811,
+        "std_energy": 0.12680755615965983,
+        "initial_energy": -341.30484292177556,
+        "final_energy": -341.13643953345996
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_2",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.07111111111111111,
+    "e_chg_init": -5.24363374710083,
+    "e_mace_init": -5.267403602600098,
+    "e_orb_init": -5.2869662046432495,
+    "disagreement": 0.017718174303429462,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 355.4814453125,
+        "time_per_step_ms": 48.485212326049805,
+        "drift_per_step": 1.0953822786063939e-06,
+        "std_energy": 0.00197503669905323,
+        "initial_energy": -334.385911738868,
+        "final_energy": -334.3856926624123
+      },
+      "CHGNet": {
+        "vram_peak_mb": 409.60498046875,
+        "time_per_step_ms": 72.13294982910156,
+        "drift_per_step": -5.4395820630190886e-05,
+        "std_energy": 0.010741355678346987,
+        "initial_energy": -333.0783773718495,
+        "final_energy": -333.08925653597555
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 85.05949378013611,
+        "drift_per_step": 0.0002624534635609166,
+        "std_energy": 0.12182790889111256,
+        "initial_energy": -335.6201039099965,
+        "final_energy": -335.5676132172843
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_3",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.09666666666666668,
+    "e_chg_init": -5.1658477783203125,
+    "e_mace_init": -5.183911323547363,
+    "e_orb_init": -5.17594701051712,
+    "disagreement": 0.007391560045668054,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 352.80078125,
+        "time_per_step_ms": 98.7139344215393,
+        "drift_per_step": -4.945073493445307e-05,
+        "std_energy": 0.0029580154632967313,
+        "initial_energy": -329.16456302068957,
+        "final_energy": -329.17445316767646
+      },
+      "CHGNet": {
+        "vram_peak_mb": 411.5146484375,
+        "time_per_step_ms": 96.76913738250732,
+        "drift_per_step": -0.0002213903233041492,
+        "std_energy": 0.013548103887408734,
+        "initial_energy": -328.759151858974,
+        "final_energy": -328.80342992363484
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 91.35008335113525,
+        "drift_per_step": 0.0025716830511063903,
+        "std_energy": 0.23209012436966983,
+        "initial_energy": -328.5678845001552,
+        "final_energy": -328.0535478899339
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_4",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.12222222222222223,
+    "e_chg_init": -5.095319747924805,
+    "e_mace_init": -5.111880302429199,
+    "e_orb_init": -5.087973058223724,
+    "disagreement": 0.00999878959650835,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 350.892578125,
+        "time_per_step_ms": 90.24107933044434,
+        "drift_per_step": -6.691371149770475e-05,
+        "std_energy": 0.0037550980812527546,
+        "initial_energy": -324.5329511925684,
+        "final_energy": -324.54633393486796
+      },
+      "CHGNet": {
+        "vram_peak_mb": 409.1669921875,
+        "time_per_step_ms": 89.28668737411499,
+        "drift_per_step": -0.0004743459597574429,
+        "std_energy": 0.01893371402296219,
+        "initial_energy": -323.394251821015,
+        "final_energy": -323.4891210129665
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 78.05145382881165,
+        "drift_per_step": 0.002732373414273752,
+        "std_energy": 0.22199497700605234,
+        "initial_energy": -323.3379750877577,
+        "final_energy": -322.79150040490293
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_5",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.14777777777777779,
+    "e_chg_init": -5.027587890625,
+    "e_mace_init": -5.0477190017700195,
+    "e_orb_init": -5.007005155086517,
+    "disagreement": 0.016621699170889605,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 349.5380859375,
+        "time_per_step_ms": 84.54342484474182,
+        "drift_per_step": -6.831595491661346e-05,
+        "std_energy": 0.003979921766557024,
+        "initial_energy": -320.56081986837194,
+        "final_energy": -320.57448305935526
+      },
+      "CHGNet": {
+        "vram_peak_mb": 407.8720703125,
+        "time_per_step_ms": 68.24470162391663,
+        "drift_per_step": -7.479268756100055e-05,
+        "std_energy": 0.01863486524445973,
+        "initial_energy": -319.30673041147566,
+        "final_energy": -319.32168894898786
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 20.066877603530884,
+        "drift_per_step": 0.004434994687927087,
+        "std_energy": 0.29295558109525716,
+        "initial_energy": -317.728840624227,
+        "final_energy": -316.8418416866416
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_6",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.17333333333333334,
+    "e_chg_init": -4.849541187286377,
+    "e_mace_init": -4.9010467529296875,
+    "e_orb_init": -4.841676235198975,
+    "disagreement": 0.02633025116812177,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 349.18310546875,
+        "time_per_step_ms": 24.15157914161682,
+        "drift_per_step": -0.00013697967841352465,
+        "std_energy": 0.005710390446062861,
+        "initial_energy": -311.3088334319761,
+        "final_energy": -311.3362293676588
+      },
+      "CHGNet": {
+        "vram_peak_mb": 435.48974609375,
+        "time_per_step_ms": 30.28975486755371,
+        "drift_per_step": 0.0005540150181653303,
+        "std_energy": 0.025379841114960916,
+        "initial_energy": -308.2897505293363,
+        "final_energy": -308.1789475257032
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 14.450291395187378,
+        "drift_per_step": 0.000565569742404648,
+        "std_energy": 0.2126292116409126,
+        "initial_energy": -306.84591158632026,
+        "final_energy": -306.7327976378393
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_7",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.1988888888888889,
+    "e_chg_init": -4.616824626922607,
+    "e_mace_init": -4.718578815460205,
+    "e_orb_init": -4.627038598060608,
+    "disagreement": 0.04575035093115971,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 349.8232421875,
+        "time_per_step_ms": 20.46312928199768,
+        "drift_per_step": -0.0001977914560475824,
+        "std_energy": 0.007993678126122644,
+        "initial_energy": -299.27573768478965,
+        "final_energy": -299.31529597599916
+      },
+      "CHGNet": {
+        "vram_peak_mb": 451.095703125,
+        "time_per_step_ms": 30.6722629070282,
+        "drift_per_step": -0.0006454894173748471,
+        "std_energy": 0.03135325782857812,
+        "initial_energy": -292.4864358269803,
+        "final_energy": -292.6155337104553
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 16.331775188446045,
+        "drift_per_step": 0.0050522129482467905,
+        "std_energy": 0.2442076879519967,
+        "initial_energy": -294.18267839563003,
+        "final_energy": -293.1722358059807
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_8",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.22444444444444445,
+    "e_chg_init": -4.225133895874023,
+    "e_mace_init": -4.363722801208496,
+    "e_orb_init": -4.246501922607422,
+    "disagreement": 0.06092273032137096,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 356.5751953125,
+        "time_per_step_ms": 26.86847448348999,
+        "drift_per_step": -0.0005062133238976685,
+        "std_energy": 0.014676311152486684,
+        "initial_energy": -276.631713588876,
+        "final_energy": -276.7329562536555
+      },
+      "CHGNet": {
+        "vram_peak_mb": 494.55419921875,
+        "time_per_step_ms": 30.15347957611084,
+        "drift_per_step": -0.0013232415341846604,
+        "std_energy": 0.04279473739171068,
+        "initial_energy": -267.8697481557023,
+        "final_energy": -268.13439646253926
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 14.748872518539429,
+        "drift_per_step": -0.003864533276630482,
+        "std_energy": 0.31823220758063325,
+        "initial_energy": -269.56883254229183,
+        "final_energy": -270.3417391976179
+      }
+    }
+  },
+  {
+    "id": "Si_rattle_9",
+    "symbol": "Si",
+    "type": "rattle",
+    "param": 0.25,
+    "e_chg_init": -3.372982978820801,
+    "e_mace_init": -3.4760966300964355,
+    "e_orb_init": -3.4309651851654053,
+    "disagreement": 0.04220480311468527,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 358.5400390625,
+        "time_per_step_ms": 20.90091824531555,
+        "drift_per_step": -0.0017796160941588824,
+        "std_energy": 0.06033432867547723,
+        "initial_energy": -220.32522773804362,
+        "final_energy": -220.6811509568754
+      },
+      "CHGNet": {
+        "vram_peak_mb": 492.70751953125,
+        "time_per_step_ms": 32.43427038192749,
+        "drift_per_step": 0.0016436444806045359,
+        "std_energy": 0.11207480490338183,
+        "initial_energy": -212.95227689832112,
+        "final_energy": -212.6235480022002
+      },
+      "ORB": {
+        "vram_peak_mb": 153.98583984375,
+        "time_per_step_ms": 12.394946813583374,
+        "drift_per_step": 0.004214262436857012,
+        "std_energy": 0.43033192498256,
+        "initial_energy": -217.18597519069488,
+        "final_energy": -216.34312270332347
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_0",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 0.85,
+    "e_chg_init": -1.7758092880249023,
+    "e_mace_init": -2.226848602294922,
+    "e_orb_init": -2.0756781101226807,
+    "disagreement": 0.18744192913690366,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 428.16357421875,
+        "time_per_step_ms": 24.39075469970703,
+        "drift_per_step": 9.95810309596834e-06,
+        "std_energy": 0.004140120767838456,
+        "initial_energy": -69.88450011986353,
+        "final_energy": -69.88250849924434
+      },
+      "CHGNet": {
+        "vram_peak_mb": 877.02392578125,
+        "time_per_step_ms": 38.60947132110596,
+        "drift_per_step": -2.157410430001505e-06,
+        "std_energy": 0.005684454052580883,
+        "initial_energy": -55.38579172693134,
+        "final_energy": -55.38622320901734
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.556057453155518,
+        "drift_per_step": 0.004821223955592373,
+        "std_energy": 0.1168955032706929,
+        "initial_energy": -65.25844976999244,
+        "final_energy": -64.29420497887396
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_1",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 0.8833333333333333,
+    "e_chg_init": -2.965703010559082,
+    "e_mace_init": -2.972707748413086,
+    "e_orb_init": -2.9135828018188477,
+    "disagreement": 0.026376213655700486,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 428.16357421875,
+        "time_per_step_ms": 22.456141710281372,
+        "drift_per_step": -2.9281652211210483e-06,
+        "std_energy": 0.001746138113454254,
+        "initial_energy": -93.83656232936683,
+        "final_energy": -93.83714796241105
+      },
+      "CHGNet": {
+        "vram_peak_mb": 821.49365234375,
+        "time_per_step_ms": 36.492406129837036,
+        "drift_per_step": 2.9525972779183008e-05,
+        "std_energy": 0.004312698133185722,
+        "initial_energy": -94.09861767608248,
+        "final_energy": -94.09271248152665
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.554232120513916,
+        "drift_per_step": 0.0019384637336129628,
+        "std_energy": 0.03759342178414773,
+        "initial_energy": -91.8480285996147,
+        "final_energy": -91.4603358528921
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_2",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 0.9166666666666666,
+    "e_chg_init": -3.603011131286621,
+    "e_mace_init": -3.564629554748535,
+    "e_orb_init": -3.5589230060577393,
+    "disagreement": 0.019577404497438538,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 331.23046875,
+        "time_per_step_ms": 22.760173082351685,
+        "drift_per_step": -4.1083248101614344e-06,
+        "std_energy": 0.0011902732981579785,
+        "initial_energy": -113.21470870182512,
+        "final_energy": -113.21553036678715
+      },
+      "CHGNet": {
+        "vram_peak_mb": 698.3720703125,
+        "time_per_step_ms": 33.40070605278015,
+        "drift_per_step": -3.995153215541336e-05,
+        "std_energy": 0.004256673000002488,
+        "initial_energy": -113.85738079016964,
+        "final_energy": -113.86537109660073
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 13.452624082565308,
+        "drift_per_step": -0.000617928142660702,
+        "std_energy": 0.03706777123525758,
+        "initial_energy": -112.79027706620354,
+        "final_energy": -112.91386269473568
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_3",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 0.95,
+    "e_chg_init": -3.931899309158325,
+    "e_mace_init": -3.907919406890869,
+    "e_orb_init": -3.917248487472534,
+    "disagreement": 0.009869785730674242,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 330.984375,
+        "time_per_step_ms": 19.09479856491089,
+        "drift_per_step": -1.1807101797174369e-05,
+        "std_energy": 0.0009110887913649707,
+        "initial_energy": -124.0771821604826,
+        "final_energy": -124.07954358084203
+      },
+      "CHGNet": {
+        "vram_peak_mb": 697.98388671875,
+        "time_per_step_ms": 34.65496063232422,
+        "drift_per_step": 5.272631211475698e-05,
+        "std_energy": 0.0031972779539536323,
+        "initial_energy": -124.42745656323123,
+        "final_energy": -124.41691130080828
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.105405807495117,
+        "drift_per_step": -0.0011519275537173002,
+        "std_energy": 0.04625666181991093,
+        "initial_energy": -124.17381597527802,
+        "final_energy": -124.40420148602148
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_4",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 0.9833333333333333,
+    "e_chg_init": -4.064879894256592,
+    "e_mace_init": -4.061830520629883,
+    "e_orb_init": -4.071824431419373,
+    "disagreement": 0.004182018768075094,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 317.49072265625,
+        "time_per_step_ms": 21.18493676185608,
+        "drift_per_step": -6.99041766836217e-07,
+        "std_energy": 0.0006332843939990262,
+        "initial_energy": -128.64785539783043,
+        "final_energy": -128.6479952061838
+      },
+      "CHGNet": {
+        "vram_peak_mb": 683.0146484375,
+        "time_per_step_ms": 33.129414319992065,
+        "drift_per_step": -1.1859834662573121e-05,
+        "std_energy": 0.0035124920897733488,
+        "initial_energy": -128.75371104196464,
+        "final_energy": -128.75608300889715
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 15.408427715301514,
+        "drift_per_step": 0.0001805688717161047,
+        "std_energy": 0.04083454616111188,
+        "initial_energy": -129.12141533864045,
+        "final_energy": -129.08530156429723
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_5",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 1.0166666666666666,
+    "e_chg_init": -4.071653366088867,
+    "e_mace_init": -4.077978134155273,
+    "e_orb_init": -4.076487302780151,
+    "disagreement": 0.0026996339920281388,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.60791015625,
+        "time_per_step_ms": 21.36949062347412,
+        "drift_per_step": -1.1066325675699318e-05,
+        "std_energy": 0.0007612686078316567,
+        "initial_energy": -129.1194533313908,
+        "final_energy": -129.12166659652593
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.0517578125,
+        "time_per_step_ms": 37.005876302719116,
+        "drift_per_step": -4.538097417963627e-05,
+        "std_energy": 0.0030721282277088404,
+        "initial_energy": -129.21088319157155,
+        "final_energy": -129.21995938640748
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.310872554779053,
+        "drift_per_step": -0.0018015860419993146,
+        "std_energy": 0.0736623673883805,
+        "initial_energy": -129.39949630071092,
+        "final_energy": -129.75981350911078
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_6",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 1.0499999999999998,
+    "e_chg_init": -3.994364023208618,
+    "e_mace_init": -4.002327919006348,
+    "e_orb_init": -4.000813007354736,
+    "disagreement": 0.0034529856663177844,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.60791015625,
+        "time_per_step_ms": 18.384177684783936,
+        "drift_per_step": -7.4870302467644475e-06,
+        "std_energy": 0.0007426070334571764,
+        "initial_energy": -126.97982490012953,
+        "final_energy": -126.98132230617888
+      },
+      "CHGNet": {
+        "vram_peak_mb": 680.40966796875,
+        "time_per_step_ms": 28.108303546905518,
+        "drift_per_step": -2.158904597237665e-05,
+        "std_energy": 0.0028168761537901432,
+        "initial_energy": -126.568014574684,
+        "final_energy": -126.57233238387848
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 9.854110479354858,
+        "drift_per_step": -0.002476098968337226,
+        "std_energy": 0.11970257509046019,
+        "initial_energy": -126.82136730634636,
+        "final_energy": -127.3165871000138
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_7",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 1.0833333333333333,
+    "e_chg_init": -3.8584089279174805,
+    "e_mace_init": -3.868291139602661,
+    "e_orb_init": -3.8877270221710205,
+    "disagreement": 0.012179045253865046,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 273.71240234375,
+        "time_per_step_ms": 17.021114826202393,
+        "drift_per_step": -8.420109688032085e-06,
+        "std_energy": 0.0007884817891682752,
+        "initial_energy": -122.72036544160926,
+        "final_energy": -122.72204946354687
+      },
+      "CHGNet": {
+        "vram_peak_mb": 624.30126953125,
+        "time_per_step_ms": 27.58279323577881,
+        "drift_per_step": -4.816087488116239e-05,
+        "std_energy": 0.002764669551289823,
+        "initial_energy": -122.22975775786944,
+        "final_energy": -122.23938993284567
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 10.784162282943726,
+        "drift_per_step": 0.00038785330016310126,
+        "std_energy": 0.10249588450645945,
+        "initial_energy": -123.10593401390443,
+        "final_energy": -123.02836335387181
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_8",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 1.1166666666666667,
+    "e_chg_init": -3.6906490325927734,
+    "e_mace_init": -3.701030969619751,
+    "e_orb_init": -3.721514940261841,
+    "disagreement": 0.012823944296742187,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 18.101296424865723,
+        "drift_per_step": -3.236932935948289e-06,
+        "std_energy": 0.0008332431758528852,
+        "initial_energy": -117.36982826541822,
+        "final_energy": -117.37047565200541
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 23.748897314071655,
+        "drift_per_step": -2.545603824948728e-05,
+        "std_energy": 0.0027651515337612704,
+        "initial_energy": -116.74619462119865,
+        "final_energy": -116.75128582884855
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.120752334594727,
+        "drift_per_step": 0.0011637395407020534,
+        "std_energy": 0.17109194912951167,
+        "initial_energy": -117.92696562984885,
+        "final_energy": -117.69421772170844
+      }
+    }
+  },
+  {
+    "id": "Cu_strain_9",
+    "symbol": "Cu",
+    "type": "strain",
+    "param": 1.15,
+    "e_chg_init": -3.510042667388916,
+    "e_mace_init": -3.514413356781006,
+    "e_orb_init": -3.521800398826599,
+    "disagreement": 0.00485243998767826,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 12.502706050872803,
+        "drift_per_step": 3.347800578978877e-08,
+        "std_energy": 0.0007161411336792808,
+        "initial_energy": -111.17292734019556,
+        "final_energy": -111.1729206445944
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 25.94290018081665,
+        "drift_per_step": -6.0353292057868656e-05,
+        "std_energy": 0.002909781089145702,
+        "initial_energy": -110.68386559361413,
+        "final_energy": -110.6959362520257
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.971633672714233,
+        "drift_per_step": -0.0016346878877548932,
+        "std_energy": 0.1001011170145732,
+        "initial_energy": -111.29597312217498,
+        "final_energy": -111.62291069972596
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_0",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.02,
+    "e_chg_init": -4.080837249755859,
+    "e_mace_init": -4.080371379852295,
+    "e_orb_init": -4.086593985557556,
+    "disagreement": 0.00282995609743595,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.83056640625,
+        "time_per_step_ms": 12.098612785339355,
+        "drift_per_step": -6.542568662837311e-06,
+        "std_energy": 0.0007447292155659887,
+        "initial_energy": -129.0298072250286,
+        "final_energy": -129.03111573876117
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.0517578125,
+        "time_per_step_ms": 28.300704956054688,
+        "drift_per_step": 1.9241414081676568e-05,
+        "std_energy": 0.003200782349967981,
+        "initial_energy": -129.06276605476722,
+        "final_energy": -129.0589177719509
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.477372884750366,
+        "drift_per_step": -0.00012486743094598297,
+        "std_energy": 0.04360014582295048,
+        "initial_energy": -129.47458923912603,
+        "final_energy": -129.49956272531523
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_1",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.04555555555555556,
+    "e_chg_init": -4.0705108642578125,
+    "e_mace_init": -4.067798137664795,
+    "e_orb_init": -4.070623517036438,
+    "disagreement": 0.0013061540155358132,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.72119140625,
+        "time_per_step_ms": 13.999431133270264,
+        "drift_per_step": 7.1622331657295035e-06,
+        "std_energy": 0.0007381659803295859,
+        "initial_energy": -129.05027056153517,
+        "final_energy": -129.04883811490203
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.0517578125,
+        "time_per_step_ms": 29.980833530426025,
+        "drift_per_step": -5.074844446255611e-06,
+        "std_energy": 0.002981924228567734,
+        "initial_energy": -129.05061646086352,
+        "final_energy": -129.05163142975277
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.428610801696777,
+        "drift_per_step": -0.0005809406145827722,
+        "std_energy": 0.037280866350870835,
+        "initial_energy": -128.93749724706407,
+        "final_energy": -129.05368536998063
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_2",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.07111111111111111,
+    "e_chg_init": -4.047942161560059,
+    "e_mace_init": -4.042688846588135,
+    "e_orb_init": -4.04455292224884,
+    "disagreement": 0.0021745763156118783,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.83056640625,
+        "time_per_step_ms": 21.31726384162903,
+        "drift_per_step": -7.155621027408188e-06,
+        "std_energy": 0.0007467225011848842,
+        "initial_energy": -128.26563921862743,
+        "final_energy": -128.2670703428329
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.70361328125,
+        "time_per_step_ms": 35.66420793533325,
+        "drift_per_step": -2.0304966371043065e-06,
+        "std_energy": 0.003343610227698629,
+        "initial_energy": -128.5002640740635,
+        "final_energy": -128.50067017339092
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.729466438293457,
+        "drift_per_step": 0.000109705687297037,
+        "std_energy": 0.021461717614113217,
+        "initial_energy": -128.26206228900298,
+        "final_energy": -128.24012115154358
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_3",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.09666666666666668,
+    "e_chg_init": -4.0017876625061035,
+    "e_mace_init": -3.992887020111084,
+    "e_orb_init": -3.990671157836914,
+    "disagreement": 0.004804027901693183,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.60791015625,
+        "time_per_step_ms": 25.049337148666382,
+        "drift_per_step": -5.346321424823941e-06,
+        "std_energy": 0.0007108677700796795,
+        "initial_energy": -126.66966130286191,
+        "final_energy": -126.67073056714688
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.43798828125,
+        "time_per_step_ms": 30.69305181503296,
+        "drift_per_step": -1.0354259930451804e-05,
+        "std_energy": 0.004168551896371046,
+        "initial_energy": -126.94604964928055,
+        "final_energy": -126.94812050126664
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.006083011627197,
+        "drift_per_step": 0.0002771272006956593,
+        "std_energy": 0.04874531401337583,
+        "initial_energy": -126.37695255638545,
+        "final_energy": -126.32152711624632
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_4",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.12222222222222223,
+    "e_chg_init": -3.9276366233825684,
+    "e_mace_init": -3.9221067428588867,
+    "e_orb_init": -3.911768913269043,
+    "disagreement": 0.00657634247791716,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.83056640625,
+        "time_per_step_ms": 23.23491334915161,
+        "drift_per_step": -5.832370643830132e-06,
+        "std_energy": 0.0008112940892204845,
+        "initial_energy": -124.11758510364851,
+        "final_energy": -124.11875157777727
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.5791015625,
+        "time_per_step_ms": 35.884666442871094,
+        "drift_per_step": -1.1477129152552834e-05,
+        "std_energy": 0.004917029884673205,
+        "initial_energy": -124.65811945191354,
+        "final_energy": -124.66041487774405
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 15.168488025665283,
+        "drift_per_step": 0.00018196097490807972,
+        "std_energy": 0.0332304270024448,
+        "initial_energy": -123.9389187310355,
+        "final_energy": -123.90252653605388
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_5",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.14777777777777779,
+    "e_chg_init": -3.8639039993286133,
+    "e_mace_init": -3.865154266357422,
+    "e_orb_init": -3.84262752532959,
+    "disagreement": 0.010337126050253454,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.49853515625,
+        "time_per_step_ms": 23.395906686782837,
+        "drift_per_step": -6.593532612271247e-06,
+        "std_energy": 0.0008032447663871823,
+        "initial_energy": -122.38384577355889,
+        "final_energy": -122.38516448008134
+      },
+      "CHGNet": {
+        "vram_peak_mb": 680.64794921875,
+        "time_per_step_ms": 33.580082654953,
+        "drift_per_step": -3.630274727179028e-05,
+        "std_energy": 0.007253287318988349,
+        "initial_energy": -122.44473527023871,
+        "final_energy": -122.45199581969307
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 14.665993452072144,
+        "drift_per_step": -0.0001255814629704588,
+        "std_energy": 0.04461620968270055,
+        "initial_energy": -121.64620401466347,
+        "final_energy": -121.67132030725756
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_6",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.17333333333333334,
+    "e_chg_init": -3.651747703552246,
+    "e_mace_init": -3.678046464920044,
+    "e_orb_init": -3.6350998878479004,
+    "disagreement": 0.017679816173691784,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.38916015625,
+        "time_per_step_ms": 27.16591715812683,
+        "drift_per_step": -2.154588991757578e-05,
+        "std_energy": 0.0013083696387474236,
+        "initial_energy": -116.59947932239614,
+        "final_energy": -116.60378850037965
+      },
+      "CHGNet": {
+        "vram_peak_mb": 680.7861328125,
+        "time_per_step_ms": 33.48593473434448,
+        "drift_per_step": -5.081652887199084e-05,
+        "std_energy": 0.01103267388077861,
+        "initial_energy": -115.3969549669686,
+        "final_energy": -115.40711827274299
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 15.331557989120483,
+        "drift_per_step": -0.00038205790092646905,
+        "std_energy": 0.13633561319521026,
+        "initial_energy": -114.94714708020933,
+        "final_energy": -115.02355866039463
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_7",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.1988888888888889,
+    "e_chg_init": -3.6056370735168457,
+    "e_mace_init": -3.6290483474731445,
+    "e_orb_init": -3.601447343826294,
+    "disagreement": 0.012144761035342799,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 315.90625,
+        "time_per_step_ms": 23.96207094192505,
+        "drift_per_step": -9.053371722558269e-06,
+        "std_energy": 0.0013010521319118207,
+        "initial_energy": -114.88064819902014,
+        "final_energy": -114.88245887336466
+      },
+      "CHGNet": {
+        "vram_peak_mb": 680.38623046875,
+        "time_per_step_ms": 38.77694129943848,
+        "drift_per_step": -0.0002741287334342246,
+        "std_energy": 0.011893841454381144,
+        "initial_energy": -114.1413940499036,
+        "final_energy": -114.19621979659044
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 16.257953643798828,
+        "drift_per_step": 0.0014185921429719173,
+        "std_energy": 0.15594799441094412,
+        "initial_energy": -114.16412957005558,
+        "final_energy": -113.8804111414612
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_8",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.22444444444444445,
+    "e_chg_init": -2.910344123840332,
+    "e_mace_init": -3.0277178287506104,
+    "e_orb_init": -2.829991102218628,
+    "disagreement": 0.0811918530896327,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 314.21826171875,
+        "time_per_step_ms": 24.288640022277832,
+        "drift_per_step": -8.224227370767778e-05,
+        "std_energy": 0.004257322044620372,
+        "initial_energy": -95.57455315673326,
+        "final_energy": -95.5910016114748
+      },
+      "CHGNet": {
+        "vram_peak_mb": 651.18115234375,
+        "time_per_step_ms": 37.01184630393982,
+        "drift_per_step": -0.00012330864208372815,
+        "std_energy": 0.018248729516505288,
+        "initial_energy": -92.11806734731235,
+        "final_energy": -92.1427290757291
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 15.485591888427734,
+        "drift_per_step": -0.0010025482243904093,
+        "std_energy": 0.29099568737785897,
+        "initial_energy": -89.63765643742356,
+        "final_energy": -89.83816608230164
+      }
+    }
+  },
+  {
+    "id": "Cu_rattle_9",
+    "symbol": "Cu",
+    "type": "rattle",
+    "param": 0.25,
+    "e_chg_init": -2.8735640048980713,
+    "e_mace_init": -3.016831159591675,
+    "e_orb_init": -2.827996253967285,
+    "disagreement": 0.0804573863200357,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 315.458984375,
+        "time_per_step_ms": 24.640750885009766,
+        "drift_per_step": -8.914699816507721e-05,
+        "std_energy": 0.0033343484016130076,
+        "initial_energy": -95.30589876387303,
+        "final_energy": -95.32372816350605
+      },
+      "CHGNet": {
+        "vram_peak_mb": 655.3271484375,
+        "time_per_step_ms": 33.77778887748718,
+        "drift_per_step": 0.00011304264919374418,
+        "std_energy": 0.02068831334197143,
+        "initial_energy": -90.3694883769785,
+        "final_energy": -90.34687984713975
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 13.15152645111084,
+        "drift_per_step": 0.004474434465402624,
+        "std_energy": 0.3016983568450772,
+        "initial_energy": -89.32511850759343,
+        "final_energy": -88.4302316145129
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_0",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 0.85,
+    "e_chg_init": -6.843280792236328,
+    "e_mace_init": -6.463446617126465,
+    "e_orb_init": -6.470035552978516,
+    "disagreement": 0.17752290095949574,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 287.8427734375,
+        "time_per_step_ms": 24.021514654159546,
+        "drift_per_step": 4.8293996146995254e-05,
+        "std_energy": 0.009161028097076836,
+        "initial_energy": -102.76099173042438,
+        "final_energy": -102.75133293119498
+      },
+      "CHGNet": {
+        "vram_peak_mb": 538.1279296875,
+        "time_per_step_ms": 31.646502017974854,
+        "drift_per_step": 1.5210849165399054e-05,
+        "std_energy": 0.0022157461124737723,
+        "initial_energy": -108.87983793877034,
+        "final_energy": -108.87679576893726
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 14.0740966796875,
+        "drift_per_step": -0.0018670847051213003,
+        "std_energy": 0.3655698023728506,
+        "initial_energy": -102.96777611074361,
+        "final_energy": -103.34119305176787
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_1",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 0.8833333333333333,
+    "e_chg_init": -7.6551833152771,
+    "e_mace_init": -7.796209335327148,
+    "e_orb_init": -7.470122456550598,
+    "disagreement": 0.1335284040835838,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 262.515625,
+        "time_per_step_ms": 20.174952745437622,
+        "drift_per_step": -8.129306246971168e-06,
+        "std_energy": 0.002100432052543065,
+        "initial_energy": -124.32436404593257,
+        "final_energy": -124.32598990718196
+      },
+      "CHGNet": {
+        "vram_peak_mb": 510.8017578125,
+        "time_per_step_ms": 31.020883321762085,
+        "drift_per_step": -1.7717363644464968e-06,
+        "std_energy": 0.001099940143231101,
+        "initial_energy": -121.76964002976821,
+        "final_energy": -121.7699943770411
+      },
+      "ORB": {
+        "vram_peak_mb": 267.58447265625,
+        "time_per_step_ms": 20.699633359909058,
+        "drift_per_step": 0.0034122864771105555,
+        "std_energy": 0.1499507969746057,
+        "initial_energy": -118.90570118718932,
+        "final_energy": -118.22324389176721
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_2",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 0.9166666666666666,
+    "e_chg_init": -8.110230445861816,
+    "e_mace_init": -8.209845542907715,
+    "e_orb_init": -8.021404027938843,
+    "disagreement": 0.07697294231976308,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 262.515625,
+        "time_per_step_ms": 21.138516664505005,
+        "drift_per_step": 1.4336983360436761e-05,
+        "std_energy": 0.0011668577198285747,
+        "initial_energy": -130.6934976388711,
+        "final_energy": -130.690630242199
+      },
+      "CHGNet": {
+        "vram_peak_mb": 510.8017578125,
+        "time_per_step_ms": 29.580438137054443,
+        "drift_per_step": -2.512151666707041e-06,
+        "std_energy": 0.0015015819891987389,
+        "initial_energy": -129.12210801109165,
+        "final_energy": -129.122610441425
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 15.43233871459961,
+        "drift_per_step": 0.005405796960217941,
+        "std_energy": 0.34335096889746436,
+        "initial_energy": -127.35097162575379,
+        "final_energy": -126.2698122337102
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_3",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 0.95,
+    "e_chg_init": -8.301790237426758,
+    "e_mace_init": -8.352163314819336,
+    "e_orb_init": -8.332463383674622,
+    "disagreement": 0.0207267302289365,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 239.294921875,
+        "time_per_step_ms": 24.4235622882843,
+        "drift_per_step": 8.53649442689175e-07,
+        "std_energy": 0.0009348273876858434,
+        "initial_energy": -132.8475499674939,
+        "final_energy": -132.84737923760537
+      },
+      "CHGNet": {
+        "vram_peak_mb": 482.02587890625,
+        "time_per_step_ms": 31.834046840667725,
+        "drift_per_step": -5.522864859841547e-06,
+        "std_energy": 0.0016176559352359926,
+        "initial_energy": -132.06554131266316,
+        "final_energy": -132.06664588563513
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 16.462188959121704,
+        "drift_per_step": 0.014731464957448849,
+        "std_energy": 1.0002176025894247,
+        "initial_energy": -132.6238218821283,
+        "final_energy": -129.67752889063854
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_4",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 0.9833333333333333,
+    "e_chg_init": -8.35433578491211,
+    "e_mace_init": -8.388861656188965,
+    "e_orb_init": -8.435364305973053,
+    "disagreement": 0.03319998903897297,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.52490234375,
+        "time_per_step_ms": 24.05440092086792,
+        "drift_per_step": -3.7288712563565694e-06,
+        "std_energy": 0.000876013088281437,
+        "initial_energy": -133.69750865139432,
+        "final_energy": -133.6982544256456
+      },
+      "CHGNet": {
+        "vram_peak_mb": 452.5234375,
+        "time_per_step_ms": 46.316460371017456,
+        "drift_per_step": -1.7001993277574457e-05,
+        "std_energy": 0.0015488940074910122,
+        "initial_energy": -133.01498588046582,
+        "final_energy": -133.01838627912133
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 42.895931005477905,
+        "drift_per_step": 0.017093996415337785,
+        "std_energy": 0.5473039267964224,
+        "initial_energy": -134.49864365086947,
+        "final_energy": -131.0798443678019
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_5",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 1.0166666666666666,
+    "e_chg_init": -8.339958190917969,
+    "e_mace_init": -8.376338958740234,
+    "e_orb_init": -8.410586297512054,
+    "disagreement": 0.02883818826439641,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.52490234375,
+        "time_per_step_ms": 55.12587070465088,
+        "drift_per_step": -2.0096181893336505e-06,
+        "std_energy": 0.0008689542441213176,
+        "initial_energy": -133.30547353792608,
+        "final_energy": -133.30587546156394
+      },
+      "CHGNet": {
+        "vram_peak_mb": 451.72607421875,
+        "time_per_step_ms": 49.69557285308838,
+        "drift_per_step": 2.306020603612069e-05,
+        "std_energy": 0.0015484075613757336,
+        "initial_energy": -132.50452594574048,
+        "final_energy": -132.49991390453326
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 42.71848201751709,
+        "drift_per_step": -8.763218429194808e-05,
+        "std_energy": 0.05861753082027572,
+        "initial_energy": -134.00776143353883,
+        "final_energy": -134.02528787039722
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_6",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 1.0499999999999998,
+    "e_chg_init": -8.239692687988281,
+    "e_mace_init": -8.288396835327148,
+    "e_orb_init": -8.290884494781494,
+    "disagreement": 0.023567594277643465,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 208.43896484375,
+        "time_per_step_ms": 47.85209059715271,
+        "drift_per_step": 6.275302633156343e-06,
+        "std_energy": 0.0007976996562664649,
+        "initial_energy": -131.88593817510346,
+        "final_energy": -131.88468311457683
+      },
+      "CHGNet": {
+        "vram_peak_mb": 350.61865234375,
+        "time_per_step_ms": 34.87655758857727,
+        "drift_per_step": -4.9623223403472136e-05,
+        "std_energy": 0.001663617539630246,
+        "initial_energy": -131.4142976859708,
+        "final_energy": -131.4242223306515
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 20.39485216140747,
+        "drift_per_step": -0.00028038717193652475,
+        "std_energy": 0.06491894132123746,
+        "initial_energy": -131.9833998166191,
+        "final_energy": -132.03947725100642
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_7",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 1.0833333333333333,
+    "e_chg_init": -8.051374435424805,
+    "e_mace_init": -8.127361297607422,
+    "e_orb_init": -8.133185684680939,
+    "disagreement": 0.03726930106072035,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 208.43896484375,
+        "time_per_step_ms": 44.24880266189575,
+        "drift_per_step": 6.3296686889202645e-06,
+        "std_energy": 0.0007833776546604913,
+        "initial_energy": -129.4206460593023,
+        "final_energy": -129.41938012556452
+      },
+      "CHGNet": {
+        "vram_peak_mb": 321.52685546875,
+        "time_per_step_ms": 49.0330445766449,
+        "drift_per_step": -6.426452467422905e-06,
+        "std_energy": 0.0014759906177518724,
+        "initial_energy": -128.06189513841747,
+        "final_energy": -128.06318042891095
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 39.85677123069763,
+        "drift_per_step": 0.0006518701463366483,
+        "std_energy": 0.036962237643352075,
+        "initial_energy": -129.5771375780964,
+        "final_energy": -129.44676354882907
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_8",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 1.1166666666666667,
+    "e_chg_init": -7.835341453552246,
+    "e_mace_init": -7.91717004776001,
+    "e_orb_init": -7.901281535625458,
+    "disagreement": 0.035428265664093926,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 208.43896484375,
+        "time_per_step_ms": 45.09898543357849,
+        "drift_per_step": -7.658928675269294e-06,
+        "std_energy": 0.000854281005268177,
+        "initial_energy": -126.06923615337426,
+        "final_energy": -126.07076793910932
+      },
+      "CHGNet": {
+        "vram_peak_mb": 291.5634765625,
+        "time_per_step_ms": 48.76211166381836,
+        "drift_per_step": 1.1473340033774093e-06,
+        "std_energy": 0.0012681443985891837,
+        "initial_energy": -124.90370788981099,
+        "final_energy": -124.90347842301031
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 29.698210954666138,
+        "drift_per_step": -0.00017283571401975452,
+        "std_energy": 0.006456687513023048,
+        "initial_energy": -125.85823126568363,
+        "final_energy": -125.89279840848758
+      }
+    }
+  },
+  {
+    "id": "Fe_strain_9",
+    "symbol": "Fe",
+    "type": "strain",
+    "param": 1.15,
+    "e_chg_init": -7.594732761383057,
+    "e_mace_init": -7.6655707359313965,
+    "e_orb_init": -7.648120105266571,
+    "disagreement": 0.030134424087279343,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 208.83349609375,
+        "time_per_step_ms": 19.711627960205078,
+        "drift_per_step": -5.202501714975938e-06,
+        "std_energy": 0.0008317563810114978,
+        "initial_energy": -122.13628291758472,
+        "final_energy": -122.13732341792772
+      },
+      "CHGNet": {
+        "vram_peak_mb": 279.86572265625,
+        "time_per_step_ms": 35.73042154312134,
+        "drift_per_step": 9.386186631203941e-06,
+        "std_energy": 0.0013107520056331917,
+        "initial_energy": -120.73860754888513,
+        "final_energy": -120.73673031155889
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 39.80617046356201,
+        "drift_per_step": -0.0031033460603337205,
+        "std_energy": 0.22796279711952305,
+        "initial_energy": -121.79564583344502,
+        "final_energy": -122.41631504551177
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_0",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.02,
+    "e_chg_init": -8.35152530670166,
+    "e_mace_init": -8.385748863220215,
+    "e_orb_init": -8.418042182922363,
+    "disagreement": 0.027159211943084013,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.52490234375,
+        "time_per_step_ms": 45.67505478858948,
+        "drift_per_step": 8.200436569438807e-07,
+        "std_energy": 0.0008632275498312063,
+        "initial_energy": -133.61881275654517,
+        "final_energy": -133.61864874781378
+      },
+      "CHGNet": {
+        "vram_peak_mb": 451.72607421875,
+        "time_per_step_ms": 50.28711676597595,
+        "drift_per_step": -1.076822569970659e-05,
+        "std_energy": 0.0014037745530759435,
+        "initial_energy": -132.97342442165464,
+        "final_energy": -132.97557806679458
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 39.59792375564575,
+        "drift_per_step": 0.002808028415425099,
+        "std_energy": 0.3540607093533318,
+        "initial_energy": -134.170345776244,
+        "final_energy": -133.60874009315899
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_1",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.04555555555555556,
+    "e_chg_init": -8.341764450073242,
+    "e_mace_init": -8.371371269226074,
+    "e_orb_init": -8.32229608297348,
+    "disagreement": 0.020176870596486863,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.52490234375,
+        "time_per_step_ms": 45.5106246471405,
+        "drift_per_step": -6.7115351546931375e-06,
+        "std_energy": 0.0008046518426306578,
+        "initial_energy": -133.4392192260426,
+        "final_energy": -133.44056153307355
+      },
+      "CHGNet": {
+        "vram_peak_mb": 446.84716796875,
+        "time_per_step_ms": 29.37166929244995,
+        "drift_per_step": -8.716917689071124e-06,
+        "std_energy": 0.0013679670946964068,
+        "initial_energy": -132.89250491701105,
+        "final_energy": -132.89424830054887
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 11.970070600509644,
+        "drift_per_step": -0.0017872337786675985,
+        "std_energy": 0.4050159093092882,
+        "initial_energy": -132.68191882738276,
+        "final_energy": -133.03936558311628
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_2",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.07111111111111111,
+    "e_chg_init": -8.303218841552734,
+    "e_mace_init": -8.32186508178711,
+    "e_orb_init": -8.188720464706421,
+    "disagreement": 0.058864297454098796,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.52490234375,
+        "time_per_step_ms": 18.615111112594604,
+        "drift_per_step": 2.9921634957474906e-06,
+        "std_energy": 0.0008601727549692634,
+        "initial_energy": -132.39770939431028,
+        "final_energy": -132.39711096161113
+      },
+      "CHGNet": {
+        "vram_peak_mb": 446.84716796875,
+        "time_per_step_ms": 21.555962562561035,
+        "drift_per_step": -6.349187915759558e-06,
+        "std_energy": 0.001507892844706346,
+        "initial_energy": -132.35443064456175,
+        "final_energy": -132.3557004821449
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 11.878628730773926,
+        "drift_per_step": -0.0023286769397275007,
+        "std_energy": 0.2693804173475886,
+        "initial_energy": -130.31900926347402,
+        "final_energy": -130.78474465141952
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_3",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.09666666666666668,
+    "e_chg_init": -8.273665428161621,
+    "e_mace_init": -8.285805702209473,
+    "e_orb_init": -8.171747088432312,
+    "disagreement": 0.0511469577719202,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.52490234375,
+        "time_per_step_ms": 18.723748922348022,
+        "drift_per_step": -7.166683174943955e-06,
+        "std_energy": 0.0008740605993313667,
+        "initial_energy": -132.07355015219596,
+        "final_energy": -132.07498348883095
+      },
+      "CHGNet": {
+        "vram_peak_mb": 422.1796875,
+        "time_per_step_ms": 25.66620111465454,
+        "drift_per_step": -2.7578698017123315e-05,
+        "std_energy": 0.0015841936996421702,
+        "initial_energy": -131.86434040405948,
+        "final_energy": -131.8698561436629
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 12.22253680229187,
+        "drift_per_step": -0.00019609579570925462,
+        "std_energy": 0.35035784247320906,
+        "initial_energy": -130.22002156734584,
+        "final_energy": -130.2592407264877
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_4",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.12222222222222223,
+    "e_chg_init": -8.228397369384766,
+    "e_mace_init": -8.23644733428955,
+    "e_orb_init": -8.133781969547272,
+    "disagreement": 0.04661551117509934,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.3017578125,
+        "time_per_step_ms": 18.580186367034912,
+        "drift_per_step": 2.674202230110723e-06,
+        "std_energy": 0.0009055855629557743,
+        "initial_energy": -131.18621035738315,
+        "final_energy": -131.18567551693712
+      },
+      "CHGNet": {
+        "vram_peak_mb": 438.37451171875,
+        "time_per_step_ms": 24.929838180541992,
+        "drift_per_step": 5.8178289323507215e-06,
+        "std_energy": 0.0015255607269058088,
+        "initial_energy": -131.2195446485783,
+        "final_energy": -131.21838108279184
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 11.894656419754028,
+        "drift_per_step": -0.00015951603618859168,
+        "std_energy": 0.3736090481307749,
+        "initial_energy": -129.48632770896643,
+        "final_energy": -129.51823091620415
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_5",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.14777777777777779,
+    "e_chg_init": -8.233933448791504,
+    "e_mace_init": -8.244731903076172,
+    "e_orb_init": -8.142019748687744,
+    "disagreement": 0.04608509223986787,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 217.541015625,
+        "time_per_step_ms": 19.31156873703003,
+        "drift_per_step": -4.627715008069799e-06,
+        "std_energy": 0.0008446850395191247,
+        "initial_energy": -131.34635208158113,
+        "final_energy": -131.34727762458274
+      },
+      "CHGNet": {
+        "vram_peak_mb": 423.21923828125,
+        "time_per_step_ms": 21.828113794326782,
+        "drift_per_step": 1.2987717711752112e-05,
+        "std_energy": 0.0014757786752069894,
+        "initial_energy": -131.16781188630273,
+        "final_energy": -131.16521434276038
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 12.275522947311401,
+        "drift_per_step": 9.057317789654462e-05,
+        "std_energy": 0.26727534837651773,
+        "initial_energy": -129.66163705818494,
+        "final_energy": -129.64352242260563
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_6",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.17333333333333334,
+    "e_chg_init": -7.963293552398682,
+    "e_mace_init": -7.979834079742432,
+    "e_orb_init": -7.836839318275452,
+    "disagreement": 0.06386771413502593,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 220.92236328125,
+        "time_per_step_ms": 17.672324180603027,
+        "drift_per_step": -1.1492527656216112e-05,
+        "std_energy": 0.0010231805926400406,
+        "initial_energy": -127.08987292021301,
+        "final_energy": -127.09217142574425
+      },
+      "CHGNet": {
+        "vram_peak_mb": 407.63525390625,
+        "time_per_step_ms": 22.892271280288696,
+        "drift_per_step": -2.9142759895250946e-06,
+        "std_energy": 0.0016986820535302466,
+        "initial_energy": -126.62965427341537,
+        "final_energy": -126.63023712861327
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 12.101035118103027,
+        "drift_per_step": -5.967317137695716e-05,
+        "std_energy": 0.15322394493641092,
+        "initial_energy": -124.78235793845192,
+        "final_energy": -124.79429257272731
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_7",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.1988888888888889,
+    "e_chg_init": -7.737178802490234,
+    "e_mace_init": -7.732316970825195,
+    "e_orb_init": -7.621353030204773,
+    "disagreement": 0.05349168476468028,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 222.43408203125,
+        "time_per_step_ms": 18.23929190635681,
+        "drift_per_step": -3.343873263638386e-05,
+        "std_energy": 0.0015160450640082806,
+        "initial_energy": -123.19408186441684,
+        "final_energy": -123.20076961094412
+      },
+      "CHGNet": {
+        "vram_peak_mb": 401.50634765625,
+        "time_per_step_ms": 24.293678998947144,
+        "drift_per_step": -2.0143710823248285e-05,
+        "std_energy": 0.0020658914467269083,
+        "initial_energy": -123.34540540581617,
+        "final_energy": -123.34943414798082
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 12.929826974868774,
+        "drift_per_step": 0.006976498752123135,
+        "std_energy": 0.34274486605760296,
+        "initial_energy": -121.37892985591155,
+        "final_energy": -119.98363010548692
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_8",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.22444444444444445,
+    "e_chg_init": -7.151196002960205,
+    "e_mace_init": -7.163658142089844,
+    "e_orb_init": -6.9536004066467285,
+    "disagreement": 0.09621941177079178,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 229.654296875,
+        "time_per_step_ms": 19.04322385787964,
+        "drift_per_step": -0.00016238061716805418,
+        "std_energy": 0.005990578211032764,
+        "initial_energy": -114.0502544373083,
+        "final_energy": -114.08273056074191
+      },
+      "CHGNet": {
+        "vram_peak_mb": 404.19775390625,
+        "time_per_step_ms": 20.89200496673584,
+        "drift_per_step": -0.0003780031766441283,
+        "std_energy": 0.009902593259908216,
+        "initial_energy": -113.90745475855796,
+        "final_energy": -113.98305539388679
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 13.453348875045776,
+        "drift_per_step": -0.006427849761277926,
+        "std_energy": 0.3037417640850926,
+        "initial_energy": -110.777421316217,
+        "final_energy": -112.06299126847259
+      }
+    }
+  },
+  {
+    "id": "Fe_rattle_9",
+    "symbol": "Fe",
+    "type": "rattle",
+    "param": 0.25,
+    "e_chg_init": -7.800005912780762,
+    "e_mace_init": -7.796837329864502,
+    "e_orb_init": -7.65035742521286,
+    "disagreement": 0.06981011723542313,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 222.94189453125,
+        "time_per_step_ms": 18.218579292297363,
+        "drift_per_step": -2.0874637209900015e-05,
+        "std_energy": 0.0010155126757310545,
+        "initial_energy": -124.14546068362272,
+        "final_energy": -124.1496356110647
+      },
+      "CHGNet": {
+        "vram_peak_mb": 396.12060546875,
+        "time_per_step_ms": 24.449883699417114,
+        "drift_per_step": -3.161289659850297e-05,
+        "std_energy": 0.002009804430188945,
+        "initial_energy": -123.88469515014336,
+        "final_energy": -123.89101772946306
+      },
+      "ORB": {
+        "vram_peak_mb": 141.8466796875,
+        "time_per_step_ms": 11.45460844039917,
+        "drift_per_step": 0.00041486812140270504,
+        "std_energy": 0.18395313836725918,
+        "initial_energy": -121.90050411841229,
+        "final_energy": -121.81753049413174
+      }
+    }
+  },
+  {
+    "id": "Al_strain_0",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 0.85,
+    "e_chg_init": -2.3230748176574707,
+    "e_mace_init": -2.750919818878174,
+    "e_orb_init": -2.41542911529541,
+    "disagreement": 0.18382802154677022,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 330.984375,
+        "time_per_step_ms": 19.707303047180176,
+        "drift_per_step": 3.100574871766071e-05,
+        "std_energy": 0.002848172332302671,
+        "initial_energy": -86.71468886230875,
+        "final_energy": -86.70848771256522
+      },
+      "CHGNet": {
+        "vram_peak_mb": 697.98388671875,
+        "time_per_step_ms": 27.720279693603516,
+        "drift_per_step": -1.231093773135683e-05,
+        "std_energy": 0.004837869031859164,
+        "initial_energy": -73.13023929595003,
+        "final_energy": -73.1327014834963
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.397967576980591,
+        "drift_per_step": 0.0012362704297469661,
+        "std_energy": 0.03925622963806421,
+        "initial_energy": -75.54857330661517,
+        "final_energy": -75.30131922066577
+      }
+    }
+  },
+  {
+    "id": "Al_strain_1",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 0.8833333333333333,
+    "e_chg_init": -2.94581937789917,
+    "e_mace_init": -3.052746295928955,
+    "e_orb_init": -3.0286903381347656,
+    "disagreement": 0.045801080718828636,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.72119140625,
+        "time_per_step_ms": 76.33581042289734,
+        "drift_per_step": -1.346540140289676e-05,
+        "std_energy": 0.0023875210982287755,
+        "initial_energy": -96.36935316324843,
+        "final_energy": -96.37204624352901
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.43798828125,
+        "time_per_step_ms": 96.57438397407532,
+        "drift_per_step": 3.0606435749547246e-06,
+        "std_energy": 0.003625876151758029,
+        "initial_energy": -92.98990074846637,
+        "final_energy": -92.98928861975138
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 77.92059421539307,
+        "drift_per_step": 0.0007273652355004856,
+        "std_energy": 0.04324815945392075,
+        "initial_energy": -95.62697863657645,
+        "final_energy": -95.48150558947636
+      }
+    }
+  },
+  {
+    "id": "Al_strain_2",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 0.9166666666666666,
+    "e_chg_init": -3.3465986251831055,
+    "e_mace_init": -3.3942131996154785,
+    "e_orb_init": -3.420269012451172,
+    "disagreement": 0.03050205647189411,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.60791015625,
+        "time_per_step_ms": 71.26575708389282,
+        "drift_per_step": -3.1781090378757425e-06,
+        "std_energy": 0.001750183469400187,
+        "initial_energy": -107.2420941130613,
+        "final_energy": -107.24272973486887
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.0517578125,
+        "time_per_step_ms": 98.47005724906921,
+        "drift_per_step": -1.3245083084001407e-05,
+        "std_energy": 0.0030835007198440818,
+        "initial_energy": -106.03458289949533,
+        "final_energy": -106.03723191611213
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 79.93137717247009,
+        "drift_per_step": -0.000754542109036862,
+        "std_energy": 0.03751738103535146,
+        "initial_energy": -108.32963931630198,
+        "final_energy": -108.48054773810935
+      }
+    }
+  },
+  {
+    "id": "Al_strain_3",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 0.95,
+    "e_chg_init": -3.5691580772399902,
+    "e_mace_init": -3.622410297393799,
+    "e_orb_init": -3.6442110538482666,
+    "disagreement": 0.03152427852916471,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 276.451171875,
+        "time_per_step_ms": 69.57722306251526,
+        "drift_per_step": -2.9205553721567413e-06,
+        "std_energy": 0.0015073715907678116,
+        "initial_energy": -114.71498717100908,
+        "final_energy": -114.71557128208352
+      },
+      "CHGNet": {
+        "vram_peak_mb": 636.18017578125,
+        "time_per_step_ms": 98.01414251327515,
+        "drift_per_step": -3.777508831198873e-05,
+        "std_energy": 0.002531466800403242,
+        "initial_energy": -112.97180574969575,
+        "final_energy": -112.97936076735814
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 79.65245246887207,
+        "drift_per_step": 0.00029297709242058544,
+        "std_energy": 0.057054184036292754,
+        "initial_energy": -115.61249943223807,
+        "final_energy": -115.55390401375395
+      }
+    }
+  },
+  {
+    "id": "Al_strain_4",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 0.9833333333333333,
+    "e_chg_init": -3.657428026199341,
+    "e_mace_init": -3.7160892486572266,
+    "e_orb_init": -3.7334368228912354,
+    "disagreement": 0.032522495678816536,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.330078125,
+        "time_per_step_ms": 51.28881812095642,
+        "drift_per_step": 1.2559970951997457e-06,
+        "std_energy": 0.001228535989364548,
+        "initial_energy": -117.64809960729026,
+        "final_energy": -117.64784840787122
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 79.58784103393555,
+        "drift_per_step": 1.3708071952507339e-05,
+        "std_energy": 0.002115935847734335,
+        "initial_energy": -115.70355238304457,
+        "final_energy": -115.70081076865407
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 78.73982071876526,
+        "drift_per_step": 0.0011343245215328325,
+        "std_energy": 0.05796617564335581,
+        "initial_energy": -117.91094797660983,
+        "final_energy": -117.68408307230327
+      }
+    }
+  },
+  {
+    "id": "Al_strain_5",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 1.0166666666666666,
+    "e_chg_init": -3.6580846309661865,
+    "e_mace_init": -3.7226991653442383,
+    "e_orb_init": -3.728606939315796,
+    "disagreement": 0.0319432410189435,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 63.18341255187988,
+        "drift_per_step": 2.893037560056655e-06,
+        "std_energy": 0.0010555654458613269,
+        "initial_energy": -118.02863800494669,
+        "final_energy": -118.02805939743467
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 71.43629193305969,
+        "drift_per_step": -2.8489286003576807e-05,
+        "std_energy": 0.0019979671971707717,
+        "initial_energy": -115.85336832687696,
+        "final_energy": -115.85906618407768
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 96.16895318031311,
+        "drift_per_step": -0.00013336965945505595,
+        "std_energy": 0.030454900076697933,
+        "initial_energy": -118.27255760340958,
+        "final_energy": -118.29923153530059
+      }
+    }
+  },
+  {
+    "id": "Al_strain_6",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 1.0499999999999998,
+    "e_chg_init": -3.6221377849578857,
+    "e_mace_init": -3.6677424907684326,
+    "e_orb_init": -3.656858444213867,
+    "disagreement": 0.019447295843548377,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 257.54248046875,
+        "time_per_step_ms": 99.42567706108093,
+        "drift_per_step": -1.710778547661107e-06,
+        "std_energy": 0.0010494442121792404,
+        "initial_energy": -115.64317266675721,
+        "final_energy": -115.64351482246674
+      },
+      "CHGNet": {
+        "vram_peak_mb": 343.1669921875,
+        "time_per_step_ms": 99.99525785446167,
+        "drift_per_step": -5.461937664321681e-06,
+        "std_energy": 0.0019738199757063195,
+        "initial_energy": -114.66871878582222,
+        "final_energy": -114.66981117335509
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 97.34167337417603,
+        "drift_per_step": -0.002723982461998915,
+        "std_energy": 0.1006931844055819,
+        "initial_energy": -115.6156655239945,
+        "final_energy": -116.16046201639428
+      }
+    }
+  },
+  {
+    "id": "Al_strain_7",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 1.0833333333333333,
+    "e_chg_init": -3.535457134246826,
+    "e_mace_init": -3.5616629123687744,
+    "e_orb_init": -3.549100637435913,
+    "disagreement": 0.010701499052501435,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 248.07666015625,
+        "time_per_step_ms": 100.35347580909729,
+        "drift_per_step": 2.6333163063441134e-08,
+        "std_energy": 0.0010784885659698834,
+        "initial_energy": -113.14565612622036,
+        "final_energy": -113.14565085958775
+      },
+      "CHGNet": {
+        "vram_peak_mb": 303.9521484375,
+        "time_per_step_ms": 101.64217829704285,
+        "drift_per_step": -1.9124927005123026e-05,
+        "std_energy": 0.0023674157283677024,
+        "initial_energy": -111.6147256376739,
+        "final_energy": -111.61855062307492
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 99.27116274833679,
+        "drift_per_step": -0.003665266183521112,
+        "std_energy": 0.17851390075988982,
+        "initial_energy": -112.58281661526178,
+        "final_energy": -113.315869851966
+      }
+    }
+  },
+  {
+    "id": "Al_strain_8",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 1.1166666666666667,
+    "e_chg_init": -3.41521954536438,
+    "e_mace_init": -3.413275718688965,
+    "e_orb_init": -3.4055018424987793,
+    "disagreement": 0.0041984833524671035,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 243.93212890625,
+        "time_per_step_ms": 100.17062544822693,
+        "drift_per_step": 8.35901688773788e-06,
+        "std_energy": 0.0010107631162635526,
+        "initial_energy": -107.680348639053,
+        "final_energy": -107.67867683567545
+      },
+      "CHGNet": {
+        "vram_peak_mb": 282.75341796875,
+        "time_per_step_ms": 103.48488450050354,
+        "drift_per_step": 2.503003811362703e-05,
+        "std_energy": 0.0024625138939317935,
+        "initial_energy": -107.88631043691133,
+        "final_energy": -107.8813044292886
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 49.940054416656494,
+        "drift_per_step": -0.0007680290204882567,
+        "std_energy": 0.12880413608594593,
+        "initial_energy": -107.6730394402254,
+        "final_energy": -107.82664524432305
+      }
+    }
+  },
+  {
+    "id": "Al_strain_9",
+    "symbol": "Al",
+    "type": "strain",
+    "param": 1.15,
+    "e_chg_init": -3.2640185356140137,
+    "e_mace_init": -3.240858316421509,
+    "e_orb_init": -3.248518705368042,
+    "disagreement": 0.00963397950261341,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 243.74072265625,
+        "time_per_step_ms": 101.0685122013092,
+        "drift_per_step": -1.0267397574068582e-05,
+        "std_energy": 0.0010415991515378166,
+        "initial_energy": -102.71454770985856,
+        "final_energy": -102.71660118937338
+      },
+      "CHGNet": {
+        "vram_peak_mb": 280.9609375,
+        "time_per_step_ms": 93.78242015838623,
+        "drift_per_step": -4.8002264980695486e-05,
+        "std_energy": 0.002693776265482886,
+        "initial_energy": -103.08023434991473,
+        "final_energy": -103.08983480291087
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 101.31804466247559,
+        "drift_per_step": -0.0011400775019241394,
+        "std_energy": 0.1270197229819556,
+        "initial_energy": -102.72011311228216,
+        "final_energy": -102.94812861266699
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_0",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.02,
+    "e_chg_init": -3.6635866165161133,
+    "e_mace_init": -3.7263336181640625,
+    "e_orb_init": -3.735209107398987,
+    "disagreement": 0.0318777904664993,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 105.97057938575745,
+        "drift_per_step": -1.7461217705516674e-06,
+        "std_energy": 0.0010971945294332174,
+        "initial_energy": -117.98049036134528,
+        "final_energy": -117.98083958569939
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 106.81146144866943,
+        "drift_per_step": 1.684748255769364e-05,
+        "std_energy": 0.0019343589954674098,
+        "initial_energy": -116.02242807411697,
+        "final_energy": -116.01905857760543
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 96.32264971733093,
+        "drift_per_step": 0.0002618588464483196,
+        "std_energy": 0.031028483296551775,
+        "initial_energy": -118.26903651255918,
+        "final_energy": -118.21666474326952
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_1",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.04555555555555556,
+    "e_chg_init": -3.6607632637023926,
+    "e_mace_init": -3.7209296226501465,
+    "e_orb_init": -3.729499340057373,
+    "disagreement": 0.030583363302705377,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 97.15140700340271,
+        "drift_per_step": 3.156103313273206e-07,
+        "std_energy": 0.0011225865314585283,
+        "initial_energy": -117.99754146746947,
+        "final_energy": -117.99747834540321
+      },
+      "CHGNet": {
+        "vram_peak_mb": 596.75537109375,
+        "time_per_step_ms": 102.12226986885071,
+        "drift_per_step": -1.3275191732731173e-06,
+        "std_energy": 0.002503556572555486,
+        "initial_energy": -115.61183847339518,
+        "final_energy": -115.61210397722984
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 84.87749576568604,
+        "drift_per_step": 2.509566511406547e-05,
+        "std_energy": 0.02948250530874548,
+        "initial_energy": -118.09113421297535,
+        "final_energy": -118.08611507995253
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_2",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.07111111111111111,
+    "e_chg_init": -3.6541545391082764,
+    "e_mace_init": -3.708536148071289,
+    "e_orb_init": -3.712017297744751,
+    "disagreement": 0.02649439486524143,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.138671875,
+        "time_per_step_ms": 79.99077200889587,
+        "drift_per_step": -8.579950232814326e-06,
+        "std_energy": 0.0010234560153440666,
+        "initial_energy": -117.52883530209738,
+        "final_energy": -117.53055129214394
+      },
+      "CHGNet": {
+        "vram_peak_mb": 574.05029296875,
+        "time_per_step_ms": 106.87189936637878,
+        "drift_per_step": 3.7292519856180206e-07,
+        "std_energy": 0.002068983204143496,
+        "initial_energy": -116.06247170265618,
+        "final_energy": -116.06239711761647
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 94.41794514656067,
+        "drift_per_step": 0.0006710660277288127,
+        "std_energy": 0.03970180769029746,
+        "initial_energy": -117.24567443728598,
+        "final_energy": -117.11146123174022
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_3",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.09666666666666668,
+    "e_chg_init": -3.6367859840393066,
+    "e_mace_init": -3.6837658882141113,
+    "e_orb_init": -3.6771546602249146,
+    "disagreement": 0.020764418681906146,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.2021484375,
+        "time_per_step_ms": 101.60217642784119,
+        "drift_per_step": -1.4052218531190874e-06,
+        "std_energy": 0.0012299329302192675,
+        "initial_energy": -116.2294140511972,
+        "final_energy": -116.22969509556782
+      },
+      "CHGNet": {
+        "vram_peak_mb": 507.892578125,
+        "time_per_step_ms": 104.78755593299866,
+        "drift_per_step": 2.4343828637327646e-05,
+        "std_energy": 0.0025811900065857685,
+        "initial_energy": -115.14794003377546,
+        "final_energy": -115.14307126804799
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 92.72957682609558,
+        "drift_per_step": -0.00023295455984431612,
+        "std_energy": 0.024267872292417052,
+        "initial_energy": -115.97178618176036,
+        "final_energy": -116.01837709372923
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_4",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.12222222222222223,
+    "e_chg_init": -3.605225086212158,
+    "e_mace_init": -3.6469204425811768,
+    "e_orb_init": -3.627893328666687,
+    "disagreement": 0.01704367925404126,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0078125,
+        "time_per_step_ms": 101.66400909423828,
+        "drift_per_step": -3.6149344802538507e-06,
+        "std_energy": 0.0011690427869030606,
+        "initial_energy": -115.06999957113513,
+        "final_energy": -115.07072255803118
+      },
+      "CHGNet": {
+        "vram_peak_mb": 521.43798828125,
+        "time_per_step_ms": 101.2699019908905,
+        "drift_per_step": 4.8508236924504896e-06,
+        "std_energy": 0.0036275352577859804,
+        "initial_energy": -114.14371356548993,
+        "final_energy": -114.14274340075144
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 91.25636577606201,
+        "drift_per_step": 0.00036441212877512895,
+        "std_energy": 0.051938015536795,
+        "initial_energy": -114.57367690897102,
+        "final_energy": -114.500794483216
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_5",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.14777777777777779,
+    "e_chg_init": -3.5773990154266357,
+    "e_mace_init": -3.6088056564331055,
+    "e_orb_init": -3.5856975317001343,
+    "disagreement": 0.01328837378364737,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 267.80810546875,
+        "time_per_step_ms": 45.797752141952515,
+        "drift_per_step": -6.53327712747398e-06,
+        "std_energy": 0.0012151632488384381,
+        "initial_energy": -114.02184448678112,
+        "final_energy": -114.02315114220661
+      },
+      "CHGNet": {
+        "vram_peak_mb": 519.06396484375,
+        "time_per_step_ms": 23.832402229309082,
+        "drift_per_step": -2.0669101453876236e-05,
+        "std_energy": 0.0036933706894720308,
+        "initial_energy": -113.24014430189112,
+        "final_energy": -113.2442781221819
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.375146150588989,
+        "drift_per_step": -8.732583413319617e-05,
+        "std_energy": 0.06678615824843764,
+        "initial_energy": -113.48158808859519,
+        "final_energy": -113.49905325542183
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_6",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.17333333333333334,
+    "e_chg_init": -3.475216865539551,
+    "e_mace_init": -3.4954469203948975,
+    "e_orb_init": -3.4609532356262207,
+    "disagreement": 0.014152033802310391,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 267.73486328125,
+        "time_per_step_ms": 17.316133975982666,
+        "drift_per_step": -2.3484535830746724e-05,
+        "std_energy": 0.001603452488361173,
+        "initial_energy": -110.62834481747299,
+        "final_energy": -110.63304172463914
+      },
+      "CHGNet": {
+        "vram_peak_mb": 502.8828125,
+        "time_per_step_ms": 24.467637538909912,
+        "drift_per_step": -1.0382740823899894e-05,
+        "std_energy": 0.005684744649431412,
+        "initial_energy": -109.97381722388836,
+        "final_energy": -109.97589377205314
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.919670104980469,
+        "drift_per_step": -0.0005496352983691821,
+        "std_energy": 0.08239378343727591,
+        "initial_energy": -109.58205396913424,
+        "final_energy": -109.69198102880807
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_7",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.1988888888888889,
+    "e_chg_init": -3.4451849460601807,
+    "e_mace_init": -3.4673309326171875,
+    "e_orb_init": -3.428056240081787,
+    "disagreement": 0.016077378043655756,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 15.447053909301758,
+        "drift_per_step": -2.014045038222889e-05,
+        "std_energy": 0.0014588737860763445,
+        "initial_energy": -109.85497017093488,
+        "final_energy": -109.85899826101132
+      },
+      "CHGNet": {
+        "vram_peak_mb": 467.24658203125,
+        "time_per_step_ms": 24.45560574531555,
+        "drift_per_step": -8.493571160897773e-05,
+        "std_energy": 0.00613366032684012,
+        "initial_energy": -109.18468461118657,
+        "final_energy": -109.20167175350836
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.820796728134155,
+        "drift_per_step": -0.001082609367737959,
+        "std_energy": 0.09187936010485362,
+        "initial_energy": -108.60115391332239,
+        "final_energy": -108.81767578686998
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_8",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.22444444444444445,
+    "e_chg_init": -3.078372001647949,
+    "e_mace_init": -3.0956315994262695,
+    "e_orb_init": -3.072420597076416,
+    "disagreement": 0.009843574113368303,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 270.16162109375,
+        "time_per_step_ms": 11.468175649642944,
+        "drift_per_step": -5.6462941440074135e-05,
+        "std_energy": 0.003645918312319866,
+        "initial_energy": -97.87240947265074,
+        "final_energy": -97.88370206093876
+      },
+      "CHGNet": {
+        "vram_peak_mb": 458.7841796875,
+        "time_per_step_ms": 20.786914825439453,
+        "drift_per_step": -0.00028233500842489434,
+        "std_energy": 0.012738161367258506,
+        "initial_energy": -97.24749013080167,
+        "final_energy": -97.30395713248664
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.689368724822998,
+        "drift_per_step": 0.0010647258538693193,
+        "std_energy": 0.1112774242632754,
+        "initial_energy": -96.9639473685184,
+        "final_energy": -96.75100219774454
+      }
+    }
+  },
+  {
+    "id": "Al_rattle_9",
+    "symbol": "Al",
+    "type": "rattle",
+    "param": 0.25,
+    "e_chg_init": -3.0755691528320312,
+    "e_mace_init": -3.0701441764831543,
+    "e_orb_init": -3.0592894554138184,
+    "disagreement": 0.006768258317794315,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.9384765625,
+        "time_per_step_ms": 15.9481680393219,
+        "drift_per_step": -8.785467041590778e-05,
+        "std_energy": 0.0036094491149197125,
+        "initial_energy": -97.13106391866457,
+        "final_energy": -97.14863485274775
+      },
+      "CHGNet": {
+        "vram_peak_mb": 457.51025390625,
+        "time_per_step_ms": 22.94503092765808,
+        "drift_per_step": -6.201806977372826e-05,
+        "std_energy": 0.012856442649731094,
+        "initial_energy": -97.63767456975322,
+        "final_energy": -97.65007818370796
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.721965312957764,
+        "drift_per_step": 0.0020047273145102195,
+        "std_energy": 0.2067039205959069,
+        "initial_energy": -96.30917702382577,
+        "final_energy": -95.90823156092372
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_0",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 0.85,
+    "e_chg_init": -2.595749855041504,
+    "e_mace_init": 0.9381194114685059,
+    "e_orb_init": -1.1504080295562744,
+    "disagreement": 1.4506393937844744,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 330.984375,
+        "time_per_step_ms": 14.29445505142212,
+        "drift_per_step": -0.0006725921991996842,
+        "std_energy": 0.19925008851112333,
+        "initial_energy": 32.43977943666922,
+        "final_energy": 32.30526099682928
+      },
+      "CHGNet": {
+        "vram_peak_mb": 697.98388671875,
+        "time_per_step_ms": 28.11620593070984,
+        "drift_per_step": -3.823637729659879e-05,
+        "std_energy": 0.008525827023984156,
+        "initial_energy": -81.71562165592177,
+        "final_energy": -81.72326893138109
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.895251750946045,
+        "drift_per_step": 0.005451111935906887,
+        "std_energy": 0.39958362722688817,
+        "initial_energy": -35.58499834980324,
+        "final_energy": -34.494775962621866
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_1",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 0.8833333333333333,
+    "e_chg_init": -3.6105618476867676,
+    "e_mace_init": -2.673518419265747,
+    "e_orb_init": -3.057701587677002,
+    "disagreement": 0.384606806540509,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 330.52685546875,
+        "time_per_step_ms": 15.690360069274902,
+        "drift_per_step": -6.324952441318032e-05,
+        "std_energy": 0.0070470939533442386,
+        "initial_energy": -84.56022342783943,
+        "final_energy": -84.57287333272207
+      },
+      "CHGNet": {
+        "vram_peak_mb": 696.806640625,
+        "time_per_step_ms": 29.21391010284424,
+        "drift_per_step": -7.211729057637228e-05,
+        "std_energy": 0.006528499484683074,
+        "initial_energy": -114.3051542545741,
+        "final_energy": -114.31957771268938
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.263648748397827,
+        "drift_per_step": 0.00788895321223066,
+        "std_energy": 0.27892233796632515,
+        "initial_energy": -96.64590263463852,
+        "final_energy": -95.06811199219239
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_2",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 0.9166666666666666,
+    "e_chg_init": -4.61428689956665,
+    "e_mace_init": -4.503889083862305,
+    "e_orb_init": -4.531544864177704,
+    "disagreement": 0.0469026939731492,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.60791015625,
+        "time_per_step_ms": 13.755908012390137,
+        "drift_per_step": -1.8454377518537512e-05,
+        "std_energy": 0.0038225995191681016,
+        "initial_energy": -142.9294542761107,
+        "final_energy": -142.9331451516144
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.0517578125,
+        "time_per_step_ms": 26.598646640777588,
+        "drift_per_step": -6.681736962832474e-08,
+        "std_energy": 0.0047455299334002825,
+        "initial_energy": -146.6810756665416,
+        "final_energy": -146.68108903001553
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.108941316604614,
+        "drift_per_step": 0.00307611350175236,
+        "std_energy": 0.09704027012170133,
+        "initial_energy": -143.99604408591952,
+        "final_energy": -143.38082138556905
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_3",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 0.95,
+    "e_chg_init": -5.5271100997924805,
+    "e_mace_init": -5.484489917755127,
+    "e_orb_init": -5.440962016582489,
+    "disagreement": 0.03517045846563672,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 316.60791015625,
+        "time_per_step_ms": 14.106372594833374,
+        "drift_per_step": -3.274872399884998e-05,
+        "std_energy": 0.0022173496787186663,
+        "initial_energy": -174.58263397117722,
+        "final_energy": -174.589183715977
+      },
+      "CHGNet": {
+        "vram_peak_mb": 681.0517578125,
+        "time_per_step_ms": 27.495250701904297,
+        "drift_per_step": -4.802605829993922e-05,
+        "std_energy": 0.004438679371523684,
+        "initial_energy": -175.8136875505166,
+        "final_energy": -175.82329276217658
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.293415307998657,
+        "drift_per_step": 0.0007015736251845795,
+        "std_energy": 0.03376164661453633,
+        "initial_energy": -173.078428845039,
+        "final_energy": -172.9381141200021
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_4",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 0.9833333333333333,
+    "e_chg_init": -5.987135887145996,
+    "e_mace_init": -5.927426338195801,
+    "e_orb_init": -5.938532531261444,
+    "disagreement": 0.025929099833300828,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 273.1826171875,
+        "time_per_step_ms": 14.55959439277649,
+        "drift_per_step": -2.1376160367339027e-05,
+        "std_energy": 0.0014940513030504041,
+        "initial_energy": -188.4405390599402,
+        "final_energy": -188.44481429201366
+      },
+      "CHGNet": {
+        "vram_peak_mb": 626.9384765625,
+        "time_per_step_ms": 25.664243698120117,
+        "drift_per_step": -3.942006923267627e-06,
+        "std_energy": 0.0032555883747738628,
+        "initial_energy": -190.37998847073612,
+        "final_energy": -190.38077687212078
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.179752826690674,
+        "drift_per_step": -0.00035201653375466435,
+        "std_energy": 0.0681980111350006,
+        "initial_energy": -188.80193804857782,
+        "final_energy": -188.87234135532876
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_5",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 1.0166666666666666,
+    "e_chg_init": -6.091630458831787,
+    "e_mace_init": -6.034409046173096,
+    "e_orb_init": -6.045493423938751,
+    "disagreement": 0.024778528980257657,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 14.413889646530151,
+        "drift_per_step": 9.853406428277367e-06,
+        "std_energy": 0.001232779265769727,
+        "initial_energy": -191.6531329322116,
+        "final_energy": -191.65116225092595
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 25.78309655189514,
+        "drift_per_step": 4.0840079764450364e-05,
+        "std_energy": 0.0038768994339503115,
+        "initial_energy": -193.7129922576018,
+        "final_energy": -193.7048242416489
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.575307130813599,
+        "drift_per_step": -0.0001171772158122053,
+        "std_energy": 0.02923871852607455,
+        "initial_energy": -192.18451590931681,
+        "final_energy": -192.20795135247926
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_6",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 1.0499999999999998,
+    "e_chg_init": -5.976551532745361,
+    "e_mace_init": -5.925228595733643,
+    "e_orb_init": -5.946170151233673,
+    "disagreement": 0.02107030810518932,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.0712890625,
+        "time_per_step_ms": 14.415932893753052,
+        "drift_per_step": -1.6095168500669388e-05,
+        "std_energy": 0.0011715687732280443,
+        "initial_energy": -188.59295820627946,
+        "final_energy": -188.5961772399796
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.16552734375,
+        "time_per_step_ms": 25.996408462524414,
+        "drift_per_step": -5.83039665502838e-05,
+        "std_energy": 0.002434541938933475,
+        "initial_energy": -190.11173586218877,
+        "final_energy": -190.12339665549882
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.342825174331665,
+        "drift_per_step": 0.001764060186465599,
+        "std_energy": 0.09194451230808212,
+        "initial_energy": -189.11307260374468,
+        "final_energy": -188.76026056645156
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_7",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 1.0833333333333333,
+    "e_chg_init": -5.72434139251709,
+    "e_mace_init": -5.669671535491943,
+    "e_orb_init": -5.690035879611969,
+    "disagreement": 0.022559472004932978,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 257.50927734375,
+        "time_per_step_ms": 12.959471940994263,
+        "drift_per_step": 1.3154481020336562e-05,
+        "std_energy": 0.0014731026165497936,
+        "initial_energy": -180.32289189369618,
+        "final_energy": -180.3202609974921
+      },
+      "CHGNet": {
+        "vram_peak_mb": 328.50537109375,
+        "time_per_step_ms": 20.485950708389282,
+        "drift_per_step": 3.259675638233261e-05,
+        "std_energy": 0.0028024424963014544,
+        "initial_energy": -181.9537070047908,
+        "final_energy": -181.94718765351433
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.683383464813232,
+        "drift_per_step": -0.00018016651095365433,
+        "std_energy": 0.13585305610941878,
+        "initial_energy": -181.01399997450588,
+        "final_energy": -181.0500332766966
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_8",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 1.1166666666666667,
+    "e_chg_init": -5.378108024597168,
+    "e_mace_init": -5.332274436950684,
+    "e_orb_init": -5.353948175907135,
+    "disagreement": 0.018720657056446297,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 251.4248046875,
+        "time_per_step_ms": 18.233076333999634,
+        "drift_per_step": -1.9708018573822983e-05,
+        "std_energy": 0.0016291775745236265,
+        "initial_energy": -169.16594088314565,
+        "final_energy": -169.16988248686042
+      },
+      "CHGNet": {
+        "vram_peak_mb": 289.74169921875,
+        "time_per_step_ms": 22.732274532318115,
+        "drift_per_step": 2.8893655515247473e-05,
+        "std_energy": 0.005131521563057259,
+        "initial_energy": -170.78171075941336,
+        "final_energy": -170.7759320283103
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.214201927185059,
+        "drift_per_step": -0.0015169286157150452,
+        "std_energy": 0.09679439613605931,
+        "initial_energy": -170.2904297166014,
+        "final_energy": -170.59381543974442
+      }
+    }
+  },
+  {
+    "id": "Pt_strain_9",
+    "symbol": "Pt",
+    "type": "strain",
+    "param": 1.15,
+    "e_chg_init": -4.989013195037842,
+    "e_mace_init": -4.960945129394531,
+    "e_orb_init": -4.979979991912842,
+    "disagreement": 0.011698722906300895,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 243.93212890625,
+        "time_per_step_ms": 14.266804456710815,
+        "drift_per_step": 1.954101956172849e-05,
+        "std_energy": 0.0016697250003180728,
+        "initial_energy": -157.45855763225134,
+        "final_energy": -157.454649428339
+      },
+      "CHGNet": {
+        "vram_peak_mb": 275.6806640625,
+        "time_per_step_ms": 19.506067037582397,
+        "drift_per_step": -6.122723381977835e-05,
+        "std_energy": 0.007912466200134614,
+        "initial_energy": -158.4127011108129,
+        "final_energy": -158.42494655757685
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.28717827796936,
+        "drift_per_step": 0.002007455739777555,
+        "std_energy": 0.20534373463337863,
+        "initial_energy": -158.28723689414397,
+        "final_energy": -157.88574574618846
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_0",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.02,
+    "e_chg_init": -6.066965103149414,
+    "e_mace_init": -6.008281707763672,
+    "e_orb_init": -6.030112683773041,
+    "disagreement": 0.024217608886035982,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.2666015625,
+        "time_per_step_ms": 14.058250188827515,
+        "drift_per_step": -6.9969621419829765e-06,
+        "std_energy": 0.0013091908921691849,
+        "initial_energy": -190.77257888134793,
+        "final_energy": -190.77397827377632
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.5537109375,
+        "time_per_step_ms": 27.57590413093567,
+        "drift_per_step": 2.3668194612582737e-05,
+        "std_energy": 0.003282282522063228,
+        "initial_energy": -193.15514594070746,
+        "final_energy": -193.15041230178494
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.18690299987793,
+        "drift_per_step": 6.808905362532868e-05,
+        "std_energy": 0.03237684315473818,
+        "initial_energy": -191.93057676525123,
+        "final_energy": -191.91695895452617
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_1",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.04555555555555556,
+    "e_chg_init": -6.05033540725708,
+    "e_mace_init": -5.990342140197754,
+    "e_orb_init": -6.002218544483185,
+    "disagreement": 0.025938974438744364,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 269.39404296875,
+        "time_per_step_ms": 13.232024908065796,
+        "drift_per_step": 8.14493655525439e-07,
+        "std_energy": 0.0015243383475087742,
+        "initial_energy": -190.58056761891854,
+        "final_energy": -190.58040472018743
+      },
+      "CHGNet": {
+        "vram_peak_mb": 622.69580078125,
+        "time_per_step_ms": 24.621917009353638,
+        "drift_per_step": -1.761902721696629e-05,
+        "std_energy": 0.003563338482852828,
+        "initial_energy": -192.73468024470688,
+        "final_energy": -192.73820405015027
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 8.477208614349365,
+        "drift_per_step": 7.642547306659253e-05,
+        "std_energy": 0.04775855415305727,
+        "initial_energy": -190.68383588212234,
+        "final_energy": -190.66855078750902
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_2",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.07111111111111111,
+    "e_chg_init": -6.016531467437744,
+    "e_mace_init": -5.95235013961792,
+    "e_orb_init": -5.952571213245392,
+    "disagreement": 0.030203395376853515,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 270.49267578125,
+        "time_per_step_ms": 14.703712463378906,
+        "drift_per_step": 7.57251821681848e-06,
+        "std_energy": 0.00139795211937303,
+        "initial_energy": -189.1884849999912,
+        "final_energy": -189.18697049634784
+      },
+      "CHGNet": {
+        "vram_peak_mb": 623.642578125,
+        "time_per_step_ms": 25.409576892852783,
+        "drift_per_step": -3.0460119854609503e-05,
+        "std_energy": 0.004190902835359135,
+        "initial_energy": -191.18056495340798,
+        "final_energy": -191.1866569773789
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.8910133838653564,
+        "drift_per_step": -0.00046518307403744076,
+        "std_energy": 0.05168351481900138,
+        "initial_energy": -189.36433013761237,
+        "final_energy": -189.45736675241986
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_3",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.09666666666666668,
+    "e_chg_init": -5.944711208343506,
+    "e_mace_init": -5.877468109130859,
+    "e_orb_init": -5.858846843242645,
+    "disagreement": 0.03687979743433053,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 274.33154296875,
+        "time_per_step_ms": 16.612303256988525,
+        "drift_per_step": -2.6753992946737525e-06,
+        "std_energy": 0.001389535874025025,
+        "initial_energy": -186.76669809072104,
+        "final_energy": -186.76723317057997
+      },
+      "CHGNet": {
+        "vram_peak_mb": 602.12158203125,
+        "time_per_step_ms": 20.578984022140503,
+        "drift_per_step": -0.00010152553015743137,
+        "std_energy": 0.006373054704062079,
+        "initial_energy": -188.69009862223922,
+        "final_energy": -188.7104037282707
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.7399609088897705,
+        "drift_per_step": -0.0013166958517902571,
+        "std_energy": 0.07361295316171221,
+        "initial_energy": -186.08730774373606,
+        "final_energy": -186.3506469140941
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_4",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.12222222222222223,
+    "e_chg_init": -5.817927837371826,
+    "e_mace_init": -5.751221656799316,
+    "e_orb_init": -5.710893929004669,
+    "disagreement": 0.0441365276990995,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 274.33154296875,
+        "time_per_step_ms": 11.03519082069397,
+        "drift_per_step": -1.1991631314316465e-05,
+        "std_energy": 0.001431958878226739,
+        "initial_energy": -182.8051325615394,
+        "final_energy": -182.80753088780227
+      },
+      "CHGNet": {
+        "vram_peak_mb": 598.79443359375,
+        "time_per_step_ms": 18.888754844665527,
+        "drift_per_step": -0.0001333205460564102,
+        "std_energy": 0.00973965491431659,
+        "initial_energy": -184.80685481374624,
+        "final_energy": -184.83351892295752
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.7324018478393555,
+        "drift_per_step": -4.511630970171154e-05,
+        "std_energy": 0.09771182142218378,
+        "initial_energy": -181.39707414794808,
+        "final_energy": -181.40609740988842
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_5",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.14777777777777779,
+    "e_chg_init": -5.715906143188477,
+    "e_mace_init": -5.661487579345703,
+    "e_orb_init": -5.596787989139557,
+    "disagreement": 0.04869012184505352,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 275.56298828125,
+        "time_per_step_ms": 11.10152006149292,
+        "drift_per_step": 9.673444995570435e-06,
+        "std_energy": 0.0016396526916870938,
+        "initial_energy": -180.05866769479323,
+        "final_energy": -180.05673300579411
+      },
+      "CHGNet": {
+        "vram_peak_mb": 594.30224609375,
+        "time_per_step_ms": 22.2000789642334,
+        "drift_per_step": -1.2695692927877644e-06,
+        "std_energy": 0.012807649048693089,
+        "initial_energy": -181.86051574152026,
+        "final_energy": -181.86076965537882
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.340521812438965,
+        "drift_per_step": -0.0013087480423983778,
+        "std_energy": 0.10016226491783191,
+        "initial_energy": -177.5434922535093,
+        "final_energy": -177.80524186198897
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_6",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.17333333333333334,
+    "e_chg_init": -5.347171306610107,
+    "e_mace_init": -5.309199333190918,
+    "e_orb_init": -5.222800016403198,
+    "disagreement": 0.05204157583067984,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 277.5869140625,
+        "time_per_step_ms": 14.013584852218628,
+        "drift_per_step": -1.2504956319645544e-05,
+        "std_energy": 0.0020470017982178097,
+        "initial_energy": -168.5300353463562,
+        "final_energy": -168.53253633762012
+      },
+      "CHGNet": {
+        "vram_peak_mb": 566.82861328125,
+        "time_per_step_ms": 23.08915615081787,
+        "drift_per_step": -4.392974993436383e-05,
+        "std_energy": 0.020707400064032874,
+        "initial_energy": -169.61595420057526,
+        "final_energy": -169.62474015056213
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.81981086730957,
+        "drift_per_step": -0.0029438123456054653,
+        "std_energy": 0.2126399383828455,
+        "initial_energy": -165.97493681324534,
+        "final_energy": -166.56369928236643
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_7",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.1988888888888889,
+    "e_chg_init": -5.29806661605835,
+    "e_mace_init": -5.229201793670654,
+    "e_orb_init": -5.153796970844269,
+    "disagreement": 0.058918004792125354,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 279.2021484375,
+        "time_per_step_ms": 13.406094312667847,
+        "drift_per_step": -2.084696398782171e-05,
+        "std_energy": 0.001975680882298889,
+        "initial_energy": -166.17830264089824,
+        "final_energy": -166.1824720336958
+      },
+      "CHGNet": {
+        "vram_peak_mb": 558.89306640625,
+        "time_per_step_ms": 23.504023551940918,
+        "drift_per_step": -0.00013720430864609057,
+        "std_energy": 0.0175849448132881,
+        "initial_energy": -168.27678657917946,
+        "final_energy": -168.30422744090868
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.762328147888184,
+        "drift_per_step": -0.0020719849741759333,
+        "std_energy": 0.12050698523058498,
+        "initial_energy": -163.69655892671148,
+        "final_energy": -164.11095592154666
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_8",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.22444444444444445,
+    "e_chg_init": -4.671433448791504,
+    "e_mace_init": -3.982374668121338,
+    "e_orb_init": -3.8840930461883545,
+    "disagreement": 0.35029609538847806,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 278.93310546875,
+        "time_per_step_ms": 15.11404037475586,
+        "drift_per_step": -0.00020445506938891357,
+        "std_energy": 0.007289418812607617,
+        "initial_energy": -126.62226306980583,
+        "final_energy": -126.66315408368361
+      },
+      "CHGNet": {
+        "vram_peak_mb": 534.033203125,
+        "time_per_step_ms": 24.850327968597412,
+        "drift_per_step": 0.00010488894158669382,
+        "std_energy": 0.02606437990953622,
+        "initial_energy": -148.28226534118727,
+        "final_energy": -148.26128755286993
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 7.290194034576416,
+        "drift_per_step": -0.0031279718556081093,
+        "std_energy": 0.20000333489450767,
+        "initial_energy": -122.71723447139888,
+        "final_energy": -123.3428288425205
+      }
+    }
+  },
+  {
+    "id": "Pt_rattle_9",
+    "symbol": "Pt",
+    "type": "rattle",
+    "param": 0.25,
+    "e_chg_init": -4.4161272048950195,
+    "e_mace_init": -4.064187049865723,
+    "e_orb_init": -3.8490132093429565,
+    "disagreement": 0.23375674400690502,
+    "md_results": {
+      "MACE": {
+        "vram_peak_mb": 279.42333984375,
+        "time_per_step_ms": 14.812332391738892,
+        "drift_per_step": -0.00012177940936254572,
+        "std_energy": 0.005069610573369486,
+        "initial_energy": -128.82200272339836,
+        "final_energy": -128.84635860527086
+      },
+      "CHGNet": {
+        "vram_peak_mb": 526.9287109375,
+        "time_per_step_ms": 20.103490352630615,
+        "drift_per_step": 0.00043317328890680074,
+        "std_energy": 0.029694805675536767,
+        "initial_energy": -140.51425362082065,
+        "final_energy": -140.4276189630393
+      },
+      "ORB": {
+        "vram_peak_mb": 146.41455078125,
+        "time_per_step_ms": 6.718301773071289,
+        "drift_per_step": 0.00013079285506314875,
+        "std_energy": 0.2970429790138867,
+        "initial_energy": -121.88329328762512,
+        "final_energy": -121.85713471661249
+      }
+    }
+  }
+]

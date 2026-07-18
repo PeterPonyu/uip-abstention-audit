@@ -1,0 +1,1367 @@
+{
+  "meta": {
+    "seed": 20260621,
+    "n_boot": 1000,
+    "n_rows": 256963,
+    "stable_definition": "e_above_hull < 0",
+    "models": [
+      "chgnet",
+      "m3gnet",
+      "mace",
+      "orb"
+    ],
+    "ranking_metric_primary": "f1",
+    "ranking_metric_secondary": "daf"
+  },
+  "rank_reordering": {
+    "f1": {
+      "FULL": {
+        "point_values": {
+          "chgnet": 0.60988,
+          "m3gnet": 0.57337,
+          "mace": 0.83388,
+          "orb": 0.85964
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.6097824209933745,
+            "metric_ci95": [
+              0.6063528433750667,
+              0.6133614841594776
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5733298638150713,
+            "metric_ci95": [
+              0.5698999688951775,
+              0.5767742733977721
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8338328012530996,
+            "metric_ci95": [
+              0.8311329095397337,
+              0.8363986162795176
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8595641794369646,
+            "metric_ci95": [
+              0.8569735289002454,
+              0.8620659932782282
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 256963
+      },
+      "unique_prototype": {
+        "point_values": {
+          "chgnet": 0.61111,
+          "m3gnet": 0.568,
+          "mace": 0.85055,
+          "orb": 0.88019
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.6111080636313768,
+            "metric_ci95": [
+              0.607496559544684,
+              0.6149978690207188
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5680529274505115,
+            "metric_ci95": [
+              0.5645381530143477,
+              0.5714984997420549
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.850493919330981,
+            "metric_ci95": [
+              0.8477788702521141,
+              0.8534053149866496
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8801955086454476,
+            "metric_ci95": [
+              0.8775776971349005,
+              0.8828246249464639
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 215488
+      },
+      "round_1": {
+        "point_values": {
+          "chgnet": 0.62084,
+          "m3gnet": 0.59764,
+          "mace": 0.80945,
+          "orb": 0.84645
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.620823374560121,
+            "metric_ci95": [
+              0.6135404594033914,
+              0.6283380270478468
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5976281450905323,
+            "metric_ci95": [
+              0.5900373563218392,
+              0.604424668257604
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8093694926123081,
+            "metric_ci95": [
+              0.8031886305702102,
+              0.8156848946104106
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8466422019045093,
+            "metric_ci95": [
+              0.8408291557861703,
+              0.8519878084411338
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 61466
+      },
+      "round_2": {
+        "point_values": {
+          "chgnet": 0.64012,
+          "m3gnet": 0.60652,
+          "mace": 0.84301,
+          "orb": 0.87245
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.6399528345390024,
+            "metric_ci95": [
+              0.6330290117460871,
+              0.6462301775440152
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.6062068107924423,
+            "metric_ci95": [
+              0.5994175509666747,
+              0.6124943862028749
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8428748258650358,
+            "metric_ci95": [
+              0.8376352723624548,
+              0.8482277788778746
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8722750399324922,
+            "metric_ci95": [
+              0.867239901006774,
+              0.8774096330673193
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 52755
+      },
+      "round_3": {
+        "point_values": {
+          "chgnet": 0.5778,
+          "m3gnet": 0.53353,
+          "mace": 0.833,
+          "orb": 0.85754
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.5778190584473871,
+            "metric_ci95": [
+              0.5710424579612743,
+              0.5841140401172368
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5335955071473892,
+            "metric_ci95": [
+              0.5267863684353505,
+              0.5401790025460929
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8330188109024824,
+            "metric_ci95": [
+              0.8278446441851757,
+              0.8381694877272315
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8574776864058412,
+            "metric_ci95": [
+              0.8523766619766171,
+              0.8624862223679611
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 79160
+      },
+      "round_4": {
+        "point_values": {
+          "chgnet": 0.60858,
+          "m3gnet": 0.56978,
+          "mace": 0.85515,
+          "orb": 0.8666
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.608634560951492,
+            "metric_ci95": [
+              0.6002846363364346,
+              0.6172039817105939
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5695825317654857,
+            "metric_ci95": [
+              0.5619867019974456,
+              0.5782417922041002
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.855122468666328,
+            "metric_ci95": [
+              0.8485168346488419,
+              0.8611100715766105
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.866599160044982,
+            "metric_ci95": [
+              0.8604598285308498,
+              0.8722871490579511
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 40314
+      },
+      "round_5": {
+        "point_values": {
+          "chgnet": 0.60592,
+          "m3gnet": 0.56452,
+          "mace": 0.83187,
+          "orb": 0.85092
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.6061544057153245,
+            "metric_ci95": [
+              0.5945379064452826,
+              0.616469845357027
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5643814792741444,
+            "metric_ci95": [
+              0.553765322046837,
+              0.5746740790988101
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8318492288766915,
+            "metric_ci95": [
+              0.8233331651565682,
+              0.8403934986205239
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8507517485916485,
+            "metric_ci95": [
+              0.8426591173521067,
+              0.8589510815873592
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 23268
+      },
+      "family_binary": {
+        "point_values": {
+          "chgnet": 0.49788,
+          "m3gnet": 0.46618,
+          "mace": 0.74876,
+          "orb": 0.76172
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.49751391223929003,
+            "metric_ci95": [
+              0.4844835503775901,
+              0.5101456166885292
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.4660059389430022,
+            "metric_ci95": [
+              0.4551013179705388,
+              0.4768463167085016
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.7485163732350946,
+            "metric_ci95": [
+              0.7372628961979026,
+              0.7588110459698303
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.7613529561617756,
+            "metric_ci95": [
+              0.7504549759049612,
+              0.7723240085827319
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 32374
+      },
+      "family_ternary": {
+        "point_values": {
+          "chgnet": 0.61212,
+          "m3gnet": 0.58053,
+          "mace": 0.8401,
+          "orb": 0.86271
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.612156476211527,
+            "metric_ci95": [
+              0.6081694680857196,
+              0.6163490857300564
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.5805015891142052,
+            "metric_ci95": [
+              0.5767639870050731,
+              0.5843688579316845
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8401277254347485,
+            "metric_ci95": [
+              0.8370036754098978,
+              0.8431477679904069
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8627599816762452,
+            "metric_ci95": [
+              0.8598360085498656,
+              0.8655077139612745
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 189934
+      },
+      "family_quaternary+": {
+        "point_values": {
+          "chgnet": 0.67123,
+          "m3gnet": 0.60777,
+          "mace": 0.8523,
+          "orb": 0.89628
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 0.6711640069506374,
+            "metric_ci95": [
+              0.6634969666668757,
+              0.679287626743103
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 0.6076402000482277,
+            "metric_ci95": [
+              0.5997808930184381,
+              0.615946835510808
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 0.8524501749014806,
+            "metric_ci95": [
+              0.8460903389756057,
+              0.8584915026618549
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 0.8964156476910867,
+            "metric_ci95": [
+              0.8909099855899246,
+              0.9017941384625179
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 34655
+      }
+    },
+    "daf": {
+      "FULL": {
+        "point_values": {
+          "chgnet": 3.09047,
+          "m3gnet": 2.66549,
+          "mace": 4.96186,
+          "orb": 5.4141
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 3.090418786281073,
+            "metric_ci95": [
+              3.0685931944505525,
+              3.1117437306347835
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.665170018013642,
+            "metric_ci95": [
+              2.6488384594445806,
+              2.6827942331095187
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 4.961472326935954,
+            "metric_ci95": [
+              4.923097433257392,
+              5.0024401423234535
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 5.414092024414151,
+            "metric_ci95": [
+              5.370757885587846,
+              5.45949781245126
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 256963
+      },
+      "unique_prototype": {
+        "point_values": {
+          "chgnet": 3.34431,
+          "m3gnet": 2.83763,
+          "mace": 5.55797,
+          "orb": 6.03505
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 3.3448273048708437,
+            "metric_ci95": [
+              3.3175644099517787,
+              3.369883552384121
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.8377976124812916,
+            "metric_ci95": [
+              2.8168670038308723,
+              2.8565144180724134
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 5.558580329675779,
+            "metric_ci95": [
+              5.512378335972348,
+              5.61091125607056
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 6.035906411923909,
+            "metric_ci95": [
+              5.9790845503078955,
+              6.094249544491034
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 215488
+      },
+      "round_1": {
+        "point_values": {
+          "chgnet": 3.59781,
+          "m3gnet": 3.14652,
+          "mace": 5.26957,
+          "orb": 5.78299
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 3.596958580507543,
+            "metric_ci95": [
+              3.544197526070643,
+              3.6525332855659225
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 3.1458588275843153,
+            "metric_ci95": [
+              3.1028274693065816,
+              3.1897719133011746
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 5.266513420386969,
+            "metric_ci95": [
+              5.179464957031539,
+              5.35342989209991
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 5.779794042980153,
+            "metric_ci95": [
+              5.676465911202349,
+              5.884664961666286
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 61466
+      },
+      "round_2": {
+        "point_values": {
+          "chgnet": 2.72497,
+          "m3gnet": 2.38313,
+          "mace": 4.17091,
+          "orb": 4.53261
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 2.7240452676059568,
+            "metric_ci95": [
+              2.689991018728347,
+              2.758933978499167
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.3834736761418633,
+            "metric_ci95": [
+              2.354609746514574,
+              2.4107417489817986
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 4.170663204669683,
+            "metric_ci95": [
+              4.106629431443879,
+              4.233509184655921
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 4.531999088972082,
+            "metric_ci95": [
+              4.460789060567262,
+              4.607364980961894
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 52755
+      },
+      "round_3": {
+        "point_values": {
+          "chgnet": 3.26814,
+          "m3gnet": 2.74601,
+          "mace": 5.67991,
+          "orb": 6.26249
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 3.269526646279866,
+            "metric_ci95": [
+              3.2267228595240125,
+              3.3123915155338097
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.746008306627351,
+            "metric_ci95": [
+              2.7128439374195628,
+              2.776132532941495
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 5.6794147647101685,
+            "metric_ci95": [
+              5.595046465793458,
+              5.772805489609079
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 6.2595096228321605,
+            "metric_ci95": [
+              6.166857944809924,
+              6.364138477931952
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 79160
+      },
+      "round_4": {
+        "point_values": {
+          "chgnet": 2.85785,
+          "m3gnet": 2.47503,
+          "mace": 4.82103,
+          "orb": 5.20001
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 2.858129723879392,
+            "metric_ci95": [
+              2.812913698088658,
+              2.9041475120653355
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.475090969242875,
+            "metric_ci95": [
+              2.4388252289015853,
+              2.512518650469745
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 4.8224109699719815,
+            "metric_ci95": [
+              4.732131693846094,
+              4.917799430553964
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 5.199341101550092,
+            "metric_ci95": [
+              5.097138240347907,
+              5.304161926609643
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 40314
+      },
+      "round_5": {
+        "point_values": {
+          "chgnet": 2.77376,
+          "m3gnet": 2.413,
+          "mace": 4.48636,
+          "orb": 4.85019
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 2.7726937125749154,
+            "metric_ci95": [
+              2.718958474297197,
+              2.8338821524037634
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.4128778523240646,
+            "metric_ci95": [
+              2.3659998296628637,
+              2.465441500739108
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 4.485315913892297,
+            "metric_ci95": [
+              4.375745766970635,
+              4.601195671240981
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 4.8511002493957776,
+            "metric_ci95": [
+              4.7334839858411994,
+              4.983622534279606
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 23268
+      },
+      "family_binary": {
+        "point_values": {
+          "chgnet": 3.34638,
+          "m3gnet": 2.83882,
+          "mace": 6.16099,
+          "orb": 6.92147
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 3.3446815226289317,
+            "metric_ci95": [
+              3.2676799015859994,
+              3.427898254746531
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.8386108122081124,
+            "metric_ci95": [
+              2.784344937166585,
+              2.8974137754838405
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 6.159706007485674,
+            "metric_ci95": [
+              6.005313153149831,
+              6.3291038145638465
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 6.920307969348283,
+            "metric_ci95": [
+              6.739641230788093,
+              7.128360945524115
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 32374
+      },
+      "family_ternary": {
+        "point_values": {
+          "chgnet": 3.05926,
+          "m3gnet": 2.69669,
+          "mace": 5.01123,
+          "orb": 5.43433
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 3.059424024675086,
+            "metric_ci95": [
+              3.034712729268108,
+              3.08599032156995
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.6973170341758794,
+            "metric_ci95": [
+              2.677201309240707,
+              2.7163347371582685
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 5.010332510601687,
+            "metric_ci95": [
+              4.96484423446271,
+              5.058156293433997
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 5.434123123535985,
+            "metric_ci95": [
+              5.379973109902206,
+              5.4893101854485025
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 189934
+      },
+      "family_quaternary+": {
+        "point_values": {
+          "chgnet": 2.99194,
+          "m3gnet": 2.33257,
+          "mace": 3.98784,
+          "orb": 4.39135
+        },
+        "point_rank": {
+          "chgnet": 3,
+          "m3gnet": 4,
+          "mace": 2,
+          "orb": 1
+        },
+        "bootstrap": {
+          "chgnet": {
+            "rank_median": 3.0,
+            "rank_ci95": [
+              3.0,
+              3.0
+            ],
+            "metric_median": 2.9910761685147906,
+            "metric_ci95": [
+              2.940826956470173,
+              3.0406507535089737
+            ]
+          },
+          "m3gnet": {
+            "rank_median": 4.0,
+            "rank_ci95": [
+              4.0,
+              4.0
+            ],
+            "metric_median": 2.333505638729278,
+            "metric_ci95": [
+              2.298937107384716,
+              2.367507845712755
+            ]
+          },
+          "mace": {
+            "rank_median": 2.0,
+            "rank_ci95": [
+              2.0,
+              2.0
+            ],
+            "metric_median": 3.988887040229513,
+            "metric_ci95": [
+              3.91708634694498,
+              4.060182817108697
+            ]
+          },
+          "orb": {
+            "rank_median": 1.0,
+            "rank_ci95": [
+              1.0,
+              1.0
+            ],
+            "metric_median": 4.392382571799209,
+            "metric_ci95": [
+              4.306916771098294,
+              4.473831378153505
+            ]
+          }
+        },
+        "kendall_tau_vs_full": 1.0,
+        "n": 34655
+      }
+    }
+  },
+  "reorder_findings_ci_supported": [],
+  "kendall_tau_summary": {
+    "f1": {
+      "unique_prototype": 1.0,
+      "round_1": 1.0,
+      "round_2": 1.0,
+      "round_3": 1.0,
+      "round_4": 1.0,
+      "round_5": 1.0,
+      "family_binary": 1.0,
+      "family_ternary": 1.0,
+      "family_quaternary+": 1.0
+    },
+    "daf": {
+      "unique_prototype": 1.0,
+      "round_1": 1.0,
+      "round_2": 1.0,
+      "round_3": 1.0,
+      "round_4": 1.0,
+      "round_5": 1.0,
+      "family_binary": 1.0,
+      "family_ternary": 1.0,
+      "family_quaternary+": 1.0
+    }
+  }
+}

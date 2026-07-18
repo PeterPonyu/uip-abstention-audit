@@ -1,0 +1,24 @@
+{
+  "cmd": "/home/zeyufu/miniconda3/envs/dl/bin/python research/results/MT29/mt29_stage1_altstrat.py --stratifier metal_fraction",
+  "script_sha256": "8579b9a152ca8de51689e9ff082e12771a716695663ec9bec51270abd820e7df",
+  "git_head": "66f078c78d1d27783383e7f3da104297a4099cad",
+  "seed": 20260621,
+  "n_boot": 1000,
+  "n_boot_hires": 10000,
+  "stratifier": "metal_fraction",
+  "inputs": {
+    "2023-12-13-wbm-summary.csv.gz": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+    "chgnet_pred.csv": "d84578eb02843a3f468760d01320671433867b35e969b5aa0f2b98d3293b444e",
+    "m3gnet_pred.csv": "8c4e136bf1b8e577973ba05dccafabda47dbc3b448b13ed6874484b25e028737",
+    "mace_pred.csv": "d37eed9ec6a5ee0e9993de2009ee177e3bacffffb7f1dd922fc7d786a38753d2",
+    "orb_pred.csv": "9df863e74a88cd89e234ab1f5bec02d3b226fb908f92278c7d8eb423ca53ac76"
+  },
+  "output_sha256": "755c5f489413654ebdcd83bea838ee5af4566b7649dcade93fd3d63af5344d53",
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "pymatgen": "2026.5.4"
+  },
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39"
+}

@@ -1,0 +1,130 @@
+{
+  "chgnet": {
+    "cov_70": {
+      "margin_precision": 0.70283,
+      "iso_precision": 0.92387,
+      "log_precision": 0.92555,
+      "iso_gain": 0.22105,
+      "iso_gain_ci95": [
+        0.21073,
+        0.23085
+      ],
+      "log_gain": 0.22272,
+      "log_gain_ci95": [
+        0.21205,
+        0.23221
+      ]
+    },
+    "cov_90": {
+      "margin_precision": 0.57435,
+      "iso_precision": 0.54149,
+      "log_precision": 0.4827,
+      "iso_gain": -0.03285,
+      "iso_gain_ci95": [
+        -0.03938,
+        -0.02689
+      ],
+      "log_gain": -0.09164,
+      "log_gain_ci95": [
+        -0.09752,
+        -0.08583
+      ]
+    }
+  },
+  "m3gnet": {
+    "cov_70": {
+      "margin_precision": 0.58755,
+      "iso_precision": 0.39038,
+      "log_precision": 0.82331,
+      "iso_gain": -0.19716,
+      "iso_gain_ci95": [
+        -0.28735,
+        -0.10635
+      ],
+      "log_gain": 0.23576,
+      "log_gain_ci95": [
+        0.22031,
+        0.24965
+      ]
+    },
+    "cov_90": {
+      "margin_precision": 0.49149,
+      "iso_precision": 0.42314,
+      "log_precision": 0.38087,
+      "iso_gain": -0.06835,
+      "iso_gain_ci95": [
+        -0.07332,
+        -0.06417
+      ],
+      "log_gain": -0.11062,
+      "log_gain_ci95": [
+        -0.11474,
+        -0.10628
+      ]
+    }
+  },
+  "mace": {
+    "cov_70": {
+      "margin_precision": 0.95094,
+      "iso_precision": 0.94485,
+      "log_precision": 0.95291,
+      "iso_gain": -0.00609,
+      "iso_gain_ci95": [
+        -0.03614,
+        0.01931
+      ],
+      "log_gain": 0.00197,
+      "log_gain_ci95": [
+        -0.00092,
+        0.0048
+      ]
+    },
+    "cov_90": {
+      "margin_precision": 0.91169,
+      "iso_precision": 0.92406,
+      "log_precision": 0.94259,
+      "iso_gain": 0.01237,
+      "iso_gain_ci95": [
+        0.01032,
+        0.01449
+      ],
+      "log_gain": 0.0309,
+      "log_gain_ci95": [
+        0.02734,
+        0.03426
+      ]
+    }
+  },
+  "orb": {
+    "cov_70": {
+      "margin_precision": 0.96646,
+      "iso_precision": 0.99013,
+      "log_precision": 0.96822,
+      "iso_gain": 0.02367,
+      "iso_gain_ci95": [
+        0.01573,
+        0.03086
+      ],
+      "log_gain": 0.00176,
+      "log_gain_ci95": [
+        -0.00035,
+        0.00383
+      ]
+    },
+    "cov_90": {
+      "margin_precision": 0.95695,
+      "iso_precision": 0.94933,
+      "log_precision": 0.96199,
+      "iso_gain": -0.00762,
+      "iso_gain_ci95": [
+        -0.00941,
+        -0.00599
+      ],
+      "log_gain": 0.00504,
+      "log_gain_ci95": [
+        0.0033,
+        0.00676
+      ]
+    }
+  }
+}

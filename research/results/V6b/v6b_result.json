@@ -1,0 +1,31 @@
+{
+  "experiment": "V6b_per_model_disagreement_and_routing",
+  "n": 256963,
+  "per_model": [
+    {
+      "model": "mace",
+      "MAE": 0.0292,
+      "spearman_disagree_err": 0.3839
+    },
+    {
+      "model": "chgnet",
+      "MAE": 0.0611,
+      "spearman_disagree_err": 0.7105
+    },
+    {
+      "model": "m3gnet",
+      "MAE": 0.0726,
+      "spearman_disagree_err": 0.7874
+    },
+    {
+      "model": "orb",
+      "MAE": 0.0285,
+      "spearman_disagree_err": 0.4221
+    }
+  ],
+  "best_single_MAE": 0.0285,
+  "ensemble_mean_MAE": 0.039,
+  "consensus_closest_routing_MAE": 0.042,
+  "routing_beats_best_single": false,
+  "routing_beats_ensemble_mean": false
+}

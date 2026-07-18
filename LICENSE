@@ -1,0 +1,34 @@
+MIT License
+
+Copyright (c) 2026 ZeyuFu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON DATA LICENSING (the MIT license above covers this repository's CODE only):
+
+The input data are NOT part of this repository and are NOT covered by this
+license. All experiments consume frozen Matbench Discovery model predictions and
+the WBM summary (ground truth), downloaded from the project's public Figshare
+mirror (https://matbench-discovery.materialsproject.org/). Those artifacts carry
+the Matbench Discovery / Materials Project upstream licenses and terms; reusers
+must obtain them from the upstream source (see DATA_MANIFEST.md for exact files
+and SHA-256 checksums) and comply with the upstream license. No third-party data
+are redistributed here.

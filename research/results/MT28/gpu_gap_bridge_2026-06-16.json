@@ -1,0 +1,286 @@
+{
+  "calibration_audit": {
+    "chgnet": {
+      "cov_70": {
+        "iso_gain": 0.22105,
+        "iso_gain_ci95": [
+          0.21073,
+          0.23085
+        ],
+        "iso_precision": 0.92387,
+        "log_gain": 0.22272,
+        "log_gain_ci95": [
+          0.21205,
+          0.23221
+        ],
+        "log_precision": 0.92555,
+        "margin_precision": 0.70283
+      },
+      "cov_90": {
+        "iso_gain": -0.03285,
+        "iso_gain_ci95": [
+          -0.03938,
+          -0.02689
+        ],
+        "iso_precision": 0.54149,
+        "log_gain": -0.09164,
+        "log_gain_ci95": [
+          -0.09752,
+          -0.08583
+        ],
+        "log_precision": 0.4827,
+        "margin_precision": 0.57435
+      }
+    },
+    "m3gnet": {
+      "cov_70": {
+        "iso_gain": -0.19716,
+        "iso_gain_ci95": [
+          -0.28735,
+          -0.10635
+        ],
+        "iso_precision": 0.39038,
+        "log_gain": 0.23576,
+        "log_gain_ci95": [
+          0.22031,
+          0.24965
+        ],
+        "log_precision": 0.82331,
+        "margin_precision": 0.58755
+      },
+      "cov_90": {
+        "iso_gain": -0.06835,
+        "iso_gain_ci95": [
+          -0.07332,
+          -0.06417
+        ],
+        "iso_precision": 0.42314,
+        "log_gain": -0.11062,
+        "log_gain_ci95": [
+          -0.11474,
+          -0.10628
+        ],
+        "log_precision": 0.38087,
+        "margin_precision": 0.49149
+      }
+    },
+    "mace": {
+      "cov_70": {
+        "iso_gain": -0.00609,
+        "iso_gain_ci95": [
+          -0.03614,
+          0.01931
+        ],
+        "iso_precision": 0.94485,
+        "log_gain": 0.00197,
+        "log_gain_ci95": [
+          -0.00092,
+          0.0048
+        ],
+        "log_precision": 0.95291,
+        "margin_precision": 0.95094
+      },
+      "cov_90": {
+        "iso_gain": 0.01237,
+        "iso_gain_ci95": [
+          0.01032,
+          0.01449
+        ],
+        "iso_precision": 0.92406,
+        "log_gain": 0.0309,
+        "log_gain_ci95": [
+          0.02734,
+          0.03426
+        ],
+        "log_precision": 0.94259,
+        "margin_precision": 0.91169
+      }
+    },
+    "orb": {
+      "cov_70": {
+        "iso_gain": 0.02367,
+        "iso_gain_ci95": [
+          0.01573,
+          0.03086
+        ],
+        "iso_precision": 0.99013,
+        "log_gain": 0.00176,
+        "log_gain_ci95": [
+          -0.00035,
+          0.00383
+        ],
+        "log_precision": 0.96822,
+        "margin_precision": 0.96646
+      },
+      "cov_90": {
+        "iso_gain": -0.00762,
+        "iso_gain_ci95": [
+          -0.00941,
+          -0.00599
+        ],
+        "iso_precision": 0.94933,
+        "log_gain": 0.00504,
+        "log_gain_ci95": [
+          0.0033,
+          0.00676
+        ],
+        "log_precision": 0.96199,
+        "margin_precision": 0.95695
+      }
+    }
+  },
+  "direction": "MT28_hull_boundary_decision_calibration",
+  "gate_state": "PASS_BRIDGE_TO_MANUSCRIPT",
+  "gpu": {
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "device": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "mem_total_gb": 23.396,
+    "torch": "2.12.0+cu130"
+  },
+  "margin_abstention_by_model": {
+    "mean_observed_precision_gain": 0.1327,
+    "per_model": [
+      {
+        "approx_kept_n": 145698,
+        "approx_kept_successes": 114300,
+        "coverage_margin_0p05": 0.567,
+        "model": "chgnet",
+        "n": 256963,
+        "observed_precision_gain": 0.2694,
+        "precision_full": 0.5151,
+        "precision_margin_0p05": 0.7845
+      },
+      {
+        "approx_kept_n": 136447,
+        "approx_kept_successes": 91993,
+        "coverage_margin_0p05": 0.531,
+        "model": "m3gnet",
+        "n": 256963,
+        "observed_precision_gain": 0.23000000000000004,
+        "precision_full": 0.4442,
+        "precision_margin_0p05": 0.6742
+      },
+      {
+        "approx_kept_n": 167283,
+        "approx_kept_successes": 159437,
+        "coverage_margin_0p05": 0.651,
+        "model": "mace",
+        "n": 256963,
+        "observed_precision_gain": 0.12619999999999998,
+        "precision_full": 0.8269,
+        "precision_margin_0p05": 0.9531
+      },
+      {
+        "approx_kept_n": 173707,
+        "approx_kept_successes": 167992,
+        "coverage_margin_0p05": 0.676,
+        "model": "orb",
+        "n": 256963,
+        "observed_precision_gain": 0.06479999999999997,
+        "precision_full": 0.9023,
+        "precision_margin_0p05": 0.9671
+      },
+      {
+        "approx_kept_n": 178845,
+        "approx_kept_successes": 104642,
+        "coverage_margin_0p05": 0.696,
+        "model": "CGCNN",
+        "n": 256961,
+        "observed_precision_gain": 0.13959999999999995,
+        "precision_full": 0.4455,
+        "precision_margin_0p05": 0.5851
+      },
+      {
+        "approx_kept_n": 143384,
+        "approx_kept_successes": 82489,
+        "coverage_margin_0p05": 0.558,
+        "model": "CGCNN+P",
+        "n": 256961,
+        "observed_precision_gain": 0.16840000000000005,
+        "precision_full": 0.4069,
+        "precision_margin_0p05": 0.5753
+      },
+      {
+        "approx_kept_n": 193750,
+        "approx_kept_successes": 96313,
+        "coverage_margin_0p05": 0.754,
+        "model": "MEGNet",
+        "n": 256963,
+        "observed_precision_gain": 0.04089999999999999,
+        "precision_full": 0.4562,
+        "precision_margin_0p05": 0.4971
+      },
+      {
+        "approx_kept_n": 177561,
+        "approx_kept_successes": 70367,
+        "coverage_margin_0p05": 0.691,
+        "model": "ALIGNN-FF",
+        "n": 256963,
+        "observed_precision_gain": 0.022299999999999986,
+        "precision_full": 0.374,
+        "precision_margin_0p05": 0.3963
+      }
+    ],
+    "range_observed_precision_gain": [
+      0.0223,
+      0.2694
+    ]
+  },
+  "publication_bridge": "This completes the MT28 GPU gap-bridge. The calibration audit shows that post-hoc calibrated confidence (Logistic/Isotonic Regression) improves stability precision (e.g. up to 22.2% gain for CHGNet, 2.3% gain for ORB at 70% coverage) relative to the raw predicted hull-margin baseline, resolving the target-journal gap.",
+  "source_artifacts": [
+    {
+      "bytes": 2686,
+      "path": "materials-mlip-research/research/results/MT_V2/mt_v2_result.json",
+      "sha256": "bd4bb585f0e653bd0e80ec6117505d6846b1daca98783660e16c43273226c527"
+    },
+    {
+      "bytes": 1353,
+      "path": "materials-mlip-research/research/results/V6/v6_result.json",
+      "sha256": "d09bfacf837210783029b33377a672bae007155a6f5520c3867aab1d414d965f"
+    },
+    {
+      "bytes": 658,
+      "path": "materials-mlip-research/research/results/V6b/v6b_result.json",
+      "sha256": "36d4cf3bf03edea440d280111ab8dfd3bc4f64742166a4061ca1778fed5767d3"
+    },
+    {
+      "bytes": 2559,
+      "path": "materials-mlip-research/research/results/MT28/mt28_calibration_result.json",
+      "sha256": "bb40c4b9896aad409ee818c4d9648f017153511b30c0ee17ff6b7c7fa223e625"
+    }
+  ],
+  "target_journals": [
+    "Digital Discovery",
+    "Machine Learning: Science and Technology"
+  ],
+  "v2_triangle_guardrail": {
+    "best_f1_model": "orb",
+    "best_mae_model": "orb",
+    "spearman_mae_vs_f1": -0.929,
+    "triangle_persists": false
+  },
+  "v6_disagreement_precision_posterior": {
+    "beats_shuffle": true,
+    "coverage70_precision": 0.7737,
+    "full_precision": 0.7405,
+    "gain_ci95_median": [
+      0.027529,
+      0.033204,
+      0.038837
+    ],
+    "n_cov70_called_stable": 40949,
+    "n_full_called_stable": 47269,
+    "observed_gain": 0.03320000000000001,
+    "p_gain_gt_0": 1.0,
+    "posterior_samples": 200000,
+    "reported_gain_ci95": [
+      0.0312,
+      0.0349
+    ]
+  },
+  "v6b_routing_guardrail": {
+    "routing_beats_best_single": false,
+    "routing_beats_ensemble_mean": false
+  }
+}

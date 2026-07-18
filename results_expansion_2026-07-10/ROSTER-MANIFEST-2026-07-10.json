@@ -1,0 +1,213 @@
+{
+  "generated_utc": "2026-07-10T15:16:54.700053+00:00",
+  "purpose": "Roster validation for MT29 5-UIP expansion (sessions 4c/4d). Every pred CSV: exactly 256963 data rows, schema material_id,e_form_pred, full sha256. new_inhouse block also records the diagnosed anion-referenced formation-energy offset vs corrected ground truth (see POST-ANALYSIS-2026-07-10.md).",
+  "wbm_ground_truth_n": 256963,
+  "schema_required": "material_id,e_form_pred",
+  "n_data_rows_required": 256963,
+  "legacy_2023_24": {
+    "chgnet": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/chgnet_pred.csv",
+      "sha256": "d84578eb02843a3f468760d01320671433867b35e969b5aa0f2b98d3293b444e",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true
+    },
+    "m3gnet": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/m3gnet_pred.csv",
+      "sha256": "8c4e136bf1b8e577973ba05dccafabda47dbc3b448b13ed6874484b25e028737",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true
+    },
+    "mace": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/mace_pred.csv",
+      "sha256": "d37eed9ec6a5ee0e9993de2009ee177e3bacffffb7f1dd922fc7d786a38753d2",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true
+    },
+    "orb": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/orb_pred.csv",
+      "sha256": "9df863e74a88cd89e234ab1f5bec02d3b226fb908f92278c7d8eb423ca53ac76",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true
+    }
+  },
+  "new_inhouse_4c4d": {
+    "mace_mp_0": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/mace_mp_0_pred.csv",
+      "sha256": "b55baabe81d6637957a28c4285cd6dfbbad241baf62043de553738d8dec42342",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true,
+      "formation_energy_offset_vs_corrected_truth": {
+        "oxide": {
+          "n": 25020,
+          "mean_err_eV_atom": 0.5919,
+          "median_err_eV_atom": 0.5175
+        },
+        "intermetallic": {
+          "n": 119012,
+          "mean_err_eV_atom": 0.1056,
+          "median_err_eV_atom": 0.0468
+        },
+        "chalcogenide": {
+          "n": 23847,
+          "mean_err_eV_atom": 0.3375,
+          "median_err_eV_atom": 0.2877
+        },
+        "halide": {
+          "n": 26523,
+          "mean_err_eV_atom": 0.4379,
+          "median_err_eV_atom": 0.3973
+        },
+        "pnictide": {
+          "n": 34614,
+          "mean_err_eV_atom": 0.1568,
+          "median_err_eV_atom": 0.1071
+        },
+        "other": {
+          "n": 27947,
+          "mean_err_eV_atom": 0.118,
+          "median_err_eV_atom": 0.0606
+        }
+      }
+    },
+    "mattersim": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/mattersim_pred.csv",
+      "sha256": "8ab571a4b0aa9ca23e8eeab18e0c7519853817b93627ae0048077b5e98439016",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true,
+      "formation_energy_offset_vs_corrected_truth": {
+        "oxide": {
+          "n": 25020,
+          "mean_err_eV_atom": 0.5904,
+          "median_err_eV_atom": 0.5192
+        },
+        "intermetallic": {
+          "n": 119012,
+          "mean_err_eV_atom": 0.1408,
+          "median_err_eV_atom": 0.0708
+        },
+        "chalcogenide": {
+          "n": 23847,
+          "mean_err_eV_atom": 0.3525,
+          "median_err_eV_atom": 0.3028
+        },
+        "halide": {
+          "n": 26523,
+          "mean_err_eV_atom": 0.4369,
+          "median_err_eV_atom": 0.3947
+        },
+        "pnictide": {
+          "n": 34614,
+          "mean_err_eV_atom": 0.188,
+          "median_err_eV_atom": 0.1284
+        },
+        "other": {
+          "n": 27947,
+          "mean_err_eV_atom": 0.1433,
+          "median_err_eV_atom": 0.0804
+        }
+      }
+    },
+    "sevennet_mf_ompa": {
+      "path": "results_expansion_2026-07-10/pulled/extracted_4c/root/mt_uip/sevennet_mf_ompa_pred.csv",
+      "sha256": "47365965ca2028989a1689426370cc26b1106129ee443ca64df17a975519a942",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true,
+      "formation_energy_offset_vs_corrected_truth": {
+        "oxide": {
+          "n": 25020,
+          "mean_err_eV_atom": 0.5995,
+          "median_err_eV_atom": 0.5268
+        },
+        "intermetallic": {
+          "n": 119012,
+          "mean_err_eV_atom": 0.1067,
+          "median_err_eV_atom": 0.0468
+        },
+        "chalcogenide": {
+          "n": 23847,
+          "mean_err_eV_atom": 0.339,
+          "median_err_eV_atom": 0.2877
+        },
+        "halide": {
+          "n": 26523,
+          "mean_err_eV_atom": 0.4415,
+          "median_err_eV_atom": 0.3994
+        },
+        "pnictide": {
+          "n": 34614,
+          "mean_err_eV_atom": 0.1594,
+          "median_err_eV_atom": 0.1072
+        },
+        "other": {
+          "n": 27947,
+          "mean_err_eV_atom": 0.1216,
+          "median_err_eV_atom": 0.063
+        }
+      }
+    },
+    "orb_v3": {
+      "path": "results_expansion_2026-07-10/pulled_4d/root/mt_uip/orb_v3_pred.csv",
+      "sha256": "5be8102c4be9fb6578d3995ac8e4fc7ba23f35cf41dff6b429fa5f705d8b25b8",
+      "n_data_rows": 256963,
+      "header": "material_id,e_form_pred",
+      "rows_ok": true,
+      "schema_ok": true,
+      "VALID": true,
+      "formation_energy_offset_vs_corrected_truth": {
+        "oxide": {
+          "n": 25020,
+          "mean_err_eV_atom": 0.5857,
+          "median_err_eV_atom": 0.5323
+        },
+        "intermetallic": {
+          "n": 119012,
+          "mean_err_eV_atom": 0.167,
+          "median_err_eV_atom": 0.1525
+        },
+        "chalcogenide": {
+          "n": 23847,
+          "mean_err_eV_atom": 0.3635,
+          "median_err_eV_atom": 0.3375
+        },
+        "halide": {
+          "n": 26523,
+          "mean_err_eV_atom": 0.4579,
+          "median_err_eV_atom": 0.4344
+        },
+        "pnictide": {
+          "n": 34614,
+          "mean_err_eV_atom": 0.1691,
+          "median_err_eV_atom": 0.1622
+        },
+        "other": {
+          "n": 27947,
+          "mean_err_eV_atom": 0.1355,
+          "median_err_eV_atom": 0.1159
+        }
+      }
+    }
+  },
+  "ALL_VALID": true,
+  "n_csvs": 8
+}

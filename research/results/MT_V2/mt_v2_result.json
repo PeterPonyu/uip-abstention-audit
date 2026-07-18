@@ -1,0 +1,130 @@
+{
+  "experiment": "MT_V2_modern_UIP_triangle",
+  "spearman_MAE_vs_F1": -0.929,
+  "note": "rho should be -1 (low MAE -> high F1) if regression predicts decision quality; rho>=0 = triangle persists",
+  "best_MAE_model": "orb",
+  "best_F1_model": "orb",
+  "triangle_persists": false,
+  "models": [
+    {
+      "model": "chgnet",
+      "n": 256963,
+      "MAE_form": 0.0611,
+      "F1": 0.6099,
+      "F1_CI": [
+        0.6064,
+        0.6133
+      ],
+      "precision": 0.5151,
+      "recall": 0.7475,
+      "FPR": 0.1408,
+      "precision_abstain@0.05": 0.7845,
+      "abstain_cov": 0.567
+    },
+    {
+      "model": "m3gnet",
+      "n": 256963,
+      "MAE_form": 0.0726,
+      "F1": 0.5734,
+      "F1_CI": [
+        0.5698,
+        0.5767
+      ],
+      "precision": 0.4442,
+      "recall": 0.8084,
+      "FPR": 0.2023,
+      "precision_abstain@0.05": 0.6742,
+      "abstain_cov": 0.531
+    },
+    {
+      "model": "mace",
+      "n": 256963,
+      "MAE_form": 0.0292,
+      "F1": 0.8339,
+      "F1_CI": [
+        0.8313,
+        0.8365
+      ],
+      "precision": 0.8269,
+      "recall": 0.8409,
+      "FPR": 0.0352,
+      "precision_abstain@0.05": 0.9531,
+      "abstain_cov": 0.651
+    },
+    {
+      "model": "orb",
+      "n": 256963,
+      "MAE_form": 0.0285,
+      "F1": 0.8596,
+      "F1_CI": [
+        0.8568,
+        0.8622
+      ],
+      "precision": 0.9023,
+      "recall": 0.8208,
+      "FPR": 0.0178,
+      "precision_abstain@0.05": 0.9671,
+      "abstain_cov": 0.676
+    },
+    {
+      "model": "CGCNN",
+      "n": 256961,
+      "MAE_form": 0.135,
+      "F1": 0.5089,
+      "F1_CI": [
+        0.5052,
+        0.5129
+      ],
+      "precision": 0.4455,
+      "recall": 0.5934,
+      "FPR": 0.1477,
+      "precision_abstain@0.05": 0.5851,
+      "abstain_cov": 0.696
+    },
+    {
+      "model": "CGCNN+P",
+      "n": 256961,
+      "MAE_form": 0.1083,
+      "F1": 0.5083,
+      "F1_CI": [
+        0.5047,
+        0.5121
+      ],
+      "precision": 0.4069,
+      "recall": 0.6769,
+      "FPR": 0.1973,
+      "precision_abstain@0.05": 0.5753,
+      "abstain_cov": 0.558
+    },
+    {
+      "model": "MEGNet",
+      "n": 256963,
+      "MAE_form": 0.1282,
+      "F1": 0.5105,
+      "F1_CI": [
+        0.5066,
+        0.5141
+      ],
+      "precision": 0.4562,
+      "recall": 0.5794,
+      "FPR": 0.1381,
+      "precision_abstain@0.05": 0.4971,
+      "abstain_cov": 0.754
+    },
+    {
+      "model": "ALIGNN-FF",
+      "n": 256963,
+      "MAE_form": 0.1404,
+      "F1": 0.4914,
+      "F1_CI": [
+        0.488,
+        0.4945
+      ],
+      "precision": 0.374,
+      "recall": 0.7163,
+      "FPR": 0.2398,
+      "precision_abstain@0.05": 0.3963,
+      "abstain_cov": 0.691
+    }
+  ]
+}

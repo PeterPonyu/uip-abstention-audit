@@ -1,0 +1,186 @@
+{
+  "daf_interactions": {
+    "family": [
+      {
+        "model": "chgnet",
+        "A": "binary",
+        "B": "ternary",
+        "med": 0.8088,
+        "ci": [
+          0.6139,
+          1.0061
+        ],
+        "excl0": true
+      },
+      {
+        "model": "chgnet",
+        "A": "binary",
+        "B": "quaternary+",
+        "med": 1.5733,
+        "ci": [
+          1.366,
+          1.7902
+        ],
+        "excl0": true
+      },
+      {
+        "model": "chgnet",
+        "A": "ternary",
+        "B": "quaternary+",
+        "med": 0.7659,
+        "ci": [
+          0.6744,
+          0.8577
+        ],
+        "excl0": true
+      },
+      {
+        "model": "m3gnet",
+        "A": "binary",
+        "B": "ternary",
+        "med": 0.2136,
+        "ci": [
+          0.075,
+          0.3448
+        ],
+        "excl0": true
+      },
+      {
+        "model": "m3gnet",
+        "A": "binary",
+        "B": "quaternary+",
+        "med": 1.0958,
+        "ci": [
+          0.9457,
+          1.2363
+        ],
+        "excl0": true
+      },
+      {
+        "model": "m3gnet",
+        "A": "ternary",
+        "B": "quaternary+",
+        "med": 0.8833,
+        "ci": [
+          0.8118,
+          0.9485
+        ],
+        "excl0": true
+      },
+      {
+        "model": "mace",
+        "A": "binary",
+        "B": "ternary",
+        "med": 0.3289,
+        "ci": [
+          0.1908,
+          0.4824
+        ],
+        "excl0": true
+      },
+      {
+        "model": "mace",
+        "A": "binary",
+        "B": "quaternary+",
+        "med": 0.6447,
+        "ci": [
+          0.4836,
+          0.8088
+        ],
+        "excl0": true
+      },
+      {
+        "model": "mace",
+        "A": "ternary",
+        "B": "quaternary+",
+        "med": 0.3185,
+        "ci": [
+          0.243,
+          0.3941
+        ],
+        "excl0": true
+      },
+      {
+        "model": "orb",
+        "A": "binary",
+        "B": "ternary",
+        "med": 0.0997,
+        "ci": [
+          -0.0285,
+          0.212
+        ],
+        "excl0": false
+      },
+      {
+        "model": "orb",
+        "A": "binary",
+        "B": "quaternary+",
+        "med": 0.1246,
+        "ci": [
+          -0.0121,
+          0.2451
+        ],
+        "excl0": false
+      },
+      {
+        "model": "orb",
+        "A": "ternary",
+        "B": "quaternary+",
+        "med": 0.0234,
+        "ci": [
+          -0.0306,
+          0.0781
+        ],
+        "excl0": false
+      }
+    ],
+    "unique_prototype": [
+      {
+        "model": "chgnet",
+        "A": "unique=True",
+        "B": "unique=False",
+        "med": 0.9015,
+        "ci": [
+          0.8321,
+          0.9636
+        ],
+        "excl0": true
+      },
+      {
+        "model": "m3gnet",
+        "A": "unique=True",
+        "B": "unique=False",
+        "med": 0.7303,
+        "ci": [
+          0.6732,
+          0.7868
+        ],
+        "excl0": true
+      },
+      {
+        "model": "mace",
+        "A": "unique=True",
+        "B": "unique=False",
+        "med": -0.2828,
+        "ci": [
+          -0.3384,
+          -0.2313
+        ],
+        "excl0": true
+      },
+      {
+        "model": "orb",
+        "A": "unique=True",
+        "B": "unique=False",
+        "med": -0.117,
+        "ci": [
+          -0.1621,
+          -0.0753
+        ],
+        "excl0": true
+      }
+    ]
+  },
+  "n_sig": 13,
+  "n_tot": 16
+}

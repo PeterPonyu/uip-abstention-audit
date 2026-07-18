@@ -1,0 +1,394 @@
+% Paper-specific references for the MT29 manuscript.
+% Keys are disjoint from reliability-commons/shared.bib (which supplies
+% batatia2022mace and the conformal/selective-classification literature).
+% Entries below carry over the venue/volume/page data from the manuscript's
+% previous inline thebibliography (vetted there); fields not present in that
+% bibliography are omitted rather than guessed.
+% Live-verified 2026-07-16 (arXiv API / Crossref / publisher pages) against
+% the review directive's reference-verification requirement; every field
+% below traces to a resolved source, none fabricated or guessed.
+
+@article{riebesell2025,
+  title   = {{Matbench Discovery} -- A framework to evaluate machine learning crystal stability predictions},
+  author  = {Riebesell, Janosh and Goodall, Rhys E. A. and Benner, Philipp and Chiang, Yuan and Deng, Bowen and Ceder, Gerbrand and Asta, Mark and Lee, Alpha A. and Jain, Anubhav and Persson, Kristin A.},
+  journal = {Nature Machine Intelligence},
+  volume  = {7},
+  number  = {6},
+  pages   = {836--847},
+  year    = {2025},
+  doi     = {10.1038/s42256-025-01055-1},
+}
+
+@article{wang2021,
+  title   = {Predicting stable crystalline compounds using chemical similarity},
+  author  = {Wang, Hai-Chen and Botti, Silvana and Marques, Miguel A. L.},
+  journal = {npj Computational Materials},
+  volume  = {7},
+  pages   = {12},
+  year    = {2021},
+  doi     = {10.1038/s41524-020-00481-6},
+}
+
+@article{deng2023,
+  title   = {{CHGNet} as a pretrained universal neural network potential for charge-informed atomistic modelling},
+  author  = {Deng, Bowen and Zhong, Peichen and Jun, KyuJung and Riebesell, Janosh and Han, Kevin and Bartel, Christopher J. and Ceder, Gerbrand},
+  journal = {Nature Machine Intelligence},
+  volume  = {5},
+  pages   = {1031--1041},
+  year    = {2023},
+  doi     = {10.1038/s42256-023-00716-3},
+}
+
+@article{chen2022,
+  title   = {A universal graph deep learning interatomic potential for the periodic table},
+  author  = {Chen, Chi and Ong, Shyue Ping},
+  journal = {Nature Computational Science},
+  volume  = {2},
+  pages   = {718--728},
+  year    = {2022},
+  doi     = {10.1038/s43588-022-00349-3},
+}
+
+@misc{neumann2024,
+  title         = {{Orb}: A fast, scalable neural network potential},
+  author        = {Neumann, Mark and Gin, James and Rhodes, Benjamin and Bennett, Steven and Li, Zhiyi and Choubisa, Hitarth and Hussey, Arthur and Godwin, Jonathan},
+  howpublished  = {arXiv:2410.22570},
+  year          = {2024},
+}
+
+@misc{pcm2026,
+  title         = {{Proof-Carrying Materials}: Falsifiable safety certificates for machine-learned interatomic potentials},
+  author        = {Basu, Abhinaba and Chakraborty, Pavan},
+  howpublished  = {arXiv:2603.12183 (v2)},
+  year          = {2026},
+}
+
+@article{beck2025,
+  title   = {Multi-head committees enable direct uncertainty prediction for atomistic foundation models},
+  author  = {Beck, Hubert and Simko, Pavol and Schaaf, Lars L. and Marsalek, Ondrej and Schran, Christoph},
+  journal = {The Journal of Chemical Physics},
+  volume  = {163},
+  number  = {23},
+  pages   = {234103},
+  year    = {2025},
+  doi     = {10.1063/5.0302097},
+  note    = {arXiv:2508.09907},
+}
+
+@misc{probe2026,
+  key           = {PROBE},
+  title         = {Knowing when to trust machine-learned interatomic potentials},
+  author        = {Mehdi, Shams and Cho, Ilkwon and Isayev, Olexandr},
+  howpublished  = {arXiv:2605.00640},
+  year          = {2026},
+}
+
+% Roster-expansion model papers (modern/OAM-era UIPs; deferred arm, see text)
+@misc{yang2024mattersim,
+  title         = {{MatterSim}: A deep learning atomistic model across elements, temperatures and pressures},
+  author        = {Yang, Han and Hu, Chenxi and Zhou, Yichi and Liu, Xixian and Shi, Yu and Li, Jielan and Li, Guanzhi and Chen, Zekun and Chen, Shuizhou and Zeni, Claudio and Horton, Matthew and Pinsler, Robert and Fowler, Andrew and Z{\"u}gner, Daniel and Xie, Tian and Smith, Jake and Sun, Lixin and Wang, Qian and Kong, Lingyu and Liu, Chang and Hao, Hongxia and Lu, Ziheng},
+  howpublished  = {arXiv:2405.04967},
+  year          = {2024},
+}
+
+@misc{rhodes2025orbv3,
+  title         = {{Orb-v3}: atomistic simulation at scale},
+  author        = {Rhodes, Benjamin and Vandenhaute, Sander and {\v{S}}imkus, Vaidotas and Gin, James and Godwin, Jonathan and Duignan, Tim and Neumann, Mark},
+  howpublished  = {arXiv:2504.06231},
+  year          = {2025},
+}
+
+@article{park2024sevennet,
+  title   = {Scalable parallel algorithm for graph neural network interatomic potentials in molecular dynamics simulations},
+  author  = {Park, Yutack and Kim, Jaesun and Hwang, Seungwoo and Han, Seungwu},
+  journal = {Journal of Chemical Theory and Computation},
+  volume  = {20},
+  number  = {11},
+  pages   = {4857--4868},
+  year    = {2024},
+  doi     = {10.1021/acs.jctc.4c00190},
+}
+
+@misc{sevennet,
+  title         = {{SevenNet}: scalable equivariant interatomic potentials (SevenNet-MF-ompa checkpoint)},
+  author        = {{MDIL-SNU}},
+  howpublished  = {\url{https://github.com/MDIL-SNU/SevenNet}},
+  year          = {2025},
+}
+
+% ---- DFT oxide-chemistry seams behind the oxide error dominance (verified 2026-07-11) ----
+@article{wang2006oxidation,
+  title   = {Oxidation energies of transition metal oxides within the {GGA}$+U$ framework},
+  author  = {Wang, Lei and Maxisch, Thomas and Ceder, Gerbrand},
+  journal = {Physical Review B},
+  volume  = {73},
+  number  = {19},
+  pages   = {195107},
+  year    = {2006},
+  doi     = {10.1103/PhysRevB.73.195107},
+}
+
+@article{jain2011formation,
+  title   = {Formation enthalpies by mixing {GGA} and {GGA}$+U$ calculations},
+  author  = {Jain, Anubhav and Hautier, Geoffroy and Ong, Shyue Ping and Moore, Charles J. and Fischer, Christopher C. and Persson, Kristin A. and Ceder, Gerbrand},
+  journal = {Physical Review B},
+  volume  = {84},
+  number  = {4},
+  pages   = {045115},
+  year    = {2011},
+  doi     = {10.1103/PhysRevB.84.045115},
+}
+
+@article{wang2021mp2020,
+  title   = {A framework for quantifying uncertainty in {DFT} energy corrections},
+  author  = {Wang, Amanda and Kingsbury, Ryan and McDermott, Matthew and Horton, Matthew and Jain, Anubhav and Ong, Shyue Ping and Dwaraknath, Shyam and Persson, Kristin A.},
+  journal = {Scientific Reports},
+  volume  = {11},
+  pages   = {15496},
+  year    = {2021},
+  doi     = {10.1038/s41598-021-94550-5},
+}
+
+@article{deng2025softening,
+  title   = {Systematic softening in universal machine learning interatomic potentials},
+  author  = {Deng, Bowen and Choi, Yunyeong and Zhong, Peichen and Riebesell, Janosh and Anand, Shashwat and Li, Zhuohan and Jun, KyuJung and Persson, Kristin A. and Ceder, Gerbrand},
+  journal = {npj Computational Materials},
+  volume  = {11},
+  pages   = {9},
+  year    = {2025},
+  doi     = {10.1038/s41524-024-01500-6}
+}
+
+@article{yu2024assessment,
+  title   = {Systematic assessment of various universal machine-learning interatomic potentials},
+  author  = {Yu, Haochen and Giantomassi, Matteo and Materzanini, Giuliana and Wang, Junjie and Rignanese, Gian-Marco},
+  journal = {Materials Genome Engineering Advances},
+  volume  = {2},
+  number  = {3},
+  pages   = {e58},
+  year    = {2024},
+  doi     = {10.1002/mgea.58}
+}
+
+@article{ho2026flexcalib,
+  title   = {Flexible uncertainty calibration for machine-learned interatomic potentials},
+  author  = {Ho, Cheuk Hin and Ortner, Christoph and Wang, Yangshuai},
+  journal = {npj Computational Materials},
+  year    = {2026},
+  doi     = {10.1038/s41524-026-02080-3},
+  note    = {arXiv:2510.00721}
+}
+
+@article{perez2025uqmisspec,
+  title   = {Uncertainty quantification for misspecified machine learned interatomic potentials},
+  author  = {Perez, Danny and Subramanyam, Aparna P. A. and Maliyov, Ivan and Swinburne, Thomas D.},
+  journal = {npj Computational Materials},
+  year    = {2025},
+  doi     = {10.1038/s41524-025-01758-4},
+  note    = {arXiv:2502.07104}
+}
+
+@article{yu2026uaal,
+  title   = {Uncertainty-aware active learning reveals reliability limits in lead-free halide perovskite screening},
+  author  = {Yu, Xiyao},
+  journal = {Digital Discovery},
+  volume  = {5},
+  pages   = {2342--2352},
+  year    = {2026},
+  doi     = {10.1039/D6DD00153J}
+}
+
+% ---- Reference-list expansion, 2026-07-16 (live-verified: arXiv API / Crossref / RSC/ACS/Nature
+% publisher pages / DOI resolution). Four clusters: (1) UIP model-family source papers for the
+% 32-model roster (Table~roster) beyond the four headline architectures already cited above,
+% (2) training-corpus/database provenance for the roster's MP-vs-OMat generational split,
+% (3) multiple-testing methodology already used in text (BH-FDR, Holm), and (4) Digital
+% Discovery's own reliability-of-screening / reproducibility-methodology literature, extending
+% the existing yu2026uaal cite. Every DOI/arXiv id below was resolved live; none fabricated. ----
+
+% -- (1) UIP model-family source papers (roster architectures without a source cite above) --
+@article{nequip2022,
+  title   = {{E(3)}-equivariant graph neural networks for data-efficient and accurate interatomic potentials},
+  author  = {Batzner, Simon and Musaelian, Albert and Sun, Lixin and Geiger, Mario and Mailoa, Jonathan P. and Kornbluth, Mordechai and Molinari, Nicola and Smidt, Tess E. and Kozinsky, Boris},
+  journal = {Nature Communications},
+  volume  = {13},
+  pages   = {2453},
+  year    = {2022},
+  doi     = {10.1038/s41467-022-29939-5}
+}
+
+@article{allegro2023,
+  title   = {Learning local equivariant representations for large-scale atomistic dynamics},
+  author  = {Musaelian, Albert and Batzner, Simon and Johansson, Anders and Sun, Lixin and Owen, Cameron J. and Kornbluth, Mordechai and Kozinsky, Boris},
+  journal = {Nature Communications},
+  volume  = {14},
+  pages   = {579},
+  year    = {2023},
+  doi     = {10.1038/s41467-023-36329-y}
+}
+
+@article{grace2024,
+  title   = {Graph Atomic Cluster Expansion for Semilocal Interactions beyond Equivariant Message Passing},
+  author  = {Bochkarev, Anton and Lysogorskiy, Yury and Drautz, Ralf},
+  journal = {Physical Review X},
+  volume  = {14},
+  pages   = {021036},
+  year    = {2024},
+  doi     = {10.1103/PhysRevX.14.021036}
+}
+
+@misc{liao2024equiformerv2,
+  title         = {{EquiformerV2}: Improved Equivariant Transformer for Scaling to Higher-Degree Representations},
+  author        = {Liao, Yi-Lun and Wood, Brandon and Das, Abhishek and Smidt, Tess},
+  howpublished  = {arXiv:2306.12059; published as a conference paper at ICLR 2024},
+  year          = {2024},
+}
+
+@article{zhang2024dpa2,
+  title   = {{DPA-2}: a large atomic model as a multi-task learner},
+  author  = {Zhang, Duo and Liu, Xinzijian and Zhang, Xiangyu and Zhang, Chengqian and Cai, Chun and Bi, Hangrui and Du, Yiming and Qin, Xuejian and Peng, Anyang and Huang, Jiameng and Li, Bowen and Shan, Yifan and Zeng, Jinzhe and Zhang, Yuzhi and Liu, Siyuan and Li, Yifan and Chang, Junhan and Wang, Xinyan and Zhou, Shuo and Liu, Jianchuan and Luo, Xiaoshan and Wang, Zhenyu and Jiang, Wanrun and Wu, Jing and Yang, Yudi and Yang, Jiyuan and Yang, Manyi and Gong, Fu-Qiang and Zhang, Linshuang and Shi, Mengchao and Dai, Fu-Zhi and York, Darrin M. and Liu, Shi and Zhu, Tong and Zhong, Zhicheng and Lv, Jian and Cheng, Jun and Jia, Weile and Chen, Mohan and Ke, Guolin and E, Weinan and Zhang, Linfeng and Wang, Han},
+  journal = {npj Computational Materials},
+  volume  = {10},
+  pages   = {293},
+  year    = {2024},
+  doi     = {10.1038/s41524-024-01493-2}
+}
+
+@misc{zhang2025dpa3,
+  title         = {A Graph Neural Network for the Era of Large Atomistic Models},
+  author        = {Zhang, Duo and Peng, Anyang and Cai, Chun and Li, Wentao and Zhou, Yuanchang and Zeng, Jinzhe and Guo, Mingyu and Zhang, Chengqian and Li, Bowen and Jiang, Hong and Zhu, Tong and Jia, Weile and Zhang, Linfeng and Wang, Han},
+  howpublished  = {arXiv:2506.01686},
+  year          = {2025},
+}
+
+@inproceedings{fu2025esen,
+  title     = {Learning Smooth and Expressive Interatomic Potentials for Physical Property Prediction},
+  author    = {Fu, Xiang and Wood, Brandon M. and Barroso-Luque, Luis and Levine, Daniel S. and Gao, Meng and Dzamba, Misko and Zitnick, C. Lawrence},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {267},
+  pages     = {17875--17893},
+  year      = {2025},
+  note      = {arXiv:2502.12147; eSEN}
+}
+
+@article{yin2025alphanet,
+  title   = {{AlphaNet}: scaling up local-frame-based neural network interatomic potentials},
+  author  = {Yin, Bangchen and Wang, Jiaao and Du, Weitao and others},
+  journal = {npj Computational Materials},
+  volume  = {11},
+  pages   = {332},
+  year    = {2025},
+  doi     = {10.1038/s41524-025-01817-w},
+  note    = {arXiv:2501.07155}
+}
+
+% -- (2) Training-corpus/database provenance underlying the roster's MP-vs-OMat generational split --
+@article{jain2013mp,
+  title   = {Commentary: The {Materials Project}: A materials genome approach to accelerating materials innovation},
+  author  = {Jain, Anubhav and Ong, Shyue Ping and Hautier, Geoffroy and Chen, Wei and Richards, William Davidson and Dacek, Stephen and Cholia, Shreyas and Gunter, Dan and Skinner, David and Ceder, Gerbrand and Persson, Kristin A.},
+  journal = {APL Materials},
+  volume  = {1},
+  number  = {1},
+  pages   = {011002},
+  year    = {2013},
+  doi     = {10.1063/1.4812323}
+}
+
+@misc{barrosoluque2024omat24,
+  title         = {Open Materials 2024 ({OMat24}) Inorganic Materials Dataset and Models},
+  author        = {Barroso-Luque, Luis and Shuaibi, Muhammed and Fu, Xiang and Wood, Brandon M. and Dzamba, Misko and Gao, Meng and Rizvi, Ammar and Zitnick, C. Lawrence and Ulissi, Zachary W.},
+  howpublished  = {arXiv:2410.12771},
+  year          = {2024},
+}
+
+@article{schmidt2023alexandria,
+  title   = {Machine-Learning-Assisted Determination of the Global Zero-Temperature Phase Diagram of Materials},
+  author  = {Schmidt, Jonathan and Hoffmann, Noah and Wang, Hai-Chen and Borlido, Pedro and Carri{\c{c}}o, Pedro J. M. A. and Cerqueira, Tiago F. T. and Botti, Silvana and Marques, Miguel A. L.},
+  journal = {Advanced Materials},
+  volume  = {35},
+  number  = {22},
+  pages   = {2210788},
+  year    = {2023},
+  doi     = {10.1002/adma.202210788},
+  note    = {Alexandria database}
+}
+
+% -- (3) Multiple-testing methodology already invoked in text (BH-FDR, Holm) --
+@article{benjamini1995fdr,
+  title   = {Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing},
+  author  = {Benjamini, Yoav and Hochberg, Yosef},
+  journal = {Journal of the Royal Statistical Society: Series B (Methodological)},
+  volume  = {57},
+  number  = {1},
+  pages   = {289--300},
+  year    = {1995},
+  doi     = {10.1111/j.2517-6161.1995.tb02031.x}
+}
+
+@article{holm1979,
+  title   = {A Simple Sequentially Rejective Multiple Test Procedure},
+  author  = {Holm, Sture},
+  journal = {Scandinavian Journal of Statistics},
+  volume  = {6},
+  number  = {2},
+  pages   = {65--70},
+  year    = {1979},
+  note    = {JSTOR 4615733; no resolvable DOI is registered for this article}
+}
+
+% -- (4) Digital Discovery's own reliability-of-screening / reproducibility-methodology cluster
+% (extending yu2026uaal above) --
+@article{grasselli2025uncertainty,
+  title   = {Uncertainty in the era of machine learning for atomistic modeling},
+  author  = {Grasselli, Federico and Chong, Sanggyu and Kapil, Venkat and Bonfanti, Silvia and Rossi, Kevin},
+  journal = {Digital Discovery},
+  year    = {2025},
+  doi     = {10.1039/D5DD00102A},
+  note    = {arXiv:2503.09196}
+}
+
+@article{persaud2024reproducibility,
+  title   = {Reproducibility in materials informatics: lessons from `A general-purpose machine learning framework for predicting properties of inorganic materials'},
+  author  = {Persaud, Damith and Ward, Logan and Hattrick-Simpers, Jason},
+  journal = {Digital Discovery},
+  volume  = {3},
+  number  = {2},
+  pages   = {281--286},
+  year    = {2024},
+  doi     = {10.1039/D3DD00199G}
+}
+
+@article{witman2025matfold,
+  title   = {{MatFold}: systematic insights into materials discovery models' performance through standardized cross-validation protocols},
+  author  = {Witman, Matthew D. and Schindler, Peter},
+  journal = {Digital Discovery},
+  volume  = {4},
+  number  = {3},
+  pages   = {625--635},
+  year    = {2025},
+  doi     = {10.1039/D4DD00250D}
+}
+
+@article{ottomano2024aggregation,
+  title   = {Not as simple as we thought: a rigorous examination of data aggregation in materials informatics},
+  author  = {Ottomano, Federico and De Felice, Giovanni and Gusev, Vladimir V. and Sparks, Taylor D.},
+  journal = {Digital Discovery},
+  volume  = {3},
+  number  = {2},
+  pages   = {337--346},
+  year    = {2024},
+  doi     = {10.1039/D3DD00207A}
+}
+
+@article{jiang2024autognnuq,
+  title   = {Uncertainty quantification for molecular property predictions with graph neural architecture search},
+  author  = {Jiang, Shengli and Qin, Shiyi and Van Lehn, Reid C. and Balaprakash, Prasanna and Zavala, Victor M.},
+  journal = {Digital Discovery},
+  volume  = {3},
+  number  = {8},
+  pages   = {1534--1553},
+  year    = {2024},
+  doi     = {10.1039/D4DD00088A},
+  note    = {arXiv:2307.10438; AutoGNNUQ}
+}

@@ -1,0 +1,24 @@
+{
+  "title": "materials-mlip-research: the chemistry-stratified value of selective abstention for machine-learned crystal-stability screening (MT29)",
+  "description": "Code, frozen result JSONs, and manuscript sources for a CPU-only benchmark audit of confidence-based selective abstention in machine-learned interatomic potential (UIP) crystal-stability screening, using frozen Matbench Discovery predictions from four 2023-24 UIPs (CHGNet, M3GNet, MACE, ORB) on all 256,963 WBM structures. The core finding is that the benefit of abstaining on low-confidence predictions (confidence = |predicted hull margin|) is strongly chemistry-dependent: oxides gain the most discovery acceleration factor, while halides and intermetallics gain essentially none. Controls archived here show this stratum-by-coverage interaction is not an artifact of surfaced-candidate yield (matched common-absolute-yield control, 48/60 cells CI-excluding-0), dominant elements (leave-one-element-out 12/12 splits), acquisition round, single-model quirks (committee-variance replication), or chance (all shuffle-nulls clean). A secondary result shows the native-Gaussian probability reading of the same margin is optimistic in every anion family (mean stratified calibration shortfall 0.197). The archive contains all analysis scripts, frozen result JSONs with SHA-256 run manifests (seed 20260621, n_boot=1000), R figure scripts, and the LaTeX manuscript; input prediction CSVs are external public Matbench Discovery data documented with SHA-256 hashes in DATA_MANIFEST.md.",
+  "upload_type": "software",
+  "license": "MIT",
+  "version": "0.1.0",
+  "creators": [
+    {
+      "name": "Fu, Zeyu"
+    }
+  ],
+  "keywords": [
+    "machine learning reliability",
+    "selective prediction",
+    "uncertainty quantification",
+    "machine-learned interatomic potentials",
+    "Matbench Discovery",
+    "crystal stability prediction",
+    "materials discovery",
+    "benchmark audit"
+  ],
+  "access_right": "open",
+  "prereserve_doi": true
+}

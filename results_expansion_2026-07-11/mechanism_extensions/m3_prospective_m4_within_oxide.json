@@ -1,0 +1,238 @@
+{
+  "generated_utc": "2026-07-11T08:22:28.250341+00:00",
+  "label": "POST-HOC DESCRIPTIVE (not preregistered); M3 prospective demo + M4 within-oxide split.",
+  "seed": 20260621,
+  "models": [
+    "chgnet",
+    "m3gnet",
+    "mace",
+    "orb"
+  ],
+  "wbm_rounds_present": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "n_total": 256963,
+  "M3_prospective": {
+    "calibration_rounds": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "future_round": 5,
+    "n_calib": 233695,
+    "n_future": 23268,
+    "per_model": {
+      "chgnet": {
+        "calibration_oxide": {
+          "n_called_stable": 2627,
+          "base_rate": 0.1227,
+          "precision_full": 0.7556,
+          "precision_conf_half": 0.8964,
+          "precision_uplift": 0.1408,
+          "daf_full": 6.156,
+          "daf_conf_half": 7.3031,
+          "daf_gain": 1.1471
+        },
+        "future_per_stratum_daf_gain": {
+          "oxide": 0.8507,
+          "intermetallic": 1.0627,
+          "chalcogenide": 0.6525,
+          "halide": 0.3928,
+          "pnictide": 1.0037,
+          "other": 0.9315
+        },
+        "future_oxide_precision_uplift": 0.1594,
+        "future_oxide_daf_gain": 0.8507,
+        "future_other_strata_mean_daf_gain": 0.8086,
+        "oxide_is_top_gain_on_future": false,
+        "oxide_beats_other_mean_on_future": true
+      },
+      "m3gnet": {
+        "calibration_oxide": {
+          "n_called_stable": 4112,
+          "base_rate": 0.1227,
+          "precision_full": 0.5467,
+          "precision_conf_half": 0.6362,
+          "precision_uplift": 0.0895,
+          "daf_full": 4.4539,
+          "daf_conf_half": 5.183,
+          "daf_gain": 0.7291
+        },
+        "future_per_stratum_daf_gain": {
+          "oxide": 1.0955,
+          "intermetallic": 1.0153,
+          "chalcogenide": 0.7522,
+          "halide": 0.276,
+          "pnictide": 1.1007,
+          "other": 1.0108
+        },
+        "future_oxide_precision_uplift": 0.2053,
+        "future_oxide_daf_gain": 1.0955,
+        "future_other_strata_mean_daf_gain": 0.831,
+        "oxide_is_top_gain_on_future": false,
+        "oxide_beats_other_mean_on_future": true
+      },
+      "mace": {
+        "calibration_oxide": {
+          "n_called_stable": 3160,
+          "base_rate": 0.1227,
+          "precision_full": 0.7858,
+          "precision_conf_half": 0.8703,
+          "precision_uplift": 0.0845,
+          "daf_full": 6.4015,
+          "daf_conf_half": 7.0899,
+          "daf_gain": 0.6884
+        },
+        "future_per_stratum_daf_gain": {
+          "oxide": 0.1976,
+          "intermetallic": 0.7099,
+          "chalcogenide": 0.1717,
+          "halide": 0.3027,
+          "pnictide": 0.4669,
+          "other": 0.7384
+        },
+        "future_oxide_precision_uplift": 0.037,
+        "future_oxide_daf_gain": 0.1976,
+        "future_other_strata_mean_daf_gain": 0.4779,
+        "oxide_is_top_gain_on_future": false,
+        "oxide_beats_other_mean_on_future": false
+      },
+      "orb": {
+        "calibration_oxide": {
+          "n_called_stable": 2862,
+          "base_rate": 0.1227,
+          "precision_full": 0.8889,
+          "precision_conf_half": 0.9462,
+          "precision_uplift": 0.0573,
+          "daf_full": 7.2417,
+          "daf_conf_half": 7.7086,
+          "daf_gain": 0.4668
+        },
+        "future_per_stratum_daf_gain": {
+          "oxide": -0.001,
+          "intermetallic": 0.389,
+          "chalcogenide": 0.1162,
+          "halide": 0.1736,
+          "pnictide": 0.195,
+          "other": 0.1798
+        },
+        "future_oxide_precision_uplift": -0.0002,
+        "future_oxide_daf_gain": -0.001,
+        "future_other_strata_mean_daf_gain": 0.2107,
+        "oxide_is_top_gain_on_future": false,
+        "oxide_beats_other_mean_on_future": false
+      }
+    },
+    "summary": {
+      "oxide_top_gain_on_future_round": "0/4",
+      "oxide_beats_other_mean_on_future": "2/4"
+    }
+  },
+  "M4_within_oxide": {
+    "n_oxide": 25020,
+    "n_tm_oxide": 17369,
+    "n_maingroup_oxide": 7651,
+    "per_model": {
+      "chgnet": {
+        "tm_oxide": {
+          "n_called_stable": 1778,
+          "base_rate": 0.1183,
+          "precision_full": 0.7705,
+          "precision_conf_half": 0.9168,
+          "precision_uplift": 0.1462,
+          "daf_full": 6.5126,
+          "daf_conf_half": 7.7485,
+          "daf_gain": 1.236
+        },
+        "maingroup_oxide": {
+          "n_called_stable": 918,
+          "base_rate": 0.1376,
+          "precision_full": 0.7331,
+          "precision_conf_half": 0.8671,
+          "precision_uplift": 0.134,
+          "daf_full": 5.3267,
+          "daf_conf_half": 6.3003,
+          "daf_gain": 0.9735
+        },
+        "both_subfamilies_positive_gain": true
+      },
+      "m3gnet": {
+        "tm_oxide": {
+          "n_called_stable": 2907,
+          "base_rate": 0.1183,
+          "precision_full": 0.5122,
+          "precision_conf_half": 0.5788,
+          "precision_uplift": 0.0666,
+          "daf_full": 4.3292,
+          "daf_conf_half": 4.8921,
+          "daf_gain": 0.5628
+        },
+        "maingroup_oxide": {
+          "n_called_stable": 1292,
+          "base_rate": 0.1376,
+          "precision_full": 0.6316,
+          "precision_conf_half": 0.7848,
+          "precision_uplift": 0.1533,
+          "daf_full": 4.589,
+          "daf_conf_half": 5.7025,
+          "daf_gain": 1.1135
+        },
+        "both_subfamilies_positive_gain": true
+      },
+      "mace": {
+        "tm_oxide": {
+          "n_called_stable": 2221,
+          "base_rate": 0.1183,
+          "precision_full": 0.7569,
+          "precision_conf_half": 0.8252,
+          "precision_uplift": 0.0684,
+          "daf_full": 6.3971,
+          "daf_conf_half": 6.9749,
+          "daf_gain": 0.5778
+        },
+        "maingroup_oxide": {
+          "n_called_stable": 1047,
+          "base_rate": 0.1376,
+          "precision_full": 0.8596,
+          "precision_conf_half": 0.9732,
+          "precision_uplift": 0.1136,
+          "daf_full": 6.2458,
+          "daf_conf_half": 7.0714,
+          "daf_gain": 0.8256
+        },
+        "both_subfamilies_positive_gain": true
+      },
+      "orb": {
+        "tm_oxide": {
+          "n_called_stable": 2003,
+          "base_rate": 0.1183,
+          "precision_full": 0.8777,
+          "precision_conf_half": 0.95,
+          "precision_uplift": 0.0724,
+          "daf_full": 7.4182,
+          "daf_conf_half": 8.0299,
+          "daf_gain": 0.6116
+        },
+        "maingroup_oxide": {
+          "n_called_stable": 962,
+          "base_rate": 0.1376,
+          "precision_full": 0.922,
+          "precision_conf_half": 0.9376,
+          "precision_uplift": 0.0156,
+          "daf_full": 6.6994,
+          "daf_conf_half": 6.8127,
+          "daf_gain": 0.1133
+        },
+        "both_subfamilies_positive_gain": true
+      }
+    },
+    "summary": {
+      "both_subfamilies_positive": "4/4"
+    }
+  }
+}

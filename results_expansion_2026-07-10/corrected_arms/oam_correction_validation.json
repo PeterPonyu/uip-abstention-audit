@@ -1,0 +1,167 @@
+{
+  "gate0_identity_max_resid": 1.0000000005838672e-06,
+  "n_identity_rows": 256963,
+  "method": "e_form_pred_mp2020 = e_form_pred_raw + e_correction_per_atom_mp2020 (matbench-discovery per-material MP2020 correction from 2023-12-13-wbm-summary.csv.gz); applied to the 4 NEW models only; 4 legacy CSVs already corrected -> copied through unchanged.",
+  "legacy_before": {
+    "chgnet": {
+      "oxide": -0.0113,
+      "halide": -0.0291,
+      "chalcogenide": -0.0352,
+      "pnictide": -0.0451,
+      "intermetallic": -0.0318,
+      "other": -0.0422
+    },
+    "m3gnet": {
+      "oxide": -0.0381,
+      "halide": -0.0511,
+      "chalcogenide": -0.0578,
+      "pnictide": -0.0636,
+      "intermetallic": -0.0422,
+      "other": -0.0602
+    },
+    "mace": {
+      "oxide": -0.0232,
+      "halide": -0.0036,
+      "chalcogenide": 0.004,
+      "pnictide": -0.0043,
+      "intermetallic": -0.0089,
+      "other": -0.0049
+    },
+    "orb": {
+      "oxide": 0.0093,
+      "halide": 0.0084,
+      "chalcogenide": 0.0158,
+      "pnictide": 0.0099,
+      "intermetallic": 0.0045,
+      "other": 0.0145
+    }
+  },
+  "legacy_after_WOULD_OVERCORRECT": {
+    "chgnet": {
+      "oxide": -0.492,
+      "halide": -0.3575,
+      "chalcogenide": -0.2567,
+      "pnictide": -0.0861,
+      "intermetallic": -0.0318,
+      "other": -0.0434
+    },
+    "m3gnet": {
+      "oxide": -0.5188,
+      "halide": -0.3794,
+      "chalcogenide": -0.2794,
+      "pnictide": -0.1046,
+      "intermetallic": -0.0422,
+      "other": -0.0614
+    },
+    "mace": {
+      "oxide": -0.5039,
+      "halide": -0.3319,
+      "chalcogenide": -0.2176,
+      "pnictide": -0.0453,
+      "intermetallic": -0.0089,
+      "other": -0.0061
+    },
+    "orb": {
+      "oxide": -0.4714,
+      "halide": -0.3199,
+      "chalcogenide": -0.2057,
+      "pnictide": -0.0311,
+      "intermetallic": 0.0045,
+      "other": 0.0133
+    }
+  },
+  "new_before": {
+    "mace_mp_0": {
+      "oxide": 0.5919,
+      "halide": 0.4379,
+      "chalcogenide": 0.3375,
+      "pnictide": 0.1568,
+      "intermetallic": 0.1056,
+      "other": 0.118
+    },
+    "mattersim": {
+      "oxide": 0.5904,
+      "halide": 0.4369,
+      "chalcogenide": 0.3525,
+      "pnictide": 0.188,
+      "intermetallic": 0.1408,
+      "other": 0.1433
+    },
+    "sevennet_mf_ompa": {
+      "oxide": 0.5995,
+      "halide": 0.4415,
+      "chalcogenide": 0.339,
+      "pnictide": 0.1594,
+      "intermetallic": 0.1067,
+      "other": 0.1216
+    },
+    "orb_v3": {
+      "oxide": 0.5857,
+      "halide": 0.4579,
+      "chalcogenide": 0.3635,
+      "pnictide": 0.1691,
+      "intermetallic": 0.167,
+      "other": 0.1355
+    }
+  },
+  "new_after": {
+    "mace_mp_0": {
+      "oxide": 0.1111,
+      "halide": 0.1096,
+      "chalcogenide": 0.116,
+      "pnictide": 0.1158,
+      "intermetallic": 0.1056,
+      "other": 0.1168
+    },
+    "mattersim": {
+      "oxide": 0.1097,
+      "halide": 0.1085,
+      "chalcogenide": 0.1309,
+      "pnictide": 0.147,
+      "intermetallic": 0.1408,
+      "other": 0.1421
+    },
+    "sevennet_mf_ompa": {
+      "oxide": 0.1188,
+      "halide": 0.1132,
+      "chalcogenide": 0.1174,
+      "pnictide": 0.1184,
+      "intermetallic": 0.1067,
+      "other": 0.1204
+    },
+    "orb_v3": {
+      "oxide": 0.105,
+      "halide": 0.1296,
+      "chalcogenide": 0.142,
+      "pnictide": 0.1281,
+      "intermetallic": 0.167,
+      "other": 0.1342
+    }
+  },
+  "outputs": {
+    "roster/chgnet_pred.csv (legacy, unchanged)": "d84578eb02843a3f468760d01320671433867b35e969b5aa0f2b98d3293b444e",
+    "roster/m3gnet_pred.csv (legacy, unchanged)": "8c4e136bf1b8e577973ba05dccafabda47dbc3b448b13ed6874484b25e028737",
+    "roster/mace_pred.csv (legacy, unchanged)": "d37eed9ec6a5ee0e9993de2009ee177e3bacffffb7f1dd922fc7d786a38753d2",
+    "roster/orb_pred.csv (legacy, unchanged)": "9df863e74a88cd89e234ab1f5bec02d3b226fb908f92278c7d8eb423ca53ac76",
+    "mace_mp_0_pred_mp2020.csv (new, corrected)": {
+      "sha256": "da3b455bd7c2f3c834d623aca2838f0ea9e0c9b11cfc1a8ead3050e807798fcc",
+      "rows_in": 256963,
+      "rows_out": 256963
+    },
+    "mattersim_pred_mp2020.csv (new, corrected)": {
+      "sha256": "edeb98129d75d21b183bb7e6264a1d61152f1aa006209cec17309a5a53416416",
+      "rows_in": 256963,
+      "rows_out": 256963
+    },
+    "sevennet_mf_ompa_pred_mp2020.csv (new, corrected)": {
+      "sha256": "b8fa6d82df6c00d5a787d85944ef3ddefb8977fce9f8b3b9e449a15c4be1798f",
+      "rows_in": 256963,
+      "rows_out": 256963
+    },
+    "orb_v3_pred_mp2020.csv (new, corrected)": {
+      "sha256": "47ac0313cf815e471800791d7dd39a2e2a7eb3c41dcaf09c3e1310dbb5465196",
+      "rows_in": 256963,
+      "rows_out": 256963
+    }
+  }
+}

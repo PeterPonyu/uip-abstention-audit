@@ -1,0 +1,989 @@
+{
+  "meta": {
+    "story": "G007-s1-materials-mt29-oam-arm-CORRECTED",
+    "stage": "corrected_arms 2026-07-10: MP2020-corrected modern roster",
+    "seed": 20260621,
+    "n_boot": 1000,
+    "base_models": [
+      "chgnet",
+      "m3gnet",
+      "mace",
+      "orb"
+    ],
+    "oam_models_found": [
+      "mace_mp_0",
+      "mattersim",
+      "orb_v3",
+      "sevennet_mf_ompa"
+    ],
+    "models": [
+      "chgnet",
+      "m3gnet",
+      "mace",
+      "orb",
+      "mace_mp_0",
+      "mattersim",
+      "orb_v3",
+      "sevennet_mf_ompa"
+    ],
+    "strata": [
+      "oxide",
+      "intermetallic",
+      "chalcogenide",
+      "halide",
+      "pnictide",
+      "other"
+    ],
+    "n_rows": 256963,
+    "roster_note": "4 legacy CSVs (chgnet/m3gnet/mace/orb) UNCHANGED; 4 new models (mace_mp_0/mattersim/sevennet_mf_ompa/orb_v3) = raw prediction + e_correction_per_atom_mp2020 (matbench-discovery per-material MP2020 correction). See oam_correction_validation.json.",
+    "control": "identical corrected matched-yield control as mt29_stage1_matched_yield_fix.py, generalized over the OAM-extended roster; frozen canonical result JSONs untouched."
+  },
+  "per_model_budgets": {
+    "chgnet": {
+      "y_loose": 2696,
+      "y_tight": 1348,
+      "total_called_stable": {
+        "oxide": 2696,
+        "intermetallic": 28315,
+        "chalcogenide": 6213,
+        "halide": 8843,
+        "pnictide": 8819,
+        "other": 7267
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 1.13766,
+        "intermetallic": 0.4186,
+        "chalcogenide": 0.46269,
+        "halide": 0.23722,
+        "pnictide": 0.65151,
+        "other": 0.63898
+      }
+    },
+    "m3gnet": {
+      "y_loose": 4199,
+      "y_tight": 2099,
+      "total_called_stable": {
+        "oxide": 4199,
+        "intermetallic": 34917,
+        "chalcogenide": 8313,
+        "halide": 10662,
+        "pnictide": 10974,
+        "other": 8866
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 0.75083,
+        "intermetallic": 0.61462,
+        "chalcogenide": 0.49636,
+        "halide": 0.17777,
+        "pnictide": 0.67738,
+        "other": 0.75725
+      }
+    },
+    "mace": {
+      "y_loose": 3268,
+      "y_tight": 1634,
+      "total_called_stable": {
+        "oxide": 3268,
+        "intermetallic": 17316,
+        "chalcogenide": 4765,
+        "halide": 7355,
+        "pnictide": 5926,
+        "other": 4920
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 0.67003,
+        "intermetallic": -0.00432,
+        "chalcogenide": 0.12077,
+        "halide": 0.02968,
+        "pnictide": 0.09316,
+        "other": 0.2902
+      }
+    },
+    "orb": {
+      "y_loose": 2965,
+      "y_tight": 1482,
+      "total_called_stable": {
+        "oxide": 2965,
+        "intermetallic": 15098,
+        "chalcogenide": 4477,
+        "halide": 6914,
+        "pnictide": 5295,
+        "other": 4209
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 0.44783,
+        "intermetallic": -0.0049,
+        "chalcogenide": 0.03614,
+        "halide": -0.00488,
+        "pnictide": 0.07106,
+        "other": 0.13152
+      }
+    },
+    "mace_mp_0": {
+      "y_loose": 1552,
+      "y_tight": 776,
+      "total_called_stable": {
+        "oxide": 1552,
+        "intermetallic": 8149,
+        "chalcogenide": 2442,
+        "halide": 3503,
+        "pnictide": 2692,
+        "other": 2475
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 0.15561,
+        "intermetallic": 0.02727,
+        "chalcogenide": 0.02198,
+        "halide": 0.02778,
+        "pnictide": 0.04904,
+        "other": 0.04641
+      }
+    },
+    "mattersim": {
+      "y_loose": 1718,
+      "y_tight": 859,
+      "total_called_stable": {
+        "oxide": 1718,
+        "intermetallic": 6550,
+        "chalcogenide": 1989,
+        "halide": 3844,
+        "pnictide": 2434,
+        "other": 2175
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 0.42641,
+        "intermetallic": 0.18065,
+        "chalcogenide": 0.17301,
+        "halide": 0.1924,
+        "pnictide": 0.39192,
+        "other": 0.26902
+      }
+    },
+    "orb_v3": {
+      "y_loose": 1789,
+      "y_tight": 894,
+      "total_called_stable": {
+        "oxide": 2194,
+        "intermetallic": 6000,
+        "chalcogenide": 1789,
+        "halide": 2826,
+        "pnictide": 2732,
+        "other": 2299
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": -1.82076,
+        "intermetallic": 0.07983,
+        "chalcogenide": -0.98453,
+        "halide": -0.65964,
+        "pnictide": -0.45647,
+        "other": -1.75039
+      }
+    },
+    "sevennet_mf_ompa": {
+      "y_loose": 1524,
+      "y_tight": 762,
+      "total_called_stable": {
+        "oxide": 1524,
+        "intermetallic": 8310,
+        "chalcogenide": 2490,
+        "halide": 3541,
+        "pnictide": 2726,
+        "other": 2495
+      },
+      "base_rate_stable": {
+        "oxide": 0.12422,
+        "intermetallic": 0.14178,
+        "chalcogenide": 0.20522,
+        "halide": 0.27832,
+        "pnictide": 0.1708,
+        "other": 0.1666
+      },
+      "gain_median": {
+        "oxide": 0.16903,
+        "intermetallic": 0.06017,
+        "chalcogenide": 0.02238,
+        "halide": 0.00472,
+        "pnictide": 0.06531,
+        "other": 0.03545
+      }
+    }
+  },
+  "interactions": [
+    {
+      "model": "chgnet",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.71906
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.67497
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.90044
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.48615
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": 0.49868
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": -0.04409
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": 0.18138
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.23291
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": -0.22038
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": 0.22547
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.18882
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.17629
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.41429
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.40176
+    },
+    {
+      "model": "chgnet",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": 0.01253
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.13621
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.25447
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.57306
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.07345
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": -0.00642
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.11826
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": 0.43685
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.06276
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": -0.14263
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": 0.31859
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.18102
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.26089
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.49961
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.57948
+    },
+    {
+      "model": "m3gnet",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": -0.07987
+    },
+    {
+      "model": "mace",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.67435
+    },
+    {
+      "model": "mace",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.54926
+    },
+    {
+      "model": "mace",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.64035
+    },
+    {
+      "model": "mace",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.57687
+    },
+    {
+      "model": "mace",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": 0.37983
+    },
+    {
+      "model": "mace",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": -0.12509
+    },
+    {
+      "model": "mace",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": -0.034
+    },
+    {
+      "model": "mace",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.09748
+    },
+    {
+      "model": "mace",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": -0.29452
+    },
+    {
+      "model": "mace",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": 0.09109
+    },
+    {
+      "model": "mace",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.02761
+    },
+    {
+      "model": "mace",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.16943
+    },
+    {
+      "model": "mace",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.06348
+    },
+    {
+      "model": "mace",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.26052
+    },
+    {
+      "model": "mace",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": -0.19704
+    },
+    {
+      "model": "orb",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.45273
+    },
+    {
+      "model": "orb",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.41169
+    },
+    {
+      "model": "orb",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.45271
+    },
+    {
+      "model": "orb",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.37677
+    },
+    {
+      "model": "orb",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": 0.31631
+    },
+    {
+      "model": "orb",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": -0.04104
+    },
+    {
+      "model": "orb",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": -2e-05
+    },
+    {
+      "model": "orb",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.07596
+    },
+    {
+      "model": "orb",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": -0.13642
+    },
+    {
+      "model": "orb",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": 0.04102
+    },
+    {
+      "model": "orb",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.03492
+    },
+    {
+      "model": "orb",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.09538
+    },
+    {
+      "model": "orb",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.07594
+    },
+    {
+      "model": "orb",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.1364
+    },
+    {
+      "model": "orb",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": -0.06046
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.12834
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.13363
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.12783
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.10657
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": 0.1092
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.00529
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": -0.00051
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.02177
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": -0.01914
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": -0.0058
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.02706
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.02443
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.02126
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.01863
+    },
+    {
+      "model": "mace_mp_0",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": 0.00263
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.24576
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.2534
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.23401
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.03449
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": 0.15739
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.00764
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": -0.01175
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.21127
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": -0.08837
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": -0.01939
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.21891
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.09601
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.19952
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.07662
+    },
+    {
+      "model": "mattersim",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": 0.1229
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": -1.90059
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": -0.83623
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": -1.16112
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": -1.36429
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": -0.07037
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": 1.06436
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": 0.73947
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": 0.5363
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": 1.83022
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": -0.32489
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.52806
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": 0.76586
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.20317
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": 1.09075
+    },
+    {
+      "model": "orb_v3",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": 1.29392
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "oxide",
+      "stratumB": "intermetallic",
+      "interaction_med": 0.10886
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "oxide",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.14665
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "oxide",
+      "stratumB": "halide",
+      "interaction_med": 0.16431
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "oxide",
+      "stratumB": "pnictide",
+      "interaction_med": 0.10372
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "oxide",
+      "stratumB": "other",
+      "interaction_med": 0.13358
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "intermetallic",
+      "stratumB": "chalcogenide",
+      "interaction_med": 0.03779
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "intermetallic",
+      "stratumB": "halide",
+      "interaction_med": 0.05545
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "intermetallic",
+      "stratumB": "pnictide",
+      "interaction_med": -0.00514
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "intermetallic",
+      "stratumB": "other",
+      "interaction_med": 0.02472
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "chalcogenide",
+      "stratumB": "halide",
+      "interaction_med": 0.01766
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "chalcogenide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.04293
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "chalcogenide",
+      "stratumB": "other",
+      "interaction_med": -0.01307
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "halide",
+      "stratumB": "pnictide",
+      "interaction_med": -0.06059
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "halide",
+      "stratumB": "other",
+      "interaction_med": -0.03073
+    },
+    {
+      "model": "sevennet_mf_ompa",
+      "stratumA": "pnictide",
+      "stratumB": "other",
+      "interaction_med": 0.02986
+    }
+  ]
+}

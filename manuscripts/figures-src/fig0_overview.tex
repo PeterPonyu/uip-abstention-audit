@@ -1,0 +1,85 @@
+% Standalone TikZ source for Figure 1 (protocol overview) of the matched-yield
+% reliability-audit-protocol manuscript (../paper.tex, ../digital_discovery/paper_dd.tex).
+% Build: `make` in this directory -> fig0_overview.pdf, copied to ../figures/.
+% Terminology matches the Methods section exactly (anion-class strata, common
+% absolute-yield budget Y, Stage-1/Stage-2, shuffle-null, falsified allocator).
+% FONTPOLISH 2026-07-18: Times (newtx) to match F1-F5 (TeX Gyre Termes) and the
+% newtx-set manuscript body.
+% REDESIGN 2026-07-18 (deep polish): replaced the default-TikZ look (pastel fills,
+% heavy black borders, ragged box heights, crossing dashed arrows) with the
+% portfolio figure system -- Okabe-Ito accent bars (pipeline #0072B2, controls
+% #E69F00, verdict #009E73), bold-header/gray-detail typography, uniform box
+% geometry, and level-aligned control lanes (straight dashed connectors, no
+% crossings). Same content, same terminology, no numbers changed.
+% WHITESPACE 2026-07-18: rectangular two-column layout -- shared stages (inputs,
+% selection, verdict) span the full width; each audit stage pairs with its control
+% in a height-matched row. Eliminates the dead right column of the L-shaped layout.
+\documentclass[11pt,tikz,border=3pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+\definecolor{pipe}{HTML}{0072B2}   % Okabe-Ito blue   (pipeline)
+\definecolor{ctrl}{HTML}{E69F00}   % Okabe-Ito orange (built-in controls)
+\definecolor{gooe}{HTML}{009E73}   % Okabe-Ito green  (verdict)
+
+\newcommand{\stagehead}[1]{{\fontsize{7.5}{9}\selectfont\bfseries #1}}
+\newcommand{\stagedetail}[1]{{\fontsize{6.8}{8.4}\selectfont\color{black!65} #1}}
+% left accent bar drawn just inside a node's west border
+\newcommand{\accentbar}[2]{%
+  \draw[#2, line width=2.6pt, line cap=butt]
+    ($(#1.north west)+(1.3pt,-1.6pt)$) -- ($(#1.south west)+(1.3pt,1.6pt)$);}
+
+\begin{document}
+\begin{tikzpicture}[
+  box/.style={
+    font=\fontsize{7.2}{8.8}\selectfont,
+    rectangle, rounded corners=1.5pt, draw=black!45, line width=0.5pt,
+    fill=black!3, align=flush left, text width=57mm,
+    minimum height=9.5mm, inner xsep=7pt, inner ysep=4.5pt
+  },
+  verdictbox/.style={box, fill=gooe!6, draw=gooe!70!black!70, line width=0.7pt},
+  checkbox/.style={
+    box, dashed, dash pattern=on 2.2pt off 1.6pt,
+    fill=ctrl!8, draw=ctrl!75!black!75, text width=44mm
+  },
+  flow/.style={-{Latex[length=1.7mm, width=1.5mm]}, line width=0.6pt, black!70},
+  guard/.style={-{Latex[length=1.5mm, width=1.3mm]}, line width=0.5pt,
+                shorten >=1pt, shorten <=1pt,
+                dashed, dash pattern=on 2.2pt off 1.6pt, ctrl!75!black!75},
+]
+
+% --- rectangular layout: full-width shared stages, paired audit|control rows ---
+\node[box, text width=104.9mm] (A) {\stagehead{Frozen UIP prediction files}\\
+  \stagedetail{provenance / md5 gate}};
+\node[box, text width=104.9mm, below=4.5mm of A] (B) {\stagehead{Chemistry-stratified matched-yield selection}\\
+  \stagedetail{anion-class strata; common absolute-yield budget $Y$}};
+\node[box, text width=55mm, minimum height=13mm, anchor=north west] (C) at ($(B.south west)+(0,-4.5mm)$)
+  {\stagehead{Stage 1 --- interaction audit}\\
+  \stagedetail{stratum $\times$ coverage DAF interaction;\\ prototype-blocked bootstrap CI}};
+\node[checkbox, minimum height=13mm, anchor=north east] (S) at ($(B.south east)+(0,-4.5mm)$)
+  {\stagehead{Shuffle-null control}\\
+  \stagedetail{confidence permuted within stratum;\\ clean throughout}};
+\node[box, text width=55mm, minimum height=13mm, anchor=north west] (D) at ($(C.south west)+(0,-4.5mm)$)
+  {\stagehead{Stage 2 --- robustness audit}\\
+  \stagedetail{leave-one-element-out;\\ WBM-round splits}};
+\node[checkbox, minimum height=13mm, anchor=north east] (F) at ($(S.south east)+(0,-4.5mm)$)
+  {\stagehead{Stratum-aware allocator}\\
+  \stagedetail{knapsack reallocation;\\ \textsc{falsified} --- no dominance}};
+\node[verdictbox, text width=104.9mm, anchor=north west] (E) at ($(D.south west)+(0,-4.5mm)$)
+  {\stagehead{Verdict per model-generation claim}\\
+  \stagedetail{MP-generation vs.\ OMat-generation}};
+
+\accentbar{A}{pipe} \accentbar{B}{pipe} \accentbar{C}{pipe} \accentbar{D}{pipe}
+\accentbar{E}{gooe} \accentbar{S}{ctrl} \accentbar{F}{ctrl}
+
+\draw[flow] (A.south -| C.north) -- (B.north -| C.north);
+\draw[flow] (C.north -| C) ++(0,4.5mm) -- (C.north);
+\draw[flow] (C) -- (D);
+\draw[flow] (D.south) -- (D.south |- E.north);
+\draw[guard] (C.east) -- (S.west);
+\draw[guard] (D.east) -- (F.west);
+
+\end{tikzpicture}
+\end{document}

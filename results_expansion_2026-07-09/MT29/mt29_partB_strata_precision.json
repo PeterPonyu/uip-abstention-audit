@@ -1,0 +1,1603 @@
+{
+  "meta": {
+    "seed": 20260621,
+    "n_boot": 1000,
+    "confidence_signal": "|predicted hull margin|",
+    "coverages": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "models": [
+      "chgnet",
+      "m3gnet",
+      "mace",
+      "orb"
+    ],
+    "interaction_def": "precision_gain(cov0.5 - cov0.9) difference between strata, bootstrapped"
+  },
+  "stratified_curves": {
+    "unique_prototype": {
+      "unique=True": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.83916,
+            "daf": 5.48929,
+            "n_called": 10905
+          },
+          "cov_70": {
+            "precision": 0.71188,
+            "daf": 4.65669,
+            "n_called": 22591
+          },
+          "cov_90": {
+            "precision": 0.57638,
+            "daf": 3.77034,
+            "n_called": 38820
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.69183,
+            "daf": 4.52555,
+            "n_called": 17951
+          },
+          "cov_70": {
+            "precision": 0.58003,
+            "daf": 3.79422,
+            "n_called": 33807
+          },
+          "cov_90": {
+            "precision": 0.47978,
+            "daf": 3.13843,
+            "n_called": 52266
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.95567,
+            "daf": 6.25146,
+            "n_called": 5211
+          },
+          "cov_70": {
+            "precision": 0.95416,
+            "daf": 6.24157,
+            "n_called": 12107
+          },
+          "cov_90": {
+            "precision": 0.92656,
+            "daf": 6.06105,
+            "n_called": 23966
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.97336,
+            "daf": 6.36717,
+            "n_called": 4129
+          },
+          "cov_70": {
+            "precision": 0.97036,
+            "daf": 6.34756,
+            "n_called": 10021
+          },
+          "cov_90": {
+            "precision": 0.96383,
+            "daf": 6.30481,
+            "n_called": 21148
+          }
+        },
+        "_base_rate_stable": 0.15287,
+        "_n": 215488
+      },
+      "unique=False": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.76786,
+            "daf": 3.22242,
+            "n_called": 4898
+          },
+          "cov_70": {
+            "precision": 0.65957,
+            "daf": 2.76795,
+            "n_called": 7843
+          },
+          "cov_90": {
+            "precision": 0.57307,
+            "daf": 2.40496,
+            "n_called": 11201
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.67622,
+            "daf": 2.83784,
+            "n_called": 6696
+          },
+          "cov_70": {
+            "precision": 0.58918,
+            "daf": 2.47257,
+            "n_called": 10097
+          },
+          "cov_90": {
+            "precision": 0.51903,
+            "daf": 2.17817,
+            "n_called": 13608
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.94105,
+            "daf": 3.94923,
+            "n_called": 3376
+          },
+          "cov_70": {
+            "precision": 0.9157,
+            "daf": 3.84281,
+            "n_called": 5836
+          },
+          "cov_90": {
+            "precision": 0.8274,
+            "daf": 3.47228,
+            "n_called": 8714
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.95396,
+            "daf": 4.00339,
+            "n_called": 2563
+          },
+          "cov_70": {
+            "precision": 0.94785,
+            "daf": 3.97775,
+            "n_called": 4813
+          },
+          "cov_90": {
+            "precision": 0.91129,
+            "daf": 3.8243,
+            "n_called": 7248
+          }
+        },
+        "_base_rate_stable": 0.23829,
+        "_n": 41475
+      }
+    },
+    "family": {
+      "binary": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.75389,
+            "daf": 6.20716,
+            "n_called": 1284
+          },
+          "cov_70": {
+            "precision": 0.59453,
+            "daf": 4.89505,
+            "n_called": 2560
+          },
+          "cov_90": {
+            "precision": 0.46443,
+            "daf": 3.82386,
+            "n_called": 4737
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.56641,
+            "daf": 4.66349,
+            "n_called": 2560
+          },
+          "cov_70": {
+            "precision": 0.45051,
+            "daf": 3.70929,
+            "n_called": 4284
+          },
+          "cov_90": {
+            "precision": 0.37452,
+            "daf": 3.08359,
+            "n_called": 6750
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.94875,
+            "daf": 7.81149,
+            "n_called": 839
+          },
+          "cov_70": {
+            "precision": 0.93115,
+            "daf": 7.66663,
+            "n_called": 1438
+          },
+          "cov_90": {
+            "precision": 0.87324,
+            "daf": 7.18983,
+            "n_called": 2706
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.96084,
+            "daf": 7.91107,
+            "n_called": 664
+          },
+          "cov_70": {
+            "precision": 0.95946,
+            "daf": 7.89968,
+            "n_called": 1184
+          },
+          "cov_90": {
+            "precision": 0.93939,
+            "daf": 7.73447,
+            "n_called": 2211
+          }
+        },
+        "_base_rate_stable": 0.12146,
+        "_n": 32374
+      },
+      "ternary": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.83395,
+            "daf": 5.00445,
+            "n_called": 11864
+          },
+          "cov_70": {
+            "precision": 0.70565,
+            "daf": 4.23451,
+            "n_called": 23499
+          },
+          "cov_90": {
+            "precision": 0.5718,
+            "daf": 3.43128,
+            "n_called": 38498
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.72604,
+            "daf": 4.35689,
+            "n_called": 17269
+          },
+          "cov_70": {
+            "precision": 0.60357,
+            "daf": 3.62193,
+            "n_called": 32086
+          },
+          "cov_90": {
+            "precision": 0.49742,
+            "daf": 2.98494,
+            "n_called": 48784
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.9695,
+            "daf": 5.81788,
+            "n_called": 5509
+          },
+          "cov_70": {
+            "precision": 0.96038,
+            "daf": 5.76315,
+            "n_called": 12545
+          },
+          "cov_90": {
+            "precision": 0.91951,
+            "daf": 5.51786,
+            "n_called": 24027
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.97211,
+            "daf": 5.83352,
+            "n_called": 4446
+          },
+          "cov_70": {
+            "precision": 0.96811,
+            "daf": 5.80952,
+            "n_called": 10411
+          },
+          "cov_90": {
+            "precision": 0.95801,
+            "daf": 5.7489,
+            "n_called": 21147
+          }
+        },
+        "_base_rate_stable": 0.16664,
+        "_n": 189934
+      },
+      "quaternary+": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.84226,
+            "daf": 4.03046,
+            "n_called": 2016
+          },
+          "cov_70": {
+            "precision": 0.75966,
+            "daf": 3.63518,
+            "n_called": 4115
+          },
+          "cov_90": {
+            "precision": 0.67235,
+            "daf": 3.21737,
+            "n_called": 6806
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.61865,
+            "daf": 2.96041,
+            "n_called": 4311
+          },
+          "cov_70": {
+            "precision": 0.56106,
+            "daf": 2.68481,
+            "n_called": 7272
+          },
+          "cov_90": {
+            "precision": 0.5159,
+            "daf": 2.4687,
+            "n_called": 10349
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.89082,
+            "daf": 4.26283,
+            "n_called": 1438
+          },
+          "cov_70": {
+            "precision": 0.92312,
+            "daf": 4.4174,
+            "n_called": 3356
+          },
+          "cov_90": {
+            "precision": 0.89372,
+            "daf": 4.27672,
+            "n_called": 5975
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.9707,
+            "daf": 4.64509,
+            "n_called": 1024
+          },
+          "cov_70": {
+            "precision": 0.96181,
+            "daf": 4.60254,
+            "n_called": 2802
+          },
+          "cov_90": {
+            "precision": 0.95738,
+            "daf": 4.58133,
+            "n_called": 5373
+          }
+        },
+        "_base_rate_stable": 0.20897,
+        "_n": 34655
+      }
+    },
+    "round": {
+      "round_1": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.86401,
+            "daf": 5.70373,
+            "n_called": 2890
+          },
+          "cov_70": {
+            "precision": 0.7451,
+            "daf": 4.91874,
+            "n_called": 5563
+          },
+          "cov_90": {
+            "precision": 0.61597,
+            "daf": 4.06631,
+            "n_called": 9528
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.72612,
+            "daf": 4.79346,
+            "n_called": 4586
+          },
+          "cov_70": {
+            "precision": 0.62297,
+            "daf": 4.11249,
+            "n_called": 8368
+          },
+          "cov_90": {
+            "precision": 0.52758,
+            "daf": 3.48277,
+            "n_called": 12891
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.95522,
+            "daf": 6.3058,
+            "n_called": 1831
+          },
+          "cov_70": {
+            "precision": 0.95148,
+            "daf": 6.28112,
+            "n_called": 3792
+          },
+          "cov_90": {
+            "precision": 0.90013,
+            "daf": 5.94214,
+            "n_called": 7059
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.97239,
+            "daf": 6.41919,
+            "n_called": 1630
+          },
+          "cov_70": {
+            "precision": 0.96921,
+            "daf": 6.39817,
+            "n_called": 3410
+          },
+          "cov_90": {
+            "precision": 0.95445,
+            "daf": 6.30072,
+            "n_called": 6432
+          }
+        },
+        "_base_rate_stable": 0.15148,
+        "_n": 61466
+      },
+      "round_2": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.83085,
+            "daf": 4.13466,
+            "n_called": 4162
+          },
+          "cov_70": {
+            "precision": 0.71899,
+            "daf": 3.57797,
+            "n_called": 7843
+          },
+          "cov_90": {
+            "precision": 0.60199,
+            "daf": 2.99576,
+            "n_called": 12354
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.69992,
+            "daf": 3.4831,
+            "n_called": 6365
+          },
+          "cov_70": {
+            "precision": 0.60571,
+            "daf": 3.01428,
+            "n_called": 10959
+          },
+          "cov_90": {
+            "precision": 0.52256,
+            "daf": 2.60049,
+            "n_called": 15778
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.96199,
+            "daf": 4.78726,
+            "n_called": 2131
+          },
+          "cov_70": {
+            "precision": 0.95773,
+            "daf": 4.76604,
+            "n_called": 4731
+          },
+          "cov_90": {
+            "precision": 0.90866,
+            "daf": 4.52186,
+            "n_called": 8375
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.97217,
+            "daf": 4.83793,
+            "n_called": 1653
+          },
+          "cov_70": {
+            "precision": 0.97307,
+            "daf": 4.84239,
+            "n_called": 3973
+          },
+          "cov_90": {
+            "precision": 0.96006,
+            "daf": 4.77765,
+            "n_called": 7511
+          }
+        },
+        "_base_rate_stable": 0.20095,
+        "_n": 52755
+      },
+      "round_3": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.81233,
+            "daf": 5.60338,
+            "n_called": 3778
+          },
+          "cov_70": {
+            "precision": 0.67922,
+            "daf": 4.68516,
+            "n_called": 8180
+          },
+          "cov_90": {
+            "precision": 0.53616,
+            "daf": 3.69838,
+            "n_called": 14255
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.656,
+            "daf": 4.52502,
+            "n_called": 6689
+          },
+          "cov_70": {
+            "precision": 0.54197,
+            "daf": 3.73842,
+            "n_called": 12617
+          },
+          "cov_90": {
+            "precision": 0.44053,
+            "daf": 3.03873,
+            "n_called": 19565
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.93638,
+            "daf": 6.459,
+            "n_called": 1556
+          },
+          "cov_70": {
+            "precision": 0.9362,
+            "daf": 6.45777,
+            "n_called": 3934
+          },
+          "cov_90": {
+            "precision": 0.9139,
+            "daf": 6.30397,
+            "n_called": 8467
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.95566,
+            "daf": 6.592,
+            "n_called": 1105
+          },
+          "cov_70": {
+            "precision": 0.96205,
+            "daf": 6.6361,
+            "n_called": 3004
+          },
+          "cov_90": {
+            "precision": 0.95679,
+            "daf": 6.59983,
+            "n_called": 7082
+          }
+        },
+        "_base_rate_stable": 0.14497,
+        "_n": 79160
+      },
+      "round_4": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.81612,
+            "daf": 4.54182,
+            "n_called": 2817
+          },
+          "cov_70": {
+            "precision": 0.69317,
+            "daf": 3.8576,
+            "n_called": 5358
+          },
+          "cov_90": {
+            "precision": 0.57017,
+            "daf": 3.17308,
+            "n_called": 8622
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.70758,
+            "daf": 3.93778,
+            "n_called": 4131
+          },
+          "cov_70": {
+            "precision": 0.57889,
+            "daf": 3.22162,
+            "n_called": 7428
+          },
+          "cov_90": {
+            "precision": 0.48287,
+            "daf": 2.68723,
+            "n_called": 11061
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.97989,
+            "daf": 5.45321,
+            "n_called": 1392
+          },
+          "cov_70": {
+            "precision": 0.97678,
+            "daf": 5.43591,
+            "n_called": 2928
+          },
+          "cov_90": {
+            "precision": 0.94348,
+            "daf": 5.25062,
+            "n_called": 5361
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.99074,
+            "daf": 5.51363,
+            "n_called": 1080
+          },
+          "cov_70": {
+            "precision": 0.98226,
+            "daf": 5.46645,
+            "n_called": 2368
+          },
+          "cov_90": {
+            "precision": 0.97651,
+            "daf": 5.43442,
+            "n_called": 4640
+          }
+        },
+        "_base_rate_stable": 0.17969,
+        "_n": 40314
+      },
+      "round_5": {
+        "chgnet": {
+          "cov_50": {
+            "precision": 0.81871,
+            "daf": 4.54323,
+            "n_called": 1721
+          },
+          "cov_70": {
+            "precision": 0.67607,
+            "daf": 3.7517,
+            "n_called": 3331
+          },
+          "cov_90": {
+            "precision": 0.55225,
+            "daf": 3.06457,
+            "n_called": 5311
+          }
+        },
+        "m3gnet": {
+          "cov_50": {
+            "precision": 0.70249,
+            "daf": 3.89827,
+            "n_called": 2494
+          },
+          "cov_70": {
+            "precision": 0.57434,
+            "daf": 3.18714,
+            "n_called": 4419
+          },
+          "cov_90": {
+            "precision": 0.47387,
+            "daf": 2.62961,
+            "n_called": 6620
+          }
+        },
+        "mace": {
+          "cov_50": {
+            "precision": 0.94922,
+            "daf": 5.26747,
+            "n_called": 965
+          },
+          "cov_70": {
+            "precision": 0.92113,
+            "daf": 5.11159,
+            "n_called": 1978
+          },
+          "cov_90": {
+            "precision": 0.87726,
+            "daf": 4.86815,
+            "n_called": 3479
+          }
+        },
+        "orb": {
+          "cov_50": {
+            "precision": 0.95302,
+            "daf": 5.28855,
+            "n_called": 745
+          },
+          "cov_70": {
+            "precision": 0.93702,
+            "daf": 5.19977,
+            "n_called": 1572
+          },
+          "cov_90": {
+            "precision": 0.91527,
+            "daf": 5.07904,
+            "n_called": 2974
+          }
+        },
+        "_base_rate_stable": 0.1802,
+        "_n": 23268
+      }
+    }
+  },
+  "interactions": [
+    {
+      "axis": "unique_prototype",
+      "model": "chgnet",
+      "stratumA": "unique=True",
+      "stratumB": "unique=False",
+      "gainA_median": 0.26282,
+      "gainB_median": 0.19448,
+      "interaction_median": 0.06814,
+      "interaction_ci95": [
+        0.05589,
+        0.08024
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "unique_prototype",
+      "model": "m3gnet",
+      "stratumA": "unique=True",
+      "stratumB": "unique=False",
+      "gainA_median": 0.2118,
+      "gainB_median": 0.15648,
+      "interaction_median": 0.05557,
+      "interaction_ci95": [
+        0.04544,
+        0.06579
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "unique_prototype",
+      "model": "mace",
+      "stratumA": "unique=True",
+      "stratumB": "unique=False",
+      "gainA_median": 0.02937,
+      "gainB_median": 0.11339,
+      "interaction_median": -0.08397,
+      "interaction_ci95": [
+        -0.0941,
+        -0.07337
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "unique_prototype",
+      "model": "orb",
+      "stratumA": "unique=True",
+      "stratumB": "unique=False",
+      "gainA_median": 0.00967,
+      "gainB_median": 0.04253,
+      "interaction_median": -0.03295,
+      "interaction_ci95": [
+        -0.04264,
+        -0.0237
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "chgnet",
+      "stratumA": "binary",
+      "stratumB": "ternary",
+      "gainA_median": 0.28946,
+      "gainB_median": 0.26216,
+      "interaction_median": 0.02748,
+      "interaction_ci95": [
+        0.00552,
+        0.0494
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "chgnet",
+      "stratumA": "binary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.28946,
+      "gainB_median": 0.16887,
+      "interaction_median": 0.12083,
+      "interaction_ci95": [
+        0.09501,
+        0.14732
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "chgnet",
+      "stratumA": "ternary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.26216,
+      "gainB_median": 0.16887,
+      "interaction_median": 0.09335,
+      "interaction_ci95": [
+        0.07628,
+        0.10904
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "m3gnet",
+      "stratumA": "binary",
+      "stratumB": "ternary",
+      "gainA_median": 0.19235,
+      "gainB_median": 0.22867,
+      "interaction_median": -0.03623,
+      "interaction_ci95": [
+        -0.05334,
+        -0.01967
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "m3gnet",
+      "stratumA": "binary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.19235,
+      "gainB_median": 0.10262,
+      "interaction_median": 0.0898,
+      "interaction_ci95": [
+        0.07036,
+        0.10872
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "m3gnet",
+      "stratumA": "ternary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.22867,
+      "gainB_median": 0.10262,
+      "interaction_median": 0.12613,
+      "interaction_ci95": [
+        0.1141,
+        0.13892
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "mace",
+      "stratumA": "binary",
+      "stratumB": "ternary",
+      "gainA_median": 0.07617,
+      "gainB_median": 0.05035,
+      "interaction_median": 0.0258,
+      "interaction_ci95": [
+        0.00897,
+        0.04296
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "mace",
+      "stratumA": "binary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.07617,
+      "gainB_median": -0.00333,
+      "interaction_median": 0.07987,
+      "interaction_ci95": [
+        0.05897,
+        0.10076
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "mace",
+      "stratumA": "ternary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.05035,
+      "gainB_median": -0.00333,
+      "interaction_median": 0.05377,
+      "interaction_ci95": [
+        0.03864,
+        0.06846
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "family",
+      "model": "orb",
+      "stratumA": "binary",
+      "stratumB": "ternary",
+      "gainA_median": 0.0216,
+      "gainB_median": 0.01415,
+      "interaction_median": 0.00756,
+      "interaction_ci95": [
+        -0.00669,
+        0.02149
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "family",
+      "model": "orb",
+      "stratumA": "binary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.0216,
+      "gainB_median": 0.01297,
+      "interaction_median": 0.00884,
+      "interaction_ci95": [
+        -0.00751,
+        0.02551
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "family",
+      "model": "orb",
+      "stratumA": "ternary",
+      "stratumB": "quaternary+",
+      "gainA_median": 0.01415,
+      "gainB_median": 0.01297,
+      "interaction_median": 0.00101,
+      "interaction_ci95": [
+        -0.01031,
+        0.01331
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_1",
+      "stratumB": "round_2",
+      "gainA_median": 0.2482,
+      "gainB_median": 0.22897,
+      "interaction_median": 0.0192,
+      "interaction_ci95": [
+        0.00263,
+        0.03656
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_1",
+      "stratumB": "round_3",
+      "gainA_median": 0.2482,
+      "gainB_median": 0.27683,
+      "interaction_median": -0.02869,
+      "interaction_ci95": [
+        -0.04604,
+        -0.00868
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_1",
+      "stratumB": "round_4",
+      "gainA_median": 0.2482,
+      "gainB_median": 0.24582,
+      "interaction_median": 0.00231,
+      "interaction_ci95": [
+        -0.01483,
+        0.02147
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_1",
+      "stratumB": "round_5",
+      "gainA_median": 0.2482,
+      "gainB_median": 0.26736,
+      "interaction_median": -0.01909,
+      "interaction_ci95": [
+        -0.04079,
+        0.00168
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_2",
+      "stratumB": "round_3",
+      "gainA_median": 0.22897,
+      "gainB_median": 0.27683,
+      "interaction_median": -0.04738,
+      "interaction_ci95": [
+        -0.06336,
+        -0.03144
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_2",
+      "stratumB": "round_4",
+      "gainA_median": 0.22897,
+      "gainB_median": 0.24582,
+      "interaction_median": -0.0165,
+      "interaction_ci95": [
+        -0.03264,
+        -0.00055
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_2",
+      "stratumB": "round_5",
+      "gainA_median": 0.22897,
+      "gainB_median": 0.26736,
+      "interaction_median": -0.03824,
+      "interaction_ci95": [
+        -0.05862,
+        -0.01735
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_3",
+      "stratumB": "round_4",
+      "gainA_median": 0.27683,
+      "gainB_median": 0.24582,
+      "interaction_median": 0.0308,
+      "interaction_ci95": [
+        0.01204,
+        0.04809
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_3",
+      "stratumB": "round_5",
+      "gainA_median": 0.27683,
+      "gainB_median": 0.26736,
+      "interaction_median": 0.00969,
+      "interaction_ci95": [
+        -0.01212,
+        0.02857
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "chgnet",
+      "stratumA": "round_4",
+      "stratumB": "round_5",
+      "gainA_median": 0.24582,
+      "gainB_median": 0.26736,
+      "interaction_median": -0.02127,
+      "interaction_ci95": [
+        -0.0428,
+        7e-05
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_1",
+      "stratumB": "round_2",
+      "gainA_median": 0.19836,
+      "gainB_median": 0.17703,
+      "interaction_median": 0.02147,
+      "interaction_ci95": [
+        0.00753,
+        0.03491
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_1",
+      "stratumB": "round_3",
+      "gainA_median": 0.19836,
+      "gainB_median": 0.21492,
+      "interaction_median": -0.01661,
+      "interaction_ci95": [
+        -0.03209,
+        -0.00178
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_1",
+      "stratumB": "round_4",
+      "gainA_median": 0.19836,
+      "gainB_median": 0.22425,
+      "interaction_median": -0.02545,
+      "interaction_ci95": [
+        -0.0421,
+        -0.01068
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_1",
+      "stratumB": "round_5",
+      "gainA_median": 0.19836,
+      "gainB_median": 0.22925,
+      "interaction_median": -0.03061,
+      "interaction_ci95": [
+        -0.04999,
+        -0.01104
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_2",
+      "stratumB": "round_3",
+      "gainA_median": 0.17703,
+      "gainB_median": 0.21492,
+      "interaction_median": -0.03838,
+      "interaction_ci95": [
+        -0.05109,
+        -0.02504
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_2",
+      "stratumB": "round_4",
+      "gainA_median": 0.17703,
+      "gainB_median": 0.22425,
+      "interaction_median": -0.04725,
+      "interaction_ci95": [
+        -0.06205,
+        -0.03215
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_2",
+      "stratumB": "round_5",
+      "gainA_median": 0.17703,
+      "gainB_median": 0.22925,
+      "interaction_median": -0.05205,
+      "interaction_ci95": [
+        -0.07,
+        -0.03355
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_3",
+      "stratumB": "round_4",
+      "gainA_median": 0.21492,
+      "gainB_median": 0.22425,
+      "interaction_median": -0.00924,
+      "interaction_ci95": [
+        -0.02454,
+        0.00612
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_3",
+      "stratumB": "round_5",
+      "gainA_median": 0.21492,
+      "gainB_median": 0.22925,
+      "interaction_median": -0.01417,
+      "interaction_ci95": [
+        -0.03207,
+        0.00466
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "m3gnet",
+      "stratumA": "round_4",
+      "stratumB": "round_5",
+      "gainA_median": 0.22425,
+      "gainB_median": 0.22925,
+      "interaction_median": -0.00455,
+      "interaction_ci95": [
+        -0.02453,
+        0.01647
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_1",
+      "stratumB": "round_2",
+      "gainA_median": 0.05513,
+      "gainB_median": 0.05317,
+      "interaction_median": 0.00172,
+      "interaction_ci95": [
+        -0.01052,
+        0.01385
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_1",
+      "stratumB": "round_3",
+      "gainA_median": 0.05513,
+      "gainB_median": 0.02258,
+      "interaction_median": 0.03245,
+      "interaction_ci95": [
+        0.01832,
+        0.04691
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_1",
+      "stratumB": "round_4",
+      "gainA_median": 0.05513,
+      "gainB_median": 0.03606,
+      "interaction_median": 0.019,
+      "interaction_ci95": [
+        0.00616,
+        0.03182
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_1",
+      "stratumB": "round_5",
+      "gainA_median": 0.05513,
+      "gainB_median": 0.07174,
+      "interaction_median": -0.01637,
+      "interaction_ci95": [
+        -0.03364,
+        -0.0002
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_2",
+      "stratumB": "round_3",
+      "gainA_median": 0.05317,
+      "gainB_median": 0.02258,
+      "interaction_median": 0.03082,
+      "interaction_ci95": [
+        0.01706,
+        0.04412
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_2",
+      "stratumB": "round_4",
+      "gainA_median": 0.05317,
+      "gainB_median": 0.03606,
+      "interaction_median": 0.01731,
+      "interaction_ci95": [
+        0.00528,
+        0.02857
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_2",
+      "stratumB": "round_5",
+      "gainA_median": 0.05317,
+      "gainB_median": 0.07174,
+      "interaction_median": -0.01845,
+      "interaction_ci95": [
+        -0.03574,
+        -0.00311
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_3",
+      "stratumB": "round_4",
+      "gainA_median": 0.02258,
+      "gainB_median": 0.03606,
+      "interaction_median": -0.01333,
+      "interaction_ci95": [
+        -0.02683,
+        -0.00064
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_3",
+      "stratumB": "round_5",
+      "gainA_median": 0.02258,
+      "gainB_median": 0.07174,
+      "interaction_median": -0.04908,
+      "interaction_ci95": [
+        -0.06722,
+        -0.03046
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "mace",
+      "stratumA": "round_4",
+      "stratumB": "round_5",
+      "gainA_median": 0.03606,
+      "gainB_median": 0.07174,
+      "interaction_median": -0.03564,
+      "interaction_ci95": [
+        -0.05106,
+        -0.0196
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_1",
+      "stratumB": "round_2",
+      "gainA_median": 0.01806,
+      "gainB_median": 0.01181,
+      "interaction_median": 0.00602,
+      "interaction_ci95": [
+        -0.004,
+        0.01621
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_1",
+      "stratumB": "round_3",
+      "gainA_median": 0.01806,
+      "gainB_median": -0.00068,
+      "interaction_median": 0.01865,
+      "interaction_ci95": [
+        0.00537,
+        0.03147
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_1",
+      "stratumB": "round_4",
+      "gainA_median": 0.01806,
+      "gainB_median": 0.01426,
+      "interaction_median": 0.00393,
+      "interaction_ci95": [
+        -0.00573,
+        0.01379
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_1",
+      "stratumB": "round_5",
+      "gainA_median": 0.01806,
+      "gainB_median": 0.03825,
+      "interaction_median": -0.02014,
+      "interaction_ci95": [
+        -0.03659,
+        -0.0036
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_2",
+      "stratumB": "round_3",
+      "gainA_median": 0.01181,
+      "gainB_median": -0.00068,
+      "interaction_median": 0.01252,
+      "interaction_ci95": [
+        -0.00046,
+        0.02582
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_2",
+      "stratumB": "round_4",
+      "gainA_median": 0.01181,
+      "gainB_median": 0.01426,
+      "interaction_median": -0.00225,
+      "interaction_ci95": [
+        -0.01133,
+        0.00711
+      ],
+      "excludes_0": false
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_2",
+      "stratumB": "round_5",
+      "gainA_median": 0.01181,
+      "gainB_median": 0.03825,
+      "interaction_median": -0.0264,
+      "interaction_ci95": [
+        -0.04295,
+        -0.01106
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_3",
+      "stratumB": "round_4",
+      "gainA_median": -0.00068,
+      "gainB_median": 0.01426,
+      "interaction_median": -0.01486,
+      "interaction_ci95": [
+        -0.02749,
+        -0.00252
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_3",
+      "stratumB": "round_5",
+      "gainA_median": -0.00068,
+      "gainB_median": 0.03825,
+      "interaction_median": -0.03905,
+      "interaction_ci95": [
+        -0.05841,
+        -0.02084
+      ],
+      "excludes_0": true
+    },
+    {
+      "axis": "round",
+      "model": "orb",
+      "stratumA": "round_4",
+      "stratumB": "round_5",
+      "gainA_median": 0.01426,
+      "gainB_median": 0.03825,
+      "interaction_median": -0.02436,
+      "interaction_ci95": [
+        -0.04014,
+        -0.00822
+      ],
+      "excludes_0": true
+    }
+  ],
+  "n_interactions_total": 56,
+  "n_interactions_excl0": 41,
+  "best_coverage_policy_daf": {
+    "unique_prototype": {
+      "unique=True": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      },
+      "unique=False": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      }
+    },
+    "family": {
+      "binary": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      },
+      "ternary": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      },
+      "quaternary+": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.7,
+        "orb": 0.5
+      }
+    },
+    "round": {
+      "round_1": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      },
+      "round_2": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.7
+      },
+      "round_3": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.7
+      },
+      "round_4": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      },
+      "round_5": {
+        "chgnet": 0.5,
+        "m3gnet": 0.5,
+        "mace": 0.5,
+        "orb": 0.5
+      }
+    }
+  }
+}

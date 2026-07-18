@@ -1,0 +1,848 @@
+{
+  "meta": {
+    "story": "B5b-constrained-knapsack-allocator-exec-2026-06-29",
+    "claim": "A constrained (greedy marginal-DAF) knapsack allocator at matched total coverage CI-dominates the global threshold on per-stratum DAF.",
+    "allocator": "Greedy drop maximizing sum_s DAF_s(k_s); abstention budget -> largest positive marginal-DAF strata; within-stratum kept = top-k confidence prefix.",
+    "objective": "equal-stratum-weight mean DAF",
+    "seed": 20260629,
+    "n_boot": 1000,
+    "n_rows": 256963,
+    "cov": 0.7,
+    "keep_budget_B": 179874,
+    "models": [
+      "chgnet",
+      "m3gnet",
+      "mace",
+      "orb"
+    ],
+    "strata": [
+      "oxide",
+      "intermetallic",
+      "chalcogenide",
+      "halide",
+      "pnictide",
+      "other"
+    ],
+    "conservation_note": "At matched total coverage, DAF_s depends only on k_s and is identical for global & knapsack; reallocation is zero-sum, so per-stratum Pareto dominance over global is impossible unless knapsack == global.",
+    "dominance_test": "CLEAN dominance = >=1 cell knapsack-minus-global gain CI-excl-0 positive AND 0 negative."
+  },
+  "base_rates": {
+    "oxide": 0.124221,
+    "intermetallic": 0.141776,
+    "chalcogenide": 0.205225,
+    "halide": 0.278324,
+    "pnictide": 0.170798,
+    "other": 0.166601
+  },
+  "stratum_n": {
+    "oxide": 25020,
+    "intermetallic": 119012,
+    "chalcogenide": 23847,
+    "halide": 26523,
+    "pnictide": 34614,
+    "other": 27947
+  },
+  "point_estimates": {
+    "chgnet": {
+      "oxide": {
+        "global_daf": 7.27272,
+        "knap_daf": 6.10035,
+        "daf_gain": -1.17237,
+        "global_k": 20224,
+        "knap_k": 25018,
+        "global_cov_s": 0.8083,
+        "knap_cov_s": 0.9999
+      },
+      "intermetallic": {
+        "global_daf": 4.65163,
+        "knap_daf": 5.13744,
+        "daf_gain": 0.48581,
+        "global_k": 79564,
+        "knap_k": 68461,
+        "global_cov_s": 0.6685,
+        "knap_cov_s": 0.5752
+      },
+      "chalcogenide": {
+        "global_daf": 3.64111,
+        "knap_daf": 2.87765,
+        "daf_gain": -0.76346,
+        "global_k": 16442,
+        "knap_k": 23841,
+        "global_cov_s": 0.6895,
+        "knap_cov_s": 0.9997
+      },
+      "halide": {
+        "global_daf": 2.83017,
+        "knap_daf": 3.59293,
+        "daf_gain": 0.76276,
+        "global_k": 17592,
+        "knap_k": 4,
+        "global_cov_s": 0.6633,
+        "knap_cov_s": 0.0002
+      },
+      "pnictide": {
+        "global_daf": 3.9331,
+        "knap_daf": 3.01476,
+        "daf_gain": -0.91834,
+        "global_k": 26108,
+        "knap_k": 34611,
+        "global_cov_s": 0.7543,
+        "knap_cov_s": 0.9999
+      },
+      "other": {
+        "global_daf": 3.89682,
+        "knap_daf": 2.88051,
+        "daf_gain": -1.01632,
+        "global_k": 19944,
+        "knap_k": 27939,
+        "global_cov_s": 0.7136,
+        "knap_cov_s": 0.9997
+      }
+    },
+    "m3gnet": {
+      "oxide": {
+        "global_daf": 5.0951,
+        "knap_daf": 4.42223,
+        "daf_gain": -0.67287,
+        "global_k": 19590,
+        "knap_k": 25015,
+        "global_cov_s": 0.783,
+        "knap_cov_s": 0.9998
+      },
+      "intermetallic": {
+        "global_daf": 3.89298,
+        "knap_daf": 4.81159,
+        "daf_gain": 0.91861,
+        "global_k": 79824,
+        "knap_k": 58403,
+        "global_cov_s": 0.6707,
+        "knap_cov_s": 0.4907
+      },
+      "chalcogenide": {
+        "global_daf": 2.93965,
+        "knap_daf": 2.39531,
+        "daf_gain": -0.54433,
+        "global_k": 16236,
+        "knap_k": 23842,
+        "global_cov_s": 0.6808,
+        "knap_cov_s": 0.9998
+      },
+      "halide": {
+        "global_daf": 2.29697,
+        "knap_daf": 2.51488,
+        "daf_gain": 0.2179,
+        "global_k": 18326,
+        "knap_k": 10095,
+        "global_cov_s": 0.6909,
+        "knap_cov_s": 0.3806
+      },
+      "pnictide": {
+        "global_daf": 3.36051,
+        "knap_daf": 2.60264,
+        "daf_gain": -0.75787,
+        "global_k": 26077,
+        "knap_k": 34599,
+        "global_cov_s": 0.7534,
+        "knap_cov_s": 0.9996
+      },
+      "other": {
+        "global_daf": 3.35272,
+        "knap_daf": 2.53477,
+        "daf_gain": -0.81796,
+        "global_k": 19821,
+        "knap_k": 27920,
+        "global_cov_s": 0.7092,
+        "knap_cov_s": 0.999
+      }
+    },
+    "mace": {
+      "oxide": {
+        "global_daf": 6.93507,
+        "knap_daf": 6.36177,
+        "daf_gain": -0.5733,
+        "global_k": 18679,
+        "knap_k": 25015,
+        "global_cov_s": 0.7466,
+        "knap_cov_s": 0.9998
+      },
+      "intermetallic": {
+        "global_daf": 6.66579,
+        "knap_daf": 6.66954,
+        "daf_gain": 0.00375,
+        "global_k": 81751,
+        "knap_k": 68460,
+        "global_cov_s": 0.6869,
+        "knap_cov_s": 0.5752
+      },
+      "chalcogenide": {
+        "global_daf": 4.76507,
+        "knap_daf": 4.27627,
+        "daf_gain": -0.48879,
+        "global_k": 16642,
+        "knap_k": 23845,
+        "global_cov_s": 0.6979,
+        "knap_cov_s": 0.9999
+      },
+      "halide": {
+        "global_daf": 3.46751,
+        "knap_daf": 3.59293,
+        "daf_gain": 0.12541,
+        "global_k": 16406,
+        "knap_k": 4,
+        "global_cov_s": 0.6186,
+        "knap_cov_s": 0.0002
+      },
+      "pnictide": {
+        "global_daf": 5.62792,
+        "knap_daf": 4.9326,
+        "daf_gain": -0.69532,
+        "global_k": 26131,
+        "knap_k": 34608,
+        "global_cov_s": 0.7549,
+        "knap_cov_s": 0.9998
+      },
+      "other": {
+        "global_daf": 5.74189,
+        "knap_daf": 4.74256,
+        "daf_gain": -0.99933,
+        "global_k": 20265,
+        "knap_k": 27942,
+        "global_cov_s": 0.7251,
+        "knap_cov_s": 0.9998
+      }
+    },
+    "orb": {
+      "oxide": {
+        "global_daf": 7.63018,
+        "knap_daf": 7.18137,
+        "daf_gain": -0.44881,
+        "global_k": 18509,
+        "knap_k": 25020,
+        "global_cov_s": 0.7398,
+        "knap_cov_s": 1.0
+      },
+      "intermetallic": {
+        "global_daf": 6.69624,
+        "knap_daf": 6.6982,
+        "daf_gain": 0.00196,
+        "global_k": 82263,
+        "knap_k": 81060,
+        "global_cov_s": 0.6912,
+        "knap_cov_s": 0.6811
+      },
+      "chalcogenide": {
+        "global_daf": 4.80742,
+        "knap_daf": 4.82854,
+        "daf_gain": 0.02112,
+        "global_k": 16419,
+        "knap_k": 11240,
+        "global_cov_s": 0.6885,
+        "knap_cov_s": 0.4713
+      },
+      "halide": {
+        "global_daf": 3.51764,
+        "knap_daf": 3.59293,
+        "daf_gain": 0.07528,
+        "global_k": 16218,
+        "knap_k": 4,
+        "global_cov_s": 0.6115,
+        "knap_cov_s": 0.0002
+      },
+      "pnictide": {
+        "global_daf": 5.68452,
+        "knap_daf": 5.37056,
+        "daf_gain": -0.31396,
+        "global_k": 26073,
+        "knap_k": 34614,
+        "global_cov_s": 0.7533,
+        "knap_cov_s": 1.0
+      },
+      "other": {
+        "global_daf": 5.79525,
+        "knap_daf": 5.25599,
+        "daf_gain": -0.53926,
+        "global_k": 20392,
+        "knap_k": 27936,
+        "global_cov_s": 0.7297,
+        "knap_cov_s": 0.9996
+      }
+    }
+  },
+  "bootstrap_gains": {
+    "chgnet": {
+      "oxide": {
+        "gain_median": -1.16835,
+        "ci95": [
+          -1.29588,
+          -1.03066
+        ],
+        "excl0": true
+      },
+      "intermetallic": {
+        "gain_median": 0.48053,
+        "ci95": [
+          0.43949,
+          0.51981
+        ],
+        "excl0": true
+      },
+      "chalcogenide": {
+        "gain_median": -0.7617,
+        "ci95": [
+          -0.82054,
+          -0.70345
+        ],
+        "excl0": true
+      },
+      "halide": {
+        "gain_median": 0.76367,
+        "ci95": [
+          0.72433,
+          0.8034
+        ],
+        "excl0": true
+      },
+      "pnictide": {
+        "gain_median": -0.91705,
+        "ci95": [
+          -0.97132,
+          -0.86477
+        ],
+        "excl0": true
+      },
+      "other": {
+        "gain_median": -1.0172,
+        "ci95": [
+          -1.08432,
+          -0.9498
+        ],
+        "excl0": true
+      },
+      "_mean_daf_gain": {
+        "gain_median": -0.43646,
+        "ci95": [
+          -0.465,
+          -0.40502
+        ],
+        "excl0": true
+      },
+      "_wmean_daf_gain": {
+        "gain_median": -0.1176,
+        "ci95": [
+          -0.14264,
+          -0.09051
+        ],
+        "excl0": true
+      }
+    },
+    "m3gnet": {
+      "oxide": {
+        "gain_median": -0.6713,
+        "ci95": [
+          -0.77282,
+          -0.56679
+        ],
+        "excl0": true
+      },
+      "intermetallic": {
+        "gain_median": 0.91467,
+        "ci95": [
+          0.85379,
+          0.97976
+        ],
+        "excl0": true
+      },
+      "chalcogenide": {
+        "gain_median": -0.54574,
+        "ci95": [
+          -0.59064,
+          -0.50248
+        ],
+        "excl0": true
+      },
+      "halide": {
+        "gain_median": 0.22012,
+        "ci95": [
+          0.1654,
+          0.28026
+        ],
+        "excl0": true
+      },
+      "pnictide": {
+        "gain_median": -0.75532,
+        "ci95": [
+          -0.79949,
+          -0.71612
+        ],
+        "excl0": true
+      },
+      "other": {
+        "gain_median": -0.81733,
+        "ci95": [
+          -0.86908,
+          -0.76177
+        ],
+        "excl0": true
+      },
+      "_mean_daf_gain": {
+        "gain_median": -0.27654,
+        "ci95": [
+          -0.29854,
+          -0.25171
+        ],
+        "excl0": true
+      },
+      "_wmean_daf_gain": {
+        "gain_median": 0.13887,
+        "ci95": [
+          0.11178,
+          0.1703
+        ],
+        "excl0": true
+      }
+    },
+    "mace": {
+      "oxide": {
+        "gain_median": -0.56641,
+        "ci95": [
+          -0.70364,
+          -0.44553
+        ],
+        "excl0": true
+      },
+      "intermetallic": {
+        "gain_median": 0.00148,
+        "ci95": [
+          -0.0346,
+          0.04175
+        ],
+        "excl0": false
+      },
+      "chalcogenide": {
+        "gain_median": -0.47005,
+        "ci95": [
+          -0.53143,
+          -0.00438
+        ],
+        "excl0": true
+      },
+      "halide": {
+        "gain_median": 0.11778,
+        "ci95": [
+          0.02448,
+          0.14332
+        ],
+        "excl0": true
+      },
+      "pnictide": {
+        "gain_median": -0.69349,
+        "ci95": [
+          -0.74664,
+          -0.63964
+        ],
+        "excl0": true
+      },
+      "other": {
+        "gain_median": -0.99656,
+        "ci95": [
+          -1.07001,
+          -0.92693
+        ],
+        "excl0": true
+      },
+      "_mean_daf_gain": {
+        "gain_median": -0.42741,
+        "ci95": [
+          -0.46173,
+          -0.36025
+        ],
+        "excl0": true
+      },
+      "_wmean_daf_gain": {
+        "gain_median": -0.28077,
+        "ci95": [
+          -0.30623,
+          -0.24597
+        ],
+        "excl0": true
+      }
+    },
+    "orb": {
+      "oxide": {
+        "gain_median": -0.44553,
+        "ci95": [
+          -0.56336,
+          -0.34338
+        ],
+        "excl0": true
+      },
+      "intermetallic": {
+        "gain_median": 0.00064,
+        "ci95": [
+          -0.01227,
+          0.0158
+        ],
+        "excl0": false
+      },
+      "chalcogenide": {
+        "gain_median": 0.00677,
+        "ci95": [
+          -0.01606,
+          0.04321
+        ],
+        "excl0": false
+      },
+      "halide": {
+        "gain_median": 0.06179,
+        "ci95": [
+          -0.02137,
+          0.08769
+        ],
+        "excl0": false
+      },
+      "pnictide": {
+        "gain_median": -0.17128,
+        "ci95": [
+          -0.35398,
+          0.0154
+        ],
+        "excl0": false
+      },
+      "other": {
+        "gain_median": -0.53731,
+        "ci95": [
+          -0.602,
+          -0.47284
+        ],
+        "excl0": true
+      },
+      "_mean_daf_gain": {
+        "gain_median": -0.1835,
+        "ci95": [
+          -0.22259,
+          -0.14841
+        ],
+        "excl0": true
+      },
+      "_wmean_daf_gain": {
+        "gain_median": -0.11931,
+        "ci95": [
+          -0.1482,
+          -0.09244
+        ],
+        "excl0": true
+      }
+    }
+  },
+  "shuffle_null": {
+    "chgnet": {
+      "oxide": {
+        "gain_median": 0.00148,
+        "ci95": [
+          -0.07983,
+          0.08703
+        ],
+        "excl0": false
+      },
+      "intermetallic": {
+        "gain_median": -0.00067,
+        "ci95": [
+          -0.03505,
+          0.03507
+        ],
+        "excl0": false
+      },
+      "chalcogenide": {
+        "gain_median": 0.0014,
+        "ci95": [
+          -0.0381,
+          0.03934
+        ],
+        "excl0": false
+      },
+      "halide": {
+        "gain_median": -0.00019,
+        "ci95": [
+          -0.02561,
+          0.03204
+        ],
+        "excl0": false
+      },
+      "pnictide": {
+        "gain_median": 0.00142,
+        "ci95": [
+          -0.03891,
+          0.0423
+        ],
+        "excl0": false
+      },
+      "other": {
+        "gain_median": 0.00146,
+        "ci95": [
+          -0.04226,
+          0.04725
+        ],
+        "excl0": false
+      },
+      "_mean_daf_gain": {
+        "gain_median": 0.00099,
+        "ci95": [
+          -0.01944,
+          0.0201
+        ],
+        "excl0": false
+      },
+      "_wmean_daf_gain": {
+        "gain_median": 0.00095,
+        "ci95": [
+          -0.01988,
+          0.02077
+        ],
+        "excl0": false
+      }
+    },
+    "m3gnet": {
+      "oxide": {
+        "gain_median": 0.00355,
+        "ci95": [
+          -0.07773,
+          0.07969
+        ],
+        "excl0": false
+      },
+      "intermetallic": {
+        "gain_median": -0.00069,
+        "ci95": [
+          -0.03089,
+          0.03251
+        ],
+        "excl0": false
+      },
+      "chalcogenide": {
+        "gain_median": 0.00094,
+        "ci95": [
+          -0.03444,
+          0.0377
+        ],
+        "excl0": false
+      },
+      "halide": {
+        "gain_median": -0.00034,
+        "ci95": [
+          -0.02053,
+          0.02116
+        ],
+        "excl0": false
+      },
+      "pnictide": {
+        "gain_median": 0.00014,
+        "ci95": [
+          -0.03656,
+          0.03735
+        ],
+        "excl0": false
+      },
+      "other": {
+        "gain_median": 5e-05,
+        "ci95": [
+          -0.04227,
+          0.04207
+        ],
+        "excl0": false
+      },
+      "_mean_daf_gain": {
+        "gain_median": 0.00037,
+        "ci95": [
+          -0.01772,
+          0.01784
+        ],
+        "excl0": false
+      },
+      "_wmean_daf_gain": {
+        "gain_median": -0.00029,
+        "ci95": [
+          -0.01786,
+          0.01844
+        ],
+        "excl0": false
+      }
+    },
+    "mace": {
+      "oxide": {
+        "gain_median": 0.0003,
+        "ci95": [
+          -0.07006,
+          0.07711
+        ],
+        "excl0": false
+      },
+      "intermetallic": {
+        "gain_median": 0.00036,
+        "ci95": [
+          -0.02948,
+          0.02989
+        ],
+        "excl0": false
+      },
+      "chalcogenide": {
+        "gain_median": 0.00038,
+        "ci95": [
+          -0.02052,
+          0.02243
+        ],
+        "excl0": false
+      },
+      "halide": {
+        "gain_median": -0.00049,
+        "ci95": [
+          -0.02381,
+          0.02418
+        ],
+        "excl0": false
+      },
+      "pnictide": {
+        "gain_median": 0.00137,
+        "ci95": [
+          -0.03416,
+          0.03499
+        ],
+        "excl0": false
+      },
+      "other": {
+        "gain_median": -0.0004,
+        "ci95": [
+          -0.04653,
+          0.04454
+        ],
+        "excl0": false
+      },
+      "_mean_daf_gain": {
+        "gain_median": 0.00024,
+        "ci95": [
+          -0.01584,
+          0.01634
+        ],
+        "excl0": false
+      },
+      "_wmean_daf_gain": {
+        "gain_median": 0.0002,
+        "ci95": [
+          -0.01658,
+          0.01727
+        ],
+        "excl0": false
+      }
+    },
+    "orb": {
+      "oxide": {
+        "gain_median": 5e-05,
+        "ci95": [
+          -0.06069,
+          0.06208
+        ],
+        "excl0": false
+      },
+      "intermetallic": {
+        "gain_median": 0.00011,
+        "ci95": [
+          -0.02062,
+          0.02211
+        ],
+        "excl0": false
+      },
+      "chalcogenide": {
+        "gain_median": -0.00022,
+        "ci95": [
+          -0.00936,
+          0.01172
+        ],
+        "excl0": false
+      },
+      "halide": {
+        "gain_median": -0.00078,
+        "ci95": [
+          -0.02204,
+          0.02485
+        ],
+        "excl0": false
+      },
+      "pnictide": {
+        "gain_median": 0.0006,
+        "ci95": [
+          -0.02842,
+          0.02611
+        ],
+        "excl0": false
+      },
+      "other": {
+        "gain_median": 0.00026,
+        "ci95": [
+          -0.03697,
+          0.03905
+        ],
+        "excl0": false
+      },
+      "_mean_daf_gain": {
+        "gain_median": -0.00018,
+        "ci95": [
+          -0.01342,
+          0.01348
+        ],
+        "excl0": false
+      },
+      "_wmean_daf_gain": {
+        "gain_median": 0.0001,
+        "ci95": [
+          -0.01268,
+          0.01284
+        ],
+        "excl0": false
+      }
+    }
+  },
+  "aggregate": {
+    "chgnet": {
+      "mean_daf_global": 4.37092,
+      "mean_daf_knap": 3.93394,
+      "mean_daf_gain": -0.43699,
+      "wmean_daf_global": 4.44617,
+      "wmean_daf_knap": 4.33067,
+      "wmean_daf_gain": -0.11551
+    },
+    "m3gnet": {
+      "mean_daf_global": 3.48966,
+      "mean_daf_knap": 3.21357,
+      "mean_daf_gain": -0.27609,
+      "wmean_daf_global": 3.62634,
+      "wmean_daf_knap": 3.7672,
+      "wmean_daf_gain": 0.14086
+    },
+    "mace": {
+      "mean_daf_global": 5.53388,
+      "mean_daf_knap": 5.09595,
+      "mean_daf_gain": -0.43793,
+      "wmean_daf_global": 5.94521,
+      "wmean_daf_knap": 5.65636,
+      "wmean_daf_gain": -0.28885
+    },
+    "orb": {
+      "mean_daf_global": 5.68854,
+      "mean_daf_knap": 5.48793,
+      "mean_daf_gain": -0.20061,
+      "wmean_daf_global": 6.04953,
+      "wmean_daf_knap": 5.91553,
+      "wmean_daf_gain": -0.134
+    }
+  },
+  "summary": {
+    "cov": 0.7,
+    "total_cells": 24,
+    "positive_excl0": 5,
+    "negative_excl0": 14,
+    "shuffle_excl0": 0,
+    "mean_daf_aggregate_positive_excl0_models": 0,
+    "clean_per_stratum_dominance": false,
+    "verdict": "FALSIFIED-NO-DOMINANCE",
+    "rationale": "Per-stratum dominance test: 5 cells CI-excl-0 POSITIVE, 14 cells CI-excl-0 NEGATIVE (of 24). CLEAN dominance requires >=1 positive AND 0 negative -> False. Aggregate mean-DAF improved with CI-excl-0 in 0/4 models (knapsack optimizes the equal-weight mean objective), but at matched total coverage the reallocation is zero-sum across strata, so per-stratum Pareto dominance over the global threshold is not achieved."
+  }
+}

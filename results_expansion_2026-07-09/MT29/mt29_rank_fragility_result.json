@@ -1,0 +1,181 @@
+{
+  "experiment": "MT29_rank_fragility_prototype_split",
+  "metrics_f1": {
+    "kendall_tau": 1.0,
+    "spearman": 1.0
+  },
+  "metrics_mae": {
+    "kendall_tau": 1.0,
+    "spearman": 1.0
+  },
+  "models": [
+    {
+      "model": "chgnet",
+      "f1_full": 0.6098801653679818,
+      "f1_uniq": 0.611111789635673,
+      "rank_f1_full": 3,
+      "rank_f1_uniq": 3,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_full": 0.06113395013251037,
+      "mae_uniq": 0.06349163694161106,
+      "rank_mae_full": 3,
+      "rank_mae_uniq": 3,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "m3gnet",
+      "f1_full": 0.5733710954321111,
+      "f1_uniq": 0.5679993291263968,
+      "rank_f1_full": 4,
+      "rank_f1_uniq": 4,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_full": 0.07263837688209496,
+      "mae_uniq": 0.0760735059354204,
+      "rank_mae_full": 4,
+      "rank_mae_uniq": 4,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "mace",
+      "f1_full": 0.8338755426917511,
+      "f1_uniq": 0.850545085136385,
+      "rank_f1_full": 2,
+      "rank_f1_uniq": 2,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_full": 0.029184545032125492,
+      "mae_uniq": 0.030046713559117522,
+      "rank_mae_full": 2,
+      "rank_mae_uniq": 2,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        -1.0,
+        0.0
+      ]
+    },
+    {
+      "model": "orb",
+      "f1_full": 0.8596407566364648,
+      "f1_uniq": 0.8801854292019241,
+      "rank_f1_full": 1,
+      "rank_f1_uniq": 1,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_full": 0.02849922960293585,
+      "mae_uniq": 0.028243878089527864,
+      "rank_mae_full": 1,
+      "rank_mae_uniq": 1,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "model": "CGCNN",
+      "f1_full": 0.5089223127916525,
+      "f1_uniq": 0.5062435095362326,
+      "rank_f1_full": 6,
+      "rank_f1_uniq": 6,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        -1.0,
+        1.0
+      ],
+      "mae_full": 0.13500825805472425,
+      "mae_uniq": 0.1384854356849169,
+      "rank_mae_full": 7,
+      "rank_mae_uniq": 7,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "CGCNN+P",
+      "f1_full": 0.5083111235797447,
+      "f1_uniq": 0.49946451598802266,
+      "rank_f1_full": 7,
+      "rank_f1_uniq": 7,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        -2.0,
+        0.0
+      ],
+      "mae_full": 0.10833103853962983,
+      "mae_uniq": 0.11328600634928401,
+      "rank_mae_full": 5,
+      "rank_mae_uniq": 5,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "MEGNet",
+      "f1_full": 0.5104828920025513,
+      "f1_uniq": 0.509106712496543,
+      "rank_f1_full": 5,
+      "rank_f1_uniq": 5,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        0.0,
+        2.0
+      ],
+      "mae_full": 0.12823231985398562,
+      "mae_uniq": 0.13010221868706087,
+      "rank_mae_full": 6,
+      "rank_mae_uniq": 6,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "model": "ALIGNN-FF",
+      "f1_full": 0.49144138732027715,
+      "f1_uniq": 0.48791266446040843,
+      "rank_f1_full": 8,
+      "rank_f1_uniq": 8,
+      "displacement_f1": 0,
+      "displacement_f1_ci95": [
+        0.0,
+        0.0
+      ],
+      "mae_full": 0.14039990380641426,
+      "mae_uniq": 0.1421168184383208,
+      "rank_mae_full": 8,
+      "rank_mae_uniq": 8,
+      "displacement_mae": 0,
+      "displacement_mae_ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

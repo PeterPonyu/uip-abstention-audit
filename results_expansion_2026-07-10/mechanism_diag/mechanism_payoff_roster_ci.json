@@ -1,0 +1,524 @@
+{
+  "generated_utc": "2026-07-11T00:50:12.910608+00:00",
+  "label": "POST-HOC DESCRIPTIVE (not preregistered); referee MAJOR-1/MAJOR-4 support.",
+  "seed": 20260621,
+  "n_boot": 1000,
+  "mechanism_per_model_stratum": {
+    "chgnet": {
+      "oxide": {
+        "eform_mae": 0.0459,
+        "eform_rmse": 0.0875,
+        "n_called_stable": 2696,
+        "precision_called_stable": 0.7578,
+        "precision_top_half_conf": 0.9006,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7512
+      },
+      "intermetallic": {
+        "eform_mae": 0.06,
+        "eform_rmse": 0.1017,
+        "n_called_stable": 28315,
+        "precision_called_stable": 0.4419,
+        "precision_top_half_conf": 0.6188,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7422
+      },
+      "chalcogenide": {
+        "eform_mae": 0.0623,
+        "eform_rmse": 0.0956,
+        "n_called_stable": 6213,
+        "precision_called_stable": 0.5904,
+        "precision_top_half_conf": 0.7534,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7238
+      },
+      "halide": {
+        "eform_mae": 0.0585,
+        "eform_rmse": 0.0989,
+        "n_called_stable": 8843,
+        "precision_called_stable": 0.6517,
+        "precision_top_half_conf": 0.8141,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7451
+      },
+      "pnictide": {
+        "eform_mae": 0.0695,
+        "eform_rmse": 0.1076,
+        "n_called_stable": 8819,
+        "precision_called_stable": 0.5148,
+        "precision_top_half_conf": 0.7099,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7602
+      },
+      "other": {
+        "eform_mae": 0.071,
+        "eform_rmse": 0.1092,
+        "n_called_stable": 7267,
+        "precision_called_stable": 0.4796,
+        "precision_top_half_conf": 0.6491,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7347
+      }
+    },
+    "m3gnet": {
+      "oxide": {
+        "eform_mae": 0.0641,
+        "eform_rmse": 0.1268,
+        "n_called_stable": 4199,
+        "precision_called_stable": 0.5489,
+        "precision_top_half_conf": 0.6422,
+        "auroc_conf_sep_truestable_among_calledstable": 0.6094
+      },
+      "intermetallic": {
+        "eform_mae": 0.0678,
+        "eform_rmse": 0.1091,
+        "n_called_stable": 34917,
+        "precision_called_stable": 0.3873,
+        "precision_top_half_conf": 0.5474,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7331
+      },
+      "chalcogenide": {
+        "eform_mae": 0.0749,
+        "eform_rmse": 0.1126,
+        "n_called_stable": 8313,
+        "precision_called_stable": 0.4915,
+        "precision_top_half_conf": 0.6333,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7039
+      },
+      "halide": {
+        "eform_mae": 0.0738,
+        "eform_rmse": 0.1204,
+        "n_called_stable": 10662,
+        "precision_called_stable": 0.571,
+        "precision_top_half_conf": 0.6736,
+        "auroc_conf_sep_truestable_among_calledstable": 0.648
+      },
+      "pnictide": {
+        "eform_mae": 0.0844,
+        "eform_rmse": 0.1254,
+        "n_called_stable": 10974,
+        "precision_called_stable": 0.4443,
+        "precision_top_half_conf": 0.6309,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7575
+      },
+      "other": {
+        "eform_mae": 0.0833,
+        "eform_rmse": 0.1198,
+        "n_called_stable": 8866,
+        "precision_called_stable": 0.4217,
+        "precision_top_half_conf": 0.5964,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7425
+      }
+    },
+    "mace": {
+      "oxide": {
+        "eform_mae": 0.0485,
+        "eform_rmse": 2.2118,
+        "n_called_stable": 3268,
+        "precision_called_stable": 0.7898,
+        "precision_top_half_conf": 0.8727,
+        "auroc_conf_sep_truestable_among_calledstable": 0.6687
+      },
+      "intermetallic": {
+        "eform_mae": 0.0245,
+        "eform_rmse": 0.0734,
+        "n_called_stable": 17316,
+        "precision_called_stable": 0.8124,
+        "precision_top_half_conf": 0.9386,
+        "auroc_conf_sep_truestable_among_calledstable": 0.788
+      },
+      "chalcogenide": {
+        "eform_mae": 0.0298,
+        "eform_rmse": 0.0702,
+        "n_called_stable": 4765,
+        "precision_called_stable": 0.8772,
+        "precision_top_half_conf": 0.9736,
+        "auroc_conf_sep_truestable_among_calledstable": 0.8223
+      },
+      "halide": {
+        "eform_mae": 0.0296,
+        "eform_rmse": 0.0697,
+        "n_called_stable": 7355,
+        "precision_called_stable": 0.8578,
+        "precision_top_half_conf": 0.9652,
+        "auroc_conf_sep_truestable_among_calledstable": 0.8168
+      },
+      "pnictide": {
+        "eform_mae": 0.0306,
+        "eform_rmse": 0.0764,
+        "n_called_stable": 5926,
+        "precision_called_stable": 0.8421,
+        "precision_top_half_conf": 0.9558,
+        "auroc_conf_sep_truestable_among_calledstable": 0.8049
+      },
+      "other": {
+        "eform_mae": 0.0292,
+        "eform_rmse": 0.0677,
+        "n_called_stable": 4920,
+        "precision_called_stable": 0.7896,
+        "precision_top_half_conf": 0.948,
+        "auroc_conf_sep_truestable_among_calledstable": 0.8175
+      }
+    },
+    "orb": {
+      "oxide": {
+        "eform_mae": 0.0279,
+        "eform_rmse": 0.0727,
+        "n_called_stable": 2965,
+        "precision_called_stable": 0.8921,
+        "precision_top_half_conf": 0.948,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7494
+      },
+      "intermetallic": {
+        "eform_mae": 0.0281,
+        "eform_rmse": 0.0793,
+        "n_called_stable": 15098,
+        "precision_called_stable": 0.8834,
+        "precision_top_half_conf": 0.954,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7596
+      },
+      "chalcogenide": {
+        "eform_mae": 0.0287,
+        "eform_rmse": 0.075,
+        "n_called_stable": 4477,
+        "precision_called_stable": 0.9406,
+        "precision_top_half_conf": 0.9848,
+        "auroc_conf_sep_truestable_among_calledstable": 0.8131
+      },
+      "halide": {
+        "eform_mae": 0.0257,
+        "eform_rmse": 0.0717,
+        "n_called_stable": 6914,
+        "precision_called_stable": 0.9283,
+        "precision_top_half_conf": 0.9783,
+        "auroc_conf_sep_truestable_among_calledstable": 0.8134
+      },
+      "pnictide": {
+        "eform_mae": 0.0295,
+        "eform_rmse": 0.0797,
+        "n_called_stable": 5295,
+        "precision_called_stable": 0.9173,
+        "precision_top_half_conf": 0.9679,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7773
+      },
+      "other": {
+        "eform_mae": 0.0321,
+        "eform_rmse": 0.0913,
+        "n_called_stable": 4209,
+        "precision_called_stable": 0.875,
+        "precision_top_half_conf": 0.9601,
+        "auroc_conf_sep_truestable_among_calledstable": 0.7924
+      }
+    }
+  },
+  "mechanism_summary": {
+    "strata_by_mean_rmse_desc": [
+      [
+        "oxide",
+        0.6247
+      ],
+      [
+        "pnictide",
+        0.0973
+      ],
+      [
+        "other",
+        0.097
+      ],
+      [
+        "intermetallic",
+        0.0909
+      ],
+      [
+        "halide",
+        0.0902
+      ],
+      [
+        "chalcogenide",
+        0.0883
+      ]
+    ],
+    "strata_by_mean_auroc_desc": [
+      [
+        "pnictide",
+        0.775
+      ],
+      [
+        "other",
+        0.7718
+      ],
+      [
+        "chalcogenide",
+        0.7658
+      ],
+      [
+        "halide",
+        0.7558
+      ],
+      [
+        "intermetallic",
+        0.7557
+      ],
+      [
+        "oxide",
+        0.6947
+      ]
+    ],
+    "oxide_highest_rmse": true,
+    "oxide_highest_auroc": false
+  },
+  "practitioner_payoff_chgnet": {
+    "oxide": {
+      "y_loose": 2696,
+      "y_tight": 1348,
+      "base_rate": 0.12422,
+      "DAF_loose": 6.10035,
+      "DAF_tight": 7.24995,
+      "precision_full_calledstable": 0.7578,
+      "precision_confident_half": 0.9006,
+      "wasted_relax_random_half": 326.5,
+      "wasted_relax_confident_half": 134.0,
+      "wasted_relax_saved": 192.5
+    },
+    "halide": {
+      "y_loose": 2696,
+      "y_tight": 1348,
+      "base_rate": 0.27832,
+      "DAF_loose": 3.17047,
+      "DAF_tight": 3.40635,
+      "precision_full_calledstable": 0.8824,
+      "precision_confident_half": 0.9481,
+      "wasted_relax_random_half": 158.5,
+      "wasted_relax_confident_half": 70.0,
+      "wasted_relax_saved": 88.5
+    }
+  },
+  "modern_roster_bootstrap_ci": {
+    "mace_mp_0": {
+      "y_loose": 1552,
+      "y_tight": 776,
+      "oxide_gain_median": 0.1608,
+      "oxide_gain_ci95": [
+        0.0259,
+        0.2905
+      ],
+      "oxide_vs_other_pairs": [
+        {
+          "vs": "intermetallic",
+          "interaction_med": 0.1342,
+          "ci95": [
+            -0.0222,
+            0.2781
+          ],
+          "excl0": false
+        },
+        {
+          "vs": "chalcogenide",
+          "interaction_med": 0.1355,
+          "ci95": [
+            0.0081,
+            0.2728
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "halide",
+          "interaction_med": 0.1295,
+          "ci95": [
+            -0.0041,
+            0.2657
+          ],
+          "excl0": false
+        },
+        {
+          "vs": "pnictide",
+          "interaction_med": 0.1073,
+          "ci95": [
+            -0.026,
+            0.2462
+          ],
+          "excl0": false
+        },
+        {
+          "vs": "other",
+          "interaction_med": 0.1106,
+          "ci95": [
+            -0.0349,
+            0.2489
+          ],
+          "excl0": false
+        }
+      ],
+      "oxide_gt_other_count": "5/5",
+      "oxide_gt_other_CI_excl0": "1/5"
+    },
+    "mattersim": {
+      "y_loose": 1718,
+      "y_tight": 859,
+      "oxide_gain_median": 0.4217,
+      "oxide_gain_ci95": [
+        0.2718,
+        0.5764
+      ],
+      "oxide_vs_other_pairs": [
+        {
+          "vs": "intermetallic",
+          "interaction_med": 0.2405,
+          "ci95": [
+            0.067,
+            0.4168
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "chalcogenide",
+          "interaction_med": 0.2486,
+          "ci95": [
+            0.0745,
+            0.4115
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "halide",
+          "interaction_med": 0.2345,
+          "ci95": [
+            0.0705,
+            0.396
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "pnictide",
+          "interaction_med": 0.0319,
+          "ci95": [
+            -0.1441,
+            0.2105
+          ],
+          "excl0": false
+        },
+        {
+          "vs": "other",
+          "interaction_med": 0.149,
+          "ci95": [
+            -0.0289,
+            0.3474
+          ],
+          "excl0": false
+        }
+      ],
+      "oxide_gt_other_count": "5/5",
+      "oxide_gt_other_CI_excl0": "3/5"
+    },
+    "sevennet_mf_ompa": {
+      "y_loose": 1524,
+      "y_tight": 762,
+      "oxide_gain_median": 0.169,
+      "oxide_gain_ci95": [
+        0.0844,
+        0.2588
+      ],
+      "oxide_vs_other_pairs": [
+        {
+          "vs": "intermetallic",
+          "interaction_med": 0.1079,
+          "ci95": [
+            -0.02,
+            0.2284
+          ],
+          "excl0": false
+        },
+        {
+          "vs": "chalcogenide",
+          "interaction_med": 0.1468,
+          "ci95": [
+            0.0546,
+            0.2376
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "halide",
+          "interaction_med": 0.162,
+          "ci95": [
+            0.0798,
+            0.2507
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "pnictide",
+          "interaction_med": 0.1032,
+          "ci95": [
+            0.0038,
+            0.2002
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "other",
+          "interaction_med": 0.1348,
+          "ci95": [
+            0.0359,
+            0.2285
+          ],
+          "excl0": true
+        }
+      ],
+      "oxide_gt_other_count": "5/5",
+      "oxide_gt_other_CI_excl0": "4/5"
+    },
+    "orb_v3": {
+      "y_loose": 1789,
+      "y_tight": 894,
+      "oxide_gain_median": -1.8252,
+      "oxide_gain_ci95": [
+        -1.9874,
+        -1.6451
+      ],
+      "oxide_vs_other_pairs": [
+        {
+          "vs": "intermetallic",
+          "interaction_med": -1.8972,
+          "ci95": [
+            -2.1208,
+            -1.6707
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "chalcogenide",
+          "interaction_med": -0.838,
+          "ci95": [
+            -1.0261,
+            -0.6462
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "halide",
+          "interaction_med": -1.1663,
+          "ci95": [
+            -1.3476,
+            -0.9819
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "pnictide",
+          "interaction_med": -1.3665,
+          "ci95": [
+            -1.5922,
+            -1.1427
+          ],
+          "excl0": true
+        },
+        {
+          "vs": "other",
+          "interaction_med": -0.0694,
+          "ci95": [
+            -0.2915,
+            0.1288
+          ],
+          "excl0": false
+        }
+      ],
+      "oxide_gt_other_count": "0/5",
+      "oxide_gt_other_CI_excl0": "0/5"
+    }
+  }
+}
