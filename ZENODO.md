@@ -3,8 +3,9 @@
 Concept DOI: <https://doi.org/10.5281/zenodo.21130295>
 
 - Version 0.2.0 was published on 18 July 2026.
-- Version 0.3.0 is the sanitized, hermetic release candidate associated with Git tag `v0.3.0`.
-- The exact version DOI is recorded only after Zenodo creates the new-version draft; it must never be guessed.
+- Version 0.3.0 exact DOI: <https://doi.org/10.5281/zenodo.21524096>
+
+Version 0.3.0 is the sanitized, hermetic release associated with Git tag `v0.3.0` and Zenodo draft 21524096. The draft has been created with metadata, the tarball uploaded, and the exact DOI recorded here. It awaits final review and manual publish.
 
 ## Release procedure
 

@@ -13,8 +13,8 @@ authors:
     orcid: "https://orcid.org/0009-0001-8329-0108"
     affiliation: "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Army Medical University, Chongqing, China"
 version: "0.3.0"
-doi: 10.5281/zenodo.21130295
-date-released: "2026-07-23"
+doi: 10.5281/zenodo.21524096
+date-released: "2026-07-24"
 repository-code: "https://github.com/PeterPonyu/uip-abstention-audit"
 license: MIT
 keywords:
@@ -25,3 +25,10 @@ keywords:
   - Matbench Discovery
   - crystal stability
   - reliability audit
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21524096
+    description: "Version 0.3.0"
+  - type: doi
+    value: 10.5281/zenodo.21130295
+    description: "Concept DOI (all versions)"

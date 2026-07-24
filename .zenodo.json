@@ -26,7 +26,12 @@
       "relation": "isSupplementTo",
       "identifier": "https://github.com/PeterPonyu/uip-abstention-audit/tree/v0.3.0",
       "resource_type": "software"
+    },
+    {
+      "relation": "isVersionOf",
+      "identifier": "10.5281/zenodo.21130295",
+      "resource_type": "software"
     }
   ],
-  "notes": "Sanitized public release corresponding to Git tag v0.3.0. Concept DOI: 10.5281/zenodo.21130295."
+  "notes": "Sanitized public release corresponding to Git tag v0.3.0. Concept DOI: 10.5281/zenodo.21130295. Version DOI: 10.5281/zenodo.21524096."
 }
