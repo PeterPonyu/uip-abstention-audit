@@ -1,5 +1,5 @@
 {
-  "cmd": "/home/zeyufu/miniconda3/envs/dl/bin/python3 mt29_stage1_chem_yield.py",
+  "cmd": "$HOME/miniconda3/envs/dl/bin/python3 mt29_stage1_chem_yield.py",
   "script_sha256": "6a479d75f61cec453cfee91ec1fe3e93dabace0bff6028ad4be7285bb9475a6f",
   "git_head": "b70f1ababcbd2250b438b46941bfd83d4c6b3824",
   "seed": 20260621,

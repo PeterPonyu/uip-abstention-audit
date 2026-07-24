@@ -4,7 +4,7 @@
 # RUNME_CONTAINER.md). Idempotent: re-running skips files already present with the
 # expected size, so it is safe to re-invoke after a partial failure.
 #
-# Sources (registration-free, per AGENTS.md / DATA_MANIFEST.md):
+# Sources (registration-free; see DATA_MANIFEST.md):
 #   - Matbench Discovery (Nature MI 2025, Apache/MIT) Figshare mirror, auto-cached by
 #     the `matbench-discovery` PyPI package under ~/.cache/matbench-discovery.
 #     https://matbench-discovery.materialsproject.org/

@@ -11,11 +11,14 @@ scikit-learn==1.8.0
 scipy==1.17.1
 matplotlib==3.10.8
 
-# Local sibling package — provides relmetrics.multiplicity (BH-FDR / Holm) and
-# relmetrics.provenance used by mt29_multiplicity_correction.py. Install editable:
-#   pip install -e ../reliability-commons
-# (declares its own numpy>=1.22, scipy>=1.8 deps; version 0.1.0)
-# relmetrics @ file://../reliability-commons
+# Local vendored package — provides relmetrics.multiplicity (BH-FDR / Holm) and
+# relmetrics.provenance used by mt29_multiplicity_correction.py (and other
+# multiplicity / stamp_result call sites). The package is vendored under
+# ./relmetrics/ at the repo root (see relmetrics/VENDORED_FROM.md), so no
+# install step is required: the analysis scripts and smoke_test resolve it
+# from the repo root via sys.path. The vendored copy is MIT-licensed from
+# the upstream reliability-commons project (same author).
+# (declares its own numpy>=1.22, scipy>=1.8 deps; version 0.2.0.dev0+mt29vendored)
 
 # ---------------------------------------------------------------------------
 # OPTIONAL — NOT required for the MT29 headline results, figures, or the new-arm

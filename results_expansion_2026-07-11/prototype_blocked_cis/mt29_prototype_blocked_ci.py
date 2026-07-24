@@ -26,7 +26,9 @@ import pandas as pd
 
 os.environ.setdefault('MT_DATA_ROOT', os.path.expanduser('~/mt_stage0/data'))
 os.environ.setdefault('MT_UIP_ROOT', os.path.expanduser('~/mt_uip'))
-MT29 = '/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/research/results/MT29'
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
+MT29 = os.path.join(REPO_ROOT, 'research', 'results', 'MT29')
 sys.path.insert(0, MT29)
 from mt29_stage1_chem_yield import load, MODELS, SEED, N_BOOT, ci95, excl0, DATA  # frozen pipeline
 from mt29_stage1_matched_yield_fix import daf_top_y, FAM_ORDER                     # frozen DAF

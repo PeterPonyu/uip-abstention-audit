@@ -1,5 +1,5 @@
 {
-  "cmd": "/home/zeyufu/miniconda3/envs/dl/bin/python3 research/results/MT29/mt29_b5b_knapsack_constrained-exec-2026-06-29.py",
+  "cmd": "$HOME/miniconda3/envs/dl/bin/python3 research/results/MT29/mt29_b5b_knapsack_constrained-exec-2026-06-29.py",
   "git_head": "b70f1ababcbd2250b438b46941bfd83d4c6b3824",
   "seed": 20260629,
   "n_boot": 1000,

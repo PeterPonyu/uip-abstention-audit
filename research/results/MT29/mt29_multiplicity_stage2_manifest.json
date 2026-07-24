@@ -1,5 +1,5 @@
 {
-  "cmd": "/home/zeyufu/miniconda3/bin/python3 mt29_multiplicity_correction.py stage2",
+  "cmd": "$HOME/miniconda3/bin/python3 mt29_multiplicity_correction.py stage2",
   "script_sha256": "c689556066c031154ce4934a197052ca3d0e69162fc3d1eadf9cfcd9333ade32",
   "git_head": "c7a036b578470b4686bbabe0108a045c2f4594a0",
   "seed": 20260621,

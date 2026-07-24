@@ -31,8 +31,8 @@ ff <- "TeX Gyre Termes"
 update_geom_defaults("text", list(family = ff, colour = "black"))
 update_geom_defaults("label", list(family = ff, colour = "black"))
 
-input_json <- "../research/results/MT29/mt29_committee_variance.json"
-out_stem <- "figures/F5_committee_variance"
+input_json <- "../../research/results/MT29/mt29_committee_variance.json"
+out_stem <- "F5_committee_variance"
 
 if (!file.exists(input_json)) {
   stop(sprintf(
@@ -45,8 +45,8 @@ res <- fromJSON(input_json)
 
 strata <- c("oxide", "intermetallic", "chalcogenide", "halide", "pnictide", "other")
 stratum_labels <- c(
-  oxide = "Oxide", intermetallic = "Intermetallic", chalcogenide = "Chalcogenide",
-  halide = "Halide", pnictide = "Pnictide", other = "Other"
+  oxide = "OX", intermetallic = "IM", chalcogenide = "CH",
+  halide = "HA", pnictide = "PN", other = "OT"
 )
 # ---- panel (a): committee gain median per stratum ---------------------------
 # Single neutral fill: the stratum is already named on the x-axis, so a
@@ -66,18 +66,20 @@ p_a <- ggplot(df_a, aes(x = stratum, y = gain)) +
   # lone small negative (halide). Generous y-expansion (below) keeps both the
   # top "+0.563" label and the negative label inside the panel.
   geom_text(aes(label = sprintf("%+.3f", gain),
-                vjust = ifelse(gain >= 0, -0.6, 1.5)), size = 3.0) +
-  scale_y_continuous(expand = expansion(mult = c(0.14, 0.20))) +
+                vjust = ifelse(gain >= 0,
+                               -0.6 - ifelse(seq_len(nrow(df_a)) %% 2 == 0, 1.25, 0),
+                               1.5)), size = 3.6) +
+  scale_y_continuous(expand = expansion(mult = c(0.18, 0.30))) +
   labs(
     x = NULL,
-    y = "committee-variance\nabstention benefit\n(DAF gain, median)"
+    y = "abstention benefit\n(median DAF gain)"
   ) +
-  theme_minimal(base_size = 10, base_family = ff) +
+  theme_minimal(base_size = 12, base_family = ff) +
   theme(
-    axis.text.x = element_text(angle = 40, hjust = 1, size = 8.5),
-    axis.title.y = element_text(size = 9),
+    axis.text.x = element_text(size = 10),
+    axis.title.y = element_text(size = 10),
     panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(),
-    plot.margin = margin(4, 6, 4, 4)
+    plot.margin = margin(8, 14, 4, 8)
   )
 
 # ---- panel (b): 15 stratum-pair committee interactions ----------------------
@@ -92,9 +94,12 @@ df_b <- data.frame(
 )
 df_b$pair <- factor(df_b$pair, levels = df_b$pair[order(df_b$med)])
 n_fired <- sum(df_b$fired)
-# Fixed x for the single-model-consensus asterisk gutter: past the widest CI
-# whisker, in the right margin opened by the upper x-expansion below.
-ast_x <- max(df_b$hi) + 0.085
+# Fixed x for the single-model-consensus asterisk gutter, with explicit
+# data-driven limits that leave the widest positive and negative CIs clear.
+ci_span <- max(df_b$hi) - min(df_b$lo)
+ci_pad <- 0.06 * ci_span
+ast_x <- max(df_b$hi) + 1.4 * ci_pad
+x_limits <- c(min(df_b$lo) - ci_pad, ast_x + 1.8 * ci_pad)
 
 p_b <- ggplot(df_b, aes(x = med, y = pair, colour = fired)) +
   geom_vline(xintercept = 0, linetype = "dashed", colour = "black",
@@ -115,24 +120,31 @@ p_b <- ggplot(df_b, aes(x = med, y = pair, colour = fired)) +
     ),
     name = NULL
   ) +
-  scale_x_continuous(expand = expansion(mult = c(0.05, 0.13))) +
+  scale_x_continuous(limits = x_limits, expand = expansion(mult = 0)) +
   labs(
-    x = expression(atop("interaction " * gain[A] - gain[B],
-                         "(committee-variance; median, 95% CI)")),
-    y = NULL
+    x = "interaction gainA − gainB (committee-var.)",
+    y = NULL,
+    caption = "* single-model consensus: CI excludes 0"
   ) +
-  theme_minimal(base_size = 10, base_family = ff) +
+  theme_minimal(base_size = 12, base_family = ff) +
   theme(
-    axis.text.y = element_text(size = 8.5),
-    axis.title.x = element_text(size = 9),
-    legend.position = "bottom", legend.text = element_text(size = 8.5),
+    axis.text.y = element_text(size = 10),
+    axis.title.x = element_text(size = 10, margin = margin(t = 2, b = 0)),
+    plot.caption = element_text(size = 8.5, hjust = 0),
+    legend.position = "bottom", legend.justification = "right",
+    legend.text = element_text(size = 9),
+    legend.key.size = unit(0.8, "lines"),
+    legend.spacing = unit(0.1, "lines"),
+    legend.margin = margin(0, 0, 0, 0),
+    legend.box.margin = margin(0, 0, 0, 0),
+    legend.background = element_rect(fill = "white", colour = NA),
     panel.grid.minor = element_blank(),
-    plot.margin = margin(4, 4, 4, 2)
+    plot.margin = margin(8, 14, 8, 8)
   )
 
-p <- (p_a + p_b + plot_layout(widths = c(1.0, 1.28))) +
+p <- (p_a + p_b + plot_layout(widths = c(1.6, 1.28))) +
   plot_annotation(tag_levels = "a", tag_prefix = "(", tag_suffix = ")") &
-  theme(plot.tag = element_text(size = 10, family = ff))
+  theme(plot.tag = element_text(size = 11, face = "bold", family = ff))
 
 # Canvas: tall enough that panel (b)'s 15 categorical rows and their pair
 # labels do not collide and the single-model asterisk gutter reads as 14
@@ -140,8 +152,8 @@ p <- (p_a + p_b + plot_layout(widths = c(1.0, 1.28))) +
 # and their labels into an overlapping stack). Included at \textwidth (~6.5in)
 # this scales base_size=10 to ~8.8pt effective; the ~0.20in per-row pitch on
 # the page leaves clear inter-label whitespace.
-ggsave(paste0(out_stem, ".pdf"), p, width = 7.4, height = 4.25, device = cairo_pdf, family = ff)
-ggsave(paste0(out_stem, ".png"), p, width = 7.4, height = 4.25, dpi = 300,
+ggsave(paste0(out_stem, ".pdf"), p, width = 8.0, height = 4.25, device = cairo_pdf, family = ff)
+ggsave(paste0(out_stem, ".png"), p, width = 8.0, height = 4.25, dpi = 300,
        device = ragg::agg_png)
 
 cat(sprintf("Wrote %s.pdf and %s.png from %s\n", out_stem, out_stem, input_json))

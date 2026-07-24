@@ -28,12 +28,12 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 
-MT29 = "/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/research/results/MT29"
-RC = "/home/zeyufu/Desktop/ml-reliability-research/reliability-commons"
-PROTO_DIR = ("/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/"
-             "results_expansion_2026-07-11/prototype_blocked_cis")
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(HERE, '..'))
+MT29 = os.path.join(REPO_ROOT, "research", "results", "MT29")
+PROTO_DIR = os.path.join(REPO_ROOT, "results_expansion_2026-07-11", "prototype_blocked_cis")
 sys.path.insert(0, MT29)
-sys.path.insert(0, RC)
+sys.path.insert(0, REPO_ROOT)
 sys.path.insert(0, PROTO_DIR)
 from mt29_stage1_chem_yield import anion_family, ci95, excl0, SEED, N_BOOT, sha256
 from mt29_stage1_matched_yield_fix import daf_top_y, FAM_ORDER
@@ -43,10 +43,11 @@ from relmetrics.multiplicity import benjamini_hochberg, holm_bonferroni
 
 WBM = os.path.expanduser("~/mt_stage0/data/2023-12-13-wbm-summary.csv.gz")
 ROSTER_DIR = os.path.expanduser("~/mt_uip_roster25")
-OUTDIR = "/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/results_expansion_2026-07-14"
-# frozen provenance manifest (the 44-file md5-verified fetch) lives in the 2026-07-13 dir
-DATA_MANIFEST = ("/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/"
-                 "results_expansion_2026-07-13/ROSTER25_DATA_MANIFEST.json")
+OUTDIR = HERE
+# Frozen provenance manifest for the 44-file verified roster.
+DATA_MANIFEST = os.path.join(
+    REPO_ROOT, "results_expansion_2026-07-13", "ROSTER25_DATA_MANIFEST.json"
+)
 OUT_JSON = os.path.join(OUTDIR, "mt29_roster_expansion_result.json")
 OUT_MANIFEST = os.path.join(OUTDIR, "mt29_roster_expansion_manifest.json")
 

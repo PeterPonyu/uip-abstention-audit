@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 """MT29 — Arm 2b (NEXT-EXPERIMENTS.md item 2): convex-hull recompute on a validation
 subset, to bound the fixed-hull approximation used everywhere else in MT29
-(`hull_pred = hull_true + (e_form_pred - e_form_true)`, acknowledged in README.md
-"Honest status" / FABLE-HANDOFF.md Sec.5).
+(see the fixed-hull limitation in README.md).
 
 For a stratified random sample of WBM test structures (default 5,000, stratified
 across the 6 anion families used throughout MT29 — mt29_stage1_chem_yield.anion_family),
@@ -42,8 +41,9 @@ import numpy as np
 import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, HERE)
-sys.path.insert(0, '/home/zeyufu/Desktop/ml-reliability-research/reliability-commons')
+sys.path.insert(0, REPO_ROOT)
 
 from mt29_hull_math import composition_fractions, formula_to_symbols, hull_energy_at  # noqa: E402
 from mt29_stage1_chem_yield import anion_family, DATA as DEFAULT_WBM_SUMMARY  # noqa: E402
@@ -301,8 +301,7 @@ def main(argv=None) -> int:
 
     try:
         git_sha = subprocess.check_output(
-            ['git', '-C', '/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research',
-             'rev-parse', 'HEAD'], text=True, stderr=subprocess.DEVNULL).strip()
+            ['git', '-C', REPO_ROOT, 'rev-parse', 'HEAD'], text=True, stderr=subprocess.DEVNULL).strip()
     except Exception:
         git_sha = None
     manifest = {

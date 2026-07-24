@@ -1,12 +1,15 @@
 {
-  "title": "materials-mlip-research: the chemistry-stratified value of selective abstention for machine-learned crystal-stability screening (MT29)",
-  "description": "Code, frozen result JSONs, and manuscript sources for a CPU-only benchmark audit of confidence-based selective abstention in machine-learned interatomic potential (UIP) crystal-stability screening, using frozen Matbench Discovery predictions from four 2023-24 UIPs (CHGNet, M3GNet, MACE, ORB) on all 256,963 WBM structures. The core finding is that the benefit of abstaining on low-confidence predictions (confidence = |predicted hull margin|) is strongly chemistry-dependent: oxides gain the most discovery acceleration factor, while halides and intermetallics gain essentially none. Controls archived here show this stratum-by-coverage interaction is not an artifact of surfaced-candidate yield (matched common-absolute-yield control, 48/60 cells CI-excluding-0), dominant elements (leave-one-element-out 12/12 splits), acquisition round, single-model quirks (committee-variance replication), or chance (all shuffle-nulls clean). A secondary result shows the native-Gaussian probability reading of the same margin is optimistic in every anion family (mean stratified calibration shortfall 0.197). The archive contains all analysis scripts, frozen result JSONs with SHA-256 run manifests (seed 20260621, n_boot=1000), R figure scripts, and the LaTeX manuscript; input prediction CSVs are external public Matbench Discovery data documented with SHA-256 hashes in DATA_MANIFEST.md.",
+  "title": "Chemistry-stratified reliability audit of selective abstention for universal machine-learning interatomic potentials",
+  "description": "Version 0.3.0 provides the sanitized, hermetic code and frozen result records supporting the chemistry-stratified selective-abstention analysis. It includes the 32-UIP roster analysis, prototype-blocked confidence intervals, mechanism and sensitivity controls, manuscript sources, deterministic tests, and a vendored MIT-licensed subset of relmetrics. External Matbench Discovery prediction files are not redistributed; DATA_MANIFEST.md records their filenames, sizes, and SHA-256 checksums.",
   "upload_type": "software",
+  "access_right": "open",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "creators": [
     {
-      "name": "Fu, Zeyu"
+      "name": "Fu, Zeyu",
+      "orcid": "0009-0001-8329-0108",
+      "affiliation": "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Army Medical University, Chongqing, China"
     }
   ],
   "keywords": [
@@ -16,9 +19,14 @@
     "machine-learned interatomic potentials",
     "Matbench Discovery",
     "crystal stability prediction",
-    "materials discovery",
-    "benchmark audit"
+    "materials discovery"
   ],
-  "access_right": "open",
-  "prereserve_doi": true
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/PeterPonyu/uip-abstention-audit/tree/v0.3.0",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Sanitized public release corresponding to Git tag v0.3.0. Concept DOI: 10.5281/zenodo.21130295."
 }

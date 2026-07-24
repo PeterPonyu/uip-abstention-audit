@@ -1,5 +1,5 @@
 {
-  "cmd": "/home/zeyufu/miniconda3/envs/biophys/bin/python3 mt29_stage2_robustness.py",
+  "cmd": "$HOME/miniconda3/envs/biophys/bin/python3 mt29_stage2_robustness.py",
   "script_sha256": "a12ab325dee4bb721433af738735d270a9de9e85db103f64a79de700d96c0569",
   "git_head": "b70f1ababcbd2250b438b46941bfd83d4c6b3824",
   "seed": 20260621,

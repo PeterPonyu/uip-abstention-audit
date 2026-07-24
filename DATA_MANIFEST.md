@@ -1,9 +1,23 @@
 # DATA_MANIFEST — external input data (not tracked in this repo)
 
-Written 2026-07-02 as part of the provenance sweep (pre-push baseline).
+Written 2026-07-02 as part of the provenance sweep (pre-push baseline); last
+revised 2026-07-23 to document the now-implemented `MT_DATA_ROOT` /
+`MT_UIP_ROOT` env-var abstraction in the analysis scripts.
 
-All experiment input data for this direction lives **outside the repository** in
-hardcoded home-directory paths (a known infra gap — no `DATA_ROOT` abstraction yet).
+All experiment input data for this direction lives **outside the repository** at
+user-configurable paths. Two environment variables, already wired into the
+canonical loader `research/results/MT29/mt29_stage1_chem_yield.py` (line ~53),
+control where the scripts find their inputs:
+
+- `MT_DATA_ROOT` (default `~/mt_stage0/data`): directory holding the WBM ground-truth
+  summary file `2023-12-13-wbm-summary.csv.gz` (and the older 2020-era model
+  prediction CSVs in §2 below).
+- `MT_UIP_ROOT` (default `~/mt_uip`): directory holding the four modern UIP
+  prediction files `{chgnet,m3gnet,mace,orb}_pred.csv` (§1 below).
+
+The earlier "no `DATA_ROOT` abstraction" gap noted in earlier revisions of this
+manifest is now closed -- no script reads a hardcoded absolute path; every input
+file is reached via one of these two env vars (with the documented default).
 No data directory inside the repo is gitignored; the repo itself is ~8 MB of
 scripts, result JSONs, manifests, figures, and manuscript sources.
 
@@ -14,11 +28,11 @@ also recorded as an input in a frozen run manifest under
 
 ## 1. `~/mt_uip/` — modern UIP predictions on WBM (21 MB total)
 
-Frozen Matbench-Discovery model prediction files (2023–24 generation UIPs), one row
-per WBM structure (n = 256,963). Source per `FABLE-HANDOFF.md` §5: "free/no-auth
-Figshare-cached" Matbench Discovery prediction data
-(https://matbench-discovery.materialsproject.org/). The exact download command is
-**not recorded** in repo docs — labeled not-recorded, do not invent.
+Frozen Matbench Discovery model prediction files (2023–24 generation UIPs), one row
+per WBM structure (n = 256,963), obtained from the public Matbench Discovery data release
+(<https://matbench-discovery.materialsproject.org/>). The exact historical download command is
+not recorded; `fetch_data.sh` documents the current acquisition route without inventing an old
+command.
 
 | File | Size (bytes) | SHA-256 | Matches run manifests |
 |---|---:|---|---|

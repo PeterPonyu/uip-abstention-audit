@@ -37,8 +37,9 @@ import pandas as pd
 
 warnings.filterwarnings('ignore')  # pymatgen noble-gas X UserWarnings are handled explicitly
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, HERE)
-sys.path.insert(0, '/home/zeyufu/Desktop/ml-reliability-research/reliability-commons')
+sys.path.insert(0, REPO_ROOT)
 
 from mt29_stage1_chem_yield import (load, MODELS, SEED, N_BOOT, OUT_DIR, ci95, excl0,
                                     sha256, DATA, UIP, TOKEN_RE)

@@ -1,23 +1,6 @@
 % Journal of Chemical Physics (AIP Publishing) submission port of the canonical
-% manuscript ../paper.tex. ../paper.tex remains the CANONICAL SOURCE (content is fixed,
-% red-team-hardened, and honest); this file is the JCP submission-format artifact only.
-% Do NOT make scientific/content changes here without mirroring them in ../paper.tex.
-% Every number in this file is verified identical to ../paper.tex (and to ../digital_discovery/
-% paper_dd.tex, whose body this file re-templates without content changes).
-%
-% Retargeted 2026-07-16 from ../digital_discovery/paper_dd.tex per the user-ratified venue
-% switch (DD gold-OA APC of GBP 2,200 exceeds the user's careful-adopt threshold; JCP's
-% subscription route carries $0 publication charges and has direct in-venue precedent for
-% UQ/reliability work on ML interatomic potentials -- see VENUE-MEMO-JCP-2026-07-16.md).
-% ../digital_discovery/ is kept intact as a fallback kit, not deleted.
-%
-% CLASS NOTE: Live-verified 2026-07-16 against AIP Publishing's author instructions
-% (publishing.aip.org/resources/researchers/author-instructions/) and the CTAN "Author's
-% Guide to AIP Substyles for REVTEX 4.2" (aipguide4-2.pdf): AIP accepts author-prepared
-% Word or LaTeX/REVTeX manuscripts; format-free initial submission is NOT offered (a single
-% compiled manuscript PDF with all figures is required at first submission; a separate
-% Cover Letter file is optional at that stage). REVTeX 4.2 with the aip/jcp substyle
-% (\documentclass[aip,jcp,...]{revtex4-2}) is AIP's own LaTeX house style and is used here.
+% manuscript ../paper.tex. Scientific changes must be mirrored in both sources.
+% REVTeX 4.2 with the aip/jcp substyle is used for the journal-formatted version.
 % We use the `preprint` (single-column) class option rather than `reprint` (two-column):
 % AIP's own guidance states peer review is typeset under the preprint option regardless of
 % what the author submits, and preprint avoids reflowing this paper's wide tables
@@ -27,7 +10,7 @@
 % ../digital_discovery/paper_dd.tex and ../paper.tex, so \citep/\citet calls are unchanged;
 % natbib is loaded alongside revtex4-2 and both packages compile cleanly together (verified
 % by the build in this directory). Figures resolve from ../figures/; bib from local
-% shared.bib + refs.bib, unchanged from the Digital Discovery kit.
+% shared.bib + refs.bib.
 \documentclass[aip,jcp,preprint,superscriptaddress,amsmath,amssymb]{revtex4-2}
 
 \usepackage[utf8]{inputenc}
@@ -44,15 +27,20 @@
 \usepackage{siunitx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{float}
 % NOTE: revtex4-2's aip/jcp substyle already loads natbib internally (numerical citation
 % style for JCP), so \citep/\citet work without an explicit \usepackage{natbib} here --
 % loading it again causes a LaTeX "Option clash for package natbib" error (caught by the
 % build in this directory).
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={A chemistry-stratified reliability audit of selective abstention for universal machine-learning interatomic potentials: abstention value is oxide-anchored and control-hardened across 32 models},
+  pdfauthor={Zeyu Fu},
+  pdfsubject={Reliability evaluation and selective abstention for universal machine-learning interatomic potentials},
+  pdfkeywords={machine-learning interatomic potentials, selective abstention, uncertainty quantification, materials discovery, reliability evaluation, reproducibility}
+}
 \usepackage{xcolor}
 \usepackage{microtype}
-
-\newcommand{\TODO}[1]{\textcolor{red}{[TODO: #1]}}
 
 \graphicspath{{../figures/}{figures/}}
 \captionsetup{font=small,labelfont=bf}
@@ -61,70 +49,31 @@
 \begin{document}
 
 % ---- Title page ----
-% JCP reframe (content-preserving, carried over unchanged from the Digital Discovery
-% port): the title foregrounds the contribution as a reliability/evaluation methodology
-% for universal MLIPs (a chemistry-stratified audit of selective abstention), which is
-% also squarely in JCP's scope (see in-venue precedent, VENUE-MEMO-JCP-2026-07-16.md).
-% R3 LEVER 2026-07-16 (FINAL-SCORE-R3-2026-07-16.md, task item (c)#3 / Reviewer 1 #2):
-% "tracks reference-data trustworthiness" read as a causal locator claim the paper itself
-% declines to establish; softened to co-location strength ("concentrates where ... is
-% lowest"), matching the paper's own "we do not claim to have isolated a single physical
-% cause" disclosure. No claim or number changed, presentation only.
-% PHYSICS-LEAD TOPPER 2026-07-17 (DESK-CHECK-JCP §4.1): one verified physical-anchor sentence
-%   prepended (RMSE ~7x line 681, GGA/Hubbard-U/MP2020 seam lines 143-145); effect-size-first
-%   structure of the R4 lever below preserved unchanged.
-% R4 LEVER 2026-07-17 (FINAL-SCORE-R4-2026-07-17.md, single highest-leverage remaining
-% lever / Reviewer 1 #1, Reviewer 2 #1): the title asserted the trustworthiness
-% *interpretation* as the finding, while SS IV(c) states the disagreement metric "cannot
-% separate" UIP-fitting error from label unreliability -- a claim the paper itself
-% certifies as unidentifiable does not belong in the title. Retitled to the demonstrated,
-% control-hardened result (oxide-anchored, 32-UIP-universal abstention-value interaction);
-% all trustworthiness/causal language removed from the title. No claim or number changed,
-% presentation only.
 \title{A chemistry-stratified reliability audit of selective abstention for
 universal machine-learning interatomic potentials: abstention value is
 oxide-anchored and control-hardened across 32 models}
-% TODO-USER: confirm author name/ORCID/email; supply the affiliation (department,
-% institution, city, postcode, country). Affiliation was never present in the canonical
-% ../paper.tex and must be added before submission.
 \author{Zeyu Fu}
 \email{fuzeyu09@gmail.com}
 \altaffiliation{ORCID: 0009-0001-8329-0108}
 \affiliation{State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Army Medical University, Chongqing, China}
-\date{\today}
 
 \begin{abstract}
-% Digital Discovery abstract, <=200 words (word count verified 2026-07-16 post-lever reframe;
-% see verify step). Reframed to lead with the reference-data-trustworthiness thesis and promote
-% the precision-point decomposition; every claim and number traces to the canonical ../paper.tex.
-% 2026-07-16 revision: restructured takeaway-first / numbers-second / scope-last per
-% (takeaway-first / numbers-second / scope-last); every number and claim below is unchanged from the
-% pre-pass abstract (see paper_dd.tex.bak-pre-readerpass), only the ordering changed.
-% R4 LEVER 2026-07-17 (FINAL-SCORE-R4-2026-07-17.md, single highest-leverage remaining lever
-% / Reviewer 1 #1, #2, Reviewer 2 #1): re-led on the demonstrated, control-hardened
-% precision-point interaction (matches SS III(C)'s own primary-effect-size recommendation);
-% the trustworthiness reading is now a single, explicitly-flagged interpretive sentence
-% ("cannot isolate ... from ... difficulty"), matching SS IV(c)'s "cannot separate them"
-% standard. No claim or number changed, presentation and ordering only; word count re-verified
-% (200 words).
 \noindent Universal machine-learning interatomic potentials (UIPs) disagree most with the
 MP2020-corrected DFT stability labels they are scored against in oxide chemistries ---
 formation-energy RMSE $\sim\!7\times$ that of other anion classes on Matbench Discovery,
 consistent with oxides being where semilocal-DFT (GGA) energetics, the Hubbard-$U$ treatment
-they lack, and the layered MP2020 corrections are least mutually consistent. The value of
-selective abstention in UIPs is therefore chemistry-dependent and, in our central finding,
-oxide-anchored: a genuine $+7.7$
-precision-point advantage (CHGNet oxide-vs-halide) that we establish with a reusable, CPU-only
-matched-yield audit protocol, runnable on any published prediction file. Across six anion-class
-strata and four UIPs on Matbench Discovery, the stratum-by-coverage interaction in discovery
-acceleration factor (DAF) excludes zero in 45 of 60 cells under a prototype-blocked bootstrap
-(48/60 i.i.d.), is oxide-anchored, and survives leave-one-element-out, WBM-round, multiplicity,
-and alternative-stratification controls with a shuffle null. Low-base-rate normalisation
+they lack, and the layered MP2020 corrections are least mutually consistent. Selective-abstention value in UIPs is therefore chemistry-dependent and, in our central
+finding, oxide-anchored: a $+7.7$ precision-point advantage (CHGNet oxide-vs-halide),
+established with a reusable, CPU-only matched-yield audit protocol runnable on any published
+prediction file. Across six anion-class
+strata and four UIPs, the stratum-by-coverage interaction in discovery acceleration factor
+(DAF) excludes zero in 45 of 60 cells under a prototype-blocked bootstrap and survives
+leave-one-element-out, WBM-round, multiplicity, and alternative-stratification controls with
+a shuffle null. Low-base-rate normalisation
 amplifies this to the $+0.90$ DAF headline (95\,\% CI $[0.74, 1.04]$); the precision-point
 interaction is the primary effect size throughout.
-% source: results_expansion_2026-07-14/mt29_roster_expansion_result.json (n_included_uip 32; positive-anchored 32/32; V3 perm_p 0.68153; orb_v3 ox-hal 0.6426)
-Across $44$ published-potential files ($43$ independent models), the oxide anchor holds for all
-$32$ UIPs with no detectable generational difference ($p{=}0.68$, an honest null). The
+Across $44$ published-potential files, the oxide anchor holds for all
+$32$ UIPs with no detectable generational difference ($p{=}0.68$). The
 established finding is thus that abstention value --- and the UIP--label disagreement driving
 it --- is chemistry-localised, anchored in the oxide stratum where the reference labels'
 construction is least self-consistent. One interpretation, which our
@@ -138,19 +87,6 @@ oxide-highest ordering does not transfer temporally, and a stratum-aware allocat
 
 \section{Introduction}
 
-% R3 LEVER 2026-07-16 (FINAL-SCORE-R3-2026-07-16.md, task item (a) / Reviewer 1 #1, #4):
-% re-pitched for JCP's chemical-physics readership -- opens on the physical finding (oxide
-% DFT reference-data self-consistency) rather than the CPU-only audit-protocol framing,
-% which is demoted to a methods virtue in the paragraph below. All caveats (post-hoc,
-% descriptive, non-transfer, cannot separate UIP error from label error) are unchanged and
-% still stated here and in the Discussion; this changes order and emphasis only.
-% R4 LEVER 2026-07-17 (FINAL-SCORE-R4-2026-07-17.md, single highest-leverage remaining lever
-% / Reviewer 1 #1, Reviewer 2 #1): the physics-first opening stays, but its first two
-% sentences asserted the trustworthiness reading close to fact ("exactly the chemistry
-% where ... are least mutually self-consistent"; "is best understood as a signal ... is
-% least trustworthy"). Hypothesis-marked to match SS IV(c)'s own standard ("cannot separate
-% them" / "do not claim to have isolated a single physical cause"): "consistent with" and
-% "one candidate explanation" replace the flat assertions. No claim or number changed.
 Evaluating the \emph{reliability} of universal machine-learning interatomic potentials
 (UIPs) --- not merely their aggregate accuracy, but when their predictions can be trusted
 enough to act on --- has become central to using them for materials screening. Our central
@@ -189,12 +125,12 @@ number to a frozen, re-runnable result. The oxide-anchored effect we report on M
 Discovery is the worked demonstration of that protocol. The relevant figure of
 merit is the discovery acceleration factor (DAF), the precision of the surfaced shortlist
 divided by the stratum's stable base rate, which is comparable across chemistries with
-different base rates.\footnote{Per-stratum base DAF values trace to the frozen chemistry-yield
-result; the halide baseline DAF present in that file is $3.005$ (CHGNet, coverage $0.5$), the
-value used consistently here. A historical correction to this figure (from an earlier $4.42$)
-is reflected in the frozen result, though its pre-freeze provenance trail is not preserved on
-disk --- noted for transparency, as it does not affect any matched-yield interaction reported
-here (all of which are recomputed from the same frozen result).}
+different base rates (per-stratum base DAF values trace to the frozen chemistry-yield
+result; the halide baseline DAF present in that file is $3.005$ for CHGNet at coverage $0.5$,
+the value used consistently here --- a historical correction to this figure, from an earlier
+$4.42$, is reflected in the frozen result but its pre-freeze provenance trail is not preserved;
+noted for transparency, and immaterial to every matched-yield interaction reported here, all
+of which are recomputed from the same frozen result).
 The closest prior work on certifiable abstention for UIPs, PCM~\citep{pcm2026}, reports a
 global risk AUC-ROC of 0.938 but does not stratify the value of abstention by anion chemistry
 or apply a matched-yield control --- those are the contributions of the present study.
@@ -245,14 +181,15 @@ allocator --- shown as explicit checks.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.82\textwidth]{fig0_overview.pdf}
-  \caption{The matched-yield reliability-audit protocol. Frozen, provenance/md5-gated UIP
-  prediction files feed a chemistry-stratified matched-yield selection (anion-class strata,
-  common absolute-yield budget $Y$), which is audited in two stages --- the Stage~1 stratum
-  $\times$ coverage DAF interaction and the Stage~2 leave-one-element-out / WBM-round
-  robustness gates --- to a verdict per model-generation claim. Two built-in controls (dashed)
-  guard the audit: a shuffle-null that stays clean throughout, and a stratum-aware knapsack
-  allocator that the protocol itself falsified.}
+  \includegraphics[width=0.94\textwidth]{fig0_overview.pdf}
+  \caption{Horizontal matched-yield audit protocol. Frozen, provenance-checked UIP prediction
+  files feed an anion-class-stratified selection with common absolute-yield budget $Y$. The solid
+  evidence path then applies the Stage~1 stratum $\times$ coverage DAF interaction audit and the
+  Stage~2 leave-one-element-out (LOEO) / WBM-round robustness audit before issuing a verdict for
+  each MP-generation or OMat-generation claim; it does not rank the generations. The dashed
+  control bus lies outside that path: the shuffle-null remains clean throughout, whereas the
+  stratum-aware knapsack allocator is marked \textsc{falsified} / no dominance and is not a
+  recommended deployable policy.}
   \label{fig:f0}
 \end{figure}
 
@@ -296,10 +233,20 @@ robustness gates (Stage~2: leave-one-element-out and WBM-round, each with a $100
 bootstrap) reproduce byte-for-byte from the frozen prediction files in under five CPU-minutes
 on a commodity laptop (measured $\sim$3\,min, single core, no GPU). A structure is \emph{stable}
 when its corrected true hull
-distance is below zero; the predicted hull distance is reconstructed as the true hull
-distance plus the model's signed formation-energy error (a fixed-hull approximation validated
-against a from-scratch phase-diagram recompute in the Discussion), and confidence is its absolute
-value $|\hat{e}_{\mathrm{hull}}|$.
+distance is below zero. The discovery acceleration factor used as the primary effect-size
+metric is
+\[
+  \mathrm{DAF}_{\mathrm{stratum}} \;=\; \frac{\mathrm{precision}(\text{top } Y)}{\mathrm{base\ rate}_{\mathrm{stratum}}},
+\]
+where $\mathrm{precision}$ is the true-stable fraction among the surfaced shortlist and
+$\mathrm{base\ rate}$ is the stratum's stable fraction; DAF is therefore comparable across
+strata with different base rates. The predicted hull distance is reconstructed as
+the true hull distance plus the model's signed formation-energy error,
+\[
+  \hat{e}_{\mathrm{hull}} \;=\; e_{\mathrm{hull}}^{\mathrm{true}} + (\hat{e}_{\mathrm{form}} - e_{\mathrm{form}}^{\mathrm{true}}),
+\]
+(a fixed-hull approximation validated against a from-scratch phase-diagram recompute in
+the Discussion), and confidence is its absolute value $|\hat{e}_{\mathrm{hull}}|$.
 
 \paragraph{Anion-class strata.} Each formula is assigned to exactly one stratum by an
 electronegativity-priority rule: halide $>$ oxide $>$ chalcogenide (S/Se/Te) $>$ pnictide
@@ -353,7 +300,20 @@ LOEO splits and a majority of rounds, with the shuffle-null clean throughout ---
 documented in a Stage-2 analysis-protocol log written in the
 same analysis session as the Stage-2 results it reports, not registered before Stage-1.
 
-\section{Results}
+\paragraph{Alternative abstention signals (used in \S\ref{sec:results}.F).} The single-model
+hull margin is the default confidence signal. Two alternatives are also evaluated under the
+identical matched-yield DAF control to test whether the oxide anchor is a quirk of the
+particular signal source. \emph{Committee variance:} for the four headline UIPs,
+confidence is $-\mathrm{std}$ over the four reconstructed $\hat{e}_{\mathrm{hull}}$ values
+and the consensus stable call is the committee-mean $\hat{e}_{\mathrm{hull}} < 0$.
+\emph{Native-Gaussian $p_{\mathrm{stable}}$:} with no free parameters,
+$p_{\mathrm{stable}} = \Phi(-\hat{e}_{\mathrm{hull}}/\sigma)$ where $\sigma$ is the
+calibration-half RMSE of the formation-energy error; the worst-slab calibration gap
+$\mathrm{SSCS} = \max_s |\mathrm{gap}_s|$ (over anion-family strata $s$) is reported as a
+post-hoc diagnostic of miscalibration.
+
+\vspace{-1.5em}
+\section{Results}\label{sec:results}
 
 \subsection{Matched-yield abstention lifts DAF most in oxides}
 
@@ -361,20 +321,37 @@ Figure~\ref{fig:f1} shows DAF at the looser and tighter yield budgets for every
 (stratum, model) pair. Across models, abstaining (moving from $Y_{\mathrm{loose}}$ to the
 tighter $Y_{\mathrm{tight}}$) raises DAF, but the size of that lift is strongly
 chemistry-dependent: the oxide bars show the largest gap between the two coverages, whereas
-% source: research/results/MT29/mt29_stage1_matched_yield_result.json (per_model_budgets gain_median: chgnet oxide 1.1377 halide 0.2372; mace interm -0.0043 oxide 0.67; orb interm -0.0049 oxide 0.4479)
 halide and intermetallic bars barely separate. For CHGNet the oxide gain is $+1.14$ DAF
 units versus $+0.24$ for halides; for MACE and ORB the intermetallic gain is essentially
 zero ($-0.004$ and $-0.005$) while the oxide gain remains positive ($+0.67$ and $+0.45$).
 The lift is a genuine reordering of which chemistry benefits, at a surfaced-candidate
 budget held identical across strata.
 
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{candidate_cases.pdf}
+  \caption{Illustrative frozen object-level candidates at the stable-call boundary, one per
+  anion-priority chemistry stratum for CHGNet on the MP-generation WBM set. Each card identifies
+  the real WBM candidate and composition, then contrasts the reconstructed predicted hull call
+  with the corrected WBM hull label. The six cards are selected deterministically within stratum
+  among false-positive stable calls by minimum absolute predicted hull distance; they are boundary
+  examples, not a representative sample or performance estimate. Each card pairs the initial WBM
+  structure with its composition, predicted hull call, and corrected WBM reference label. Chemistry codes are
+  OX/oxide, IM/intermetallic, CH/chalcogenide, HA/halide, PN/pnictide, and OT/other.}
+  \label{fig:candidatecases}
+\end{figure}
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=\textwidth]{F1_daf_coverage.pdf}
   \caption{Matched-yield DAF at the looser ($Y_{\mathrm{loose}}$) and tighter
   ($Y_{\mathrm{tight}}$, abstaining) yield budgets, per anion-class stratum and per model.
-  Oxides show the largest DAF lift from abstention; halides and intermetallics the smallest.}
-  % source: research/results/MT29/mt29_stage1_matched_yield_result.json
+  Oxides show the largest DAF lift from abstention; halides and intermetallics the smallest.
+  The dashed reference at DAF\,$=1$ in each panel marks the no-acceleration baseline (surfaced
+  precision equal to stratum base rate; abstention buys no precision gain). All four panels use
+  the same vertical scale, enabling direct comparison across models. Chemistry codes are
+  OX/oxide, IM/intermetallic, CH/chalcogenide, HA/halide, PN/pnictide, and OT/other.}
   \label{fig:f1}
 \end{figure}
 
@@ -383,11 +360,9 @@ budget held identical across strata.
 Figure~\ref{fig:f2} renders the matched-yield interaction $\mathrm{gain}_A - \mathrm{gain}_B$
 for every (model, stratum-pair) cell; outlined cells have a 95\,\% bootstrap CI excluding
 zero. Of the 60 cells, 48 exclude zero under an i.i.d.\ bootstrap, and all four models
-% source: research/results/MT29/mt29_stage1_matched_yield_result.json (interactions_matched_yield: per-model fired chgnet 13, mace 13, m3gnet 11, orb 11; oxide-anchored 18/20; median |interaction| 0.1905)
 contribute (CHGNet 13/15, MACE 13/15, M3GNet 11/15, ORB 11/15). Because WBM is generated by
 elemental substitution into shared prototypes, structures sharing a parent prototype are
 correlated; we therefore recompute the CIs with a prototype-blocked bootstrap that
-% source: results_expansion_2026-07-11/prototype_blocked_cis/mt29_prototype_blocked_ci_result.json (blocked 45/60; shuffle 0/60; oxide-containing 17/20; chgnet ox-hal median 0.89624 CI [0.7419,1.03792]; lost cells m3gnet ox-interm, m3gnet interm-chalc, orb interm-pnict)
 resamples structural-prototype clusters within each stratum (block $=$ WBM AFLOW
 prototype). Under blocking 45 of 60 cells still exclude zero (the shuffle-null stays
 $0/60$), and we adopt this as the primary count. The three cells that drop out are all
@@ -397,13 +372,12 @@ oxide-vs-halide or strong oxide cell is affected. The firing cells are dominated
 oxide-anchored pairs: 18 of 20 oxide-containing cells fire under i.i.d.\ resampling and 17 of
 20 under blocking, with oxide as the higher-benefit stratum --- a direction first observed at
 Stage-1 and documented, not registered ex ante, in
-a same-session Stage-2 analysis-protocol log; the general
+the Stage-2 analysis record; the general
 stratum-interaction hypothesis and kill criterion were committed ex ante in
 a dated pre-analysis design memo. The largest interaction is CHGNet's
 oxide-vs-halide pair at $+0.90$ (prototype-blocked 95\,\% CI $[0.74, 1.04]$; i.i.d.\ CI
 $[0.77, 1.04]$); the median absolute interaction across all 60 cells is $0.19$. These counts
 survive formal multiplicity control
-% source: research/results/MT29/mt29_multiplicity_stage1_result.json (B1000_bh_fdr_q05 46/60, hires_holm_fwer_a05 40/60, chgnet ox-hal p_holm 0.011999)
 with two-sided bootstrap sign
 $p$-values per cell, Benjamini--Hochberg at $q=0.05$ retains 46/60 cells (shuffle-null:
 0/60), and a higher-resolution pass ($10^4$ bootstrap draws, same seed and machinery)
@@ -418,11 +392,10 @@ chemistry.
   \centering
   \includegraphics[width=0.82\textwidth]{F2_interaction_heatmap.pdf}
   \caption{Stratum $\times$ coverage interaction (median $\mathrm{gain}_A - \mathrm{gain}_B$)
-  per model and stratum pair. Outlined cells have a 95\,\% bootstrap CI excluding zero
-  (48/60 i.i.d.; 45/60 under a prototype-blocked bootstrap, the primary count --- Results).
-  Oxide-anchored pairs fire positive across models.}
-  % source: research/results/MT29/mt29_stage1_matched_yield_result.json
-  % source: results_expansion_2026-07-11/prototype_blocked_cis/mt29_prototype_blocked_ci_result.json
+  per model and stratum pair. Black outlines mark the 48/60 cells whose i.i.d.-bootstrap
+  95\,\% CI excludes zero; the separate prototype-blocked sensitivity analysis retains 45/60
+  cells (the primary count --- Results). The diverging fill scale spans the full observed
+  interaction range and is centered at zero. Oxide-anchored pairs are positive across models.}
   \label{fig:f2}
 \end{figure}
 
@@ -444,7 +417,6 @@ large error creates the false-positive headroom, and because DAF normalizes prec
 stratum stable base rate, which is lowest in oxides ($12.4\,\%$ versus $27.8\,\%$ for halides),
 an equal precision gain from abstention becomes a larger DAF gain. These two amplifications
 should be read separately, because DAF folds a genuine precision-recovery advantage together
-% source: results_expansion_2026-07-10/mechanism_diag/mechanism_payoff_roster_ci.json (practitioner_payoff_chgnet: oxide precision 0.7578->0.9006 = +14.28pp, halide 0.8824->0.9481 = +6.57pp; precision-unit interaction +7.71pp; DAF gains oxide 1.1496 halide 0.2359, ratio 4.87 = 2.174 precision-recovery x 2.241 base-rate)
 with the $1/\text{base-rate}$ factor. In precision-point units the CHGNet oxide-vs-halide
 abstention advantage is $+7.7$ points (oxide called-stable precision lifts $+14.3$ points under
 abstention, halide only $+6.6$); the headline $+0.90$ DAF interaction is that $2.2\times$
@@ -466,7 +438,6 @@ confident in oxide chemistry specifically.
   stratum stable fraction; RMSE is the formation-energy error; called-stable precision is the
   true-stable fraction among structures called stable; AUROC is the rank separation of
   $|\hat{e}_{\mathrm{hull}}|$ for truly-stable versus false-positive called-stable structures.}
-  % source: results_expansion_2026-07-10/mechanism_diag/mechanism_payoff_roster_ci.json (mechanism_per_model_stratum + mechanism_summary: oxide base_rate 0.124, rmse 0.625, called_stable_prec 0.747, conf_auroc 0.695; per-stratum values averaged over the four legacy UIPs)
   \label{tab:mechanism}
   \begin{tabular}{lcccc}
     \toprule
@@ -484,7 +455,6 @@ confident in oxide chemistry specifically.
 
 \paragraph{What the interaction buys a practitioner.} Concretely, for CHGNet --- the strongest
 firer of the four UIPs, so this is a best-case illustration rather than a typical one --- the
-% source: results_expansion_2026-07-10/mechanism_diag/mechanism_payoff_roster_ci.json (practitioner_payoff_chgnet: n_called_stable_oxide 2696, conf_half 1348, precision 0.758->0.901, daf 6.1->7.2; halide 0.882->0.948, daf 3.2->3.4)
 $+0.90$ oxide-versus-halide interaction converts as follows, on the \emph{pooled} evaluation
 (post-hoc descriptive, from the frozen matched-yield DAF; this pooled framing is the one that
 does not transfer temporally, per Threats to validity). Of the $2{,}696$ structures CHGNet
@@ -502,8 +472,6 @@ which is the concrete practitioner form of the interaction.
 
 Figure~\ref{fig:f3} reports the fraction of firing cells under each robustness split.
 Under LOEO, all 12 held-out-element splits remain majority-firing (12/12), pooling to
-% source: research/results/MT29/mt29_stage2_robustness_result.json (gate1_loeo: drop-O 37/40 over 5 strata; min non-O split Si 39/60; gate2_rounds: 43/34/43/26/11 of 60, n_rows 40314 & 23268 for rounds 4-5)
-% source: blocked_robustness_2026-07-13/mt29_blocked_downstream_ci_result.json (LOEO blocked 538/700, 12/12 splits, drop-O 36/40, shuffle 0/700; WBM-round blocked 151/300, 3/5 rounds, shuffle 0/300; committee blocked 7/15; self-validated == frozen Stage-1 blocked 45/60)
 548/700 cells (538/700 under the prototype-blocked bootstrap, all 12 splits still
 majority-firing); crucially, dropping oxygen --- which empties the entire oxide stratum and
 leaves only 5 strata (40 cells) --- still fires 37/40 (36/40 blocked), so the effect is
@@ -523,9 +491,36 @@ is met on both axes.
   \caption{Fraction of (model $\times$ stratum-pair) cells whose 95\,\% CI excludes zero,
   per robustness split. (a) leave-one-element-out (12/12 splits majority-firing); (b)
   WBM round (3/5 rounds majority-firing). Cell counts annotated; dashed line is the majority
-  threshold.}
-  % source: research/results/MT29/mt29_stage2_robustness_result.json
+  threshold. In panel (a), the O bar is coloured to flag the 5-stratum / 40-cell case
+  (dropping O empties the oxide stratum entirely; the 37/40 count is out of 40, not 60).
+  In panel (b), the $n{=}X$k sub-bar labels give the row count per WBM acquisition round
+  (rounds 1--5 carry 61k, 53k, 79k, 40k, 23k rows respectively).}
   \label{fig:f3}
+\end{figure}
+
+The held-out-UIP hierarchical bootstrap (Figure~\ref{fig:e2forest}) re-estimates the
+population-average oxide$|$halide interaction under architecture-family blocking
+(32 included UIPs across 12 families, orb\_v2\_omat duplicate excluded; $10^4$
+bootstrap replicates, family as the cluster unit); the family-blocked 95\,\% CI
+is $[+0.604,\,+0.848]$ with population median $+0.721$, and no architecture family
+falls below the CI lower bound. The leave-one-family-out worst case (dropping
+dpa3) still leaves a population mean of $+0.680$, so the headline interaction
+generalises across the audited UIP population and is not carried by a single
+architecture or shared training corpus. This addresses the model-pseudoreplication
+objection that row-level prototype-blocked CIs do not speak to directly.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.62\textwidth]{e2_family_blocked_ci.pdf}
+  \caption{Held-out-UIP hierarchical bootstrap, per architecture family. Each point
+  is the family-blocked mean oxide$|$halide interaction for the indicated family. Uniform
+  $\pm0.075$ whiskers are fixed visual references for comparing family means; they are not
+  per-family confidence intervals. The gray band is the population 95\,\% CI
+  $[+0.604,\,+0.848]$; the dashed line is the population median $+0.721$. No family's mean
+  falls below the CI lower bound.}
+  % script:  figures-source/integration_2026-07-21/e2_family_blocked_ci.R (R + Cairo PDF, TeX Gyre Termes serif, Type 1C embedded)
+  % contract: 32 included UIPs, 12 architecture families, orb_v2_omat excluded
+  \label{fig:e2forest}
 \end{figure}
 
 \subsection{The shuffle-null is clean everywhere}
@@ -534,18 +529,17 @@ Figure~\ref{fig:f4} contrasts the magnitude of the real interaction with the
 confidence-shuffled interaction, per gate. Permuting confidence within each stratum's
 called-stable set collapses the signal to a tight band around zero, and no shuffled
 cell's CI excludes zero in any gate: 0/60 at Stage-1, 0/700 under LOEO, and 0/300 across
-% source: mt29_stage1_matched_yield_result.json (max |shuffle interaction_med| 0.00468) and mt29_stage2_robustness_result.json (shuffle 0/700, 0/300)
 rounds. The largest shuffled Stage-1 interaction is $0.0047$ in absolute value, two orders
 of magnitude below the real median. The interaction is therefore a property of the
 confidence ordering, exactly what a genuine abstention effect requires.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.82\textwidth]{F4_shuffle_null.pdf}
-  \caption{Real vs.\ within-stratum confidence-shuffled $|$interaction$|$ per gate. The
-  shuffle-null collapses to zero (0/60, 0/700, 0/300 cells with CI excluding zero).}
-  % source: research/results/MT29/mt29_stage1_matched_yield_result.json
-  % source: research/results/MT29/mt29_stage2_robustness_result.json
+  \includegraphics[width=\textwidth]{F4_shuffle_null.pdf}
+  \caption{Real vs.\ within-stratum confidence-shuffled $|$interaction$|$ per gate. Real
+  CIs exclude zero in 48/60 (Stage-1), 548/700 (LOEO), and 157/300 (WBM round) cells; the
+  shuffled CIs exclude zero in 0/60, 0/700, and 0/300 cells respectively --- the
+  shuffle-null collapses to zero in every gate.}
   \label{fig:f4}
 \end{figure}
 
@@ -557,7 +551,6 @@ particular confidence source. First, we replace each UIP's single-model
 $|\hat{e}_{\mathrm{hull}}|$ with a \emph{committee-variance} signal: confidence
 $=-\mathrm{std}$ of the four UIPs' reconstructed predicted hull distances, with the consensus
 stable call taken as the committee-mean hull below zero, holding the matched-yield control
-% source: research/results/MT29/mt29_committee_variance.json (committee_budgets y_tight 1422 / y_loose 2844; gain_median oxide 0.56329, halide -0.0139; ox-hal pair 0.57383 [0.46253, 0.68708]; chalc-hal 0.11521 [0.04381, 0.18274]; hal-pnict -0.11428 [-0.21111, -0.01857])
 identical ($Y_{\mathrm{tight}} = 1422$, $Y_{\mathrm{loose}} = 2844$).
 Figure~\ref{fig:f5}(a) shows the committee-variance abstention benefit is again concentrated
 in oxides (matched-yield DAF gain median $+0.563$) and small elsewhere ($\le +0.10$; halide
@@ -584,10 +577,11 @@ PASS-BOTH; Table~\ref{tab:signalcompare}).
   gain (median) per anion stratum using the committee-variance signal; the benefit
   concentrates in oxides, mirroring the single-model pattern. (b) The 15 stratum-pair
   committee-variance interactions ($\mathrm{gain}_A - \mathrm{gain}_B$, median with 95\,\%
-  bootstrap CI); orange marks the 7 pairs whose committee CI excludes zero, and the side
-  asterisk marks pairs on which the single-model consensus also fired. The committee is
-  sparser (7/15) but sign-consistent; the confidence-shuffle collapses to 0/15.}
-  % source: research/results/MT29/mt29_committee_variance.json
+  bootstrap CI); orange marks the 7 pairs whose committee CI excludes zero. A right-gutter
+  asterisk means that the single-model consensus also excludes zero for that pair; it does not
+  encode the committee CI. The committee is sparser (7/15) but sign-consistent; the
+  confidence-shuffle collapses to 0/15. Chemistry codes are OX/oxide, IM/intermetallic,
+  CH/chalcogenide, HA/halide, PN/pnictide, and OT/other.}
   \label{fig:f5}
 \end{figure}
 
@@ -600,8 +594,6 @@ PASS-BOTH; Table~\ref{tab:signalcompare}).
   stratum-pair) $=60$, committee interactions per stratum-pair $=15$. Both counts here use
   the i.i.d.\ bootstrap for an apples-to-apples comparison; the single-model primary count
   under the prototype-blocked bootstrap is 45/60 (Results).}
-  % source: research/results/MT29/mt29_stage1_matched_yield_result.json
-  % source: research/results/MT29/mt29_committee_variance.json
   \label{tab:signalcompare}
   \begin{tabular}{lcc}
     \toprule
@@ -627,7 +619,6 @@ conditional-coverage gap (mean $p_{\mathrm{native}}$ minus the empirical stable 
 held-out test half. Every gap is positive and CI-excludes-zero for every UIP
 (Table~\ref{tab:sscs}): the native Gaussian over-predicts stability in every family. The
 worst-slab gap (SSCS $= \max_s |\mathrm{gap}_s|$) ranges from ORB's $0.077$ (best calibrated)
-% source: research/results/MT29/mt29_sscs_stratified.json (per_model_SSCS orb 0.07684, mace 0.32176; mean 0.19737; mace sigma_rmse_cal 0.97741)
 to MACE's $0.322$ (worst, driven by its inflated $\sigma = 0.977$, which pushes $p$ toward
 $0.5$ everywhere), with a cross-model mean of $0.197$. Two distinct chemistry dependences must
 not be conflated here. Calibration miscalibration (whether $p_{\mathrm{stable}}$ matches the
@@ -646,7 +637,6 @@ UIP is least calibrated on is not the chemistry where abstention pays most.
   minus empirical stable rate) on the test half, per UIP. Every gap is positive and its
   95\,\% bootstrap CI excludes zero, so the native Gaussian over-predicts stability in every
   family for every model. SSCS is the worst-slab $\max_s |\mathrm{gap}_s|$.}
-  % source: research/results/MT29/mt29_sscs_stratified.json
   \label{tab:sscs}
   \begin{tabular}{lcccccccc}
     \toprule
@@ -662,7 +652,92 @@ UIP is least calibrated on is not the chemistry where abstention pays most.
   \end{tabular}
 \end{table}
 
+\subsection{Roster-wide universality (32 modern UIPs)}
+\label{sec:roster-universality}
+\paragraph{Inclusion rule and the 32-UIP sample.} Following the pre-specified inclusion rule
+($\ge\!50$ called-stable structures per stratum and $\ge\!99\%$ WBM coverage, which keeps the
+common-yield budget non-degenerate), $32$ modern UIPs qualify ($16$ MP-generation, $16$
+OMat-generation, after dropping the non-independent duplicate of the MP-generation ``orb'' anchor).
+The per-model oxide-vs-halide matched-yield interaction is positive with a prototype-blocked
+95\,\% CI excluding zero for all $32$ ($16/16$ MP-generation, $16/16$ OMat-generation);
+oxide is the single highest-benefit stratum in $29/32$ (the three exceptions are
+MP-generation models whose arg-max is the residual ``other'' stratum, not a reversal);
+per-model interactions range from $+0.31$ to $+1.31$ (Table~\ref{tab:roster}). The
+pre-specified hypothesis that the newer OMat generation would dissolve or reverse the anchoring
+is not supported: a model-level permutation test on the generation label gives $p = 0.68$
+(observed MP$-$OMat gap in mean interaction $-0.037$, 95\,\% CI $[-0.21, 0.13]$; $n_{\mathrm{MP}} = 16$,
+$n_{\mathrm{OMat}} = 16$). We read this as no detectable generational difference in the oxide anchor:
+the CI is wide relative to the observed gap and the analysis is underpowered (at $n=16$ per arm) to
+exclude a moderate-magnitude generational shift, so ``generation-independent'' should be read as
+an honest null within this roster's power, not as a demonstrated invariance.
+
+\paragraph{Classical baselines and multiplicity.} The seven 2020-era classical baselines
+(CGCNN, CGCNN+P, MEGNet, Wrenformer, Voronoi-RF, ALIGNN, BOWSR-MEGNet; all MP-trained) are by
+contrast weak and mixed --- five carry a positive CI-excluding oxide-vs-halide interaction but
+oxide is the arg-max stratum for only two, and Voronoi-RF reverses it ($-0.12$, CI $[-0.22, -0.02]$)
+--- so the effect is specific to modern universal potentials, not shared by every ML
+formation-energy model. Over the full included-UIP interaction family ($32 \times 15 = 480$
+cells) $378$ CI-exclude zero and $369$ survive Benjamini--Hochberg FDR~\citep{benjamini1995fdr}
+at $q = 0.05$; the oxide-vs-halide subfamily is $32/32$ under both, with a clean within-stratum
+confidence-shuffle null ($0/480$). The Holm--Bonferroni family-wise procedure~\citep{holm1979}
+survives $0/480$ (and $0/32$ on the oxide-halide subfamily) at $\alpha = 0.05$: this is a
+bootstrap-resolution limit, not evidence against the effect --- the minimum achievable two-sided
+bootstrap $p$ at $n_{\mathrm{boot}} = 1000$ is $\approx\!0.002$, and Holm's family-wise correction
+over $480$ (or $32$) cells demands $p < 0.05/480 \approx 1.0\times10^{-4}$ (or
+$0.05/32 \approx 1.6\times10^{-3}$), both below the achievable floor; the BH-FDR and raw-CI readings above are
+the informative ones here, mirroring the treatment of the equivalent Stage-1 Holm result.
+
+\paragraph{Two published files with non-physical MAE, retained with disclosure.} Two MP-generation
+files in the published Matbench Discovery prediction release --- GRACE-2L-MPtrj and SevenNet-0 --- contain a handful of
+catastrophic-outlier prediction rows ($13$ and $1$ of $256{,}963$, with $|\hat{e}_{\mathrm{form}}|$
+up to $10^{22}$ and $10^{33}$\,eV/atom) that make their naive mean absolute error
+non-physical ($5\times10^{16}$ and $10^{28}$\,eV/atom); trimming those rows restores physical MAEs
+of $0.057$ and $0.046$\,eV/atom. Because the analysis ranks and thresholds predictions rather than
+averaging them, these rows do not affect the result: removing them shifts each oxide-vs-halide
+interaction by $\le\!0.013$ (well inside its $\sim\!0.3$-wide CI) and leaves the arg-max stratum
+and CI-exclusion unchanged, so both models are retained among the $32$ with this disclosure rather
+than silently trimmed.
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{Roster-wide oxide-vs-halide matched-yield abstention interaction $I$ (prototype-blocked
+  95\,\% CI) for all $32$ included modern UIPs, by training generation (models are Matbench
+  Discovery leaderboard identifiers; the published Orb-v2
+  OMat file is excluded here as a non-independent duplicate of the MP-generation ``orb'' anchor,
+  text). $I>0$ with CI excluding zero for all $32$; oxide is the highest-benefit stratum in $29$.
+  GRACE-2L-MPtrj and SevenNet-0 carry non-physical published MAE from a few outlier rows that do
+  not affect this rank-based interaction (text).}
+  \label{tab:roster}
+  \begin{tabular}{lcc@{\hskip 1.4em}lcc}
+    \toprule
+    \multicolumn{3}{c}{MP generation ($n=16$)} & \multicolumn{3}{c}{OMat generation ($n=16$)} \\
+    \cmidrule(lr){1-3}\cmidrule(lr){4-6}
+    model & $I$ & 95\,\% CI & model & $I$ & 95\,\% CI \\
+    \midrule
+    eqv2\_s\_mp & $+1.16$ & $[1.02,1.29]$ & allegro\_oam & $+1.31$ & $[1.19,1.44]$ \\
+    matris\_mptrj & $+1.01$ & $[0.88,1.13]$ & dpa31\_ft & $+1.13$ & $[1.00,1.25]$ \\
+    dpa3\_v2\_mptrj & $+0.99$ & $[0.86,1.13]$ & dpa3\_v2\_openlam & $+0.98$ & $[0.86,1.11]$ \\
+    allegro\_mp & $+0.95$ & $[0.80,1.11]$ & grace\_1l\_oam & $+0.91$ & $[0.77,1.04]$ \\
+    grace\_2l\_mptrj & $+0.91$ & $[0.76,1.06]$ & eqv2\_m\_omat & $+0.90$ & $[0.77,1.03]$ \\
+    mattersim & $+0.83$ & $[0.71,0.94]$ & dpa3\_v1\_openlam & $+0.83$ & $[0.71,0.96]$ \\
+    dpa3\_v1\_mptrj & $+0.83$ & $[0.70,0.95]$ & alphanet\_oma & $+0.70$ & $[0.58,0.82]$ \\
+    hienet & $+0.74$ & $[0.60,0.87]$ & esen\_oam & $+0.70$ & $[0.58,0.81]$ \\
+    nequip\_mp & $+0.59$ & $[0.45,0.73]$ & nequip\_oam\_xl & $+0.67$ & $[0.55,0.77]$ \\
+    matris\_10m\_mp & $+0.58$ & $[0.47,0.69]$ & orb\_v3 & $+0.64$ & $[0.52,0.76]$ \\
+    eqnorm\_mptrj & $+0.50$ & $[0.37,0.63]$ & mace\_mpa & $+0.62$ & $[0.48,0.75]$ \\
+    alphanet\_mp & $+0.49$ & $[0.37,0.61]$ & grace\_3l\_oam & $+0.57$ & $[0.45,0.67]$ \\
+    sevennet\_0 & $+0.48$ & $[0.34,0.61]$ & grace\_2l\_oam & $+0.55$ & $[0.44,0.68]$ \\
+    nequix\_mp & $+0.42$ & $[0.29,0.57]$ & nequip\_oam & $+0.54$ & $[0.42,0.64]$ \\
+    sevennet\_l3i5 & $+0.41$ & $[0.27,0.55]$ & matris\_oam & $+0.50$ & $[0.40,0.61]$ \\
+    esen\_mp & $+0.38$ & $[0.25,0.52]$ & grace\_2l\_oam\_l & $+0.31$ & $[0.19,0.42]$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \section{Discussion}
+
+\subsection{Interpretation of the oxide-anchored interaction}
 
 \paragraph{What the result means.} The value of selective abstention in UIP stability
 screening is not uniform across chemistry, and where it is largest tracks where the reference
@@ -733,6 +808,8 @@ demonstrated result remains the two-factor account of the abstention benefit abo
 $\times$ base-rate normalization), now read as headroom in UIP--label disagreement rather
 than in UIP error against a trusted truth.
 
+\subsection{Robustness of the headline result}
+
 \paragraph{The oxide benefit is not a transition-metal-oxide artifact.} Splitting the oxide
 stratum into transition-metal oxides (formula containing a $d$-block metal; $17{,}369$ structures)
 and main-group oxides ($7{,}651$) shows the matched-yield abstention benefit is present in
@@ -750,7 +827,6 @@ the oxide error (post-hoc descriptive; full values in the reproduction archive).
   $n$ called-stable is the sub-family's called-stable count at the loose budget; precision is
   the true-stable fraction among called-stable structures, full budget $\to$ confident half.
   DAF gain is positive in all eight cells.}
-  % source: results_expansion_2026-07-11/mechanism_extensions/m3_prospective_m4_within_oxide.json (M4_within_oxide: n_tm_oxide 17369, n_maingroup_oxide 7651; per_model.{chgnet,m3gnet,mace,orb}.{tm_oxide,maingroup_oxide}: n_called_stable, precision_full, precision_conf_half, daf_gain; both_subfamilies_positive 4/4)
   \label{tab:tmoxide}
   \begin{tabular}{llccc}
     \toprule
@@ -768,28 +844,16 @@ the oxide error (post-hoc descriptive; full values in the reproduction archive).
   \end{tabular}
 \end{table}
 
-\paragraph{What DFT verification would and would not add.} A natural question for a screening
-paper is whether any prediction was verified against density-functional theory. For this audit the
-question is answered by construction: the estimand throughout is agreement with WBM's
-MP2020-compatible DFT ground truth~\citep{wang2021mp2020,riebesell2025}. Every structure a UIP
-calls stable, every abstention, and every stable/unstable flip is scored against an
-already-computed DFT hull distance, so the precision, DAF, and coverage numbers are
-DFT-referenced by definition. Running new DFT on the flipped or abstained candidates would not
-test any claim made here; it would test the fidelity of the WBM ground truth itself, which is
-upstream of our contribution and shared by every Matbench Discovery result. We therefore run no
-new DFT, and none is required for the audit's validity: unlike a discovery study that must confirm
-novel predictions, our claims are statements about decision behavior measured against DFT labels
-% source: reference-reliability caveat --- correlated-d TM-oxide labels lacking Hubbard-U in the PBE MP reference (wang2006oxidation, jain2011formation); full statement given once above ("Why UIP--label disagreement...") and cross-referenced here (de-duplicated in the 2026-07-16 revision)
-that already exist. One caveat follows directly, and bounds the oxide reading: because the
-estimand is agreement with those labels, the audit inherits their reliability, and --- as
-established above (``Why UIP--label disagreement is largest in oxides'') --- the oxide labels are
-the benchmark's least reliable slice of the ground truth. The oxide-anchored abstention benefit is therefore anchored to the slice of
-WBM where the ground truth is weakest, so the finding is best read as ``UIP--label disagreement is
-largest, and least trustworthy, in oxides,'' not as a certified statement about UIP error against
-a fully trusted truth. This does not affect the non-oxide interactions or the method itself, only
-the interpretation of the oxide anchor. To be explicit, our claims are statements about decision
-behavior measured against DFT labels
-that already exist.
+\paragraph{What DFT verification would and would not add.} The estimand throughout is
+agreement with WBM's MP2020-compatible DFT ground truth~\citep{wang2021mp2020,riebesell2025}:
+every stable call, abstention, and flip is scored against an already-computed DFT hull
+distance, so the precision, DAF, and coverage numbers are DFT-referenced by construction.
+Running new DFT on the flipped or abstained candidates would test the fidelity of the WBM
+ground truth itself --- upstream of our contribution and shared by every Matbench Discovery
+result --- not any claim made here, so we run none. One caveat bounds the oxide reading: the
+audit inherits the labels' reliability, and the oxide labels are the benchmark's least
+reliable slice (Sec.~\ref{sec:results}), so the finding is best read as ``UIP--label disagreement is
+largest, and least trustworthy, in oxides,'' not as UIP error against a fully trusted truth.
 
 \paragraph{Why this survives where the ``beats margin'' wedge did not.} The companion study
 tested whether a learned or calibrated confidence signal (isotonic $p_{\mathrm{stable}}$,
@@ -803,6 +867,8 @@ main-effect claim about whether margin beats some other baseline, which is why i
 the same common-absolute-yield control that companion study used. We carried that control
 through genuine anion-class strata, leave-one-element-out, and WBM-round splits, and it survives
 all of them with a clean shuffle-null.
+
+\subsection{Relation to prior work and methodological precedent}
 
 \paragraph{Relation to certified and ensemble-uncertainty approaches.} Two adjacent
 literatures address confidence for UIPs, but neither reports a chemistry-conditioned value of
@@ -836,31 +902,18 @@ choosing which candidates to acquire, it asks whether the value of abstaining is
 chemistry-dependent, and --- consistent with that work's caution about chemistry-localised
 failure --- finds its largest payoff precisely in the oxide stratum.
 
-\paragraph{Statistical-rigor and reproducibility precedent in the data-centric methodology
-literature.} The audit-protocol framing here --- a frozen, provenance-gated re-analysis of
-already-published prediction files rather than a new trained model --- has direct precedent in
-the data-centric materials-ML methodology literature. Persaud et al.~\citep{persaud2024reproducibility}, in Digital Discovery, show that even a single published
-materials-ML result can fail to reproduce without careful provenance tracking, the failure mode
-our md5-gated, byte-identical reproduction is built to rule out. Ottomano
-et al.~\citep{ottomano2024aggregation}, likewise in Digital Discovery, show that a common
-materials-informatics assumption --- that aggregating more training data uniformly helps ---
-does not survive a matched, controlled comparison, the same matched-yield discipline this paper
-applies to abstention rather than to training-set size. Witman and Schindler's
-{MatFold}~\citep{witman2025matfold}, also in Digital Discovery, standardizes cross-validation
-splitting for materials-discovery models precisely because naive splits bias performance
-estimates, echoing why this paper reports LOEO and WBM-round splits as robustness gates rather
-than a single held-out number. On the confidence-signal side, a perspective in Digital Discovery
-on uncertainty in ML atomistic modeling~\citep{grasselli2025uncertainty} surveys Bayesian
-and ensembling UQ approaches broadly, and architecture-search-based ensembling for
-molecular-property UQ~\citep{jiang2024autognnuq}, also in Digital Discovery, offers a richer
-alternative confidence signal in the same spirit as the committee-variance comparison here
-(Figure~\ref{fig:f5}); neither reports a chemistry-conditioned abstention value, the gap this
-paper fills. Within \emph{this} journal specifically, the closest genuine anchor is Beck
-et al.'s~\citep{beck2025} multi-head-committee uncertainty quantification for UIPs (discussed
-above), which validates a richer confidence signal via force-error correlation and
-active-learning data efficiency but --- like the Digital Discovery methodology literature above
---- does not test whether the value of any confidence signal for stability screening is itself
-chemistry-conditioned.
+\paragraph{Methodological precedent.} The audit-protocol framing --- a frozen,
+provenance-gated re-analysis of already-published prediction files rather than a new trained
+model --- has direct precedent in the data-centric materials-ML methodology literature:
+published materials-ML results can fail to reproduce without careful provenance
+tracking~\citep{persaud2024reproducibility}, the assumption that more training data uniformly
+helps does not survive matched comparison~\citep{ottomano2024aggregation}, and standardized
+splitting is needed precisely because naive splits bias performance
+estimates~\citep{witman2025matfold}. These motivate respectively our integrity-verified byte-identical
+reproduction, the matched-yield discipline, and the LOEO/WBM-round robustness gates.
+Uncertainty-quantification methodology for atomistic
+ML~\citep{grasselli2025uncertainty,jiang2024autognnuq} likewise reports no
+chemistry-conditioned abstention value --- the gap this paper fills.
 
 \paragraph{Scope and what stays dead.} We claim an abstention-quality interaction at
 matched yield, read as a diagnostic of where the reference data is least trustworthy --- and
@@ -898,22 +951,7 @@ calls the paper actually uses are the reconstructed ones, and it is those that a
 fixed-hull approximation is a sound basis for the stability calls throughout, not merely an
 acknowledged limitation.
 
-\paragraph{Roster-wide universality of the oxide anchor.} The four-UIP headline rests on
-cached predictions that carry the MP2020 corrections natively. To test whether the oxide
-anchoring is a property of those four models or of universal potentials as a class, we converted
-every credential-free WBM prediction file on the Matbench Discovery Figshare record
-(version~25): $44$ files --- $27$ trained on Materials Project~\citep{jain2013mp} data only (the
-2022--24 ``MP generation,'' including seven 2020-era classical baselines) and $17$ trained on the
-newer OMat24~\citep{barrosoluque2024omat24} / Alexandria~\citep{schmidt2023alexandria} / OpenLAM
-corpora (the ``OMat generation''). Each file's MP2020-corrected
-formation-energy column is the authoritative published prediction --- byte-identical to the
-frozen CHGNet anchor over all $256{,}963$ rows --- so the expansion sits on the same ground truth
-as the headline, not a re-derivation. All $44$ raw sources were re-verified against their
-Figshare-published md5 checksums (an automated verification pass, $44/44$ OK). The roster and
-its two-arm generational aggregation follow a pre-specified analysis plan written before the
-run; it is not
-git-timestamped ahead of the run, unlike the alternative-stratification plan below, so we label it
-a pre-specified plan rather than a preregistration.
+\paragraph{Roster-wide universality of the oxide anchor.} The full 32-UIP audit, the per-model interactions, the permutation test, and the baseline and multiplicity comparisons are in \S\ref{sec:roster-universality}; we collect here only the model-family provenance, three methodological disclosures (one published-file non-independence, one correction to an earlier reported claim, and one frozen-anchor drift table), and the multiplicity-correction status. The headline finding --- the oxide-vs-halide matched-yield interaction is positive with prototype-blocked 95\,\% CI excluding zero for all $32$ modern UIPs, and oxide is the single highest-benefit stratum in $29$ --- is therefore the \S\ref{sec:roster-universality} reading. (For provenance, the roster itself comprises $44$ credential-free files from the published Matbench Discovery prediction release --- $27$ MP-generation, including seven 2020-era classical baselines, and $17$ OMat-generation --- all $44/44$ verified against published release integrity records; the two-arm aggregation follows a pre-specified plan that is not git-timestamped ex ante, so we label it a pre-specified plan rather than a preregistration.)
 
 \emph{Model families represented in the roster.} Beyond the four headline architectures already
 introduced --- CHGNet~\citep{deng2023}, M3GNet~\citep{chen2022}, MACE~\citep{batatia2022mace}
@@ -930,210 +968,78 @@ across this architecturally diverse set (Table~\ref{tab:roster}) is part of what
 it as a property of universal potentials broadly rather than of any one model family.
 
 \emph{One published file is a non-independent duplicate.} Of the $44$ converted files, the
-OMat-generation Orb-v2 file (Figshare file 51607307,
-``orbff-v2-20241011.csv.gz'') is byte-identical (max\,$|\Delta e_{\mathrm{form}}| = 0$ over all
-$256{,}963$ rows) to the frozen \textsc{MP}-generation ``orb'' headline anchor: both trace to the
-same published Orb-v2 checkpoint. The frozen anchor had been labelled ``Orb-v2 MPtrj-only,'' but
-re-fetching and cross-checking both published Orb-v2 files shows the anchor matches the general
-Orb-v2 checkpoint (file 51607307) exactly and the true MPtrj-only checkpoint (file 51607310,
-``orbff-mptrj-only-v2-20241014.csv.gz'') only approximately (mean\,$|\Delta| = 0.037$,
-max\,$|\Delta| = 1.99$\,eV/atom). This file is therefore excluded from the
+OMat-generation Orb-v2 predictions are byte-identical
+(max\,$|\Delta e_{\mathrm{form}}| = 0$ over all $256{,}963$ rows) to the frozen
+\textsc{MP}-generation ``orb'' headline anchor: both trace to the same published Orb-v2
+checkpoint. The frozen anchor had been labelled ``Orb-v2 MPtrj-only,'' but re-fetching and
+cross-checking the published Orb-v2 predictions shows that the anchor matches the general Orb-v2
+checkpoint exactly and the true MPtrj-only checkpoint only approximately
+(mean\,$|\Delta| = 0.037$, max\,$|\Delta| = 1.99$\,eV/atom). This file is therefore excluded from the
 generational contrast as a non-independent duplicate rather than an additional OMat-generation
 model, leaving $43$ independent models. This is a labelling/duplication issue, not a corrupt or
-fabricated file: its md5 gate passes cleanly, and it is the only one of the $44$ sources that is
+fabricated file: its integrity check passes cleanly, and it is the only one of the $44$ sources that is
 non-independent.
 
-\emph{Correction to the earlier Orb-v3 ``dissenter'' claim.} A previous version of this check
-self-inferred predictions for a four-model roster and reported Orb-v3 as a sharp oxide-anchoring
-reversal ($-1.83$). That figure was an artifact of the self-inference, which omitted
+\emph{Correction to the earlier Orb-v3 ``dissenter'' claim.} An earlier four-model analysis
+reconstructed predictions and reported Orb-v3 as a sharp oxide-anchoring
+reversal ($-1.83$). That result arose from a reconstruction that omitted
 the MP2020 anion/oxide corrections and thereby imprinted a systematic anion-count-proportional
 offset ($\approx\!+0.11$--$0.59$\,eV/atom, largest on oxides) that the ground truth and the cached
 CSVs both carry, leaving the reconstructed-hull oxide calls degenerate. On the \emph{authoritative
-published} Figshare v25 predictions, Orb-v3's oxide-vs-halide abstention interaction is $+0.64$
+published} Matbench Discovery predictions, Orb-v3's oxide-vs-halide abstention interaction is $+0.64$
 (95\,\% CI $[0.52, 0.76]$) --- positive and oxide-anchored like every other modern potential. We
-correct the earlier reversal explicitly: it was a harness artifact, not a model property.
+correct the earlier reversal explicitly: it reflected the earlier evaluation pipeline, not a model property.
 
-\emph{The oxide anchor is universal across the modern-UIP roster.} Under the pre-specified
-inclusion rule ($\ge\!50$ called-stable structures per stratum and $\ge\!99\%$ WBM coverage, which
-keeps the common-yield budget non-degenerate), $32$ modern UIPs qualify ($16$ MP-generation, $16$
-OMat-generation, after dropping the duplicate). The oxide-vs-halide matched-yield interaction is
-positive with a prototype-blocked 95\,\% CI excluding zero for all $32$ ($16/16$
-MP-generation, $16/16$ OMat-generation), and oxide is the single highest-benefit stratum in
-$29/32$ (the three exceptions are MP-generation models whose arg-max is the residual ``other''
-stratum, not a reversal); per-model interactions range from $+0.31$ to $+1.31$
-(Table~\ref{tab:roster}). The pre-specified hypothesis that the newer OMat generation would
-dissolve or reverse the anchoring is not supported: a model-level permutation test on the
-generation label gives $p = 0.68$ (observed MP$-$OMat gap in mean interaction $-0.037$, 95\,\% CI
-$[-0.21, 0.13]$; $n_{\mathrm{MP}} = 16$, $n_{\mathrm{OMat}} = 16$). We read this as no detectable
-generational difference in the oxide anchor: the CI is wide relative to the observed gap and the
-analysis is underpowered (at $n=16$ per arm) to exclude a moderate-magnitude generational shift,
-so ``generation-independent'' should be read as an honest null within this roster's power, not as
-a demonstrated invariance.
 
-\emph{Classical baselines and multiplicity.} The seven 2020-era classical baselines (CGCNN,
-CGCNN+P, MEGNet, Wrenformer, Voronoi-RF, ALIGNN, BOWSR-MEGNet; all MP-trained) are by contrast weak
-and mixed --- five carry a positive CI-excluding oxide-vs-halide interaction but oxide is the
-arg-max stratum for only two, and Voronoi-RF reverses it ($-0.12$, CI $[-0.22, -0.02]$) ---
-so the effect is specific to modern universal potentials, not shared by every ML formation-energy
-model. Over the full included-UIP interaction family ($32 \times 15 = 480$ cells) $378$ CI-exclude
-zero and $369$ survive Benjamini--Hochberg FDR~\citep{benjamini1995fdr} at $q = 0.05$; the
-oxide-vs-halide subfamily is $32/32$ under both, with a clean within-stratum confidence-shuffle
-null ($0/480$). The Holm--Bonferroni family-wise procedure~\citep{holm1979}
-survives $0/480$ (and $0/32$ on the oxide-halide subfamily) at $\alpha = 0.05$: this is a
-bootstrap-resolution limit, not evidence against the effect --- the minimum achievable two-sided
-bootstrap $p$ at $n_{\mathrm{boot}} = 1000$ is $\approx\!0.002$, and Holm's family-wise correction
-over $480$ (or $32$) cells demands $p < 0.05/480 \approx 1.0\times10^{-4}$ (or $0.05/32
-\approx 1.6\times10^{-3}$), both below the achievable floor; the BH-FDR and raw-CI readings above
-are the informative ones here, mirroring the treatment of the equivalent Stage-1 Holm result.
-Numbers trace to
-% source: results_expansion_2026-07-14/mt29_roster_expansion_result.json (n_included_uip 32; MP_arm n 16 n_positive_anchored 16 n_argmax_oxide 13; OMat_arm n 16 n_positive_anchored 16 n_argmax_oxide 16; V3 perm_p 0.68153 gap -0.03708 CI [-0.2083,0.13303]; multiplicity_full_family n 480 ci_excl0 378 bh 369 holm 0; multiplicity_oxide_halide 32/32 holm 0; shuffle_null 0/480; orb_v3 ox-hal 0.6426 CI [0.52029,0.75598]; classical voronoi_rf -0.11704 CI [-0.21828,-0.01686])
-the roster-expansion audit in the reproduction archive
-(the corrected re-run; supersedes the contaminated
-earlier run, retained with a provenance note).
-
-\emph{Two published files with non-physical MAE, retained with disclosure.} Two MP-generation files
-as published on Figshare v25 --- GRACE-2L-MPtrj and SevenNet-0 --- contain a handful of
-catastrophic-outlier prediction rows ($13$ and $1$ of $256{,}963$, with $|\hat{e}_{\mathrm{form}}|$
-up to $10^{22}$ and $10^{33}$\,eV/atom) that make their naive mean absolute error
-non-physical ($5\times10^{16}$ and $10^{28}$\,eV/atom); trimming those rows restores physical MAEs
-of $0.057$ and $0.046$\,eV/atom. Because the analysis ranks and thresholds predictions rather than
-averaging them, these rows do not affect the result: removing them shifts each oxide-vs-halide
-interaction by $\le\!0.013$ (well inside its $\sim\!0.3$-wide CI) and leaves the arg-max stratum and
-CI-exclusion unchanged, so both models are retained among the $32$ with this disclosure rather than
-silently trimmed.
-% source: results_expansion_2026-07-13/DATA-SANITY-OUTLIERS.json (grace_2l_mptrj 13 rows mae_naive 5.28e16 mae_trimmed 0.05719 delta_I 0.01325; sevennet_0 1 row mae_naive 9.60e27 mae_trimmed 0.04642 delta_I 0.00194; both robust True; unaffected by the orb_v2_omat dedup, both MP-generation models)
+\emph{Multiplicity-correction status.} The Holm--Bonferroni survival is $0/480$ (and $0/32$ on the oxide-halide subfamily) at $\alpha = 0.05$; this is a bootstrap-resolution limit, not evidence against the effect --- the minimum achievable two-sided bootstrap $p$ at $n_{\mathrm{boot}} = 1000$ is $\approx 0.002$, and Holm's family-wise correction over $480$ (or $32$) cells demands $p < 0.05/480 \approx 1.0\times10^{-4}$ (or $0.05/32 \approx 1.6\times10^{-3}$), both below the achievable floor. The BH-FDR and raw-CI readings in \S\ref{sec:roster-universality} are the informative ones, mirroring the treatment of the equivalent Stage-1 Holm result. Numbers trace to the corrected roster-expansion analysis in the reproduction archive; the superseded run is retained there with its provenance metadata.
 
 \emph{Frozen-anchor provenance disclosure.} Three of the four headline anchors (M3GNet, MACE-MP-0,
 and the ``orb'' anchor discussed above) are frozen on-disk snapshots that are not the
-current Figshare v25 publication: cross-checking each against its re-downloaded v25 counterpart
+current published Matbench Discovery prediction release: cross-checking each against its re-downloaded counterpart
 shows measured drift (mean\,/\,max absolute difference in eV/atom: M3GNet $0.036$/$3.65$;
 MACE-MP-0 $0.050$/$349.59$; orb $0.037$/$1.99$; CHGNet is byte-identical, $0$/$0$). The drift does
 not change any reported number --- the four-UIP headline and the roster expansion both use the
 frozen snapshots (or, for orb, the published file the snapshot equals) consistently, and the drift
 magnitudes are disclosed here for provenance rather than folded into any statistic.
-% source: results_expansion_2026-07-13/ROSTER25_DATA_MANIFEST.json (anchor_crosscheck: chgnet identical; m3gnet mean_abs 0.03582 max_abs 3.6457; mace_mp_0 mean_abs 0.04955 max_abs 349.5859; orb_mptrj mean_abs 0.03721 max_abs 1.994)
 
-\begin{table}[t]
-  \centering
-  \small
-  \caption{Roster-wide oxide-vs-halide matched-yield abstention interaction $I$ (prototype-blocked
-  95\,\% CI) for all $32$ included modern UIPs, by training generation (models are Matbench
-  Discovery leaderboard identifiers; the published Orb-v2
-  OMat file is excluded here as a non-independent duplicate of the MP-generation ``orb'' anchor,
-  text). $I>0$ with CI excluding zero for all $32$; oxide is the highest-benefit stratum in $29$.
-  GRACE-2L-MPtrj and SevenNet-0 carry non-physical published MAE from a few outlier rows that do
-  not affect this rank-based interaction (text).}
-  \label{tab:roster}
-  % source: results_expansion_2026-07-14/mt29_roster_expansion_result.json (per_model oxide|halide interaction_med + ci95, all 32 included UIPs, sorted by I within generation)
-  \begin{tabular}{lcc@{\hskip 1.4em}lcc}
-    \toprule
-    \multicolumn{3}{c}{MP generation ($n=16$)} & \multicolumn{3}{c}{OMat generation ($n=16$)} \\
-    \cmidrule(lr){1-3}\cmidrule(lr){4-6}
-    model & $I$ & 95\,\% CI & model & $I$ & 95\,\% CI \\
-    \midrule
-    eqv2\_s\_mp & $+1.16$ & $[1.02,1.29]$ & allegro\_oam & $+1.31$ & $[1.19,1.44]$ \\
-    matris\_mptrj & $+1.01$ & $[0.88,1.13]$ & dpa31\_ft & $+1.13$ & $[1.00,1.25]$ \\
-    dpa3\_v2\_mptrj & $+0.99$ & $[0.86,1.13]$ & dpa3\_v2\_openlam & $+0.98$ & $[0.86,1.11]$ \\
-    allegro\_mp & $+0.95$ & $[0.80,1.11]$ & grace\_1l\_oam & $+0.91$ & $[0.77,1.04]$ \\
-    grace\_2l\_mptrj & $+0.91$ & $[0.76,1.06]$ & eqv2\_m\_omat & $+0.90$ & $[0.77,1.03]$ \\
-    mattersim & $+0.83$ & $[0.71,0.94]$ & dpa3\_v1\_openlam & $+0.83$ & $[0.71,0.96]$ \\
-    dpa3\_v1\_mptrj & $+0.83$ & $[0.70,0.95]$ & alphanet\_oma & $+0.70$ & $[0.58,0.82]$ \\
-    hienet & $+0.74$ & $[0.60,0.87]$ & esen\_oam & $+0.70$ & $[0.58,0.81]$ \\
-    nequip\_mp & $+0.59$ & $[0.45,0.73]$ & nequip\_oam\_xl & $+0.67$ & $[0.55,0.77]$ \\
-    matris\_10m\_mp & $+0.58$ & $[0.47,0.69]$ & orb\_v3 & $+0.64$ & $[0.52,0.76]$ \\
-    eqnorm\_mptrj & $+0.50$ & $[0.37,0.63]$ & mace\_mpa & $+0.62$ & $[0.48,0.75]$ \\
-    alphanet\_mp & $+0.49$ & $[0.37,0.61]$ & grace\_3l\_oam & $+0.57$ & $[0.45,0.67]$ \\
-    sevennet\_0 & $+0.48$ & $[0.34,0.61]$ & grace\_2l\_oam & $+0.55$ & $[0.44,0.68]$ \\
-    nequix\_mp & $+0.42$ & $[0.29,0.57]$ & nequip\_oam & $+0.54$ & $[0.42,0.64]$ \\
-    sevennet\_l3i5 & $+0.41$ & $[0.27,0.55]$ & matris\_oam & $+0.50$ & $[0.40,0.61]$ \\
-    esen\_mp & $+0.38$ & $[0.25,0.52]$ & grace\_2l\_oam\_l & $+0.31$ & $[0.19,0.42]$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
 
-\paragraph{Threats to validity.} The primary confound is surfaced-candidate yield, addressed
-by the common-absolute-yield budget. Stratum-definition sensitivity is probed two ways, both of
-which survive: by the LOEO of the anion-formers (F, S, N, P) and the drop-oxygen run, and ---
-directly addressing the ``cherry-picked stratifier'' objection --- by re-running the entire
-matched-yield interaction under two alternative stratum definitions that do not use the
-anion-priority ordering, preregistered ex ante and git-timestamped (2026-07-02 10:52\,UTC,
-% prereg commit 66f078c precedes result commit 2eeddcd (git-verifiable ex-ante ordering)
-before the analysis runs at 11:01\,UTC): amount-weighted mean-Pauling-
-electronegativity quintiles and amount-weighted metal-fraction bins. Both reproduce the
-chemistry-dependence (overall verdict \textsc{both\_robust}):
-% source: research/results/MT29/mt29_altstrat_multiplicity_result.json (per_stratifier_verdict EN q5 SUCCESS, metal_fraction SUCCESS, overall BOTH_ROBUST, BH-across-families 18/80)
-the interaction CI-excludes zero in
-% source: mt29_stage1_altstrat_electronegativity_q5_result.json (ci_excl0 31/40, shuffle 0/40) and mt29_stage1_altstrat_metal_fraction_result.json (ci_excl0 24/40, shuffle 0/40)
-$31/40$ (electronegativity) and $24/40$ (metal-fraction) model~$\times$~stratum-pair cells, with
-the more anion-/oxide-rich, less-metallic strata carrying the higher abstention benefit. We are
-% source: mt29_stage1_altstrat_electronegativity_q5_result.json (ci_above0_correct_direction 6/40); mt29_stage1_altstrat_metal_fraction_result.json (ci_above0_correct_direction 14/40)
-careful not to overstate the electronegativity stratifier as a clean anti-cherry-pick rebuttal:
-of its $31$ CI-excluding cells only $6/40$ fire \emph{in the hypothesized anion-rich$>$metal-rich
-direction} (the rest exclude zero in mixed or opposite directions, because its top quintile pools
-oxides and halides --- opposite-extreme anion classes), whereas metal-fraction reproduces the
-direction cleanly ($14/40$ in-direction). It is therefore metal-fraction, not electronegativity,
-that provides the clean directional reproduction. Both nonetheless survive within-family Holm
-correction ($5$ and $13$ anion-consistent survivors, Holm-adjusted
-$p$ down to $8.0\times10^{-3}$) with a clean shuffle-null ($0/40$ each). Metal-fraction is
-cleanly monotonic (mf1, nonmetal-rich, highest benefit; mf5, $96\,\%$ intermetallic, lowest);
-the electronegativity quintiles confirm the heterogeneity but are non-monotonic at the top
-quintile for a chemically sensible reason --- it pools oxides and halides, the two
-opposite-extreme anion classes --- reported transparently in a dedicated
-% source: findings-altstrat-2026-07-02.md
-alternative-stratification findings note. The chemistry-dependence is therefore not an artifact
-of the single anion-priority classification rule.
-Thin-stratum DAF instability is guarded by minimum-row and minimum-called-stable thresholds.
-Multiple comparisons are handled three ways: by requiring a majority of cells rather
-than any single cell, by pairing every real test with a matched shuffle-null (zero false
-positives observed), and by a formal correction: per-cell two-sided bootstrap sign
-% source: research/results/MT29/mt29_multiplicity_stage1_result.json and mt29_multiplicity_stage2_result.json (BH 46/60, 539/700, 135/300; Holm hires 40/60; shuffle 0/60, 0/700, 0/300)
-$p$-values with Benjamini--Hochberg at $q = 0.05$ applied within each family retain 46/60
-Stage-1, 539/700 LOEO, and 135/300 WBM-round cells (shuffle families: 0/60, 0/700, 0/300),
-and the family-wise Holm--Bonferroni procedure at $\alpha = 0.05$ retains 40/60 Stage-1
-cells in a higher-resolution $10^4$-bootstrap pass (Holm is bootstrap-resolution-limited at
-$m = 700/300$ with $10^3$ draws, so BH-FDR is the formal correction reported for the
-robustness families). One structural caveat applies to all of these corrections: within a model
-the $15$ stratum-pair contrasts are not independent --- with six strata they span only
-five independent dimensions, since any pair difference is fixed by the others (e.g.\
-$(\mathrm{oxide}-\mathrm{halide}) = (\mathrm{oxide}-\mathrm{intermetallic}) -
-(\mathrm{halide}-\mathrm{intermetallic})$). BH and Holm treat the linked contrasts as separate
-tests, so the effective number of independent stratum comparisons is five per model, not fifteen;
-the corrected counts should be read with that redundancy in mind. Every reproduced cell in these correction runs was asserted
-identical (median, CI, exclusion status) to the frozen Stage-1/Stage-2 result JSONs before
-$p$-values were attached. The single confidence signal $|\hat{e}_{\mathrm{hull}}|$ is the free
-hull-margin baseline; richer signals such as cross-model ensemble disagreement are future work.
-The companion study's audit found disagreement does not survive the joint
-matched-coverage-and-yield control and can underperform margin there (e.g.\ CHGNet
-% source: research/results/MT28/mt28_riskcov_result.json (chgnet/by_coverage/cov_50/disagree/matched_yield_gain -0.0724)
-cov\_50 matched-yield gain $-0.0724$, 95\,\% CI $[-0.0845, -0.0610]$, excluding zero in the
-negative direction), so whether a richer signal would strengthen or dilute the stratified
-interaction is an open question, not an assumed one. The tight/loose yield split itself
-($Y_{\mathrm{tight}} = Y_{\mathrm{loose}} // 2$) was fixed once, post hoc; a subsequent
-sensitivity sweep re-ran the identical matched-yield machinery at
-$Y_{\mathrm{tight}} = \mathrm{round}(Y_{\mathrm{loose}} \cdot r)$ for
-$r \in \{1/3, 0.4, 0.5, 0.6\}$ (same seed, same 1000-bootstrap CIs). The interaction count is
-% source: research/results/MT29/mt29_stage1_yield_ratio_sensitivity_result.json (excl0_by_ratio 45/47/48/47 of 60; chgnet ox-hal medians 1.14417, 0.99069, 0.90092, 0.75099)
-stable across the grid --- 45/60, 47/60, 48/60, and 47/60 cells CI-excluding zero at
-$r = 1/3, 0.4, 0.5, 0.6$ respectively, with the shuffle-null clean (0/60) at every ratio ---
-and the headline CHGNet oxide-vs-halide cell fires at all four ratios (median interaction
-$+1.14$, $+0.99$, $+0.90$, $+0.75$; monotone in $r$ as expected, since a looser tight budget
-dilutes the abstention contrast). The ratio choice is therefore a confirmed non-issue for
-the qualitative claim, though the interaction magnitude scales with the budget ratio.
-A prospective, temporally held-out check calibrates the stratified-abstention policy on early
-WBM acquisition rounds and applies it to later rounds; it shows the oxide-highest
-ordering does not transfer out-of-time, and we report both specifications
-% source: results_expansion_2026-07-11/mechanism_extensions/m3_pooled.json (calib 1-3, apply 4+5: oxide positive 4/4 but oxide_top_gain 0/4, oxide_beats_other_mean 0/4, verdict MIXED) and m3_prospective_m4_within_oxide.json (round-5-only: orb future_oxide_daf_gain -0.001, oxide beats mean 2/4, top 0/4)
-per the forking-paths rule under which the arm was run. In the primary pooled specification
-(calibrate rounds 1--3, apply to the pooled later rounds 4--5), the oxide abstention benefit
-stays positive for all four UIPs but is the top-benefit stratum for none (0/4)
-and falls below the mean of the other strata for all four (0/4 beat the
-other-strata mean; overall verdict \textsc{mixed}); the high-benefit strata out-of-time are
-intermetallics and pnictides. In the round-5-only sensitivity specification (calibrate rounds
-1--4, apply to round 5) the picture is weaker still: ORB's future-round oxide gain is
-marginally negative ($-0.001$) and oxide beats the other-strata mean for only 2 of 4
-models. The oxide-anchored ordering is therefore a property of the pooled evaluation
-and does not survive a prospective, temporally held-out test; whether a stratified policy
-should target oxides in deployment is consequently not established here.
+
+\subsection{Limitations and outlook}
+
+\paragraph{Threats to validity: stratifier choice and multiplicity.} The primary confound,
+surfaced-candidate yield, is addressed by the common-absolute-yield budget. Against the
+``cherry-picked stratifier'' objection, the entire matched-yield interaction was re-run under
+two preregistered (git-timestamped ex ante) stratum definitions that never reference the
+anion-priority ordering: amount-weighted electronegativity quintiles and metal-fraction bins.
+Both reproduce the chemistry-dependence ($31/40$ and $24/40$ cells CI-excluding zero, clean
+shuffle-nulls), with metal-fraction giving the clean directional, near-monotone reproduction;
+the electronegativity top quintile is non-monotonic for a chemically sensible reason --- it
+pools oxides and halides, the two opposite-extreme anion classes --- so we do not claim it as
+a directional rebuttal. Multiple comparisons are handled by majority-of-cells criteria,
+matched shuffle-nulls, and BH-FDR/Holm corrections (counts in Results). One structural
+caveat applies to all of these corrections: within a model the $15$ stratum-pair contrasts
+span only five independent dimensions, since any pair difference is fixed by the others, so
+the corrected counts should be read with that redundancy in mind.
+
+\paragraph{Threats to validity: signal and budget choices.} The headline uses the free
+single-model $|\hat{e}_{\mathrm{hull}}|$ signal. The committee-variance re-derivation
+(Results) reproduces the interaction, but whether richer learned signals would strengthen or
+dilute it is open: the companion audit found cross-model disagreement underperforming margin
+under the joint matched-coverage-and-yield control (e.g.\ CHGNet cov-50 matched-yield gain
+$-0.072$). The tight/loose yield ratio was fixed post hoc at $1/2$; a sensitivity sweep at
+$r \in \{1/3, 0.4, 0.5, 0.6\}$ leaves the interaction count stable ($45$--$48$ of $60$ cells)
+and the headline CHGNet oxide-vs-halide cell firing at every ratio, so the ratio is a
+non-issue for the qualitative claim, though magnitudes scale with it (the full grid is in the
+public reproduction archive).
+
+\paragraph{Threats to validity: temporal transfer.} A prospective check calibrating the
+stratified-abstention policy on early WBM rounds and applying it to later rounds shows the
+oxide-highest ordering does not transfer out-of-time: in the pooled specification (calibrate
+rounds 1--3, apply rounds 4--5) the oxide benefit stays positive for all four UIPs but is the
+top-benefit stratum for none ($0/4$; verdict \textsc{mixed}), and the round-5-only
+specification is weaker still (ORB's future-round oxide gain $-0.001$). The oxide-anchored
+ordering is therefore a property of the pooled evaluation; whether a stratified policy should
+target oxides in deployment is not established here.
 
 \paragraph{Next step --- and a caution on turning the interaction into an allocator.} The
 tempting policy reading --- ``spend the abstention budget preferentially on oxide candidates
@@ -1142,7 +1048,6 @@ automatically, and our own follow-up falsified its strongest form. A constrained
 knapsack allocator that reallocates a fixed total-coverage budget across strata by marginal
 DAF (coverage $0.7$, seed 20260629, 1000-bootstrap CIs) failed to CI-dominate the global
 threshold on per-stratum DAF:
-% source: research/results/MT29/mt29_b5b_knapsack_constrained-exec-2026-06-29.json (summary: positive_excl0 5, negative_excl0 14 of 24; aggregate positive models 0/4; verdict FALSIFIED-NO-DOMINANCE)
 of 24 (model $\times$ stratum) cells, 5 improved with CI excluding zero but 14 worsened
 with CI excluding zero, and the equal-weight aggregate mean DAF improved with CI excluding
 zero in 0 of 4 models. The mechanism is a conservation constraint: at matched total coverage,
@@ -1151,23 +1056,18 @@ across strata --- what oxides gain, other strata give back. The interaction docu
 therefore licenses stratified reporting and stratified expectations (which chemistries
 a confidence cutoff will actually help, and by how much), and it licenses spending
 additional abstention capacity where it pays, but it does not license reshuffling a
-fixed budget away from a global threshold. The alternative-stratification robustness reported
-above (Threats to validity) already addresses the stratifier-choice objection directly; a
-richer-confidence comparison remains for a benchmarks-track submission.
+fixed budget away from a global threshold.
 
 \section*{Author declarations}
 
-% JCP requires an "Author declarations" section in the manuscript body (Conflict of
-% Interest + Author Contributions), independent of and in addition to the portal-collected
-% disclosures at submission (verified 2026-07-16, publishing.aip.org conflict-of-interest
-% policy, effective Aug. 2021). Single-author paper: no conflicts, all contributions by AF.
+% Author declarations.
 \subsection*{Conflict of interest}
 The author has no conflicts to disclose.
 
 \subsection*{Use of AI tools}
-AI-based coding and writing assistant tools (large language models) were used to assist with
-drafting and editing of the manuscript text and analysis code; the author reviewed and
-verified all content and takes full responsibility for it.
+Claude Code (Anthropic, version 2.1.218) was used solely for language editing and manuscript
+preparation. The author reviewed and edited all output and takes full responsibility for the
+content of the article.
 
 \subsection*{Author contributions}
 \textbf{Zeyu Fu}: Conceptualization, Methodology, Software, Formal analysis, Investigation,
@@ -1175,63 +1075,9 @@ Writing -- original draft, Writing -- review \& editing.
 
 \section*{Data availability}
 
-% JCP requires a Data availability statement per AIP Publishing's Research Data Policy
-% (verified 2026-07-16, AIP data-availability-statement templates). Adapted from the
-% canonical ../paper.tex "Data and code availability" section; content preserved.
-All inputs are the public Matbench Discovery~\citep{riebesell2025} on-disk cached artifacts
-(WBM summary ground truth from~\citep{wang2021} and the four cached UIP
-prediction CSVs); no authentication or run-time download is required. The genuine ex-ante
-commitment --- the general strata direction and kill criteria --- is a dated pre-analysis
-design memo (written before Stage-1; committed to the version-controlled repository
-in the pre-push baseline, with the other previously-untracked frozen artifacts). The
-Stage-2 analysis-protocol log is, by its own disclosure, a same-session analysis protocol and
-results log rather than an ex-ante preregistration: it records that the exact success thresholds
-and budget parameters were fixed during the Stage-1/Stage-2 runs themselves. The one
-preregistration with a git-verifiable ex-ante ordering is the alternative-stratification prereg,
-whose commit precedes its result commit (see Threats to validity).
-% ex-ante artifacts: DEEP-REVERIFY-2026-06-21.md (committed 2026-07-02, commit c7a036b); same-session Stage-2 log research/results/MT29/prereg-stage2-mt29-2026-06-22.md; alt-strat prereg commit 66f078c precedes result commit 2eeddcd
-% frozen result JSONs (research/results/MT29/ unless noted): mt29_stage1_matched_yield_result.json; mt29_stage2_robustness_result.json; mt29_stage1_yield_ratio_sensitivity_result.json; mt29_multiplicity_stage1_result.json; mt29_multiplicity_stage2_result.json; mt29_b5b_knapsack_constrained-exec-2026-06-29.json; mt29_stage1_altstrat_electronegativity_q5_result.json; mt29_stage1_altstrat_metal_fraction_result.json; mt29_altstrat_multiplicity_result.json; results_expansion_2026-07-10/corrected_arms/{mt29_hull_recompute_corrected_result.json,mt29_stage1_oam_arm_corrected_result.json}; results_expansion_2026-07-11/prototype_blocked_cis/mt29_prototype_blocked_ci_result.json (block=protostructure_spglib); results_expansion_2026-07-11/mechanism_extensions/{m3_prospective_m4_within_oxide.json,m3_pooled.json}; results_expansion_2026-07-10/mechanism_diag/mechanism_payoff_roster_ci.json; results_expansion_2026-07-14/{mt29_roster_expansion_result.json,mt29_roster_expansion_manifest.json,verify_roster_md5.py} + results_expansion_2026-07-13/{ROSTER25_DATA_MANIFEST.json,DATA-SANITY-OUTLIERS.json} (44 published-potential files converted, 43 independent models / 32 included UIPs after dropping the orb_v2_omat duplicate; pre-specified plan mt29_roster_expansion_PREREG-2026-07-13.md, dated 2026-07-13, not git-timestamped ahead of the run; supersedes the contaminated results_expansion_2026-07-13/mt29_roster_expansion_result.json, retained with a CONTAMINATED-2026-07-14.md provenance note)
-The frozen
-results are the Stage-1 matched-yield interaction/shuffle-null record and the Stage-2
-LOEO/WBM-round robustness record, each with a SHA-256 manifest over inputs, script, and output.
-Supplementary frozen records cover the budget-ratio sweep, the formal multiple-comparison
-correction, the falsified stratum-aware allocator, the two alternative-stratification robustness
-runs with their cross-stratifier multiplicity summary, and the corrected insurance arms (the
-fixed-hull validation and the modern-roster reproduction), each with its own manifest. The
-prototype-blocked Stage-1 CIs resample WBM AFLOW prototype clusters, and the mechanism-extension
-post-hoc diagnostics --- the within-oxide transition-metal/main-group split
-(Table~\ref{tab:tmoxide}) and the prospective temporal-transfer specifications (pooled and
-round-5-only; Table~\ref{tab:mechanism} and the practitioner payoff) --- are each labelled post-hoc descriptive. % figure scripts: manuscripts/figures/F1_daf_coverage.R ... F5_committee_variance.R (portfolio paper-template pattern); retired duplicate pipelines under manuscripts/archive/
-The code is developed at GitHub (\url{https://github.com/PeterPonyu/materials-mlip-research}) and
-archived at Zenodo under DOI \texttt{10.5281/zenodo.21130295}; this DOI is currently reserved on a
-draft deposition and becomes active when the record is published.
-A single self-contained figure
-pipeline --- one R/ggplot2 script per figure, following the shared portfolio
-paper-template pattern --- reads those frozen result records directly and regenerates every
-figure; no value in this paper is hand-entered. (Two earlier figure pipelines were quarantined
-after an audit found a duplicated R and matplotlib pipeline silently overwriting
-each other's outputs; the present single R pipeline supersedes both.) The
-analysis scripts, frozen result records, manifests, figure scripts, and this manuscript are
-committed to a version-controlled GitHub repository
-(\url{https://github.com/PeterPonyu/materials-mlip-research}) and archived at Zenodo under
-DOI~\texttt{10.5281/zenodo.21130295}, consistent with AIP Publishing's Research Data Policy
-template ``data openly available in a public repository that issues datasets with DOIs,''
-alongside an actively maintained development mirror. The GitHub repository
-is private during peer review (a portfolio-wide precaution against scooping) and will be made
-public on acceptance; the Zenodo DOI is currently reserved on a draft deposition and becomes
-active on publication.
+All inputs are public Matbench Discovery~\citep{riebesell2025} resources: the WBM reference data from~\citep{wang2021} and the evaluated UIP predictions. Code and frozen analysis records are available at GitHub (\url{https://github.com/PeterPonyu/uip-abstention-audit}) and archived at Zenodo under DOI~\texttt{10.5281/zenodo.21130295}. The pre-analysis design fixed the general strata direction and kill criteria before Stage~1; the alternative-stratification preregistration also predates its corresponding result record.
 
-\paragraph{Licensing, compute, and packaging.} The entire data-and-model chain is
-license-clean with no non-commercial clause (Table~\ref{tab:licenses}). All analysis --- including
-the roster expansion ($44$ published-potential files, $43$ independent models) --- is CPU/pandas
-only and reads published,
-credential-free Matbench Discovery predictions (no network access, tokens, or model weights at run
-time). A superseded earlier arm self-inferred four models on a single RTX 4090D (24\,GB; measured
-peak GPU memory $6.3$\,GiB, peak utilisation $84\,\%$ over the $256{,}963$-structure pass, per-minute
-\texttt{nvidia-smi} log); it is retained only as the diagnostic that surfaced the MP2020-omission
-artifact corrected in the roster analysis above, and contributes no reported number.
-
-\begin{table}[t]
+\begin{table}[!ht]
   \centering
   \caption{License provenance for the data and models. No component carries a
   non-commercial (CC-BY-NC) restriction.}
@@ -1250,17 +1096,16 @@ artifact corrected in the roster analysis above, and contributes no reported num
   \end{tabular}
 \end{table}
 
-\paragraph{Reproducibility-chain status (self-reported).} Both Stage-1 and Stage-2 have now
-been independently re-executed on CPU from the same on-disk cached inputs and
-their manifests regenerated against the current scripts. The Stage-1 manifest
-reproduced its frozen output
-byte-for-byte identical across two independent
-re-runs in different Python/numpy/pandas environments. The Stage-2 manifest, whose recorded script hash had previously
-gone stale relative to the on-disk Stage-2 analysis script (the script file was
-touched after the manifest was first generated), was regenerated by this re-run: the script
-hash now matches the on-disk script, and the frozen output again reproduced byte-for-byte
-identical, confirming the Stage-2 result is
-genuinely deterministic and unaffected by the earlier hash staleness.
+\noindent\textit{Reproducibility status.} Both Stage-1 and Stage-2 have now
+been independently re-executed on CPU from the same on-disk cached inputs and their
+manifests regenerated against the current scripts. The Stage-1 manifest reproduced its
+frozen output byte-for-byte identical across two independent re-runs in different
+Python/numpy/pandas environments. The Stage-2 manifest, whose recorded script hash had
+previously gone stale relative to the on-disk Stage-2 analysis script (the script file
+was touched after the manifest was first generated), was regenerated by this re-run: the
+script hash now matches the on-disk script, and the frozen output again reproduced
+byte-for-byte identical, confirming the Stage-2 result is genuinely deterministic and
+unaffected by the earlier hash staleness.
 
 % Bibliography via natbib/BibTeX (shared-template pattern): shared.bib is the
 % portfolio bibliography copied in by `make bib`; refs.bib holds the

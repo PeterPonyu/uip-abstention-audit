@@ -1,5 +1,5 @@
 {
-  "cmd": "/home/zeyufu/miniconda3/envs/dl/bin/python research/results/MT29/mt29_stage1_altstrat.py --stratifier metal_fraction",
+  "cmd": "$HOME/miniconda3/envs/dl/bin/python research/results/MT29/mt29_stage1_altstrat.py --stratifier metal_fraction",
   "script_sha256": "8579b9a152ca8de51689e9ff082e12771a716695663ec9bec51270abd820e7df",
   "git_head": "66f078c78d1d27783383e7f3da104297a4099cad",
   "seed": 20260621,

@@ -18,9 +18,12 @@ import json
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MT29 = os.path.join(REPO, 'research', 'results', 'MT29')
-COMMONS = os.path.abspath(os.path.join(REPO, '..', 'reliability-commons'))
+# Hermetic: load `relmetrics` from the repo-contained vendor copy (see
+# relmetrics/VENDORED_FROM.md). The upstream sibling checkout at
+# `../reliability-commons` is intentionally NOT consulted -- the public
+# release must not depend on a sibling repository being present.
+sys.path.insert(0, REPO)
 sys.path.insert(0, MT29)
-sys.path.insert(0, COMMONS)
 
 failures = []
 
@@ -49,8 +52,22 @@ def _imports():
 
 
 def _relmetrics():
+    import relmetrics
     from relmetrics.multiplicity import benjamini_hochberg, holm_bonferroni  # noqa: F401
     from relmetrics.provenance import stamp_result  # noqa: F401
+    # Hermetic guard: the package MUST resolve from inside this repo (the
+    # vendored copy under <repo>/relmetrics/), NOT from a sibling checkout or
+    # an editable pip install. This is the public-release hermeticity contract
+    # -- if this fails, the release is silently broken.
+    assert relmetrics.__file__ is not None
+    real = os.path.realpath(relmetrics.__file__)
+    assert real.startswith(REPO + os.sep), (
+        f"relmetrics resolved from outside the repo: {real!r} "
+        f"(expected under {REPO!r}); the public release must not depend on a "
+        f"sibling checkout or editable pip install."
+    )
+    # Vendored copy must carry the +mt29vendored version stamp.
+    assert "mt29vendored" in relmetrics.__version__, relmetrics.__version__
 
 
 check("core scientific stack imports", _imports)

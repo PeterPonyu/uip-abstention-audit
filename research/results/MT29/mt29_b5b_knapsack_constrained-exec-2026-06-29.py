@@ -49,7 +49,9 @@ DATA = os.path.join(os.path.expanduser(os.environ.get('MT_DATA_ROOT', '~/mt_stag
                     '2023-12-13-wbm-summary.csv.gz')
 UIP_DIR = os.path.expanduser(os.environ.get('MT_UIP_ROOT', '~/mt_uip'))
 MODELS = ['chgnet', 'm3gnet', 'mace', 'orb']
-OUT_DIR = '/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/research/results/MT29'
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
+OUT_DIR = HERE
 OUT_JSON = os.path.join(OUT_DIR, 'mt29_b5b_knapsack_constrained-exec-2026-06-29.json')
 
 HALIDE = {'F', 'Cl', 'Br', 'I', 'At'}
@@ -340,7 +342,7 @@ def main():
 
     try:
         git_sha = subprocess.check_output(
-            ['git', '-C', '/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research', 'rev-parse', 'HEAD'],
+            ['git', '-C', REPO_ROOT, 'rev-parse', 'HEAD'],
             text=True, stderr=subprocess.DEVNULL).strip()
     except Exception:
         git_sha = None

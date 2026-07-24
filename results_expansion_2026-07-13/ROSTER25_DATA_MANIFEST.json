@@ -1,7 +1,7 @@
 {
   "article": 28187990,
   "figshare_version": 25,
-  "out_dir": "/home/zeyufu/mt_uip_roster25",
+  "out_dir": "$HOME/mt_uip_roster25",
   "n_wbm": 256963,
   "wbm_sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
   "n_models": 44,

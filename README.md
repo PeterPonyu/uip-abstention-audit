@@ -1,6 +1,6 @@
 # materials-mlip-research (MT29)
 
-Code archive: Zenodo DOI 10.5281/zenodo.21130295 (reserved; draft record, activates on publish).
+Code archive: Zenodo DOI 10.5281/zenodo.21130295 (published and openly accessible).
 
 **The chemistry-stratified value of selective abstention for machine-learned crystal-stability prediction.**
 
@@ -26,25 +26,24 @@ margin is optimistic in every anion family.
 
 ```
 paper (manuscripts/)
-  paper.tex, paper.pdf     # the submission draft (compiles via LuaLaTeX); superseded paper.md kept for history
-  figures/                 # F1-F5 PNG+PDF; render_figures.py + F5_committee_variance.py are the CANONICAL generators
-  figures/deprecated_R_pipeline/  # retired R/ggplot2 generators (kept for provenance; NOT runnable — external ggtheme.R vanished)
+  paper.tex, paper.pdf     # canonical manuscript source and compiled PDF
+  jcp/                     # REVTeX source, cover letter, and verified source package
+  figures/                 # F1–F5 PDF/PNG and their canonical R generators
+  figures-src/             # TikZ source for the protocol overview
 
 analysis (research/results/MT29/)
   mt29_stage0_*.py          # Stage-0 precursor gate
-  mt29_stage1_chem_yield.py # CANONICAL loader + strata + abstention metrics (imported by most others)
+  mt29_stage1_chem_yield.py # canonical loader, strata, and abstention metrics
   mt29_stage1_matched_yield_fix.py, mt29_stage2_robustness.py
-  mt29_stage1_yield_ratio_sensitivity.py  # budget-ratio sweep
-  mt29_multiplicity_correction.py         # BH-FDR / Holm (stage1|stage2), re-asserts frozen reproduction
+  mt29_stage1_yield_ratio_sensitivity.py
+  mt29_multiplicity_correction.py
   mt29_committee_variance.py, mt29_sscs_stratified.py
-  mt29_crossgen_reliability_*.py, mt29_b5_policy_spike.py, mt29_b5b_knapsack_*.py  # secondary / negative results
-  *_result.json            # FROZEN headline results (numbers in the paper trace here)
-  *_manifest.json          # SHA-256 manifests over inputs/script/output, seed 20260621, n_boot 1000
+  *_result.json            # frozen result records used by the manuscript
+  *_manifest.json          # input/script/output SHA-256, seed, and bootstrap count
 
 other
-  research/                 # direction bank, audits, findings, plans (incl. killed siblings)
-  DATA_MANIFEST.md          # external input files + SHA-256 checksums
-  NEXT-EXPERIMENTS.md       # deferred (GPU / network / scope) work
+  relmetrics/               # vendored MIT-licensed multiplicity/provenance helpers
+  DATA_MANIFEST.md          # external input files and SHA-256 checksums
   requirements.txt, CITATION.cff, LICENSE, smoke_test.sh, tests/
 ```
 
@@ -52,16 +51,15 @@ other
 
 ### 1. Environment
 
-Python 3.13 (tested). The entire headline MT29 pipeline + figures needs only five
-third-party packages plus the local `relmetrics` sibling:
+Python 3.13 was used for the frozen analysis. Install the pinned third-party dependencies:
 
 ```bash
-pip install -r requirements.txt
-pip install -e ../reliability-commons     # provides relmetrics.multiplicity / relmetrics.provenance
+python -m pip install -r requirements.txt
 ```
 
-(GPU molecular-dynamics probes under `research/mt_gpu_*.py` and `research/mt23_meep_invcrime.py`
-additionally need `ase`, `torch`, `meep`; these are optional and not needed for any paper number.)
+The two `relmetrics` modules used by the analysis are vendored under `./relmetrics/` with their
+MIT license and provenance note, so the public release does not depend on a sibling checkout.
+Figure regeneration additionally requires R with `jsonlite`, `ggplot2`, `patchwork`, and `ragg`.
 
 ### 2. Data (lives outside the repo)
 
@@ -111,57 +109,25 @@ byte-identical reproduction of the frozen inputs before attaching corrected p-va
 
 ### 5. Figures
 
-Generated **only** from the on-disk result JSONs (no hardcoded data arrays):
+The checked-in figures are generated from the frozen result JSONs by the R scripts
+`manuscripts/figures/F1_daf_coverage.R` through `F5_committee_variance.R`. The protocol overview
+is built from `manuscripts/figures-src/fig0_overview.tex`.
 
 ```bash
-python manuscripts/figures/render_figures.py         # F1-F4 (PNG+PDF)
-python manuscripts/figures/F5_committee_variance.py  # F5
+make -C manuscripts figures
 ```
 
-Note: the figure/analysis scripts currently hardcode the repository's absolute path
-(`/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/...`) for their
-repo-internal result/output locations; an external reproducer cloning elsewhere must adjust
-those constants (a known packaging limitation, distinct from the MT_DATA_ROOT input
-abstraction above).
+## Scope and limitations
 
-### R
+The analysis uses public Matbench Discovery prediction files whose filenames, sizes, and SHA-256
+values are recorded in `DATA_MANIFEST.md`; these external inputs are not redistributed. The
+fixed-hull reconstruction is validated for the reported stability calls, while the deeper
+assumption that competing hull phases are unaffected by UIP errors remains outside scope. The
+manuscript reports the negative allocator and temporal-transfer results alongside the positive
+chemistry-stratified findings.
 
-The manuscript uses **no** R. Historical R/ggplot2 figure generators live in
-`manuscripts/figures/deprecated_R_pipeline/` for provenance only and are **not runnable**
-(they depend on an external `ggtheme.R` that is no longer present). Python is the single
-canonical figure pipeline.
+## Provenance
 
-## Honest status
-
-- **Maturity ~85% of a submittable journal paper.** All headline numbers are traceable to
-  frozen `research/results/MT29/*.json`, with SHA-256 manifests and an independently
-  re-run byte-identical reproduction recorded 2026-07-01.
-- **Fixed-hull approximation:** predicted hull distance = true hull + signed formation-energy
-  error, not a full convex-hull recompute; absolute DAF numbers could shift on a full
-  recompute (validation subset deferred — see NEXT-EXPERIMENTS.md).
-- **2023-24-generation UIPs:** an OAM-era (2025-26) model refresh via frozen inference is
-  deferred (NEXT-EXPERIMENTS.md), to pre-empt a "stale models" objection.
-- **Killed / negative siblings are kept, not hidden:** MT28 calibration wedge (0/12 kill),
-  rank-fragility null (tau=1.0), MT4 NVE drift, V6 disagreement, and the falsified B5b
-  stratum-aware knapsack allocator (strictly worse than the global threshold, folded into the
-  Discussion). These are documented in `research/` and the audit trail; do not cite them as
-  positive results.
-- **No mock/synthetic contamination:** this is a real-data audit (FABLE-HANDOFF.md). The only
-  unusable artifact is an aborted 0-byte `2024-08-04-wbm-initial-atoms.extxyz.zip` download
-  noted in DATA_MANIFEST.md — not used anywhere.
-- `manuscripts/paper.md` is a **superseded** markdown draft (kept for history); `paper.tex`
-  is authoritative.
-
-## Broader direction bank
-
-The wider MLIP reliability program (MT1-MT4: classification-vs-regression mismatch near the
-0 eV/atom hull boundary, calibrated abstention, WBM 5-step OOD degradation, energy-conservation
-of direct-force models, leaderboard leakage/memorization) is catalogued in
-[`research/materials-mlip-direction-bank.md`](research/materials-mlip-direction-bank.md).
-Isolation / boundaries / resource notes: [`AGENTS.md`](AGENTS.md).
-
-## Provenance / discipline
-
-Results change **only** by re-running analysis code; no result JSON is ever hand-edited and no
-figure is drawn from hardcoded numbers. See DATA_MANIFEST.md, the `*_manifest.json` files,
-`DEEP-REVERIFY-2026-06-21.md`, and `research/audits/` for the full audit trail.
+Result records change only by rerunning analysis code. Frozen JSON outputs have sibling manifests
+recording inputs, script and output hashes, seed 20260621, and bootstrap count. `smoke_test.sh`
+checks imports, data-free helper behavior, vendored dependency resolution, and expected result keys.

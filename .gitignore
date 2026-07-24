@@ -1,0 +1,37 @@
+# ignore large data + caches
+*.h5ad
+*.zarr
+__pycache__/
+.cache/
+*.tgz
+*.pt
+*.ckpt
+
+# Python bytecode and test caches
+*.pyc
+*.pyo
+.pytest_cache/
+
+# editor / OS junk
+.Rhistory
+.DS_Store
+
+# LaTeX build junk (paper.pdf is intentionally tracked)
+*.aux
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.run.xml
+*.synctex.gz
+*.log
+
+# HuggingFace / download caches
+.huggingface/
+hf_cache/
+huggingface_hub/
+datasets_cache/
+
+# oh-my-claudecode orchestration session state (tool-generated, not research provenance)
+.omc/

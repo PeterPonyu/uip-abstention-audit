@@ -26,8 +26,8 @@ ff <- "TeX Gyre Termes"
 update_geom_defaults("text", list(family = ff))
 update_geom_defaults("label", list(family = ff))
 
-input_json <- "../research/results/MT29/mt29_stage1_matched_yield_result.json"
-out_stem <- "figures/F1_daf_coverage"
+input_json <- "../../research/results/MT29/mt29_stage1_matched_yield_result.json"
+out_stem <- "F1_daf_coverage"
 
 if (!file.exists(input_json)) {
   stop(sprintf(
@@ -42,8 +42,8 @@ models <- c("chgnet", "m3gnet", "mace", "orb")
 model_labels <- c(chgnet = "CHGNet", m3gnet = "M3GNet", mace = "MACE", orb = "ORB")
 strata <- c("oxide", "intermetallic", "chalcogenide", "halide", "pnictide", "other")
 stratum_labels <- c(
-  oxide = "Oxide", intermetallic = "Intermetallic", chalcogenide = "Chalcogenide",
-  halide = "Halide", pnictide = "Pnictide", other = "Other"
+  oxide = "OX", intermetallic = "IM", chalcogenide = "CH",
+  halide = "HA", pnictide = "PN", other = "OT"
 )
 
 rows <- list()
@@ -72,22 +72,27 @@ p <- ggplot(df, aes(x = stratum, y = daf, fill = budget)) +
            colour = "grey40", linewidth = 0.25) +
   geom_hline(yintercept = 1.0, linetype = "dashed", linewidth = 0.4,
              colour = "black", alpha = 0.6) +
-  facet_wrap(~model, nrow = 1, scales = "free_y") +
+  facet_wrap(~model, nrow = 1) +
   scale_fill_manual(
-    values = c("#999999", "#E69F00"),
+    values = c("#56B4E9", "#E69F00"),
     labels = c(
       expression("looser yield (" * Y[loose] * ")"),
       expression("abstaining (" * Y[tight] * ")")
     )
   ) +
   labs(x = NULL, y = "discovery acceleration\nfactor (DAF)", fill = NULL) +
-  theme_minimal(base_size = 10, base_family = ff) +
+  theme_minimal(base_size = 12, base_family = ff) +
   theme(
-    axis.text.x = element_text(angle = 40, hjust = 1, size = 8.5),
+    axis.text.x = element_text(size = 10),
     legend.position = "bottom",
+    legend.margin = margin(t = 0, r = 0, b = 2, l = 0),
+    legend.box.spacing = unit(0.1, "lines"),
+    legend.key.size = unit(1.0, "lines"),
+    panel.spacing = unit(0.45, "lines"),
+    plot.margin = margin(t = 4, r = 6, b = 7, l = 10),
     panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
-    strip.text = element_text(size = 9)
+    strip.text = element_text(size = 10.5)
   )
 
 # Canvas sized so the included width (\textwidth in the paper, ~6.5in) scales

@@ -42,7 +42,7 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from mt29_stage1_chem_yield import (
-    load, MODELS, SEED, N_BOOT, OUT_DIR, ci95, excl0, elements_of, anion_family, DATA, UIP, sha256,
+    load, MODELS, SEED, N_BOOT, OUT_DIR, REPO_ROOT, ci95, excl0, elements_of, anion_family, DATA, UIP, sha256,
 )
 
 RNG = np.random.default_rng(SEED)
@@ -314,7 +314,7 @@ def main():
 
     try:
         git_sha = subprocess.check_output(
-            ['git', '-C', '/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research', 'rev-parse', 'HEAD'],
+            ['git', '-C', REPO_ROOT, 'rev-parse', 'HEAD'],
             text=True, stderr=subprocess.DEVNULL).strip()
     except Exception:
         git_sha = None

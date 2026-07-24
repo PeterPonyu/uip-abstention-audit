@@ -22,7 +22,7 @@ also handles compositions that fall on a hull vertex/edge cleanly.
 Used by mt29_hull_recompute_validation.py to recompute e_above_hull_pred per model on a
 stratified WBM validation subset, instead of the fixed-hull shortcut
 `hull_pred = hull_true + (e_form_pred - e_form_true)` used everywhere else in MT29
-(acknowledged approximation — see README.md "Honest status" / FABLE-HANDOFF.md Sec.5).
+(see the fixed-hull limitation in README.md).
 """
 from __future__ import annotations
 

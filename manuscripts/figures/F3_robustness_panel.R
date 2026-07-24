@@ -28,8 +28,8 @@ ff <- "TeX Gyre Termes"
 update_geom_defaults("text", list(family = ff))
 update_geom_defaults("label", list(family = ff))
 
-input_json <- "../research/results/MT29/mt29_stage2_robustness_result.json"
-out_stem <- "figures/F3_robustness_panel"
+input_json <- "../../research/results/MT29/mt29_stage2_robustness_result.json"
+out_stem <- "F3_robustness_panel"
 
 if (!file.exists(input_json)) {
   stop(sprintf(
@@ -62,20 +62,23 @@ n_pass_loeo <- sum(loeo_df$frac > 0.5)
 # it never sits on the line, instead of a fixed vjust that assumes the bar is
 # always well clear of 0.5. Purely a layout rule -- computed from frac, no
 # hardcoded per-category values.
-loeo_df$label_y <- loeo_df$frac + ifelse(abs(loeo_df$frac - 0.5) < 0.08, 0.09, 0.035)
+# Fixed two-row label ladder above all bars: 12 dense bars with larger type make
+# bar-relative label heights collide (tall O bar reaches the staggered row), so
+# labels sit at two fixed heights above the tallest bar instead.
+loeo_df$label_y <- ifelse(seq_len(nrow(loeo_df)) %% 2 == 0, 1.075, 1.005)
 
 p_left <- ggplot(loeo_df, aes(x = element, y = frac, fill = is_O)) +
   geom_col(width = 0.7, colour = "grey30", linewidth = 0.3) +
   geom_hline(yintercept = 0.5, linetype = "dashed", colour = "black", linewidth = 0.5) +
   geom_text(aes(y = label_y, label = sprintf("%d/%d", n_excl0, n_cells)),
-            vjust = 0, size = 3.0) +
+            vjust = 0, size = 3.6, colour = "black") +
   scale_fill_manual(values = c(`FALSE` = "#56B4E9", `TRUE` = "#E69F00"), guide = "none") +
-  scale_y_continuous(limits = c(0, 1.05), expand = expansion(mult = c(0, 0.02))) +
+  scale_y_continuous(limits = c(0, 1.13), breaks = c(0, 0.25, 0.5, 0.75, 1.0), expand = expansion(mult = c(0, 0.02))) +
   labs(
     x = "held-out element (drop all formulas containing it)",
     y = "fraction of cells CI-excl-0"
   ) +
-  theme_minimal(base_size = 10, base_family = ff) +
+  theme_minimal(base_size = 12, base_family = ff) +
   theme(
     panel.grid.minor = element_blank(), panel.grid.major.x = element_blank()
   )
@@ -104,22 +107,22 @@ p_right <- ggplot(rnd_df, aes(x = round, y = frac)) +
   geom_col(width = 0.62, fill = "#009E73", colour = "grey30", linewidth = 0.3) +
   geom_hline(yintercept = 0.5, linetype = "dashed", colour = "black", linewidth = 0.5) +
   geom_text(aes(y = label_y, label = sprintf("%d/%d", n_excl0, n_cells)),
-            vjust = 0, size = 3.0) +
-  geom_text(aes(y = 0.02, label = sprintf("n=%dk", round(n_rows / 1000))),
-            vjust = 0, size = 3.0, colour = "white") +
-  scale_y_continuous(limits = c(0, 1.05), expand = expansion(mult = c(0, 0.02))) +
+            vjust = 0, size = 3.6, colour = "black") +
+  geom_text(aes(y = -0.04, label = sprintf("n=%dk", round(n_rows / 1000))),
+            vjust = 0.5, size = 3.0, colour = "black") +
+  scale_y_continuous(limits = c(-0.10, 1.05), expand = expansion(mult = c(0, 0.02))) +
   labs(
     x = "WBM acquisition round (time-like)",
     y = NULL
   ) +
-  theme_minimal(base_size = 10, base_family = ff) +
+  theme_minimal(base_size = 12, base_family = ff) +
   theme(
     panel.grid.minor = element_blank(), panel.grid.major.x = element_blank()
   )
 
 p <- (p_left + p_right + plot_layout(widths = c(3, 2))) +
   plot_annotation(tag_levels = "a", tag_prefix = "(", tag_suffix = ")") &
-  theme(plot.tag = element_text(size = 10, family = ff))
+  theme(plot.tag = element_text(size = 12, face = "bold", family = ff))
 
 # Canvas sized so the included width (\textwidth, ~6.5in) scales base_size=10
 # to ~8.5pt effective (typography audit 2026-07-16: the previous 10.5x3.6in

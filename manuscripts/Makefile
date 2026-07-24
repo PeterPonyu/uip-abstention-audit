@@ -1,17 +1,12 @@
-# MT29 manuscript Makefile -- adapted from the reliability-commons paper
-# template (v0.1) at
-# /home/zeyufu/Desktop/ml-reliability-research/reliability-commons/paper-template/
+# MT29 manuscript build.
 #
 # Targets:
-#   make figures  - run every figures/*.R via Rscript (figures regenerate
-#                   ONLY from the frozen result JSONs in
-#                   ../research/results/MT29/ -- never from hardcoded arrays)
-#   make bib      - copy the portfolio shared bibliography next to the paper
-#   make paper    - figures + bib, then latexmk -pdf
-#   make clean    - remove LaTeX aux files and generated figure PDFs/PNGs
+#   make figures  - regenerate figures from frozen result JSONs
+#   make bib      - verify the tracked shared bibliography
+#   make paper    - figures + bibliography check + LaTeX build
+#   make clean    - remove LaTeX auxiliaries and generated figures
 
-SHARED_BIB ?= /home/zeyufu/Desktop/ml-reliability-research/reliability-commons/shared.bib
-R_SCRIPTS  := $(wildcard figures/*.R)
+R_SCRIPTS := $(wildcard figures/*.R)
 
 .PHONY: all figures bib paper clean
 
@@ -25,18 +20,13 @@ figures:
 	$(MAKE) -C figures-src
 
 bib:
-	@if [ -f "$(SHARED_BIB)" ]; then \
-		cp "$(SHARED_BIB)" shared.bib; \
-		echo "Copied $(SHARED_BIB) -> shared.bib"; \
-	else \
-		echo "WARNING: $(SHARED_BIB) not found; creating empty shared.bib"; \
-		touch shared.bib; \
-	fi
+	@test -s shared.bib || { echo "ERROR: tracked manuscripts/shared.bib is missing or empty"; exit 1; }
+	@echo "Using tracked manuscripts/shared.bib"
 
 paper: figures bib
-	latexmk -pdf -interaction=nonstopmode paper.tex
+	latexmk -pdf -interaction=nonstopmode -halt-on-error paper.tex
 
 clean:
 	latexmk -C paper.tex 2>/dev/null || true
-	rm -f paper.bbl paper.run.xml shared.bib
+	rm -f paper.bbl paper.run.xml
 	rm -f figures/*.pdf figures/*.png

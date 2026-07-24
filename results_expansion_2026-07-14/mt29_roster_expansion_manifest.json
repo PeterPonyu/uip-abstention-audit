@@ -1,5 +1,5 @@
 {
-  "cmd": "/home/zeyufu/miniconda3/envs/dl/bin/python mt29_roster_expansion_audit_dedup.py",
+  "cmd": "$HOME/miniconda3/envs/dl/bin/python mt29_roster_expansion_audit_dedup.py",
   "script_sha256": "7d4aef76a8eaf8d58241cdd583905af0ef2fe5d96a0e6b1fd13edf665c6c8c78",
   "seed": 20260621,
   "n_boot": 1000,

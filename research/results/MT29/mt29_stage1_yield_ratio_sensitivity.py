@@ -18,7 +18,7 @@ import os, json
 import numpy as np
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mt29_stage1_chem_yield import load, MODELS, SEED, N_BOOT, OUT_DIR, ci95, excl0, sha256, DATA, UIP
+from mt29_stage1_chem_yield import load, MODELS, SEED, N_BOOT, OUT_DIR, REPO_ROOT, ci95, excl0, sha256, DATA, UIP
 
 FAM_ORDER = ['oxide', 'intermetallic', 'chalcogenide', 'halide', 'pnictide', 'other']
 OUT_JSON = os.path.join(OUT_DIR, 'mt29_stage1_yield_ratio_sensitivity_result.json')
@@ -178,7 +178,7 @@ def main():
     import platform, subprocess
     try:
         git_sha = subprocess.check_output(
-            ['git', '-C', '/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research', 'rev-parse', 'HEAD'],
+            ['git', '-C', REPO_ROOT, 'rev-parse', 'HEAD'],
             text=True, stderr=subprocess.DEVNULL).strip()
     except Exception:
         git_sha = None

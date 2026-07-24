@@ -3931,7 +3931,7 @@
     }
   },
   "provenance": {
-    "script": "/home/zeyufu/Desktop/ml-reliability-research/materials-mlip-research/research/results/MT29/mt29_multiplicity_correction.py",
+    "script": "$REPO_ROOT/research/results/MT29/mt29_multiplicity_correction.py",
     "timestamp_utc": "2026-07-02T07:19:59.718485+00:00",
     "seeds": [
       20260621
