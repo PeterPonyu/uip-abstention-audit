@@ -1,0 +1,665 @@
+{
+  "blocked_excl0": "45/60",
+  "cells": [
+    {
+      "ci95": [
+        0.53567,
+        0.88588
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.71434,
+      "model": "chgnet",
+      "stratum_a": "oxide",
+      "stratum_b": "intermetallic"
+    },
+    {
+      "ci95": [
+        0.49477,
+        0.82528
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.67135,
+      "model": "chgnet",
+      "stratum_a": "oxide",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        0.7419,
+        1.03792
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.89624,
+      "model": "chgnet",
+      "stratum_a": "oxide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        0.30177,
+        0.65854
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.47903,
+      "model": "chgnet",
+      "stratum_a": "oxide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        0.31244,
+        0.66346
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.48953,
+      "model": "chgnet",
+      "stratum_a": "oxide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.173,
+        0.08717
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.04659,
+      "model": "chgnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        0.06743,
+        0.29528
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.17842,
+      "model": "chgnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.37644,
+        -0.08511
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.23157,
+      "model": "chgnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.3723,
+        -0.07726
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.22346,
+      "model": "chgnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        0.11956,
+        0.32352
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.22337,
+      "model": "chgnet",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.3271,
+        -0.05122
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.18847,
+      "model": "chgnet",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.32237,
+        -0.0354
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.18059,
+      "model": "chgnet",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.52819,
+        -0.29658
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.41251,
+      "model": "chgnet",
+      "stratum_a": "halide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.52774,
+        -0.27895
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.40329,
+      "model": "chgnet",
+      "stratum_a": "halide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.14741,
+        0.16492
+      ],
+      "excludes_0": false,
+      "interaction_med": 0.01036,
+      "model": "chgnet",
+      "stratum_a": "pnictide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.0379,
+        0.29001
+      ],
+      "excludes_0": false,
+      "interaction_med": 0.13534,
+      "model": "m3gnet",
+      "stratum_a": "oxide",
+      "stratum_b": "intermetallic"
+    },
+    {
+      "ci95": [
+        0.08588,
+        0.39486
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.24512,
+      "model": "m3gnet",
+      "stratum_a": "oxide",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        0.41526,
+        0.70919
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.56819,
+      "model": "m3gnet",
+      "stratum_a": "oxide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.0946,
+        0.23021
+      ],
+      "excludes_0": false,
+      "interaction_med": 0.06148,
+      "model": "m3gnet",
+      "stratum_a": "oxide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.18446,
+        0.14944
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.01895,
+      "model": "m3gnet",
+      "stratum_a": "oxide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.01704,
+        0.24037
+      ],
+      "excludes_0": false,
+      "interaction_med": 0.11004,
+      "model": "m3gnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        0.31206,
+        0.55358
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.43252,
+      "model": "m3gnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.2036,
+        0.06685
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.07067,
+      "model": "m3gnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.28491,
+        -0.0183
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.15395,
+      "model": "m3gnet",
+      "stratum_a": "intermetallic",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        0.21843,
+        0.41893
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.32338,
+      "model": "m3gnet",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.29379,
+        -0.06647
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.17876,
+      "model": "m3gnet",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.38824,
+        -0.13555
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.262,
+      "model": "m3gnet",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.60571,
+        -0.39593
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.50352,
+      "model": "m3gnet",
+      "stratum_a": "halide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.70694,
+        -0.47234
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.58249,
+      "model": "m3gnet",
+      "stratum_a": "halide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.21762,
+        0.04631
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.08133,
+      "model": "m3gnet",
+      "stratum_a": "pnictide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        0.50737,
+        0.80022
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.65289,
+      "model": "mace",
+      "stratum_a": "oxide",
+      "stratum_b": "intermetallic"
+    },
+    {
+      "ci95": [
+        0.39612,
+        0.66422
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.52918,
+      "model": "mace",
+      "stratum_a": "oxide",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        0.48733,
+        0.75251
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.61818,
+      "model": "mace",
+      "stratum_a": "oxide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        0.41615,
+        0.69294
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.5547,
+      "model": "mace",
+      "stratum_a": "oxide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        0.20889,
+        0.50446
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.35926,
+      "model": "mace",
+      "stratum_a": "oxide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.19735,
+        -0.0526
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.12442,
+      "model": "mace",
+      "stratum_a": "intermetallic",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        -0.10026,
+        0.0333
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.0349,
+      "model": "mace",
+      "stratum_a": "intermetallic",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.1722,
+        -0.01994
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.09968,
+      "model": "mace",
+      "stratum_a": "intermetallic",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.38223,
+        -0.21434
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.2933,
+      "model": "mace",
+      "stratum_a": "intermetallic",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        0.04627,
+        0.13441
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.08874,
+      "model": "mace",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.03684,
+        0.08701
+      ],
+      "excludes_0": false,
+      "interaction_med": 0.02538,
+      "model": "mace",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.25276,
+        -0.10032
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.16953,
+      "model": "mace",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.11707,
+        -0.01734
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.06305,
+      "model": "mace",
+      "stratum_a": "halide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.33365,
+        -0.19588
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.25872,
+      "model": "mace",
+      "stratum_a": "halide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.28268,
+        -0.11569
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.19558,
+      "model": "mace",
+      "stratum_a": "pnictide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        0.30708,
+        0.56079
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.43725,
+      "model": "orb",
+      "stratum_a": "oxide",
+      "stratum_b": "intermetallic"
+    },
+    {
+      "ci95": [
+        0.28353,
+        0.50069
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.39939,
+      "model": "orb",
+      "stratum_a": "oxide",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        0.32664,
+        0.54585
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.44244,
+      "model": "orb",
+      "stratum_a": "oxide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        0.24468,
+        0.47328
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.36223,
+      "model": "orb",
+      "stratum_a": "oxide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        0.18027,
+        0.41758
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.30664,
+      "model": "orb",
+      "stratum_a": "oxide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.10596,
+        0.02375
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.04,
+      "model": "orb",
+      "stratum_a": "intermetallic",
+      "stratum_b": "chalcogenide"
+    },
+    {
+      "ci95": [
+        -0.06085,
+        0.06806
+      ],
+      "excludes_0": false,
+      "interaction_med": 0.00156,
+      "model": "orb",
+      "stratum_a": "intermetallic",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.14603,
+        0.00048
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.07748,
+      "model": "orb",
+      "stratum_a": "intermetallic",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.21729,
+        -0.05726
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.13575,
+      "model": "orb",
+      "stratum_a": "intermetallic",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        0.00889,
+        0.07571
+      ],
+      "excludes_0": true,
+      "interaction_med": 0.04236,
+      "model": "orb",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "halide"
+    },
+    {
+      "ci95": [
+        -0.08658,
+        0.01345
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.03441,
+      "model": "orb",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.15777,
+        -0.0283
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.09513,
+      "model": "orb",
+      "stratum_a": "chalcogenide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.13016,
+        -0.02949
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.07841,
+      "model": "orb",
+      "stratum_a": "halide",
+      "stratum_b": "pnictide"
+    },
+    {
+      "ci95": [
+        -0.19557,
+        -0.07405
+      ],
+      "excludes_0": true,
+      "interaction_med": -0.13861,
+      "model": "orb",
+      "stratum_a": "halide",
+      "stratum_b": "other"
+    },
+    {
+      "ci95": [
+        -0.13209,
+        0.0161
+      ],
+      "excludes_0": false,
+      "interaction_med": -0.0591,
+      "model": "orb",
+      "stratum_a": "pnictide",
+      "stratum_b": "other"
+    }
+  ]
+}

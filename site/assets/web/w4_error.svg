@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="w4-title w4-desc">
+<title id="w4-title">Oxide is not the highest-error stratum under tail-robust estimators</title>
+<desc id="w4-desc">Oxide over rest ratio is above one only for raw RMSE. Tail-robust estimators do not rank oxide highest.</desc>
+<rect width="720" height="340" fill="#FCFCFB"/>
+<text x="32.0" y="28.0" fill="#111" font-size="15" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Oxide ÷ mean non-oxide formation-energy error</text>
+<rect x="40" y="60" width="150" height="220.0" fill="#D55E00"/>
+<text x="115.0" y="300.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">RMSE</text>
+<text x="115.0" y="52.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="middle">6.73×</text>
+<rect x="210" y="242.11936240926372" width="150" height="37.9" fill="#0072B2"/>
+<text x="285.0" y="300.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">MAE</text>
+<text x="285.0" y="234.1" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="middle">0.95×</text>
+<rect x="380" y="253.51233484147568" width="150" height="26.5" fill="#0072B2"/>
+<text x="455.0" y="300.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">Median AE</text>
+<text x="455.0" y="245.5" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="middle">0.66×</text>
+<rect x="550" y="245.8983943314522" width="150" height="34.1" fill="#0072B2"/>
+<text x="625.0" y="300.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">Winsorized RMSE</text>
+<text x="625.0" y="237.9" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="middle">0.85×</text>
+<text x="32.0" y="328.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Vermillion: oxide is the highest stratum. Blue: it is not. Raw RMSE is the exception.</text>
+</svg>

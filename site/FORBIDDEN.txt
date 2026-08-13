@@ -1,0 +1,26 @@
+# Rendered HTML/SVG must not contain these stems (Materials companion).
+# Comments in source are allowed; this list is applied to built output.
+
+mt29_stage1
+mt29_stage2
+F1_debt
+F8_geomap
+F9_geopatches
+BigEarthNet
+asr-gate
+rotcert
+inspect-gate
+geospatial-fm
+structured-data-fm
+Launch →
+Launch->
+paper_jcp.pdf
+paper_kbs.pdf
+paper_rie.tex
+AutoDL
+/home/zeyufu
+crystal viewer
+3D crystal
+peaceiris
+SCPortal
+GAHIB

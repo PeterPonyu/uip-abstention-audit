@@ -1,0 +1,103 @@
+{
+  "metrics_where_oxide_not_highest": [
+    "mae",
+    "median_ae",
+    "trimmed_mae_10pct",
+    "winsorized_rmse_5_95",
+    "rmse_drop_top1pct",
+    "q90_ae",
+    "q95_ae"
+  ],
+  "model_averaged": {
+    "chalcogenide": {
+      "mae": 0.04891344328427055,
+      "median_ae": 0.026426750000000082,
+      "n": 23847,
+      "rmse": 0.08837312844848916,
+      "winsorized_rmse": 0.056985172038743655
+    },
+    "halide": {
+      "mae": 0.046890234362628666,
+      "median_ae": 0.022013249999999956,
+      "n": 26523,
+      "rmse": 0.09014166098310761,
+      "winsorized_rmse": 0.0562370811219862
+    },
+    "intermetallic": {
+      "mae": 0.04442758818809336,
+      "median_ae": 0.024754875000000023,
+      "n": 103438,
+      "rmse": 0.08898968890054615,
+      "winsorized_rmse": 0.045730369587524376
+    },
+    "other": {
+      "mae": 0.05230881485949311,
+      "median_ae": 0.03243749999999998,
+      "n": 43521,
+      "rmse": 0.09908425764089812,
+      "winsorized_rmse": 0.05726234308795783
+    },
+    "oxide": {
+      "mae": 0.04659721278976819,
+      "median_ae": 0.018547374999999866,
+      "n": 25020,
+      "rmse": 0.6246842886151923,
+      "winsorized_rmse": 0.047015192738803536
+    },
+    "pnictide": {
+      "mae": 0.053481189027561105,
+      "median_ae": 0.034413,
+      "n": 34614,
+      "rmse": 0.09729552340863809,
+      "winsorized_rmse": 0.059520981589665685
+    }
+  },
+  "oxide_highest_under_all_metrics": false,
+  "oxide_vs_rest": {
+    "mae": {
+      "mean_non_oxide": 0.04920425394440936,
+      "oxide": 0.04659721278976819,
+      "oxide_is_highest": false
+    },
+    "median_ae": {
+      "mean_non_oxide": 0.028009075000000005,
+      "oxide": 0.018547374999999866,
+      "oxide_is_highest": false
+    },
+    "q90_ae": {
+      "mean_non_oxide": 0.11010581000000004,
+      "oxide": 0.10050192500000008,
+      "oxide_is_highest": false
+    },
+    "q95_ae": {
+      "mean_non_oxide": 0.16318519999999997,
+      "oxide": 0.1581866625000001,
+      "oxide_is_highest": false
+    },
+    "q99_ae": {
+      "mean_non_oxide": 0.33709744800000035,
+      "oxide": 0.3991266525000008,
+      "oxide_is_highest": true
+    },
+    "rmse": {
+      "mean_non_oxide": 0.09277685187633582,
+      "oxide": 0.6246842886151923,
+      "oxide_is_highest": true
+    },
+    "rmse_drop_top1pct": {
+      "mean_non_oxide": 0.0688435326975372,
+      "oxide": 0.0643816490987664,
+      "oxide_is_highest": false
+    },
+    "trimmed_mae_10pct": {
+      "mean_non_oxide": 0.03167700416702636,
+      "oxide": 0.023614883204547476,
+      "oxide_is_highest": false
+    },
+    "winsorized_rmse_5_95": {
+      "mean_non_oxide": 0.05514718948517554,
+      "oxide": 0.047015192738803536,
+      "oxide_is_highest": false
+    }
+  }
+}

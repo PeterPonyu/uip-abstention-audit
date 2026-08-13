@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="w2-title w2-desc">
+<title id="w2-title">CHGNet matched-yield DAF gain by anion class</title>
+<desc id="w2-desc">Oxide has the largest matched-yield DAF gain among six anion-class strata for CHGNet.</desc>
+<rect width="720" height="360" fill="#FCFCFB"/>
+<text x="150.0" y="28.0" fill="#111" font-size="15" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">CHGNet matched-yield DAF gain (Y tight minus Y loose)</text>
+<rect x="150" y="56.0" width="460.9" height="28.0" fill="#D55E00"/>
+<text x="142.0" y="75.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">oxide</text>
+<text x="618.9" y="75.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">1.14</text>
+<rect x="150" y="100.0" width="169.6" height="28.0" fill="#0072B2"/>
+<text x="142.0" y="119.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">intermetallic</text>
+<text x="327.6" y="119.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">0.42</text>
+<rect x="150" y="144.0" width="187.4" height="28.0" fill="#009E73"/>
+<text x="142.0" y="163.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">chalcogenide</text>
+<text x="345.4" y="163.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">0.46</text>
+<rect x="150" y="188.0" width="96.1" height="28.0" fill="#56B4E9"/>
+<text x="142.0" y="207.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">halide</text>
+<text x="254.1" y="207.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">0.24</text>
+<rect x="150" y="232.0" width="263.9" height="28.0" fill="#E69F00"/>
+<text x="142.0" y="251.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">pnictide</text>
+<text x="421.9" y="251.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">0.65</text>
+<rect x="150" y="276.0" width="258.9" height="28.0" fill="#999999"/>
+<text x="142.0" y="295.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">other</text>
+<text x="416.9" y="295.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">0.64</text>
+<line x1="150" y1="48" x2="150" y2="312" stroke="#333"/>
+<text x="150.0" y="344.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Dashed reference at DAF gain = 0. Oxide (vermillion) is the largest cell.</text>
+</svg>

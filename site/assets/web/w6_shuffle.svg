@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-labelledby="w6-title w6-desc">
+<title id="w6-title">Real versus within-stratum shuffle</title>
+<desc id="w6-desc">Prototype-blocked real cells exclude zero in 45 of 60. The shuffle null is 0 of 60.</desc>
+<rect width="640" height="260" fill="#FCFCFB"/>
+<text x="32.0" y="28.0" fill="#111" font-size="15" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Cells whose CI excludes zero</text>
+<rect x="80" y="80" width="300.0" height="48" fill="#D55E00"/>
+<text x="80.0" y="70.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Prototype-blocked real  45/60</text>
+<rect x="80" y="160" width="4" height="48" fill="#0072B2"/>
+<text x="80.0" y="150.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Within-stratum shuffle  0/60</text>
+<text x="32.0" y="236.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">The shuffle null is clean. Counts stay counts; this is not a win banner.</text>
+</svg>

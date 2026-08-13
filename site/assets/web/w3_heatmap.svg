@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" role="img" aria-labelledby="w3-title w3-desc">
+<title id="w3-title">CHGNet stratum-pair DAF interaction</title>
+<desc id="w3-desc">Prototype-blocked DAF interaction heatmap for CHGNet. Oxide–halide is the largest positive cell.</desc>
+<rect width="640" height="560" fill="#FCFCFB"/>
+<text x="40.0" y="28.0" fill="#111" font-size="15" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">CHGNet stratum-pair Δgain (prototype-blocked)</text>
+<text x="40.0" y="48.0" fill="#333" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">45/60 cells exclude zero across four UIPs.</text>
+<text x="122.0" y="109.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">oxide</text>
+<text x="165.0" y="60.0" fill="#111" font-size="11" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">oxid</text>
+<rect x="130" y="70" width="68" height="68" fill="#F4F4F2" stroke="#E1E0D9"/>
+<rect x="200" y="70" width="68" height="68" fill="rgb(199,89,103)" stroke="#111" stroke-width="1.6"/>
+<text x="235.0" y="109.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.71</text>
+<rect x="270" y="70" width="68" height="68" fill="rgb(203,99,112)" stroke="#111" stroke-width="1.6"/>
+<text x="305.0" y="109.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.67</text>
+<rect x="340" y="70" width="68" height="68" fill="rgb(185,47,64)" stroke="#111" stroke-width="1.6"/>
+<text x="375.0" y="109.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.90</text>
+<rect x="410" y="70" width="68" height="68" fill="rgb(218,144,153)" stroke="#111" stroke-width="1.6"/>
+<text x="445.0" y="109.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.48</text>
+<rect x="480" y="70" width="68" height="68" fill="rgb(217,141,151)" stroke="#111" stroke-width="1.6"/>
+<text x="515.0" y="109.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.49</text>
+<text x="122.0" y="179.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">intermetallic</text>
+<text x="235.0" y="60.0" fill="#111" font-size="11" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">inte</text>
+<rect x="130" y="140" width="68" height="68" fill="rgb(199,89,103)" stroke="#111" stroke-width="1.6"/>
+<text x="165.0" y="179.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.71</text>
+<rect x="200" y="140" width="68" height="68" fill="#F4F4F2" stroke="#E1E0D9"/>
+<rect x="270" y="140" width="68" height="68" fill="rgb(244,247,251)" stroke="#E1E0D9" stroke-width="0.8"/>
+<text x="305.0" y="179.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.05</text>
+<rect x="340" y="140" width="68" height="68" fill="rgb(241,213,217)" stroke="#111" stroke-width="1.6"/>
+<text x="375.0" y="179.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.18</text>
+<rect x="410" y="140" width="68" height="68" fill="rgb(203,219,235)" stroke="#111" stroke-width="1.6"/>
+<text x="445.0" y="179.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.23</text>
+<rect x="480" y="140" width="68" height="68" fill="rgb(205,220,236)" stroke="#111" stroke-width="1.6"/>
+<text x="515.0" y="179.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.22</text>
+<text x="122.0" y="249.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">chalcogenide</text>
+<text x="305.0" y="60.0" fill="#111" font-size="11" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">chal</text>
+<rect x="130" y="210" width="68" height="68" fill="rgb(203,99,112)" stroke="#111" stroke-width="1.6"/>
+<text x="165.0" y="249.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.67</text>
+<rect x="200" y="210" width="68" height="68" fill="rgb(244,247,251)" stroke="#E1E0D9" stroke-width="0.8"/>
+<text x="235.0" y="249.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.05</text>
+<rect x="270" y="210" width="68" height="68" fill="#F4F4F2" stroke="#E1E0D9"/>
+<rect x="340" y="210" width="68" height="68" fill="rgb(237,203,207)" stroke="#111" stroke-width="1.6"/>
+<text x="375.0" y="249.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.22</text>
+<rect x="410" y="210" width="68" height="68" fill="rgb(213,226,239)" stroke="#111" stroke-width="1.6"/>
+<text x="445.0" y="249.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.19</text>
+<rect x="480" y="210" width="68" height="68" fill="rgb(214,227,240)" stroke="#111" stroke-width="1.6"/>
+<text x="515.0" y="249.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.18</text>
+<text x="122.0" y="319.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">halide</text>
+<text x="375.0" y="60.0" fill="#111" font-size="11" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">hali</text>
+<rect x="130" y="280" width="68" height="68" fill="rgb(185,47,64)" stroke="#111" stroke-width="1.6"/>
+<text x="165.0" y="319.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.90</text>
+<rect x="200" y="280" width="68" height="68" fill="rgb(241,213,217)" stroke="#111" stroke-width="1.6"/>
+<text x="235.0" y="319.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.18</text>
+<rect x="270" y="280" width="68" height="68" fill="rgb(237,203,207)" stroke="#111" stroke-width="1.6"/>
+<text x="305.0" y="319.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.22</text>
+<rect x="340" y="280" width="68" height="68" fill="#F4F4F2" stroke="#E1E0D9"/>
+<rect x="410" y="280" width="68" height="68" fill="rgb(163,191,220)" stroke="#111" stroke-width="1.6"/>
+<text x="445.0" y="319.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.41</text>
+<rect x="480" y="280" width="68" height="68" fill="rgb(165,193,221)" stroke="#111" stroke-width="1.6"/>
+<text x="515.0" y="319.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.40</text>
+<text x="122.0" y="389.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">pnictide</text>
+<text x="445.0" y="60.0" fill="#111" font-size="11" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">pnic</text>
+<rect x="130" y="350" width="68" height="68" fill="rgb(218,144,153)" stroke="#111" stroke-width="1.6"/>
+<text x="165.0" y="389.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.48</text>
+<rect x="200" y="350" width="68" height="68" fill="rgb(203,219,235)" stroke="#111" stroke-width="1.6"/>
+<text x="235.0" y="389.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.23</text>
+<rect x="270" y="350" width="68" height="68" fill="rgb(213,226,239)" stroke="#111" stroke-width="1.6"/>
+<text x="305.0" y="389.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.19</text>
+<rect x="340" y="350" width="68" height="68" fill="rgb(163,191,220)" stroke="#111" stroke-width="1.6"/>
+<text x="375.0" y="389.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.41</text>
+<rect x="410" y="350" width="68" height="68" fill="#F4F4F2" stroke="#E1E0D9"/>
+<rect x="480" y="350" width="68" height="68" fill="rgb(254,252,252)" stroke="#E1E0D9" stroke-width="0.8"/>
+<text x="515.0" y="389.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.01</text>
+<text x="122.0" y="459.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">other</text>
+<text x="515.0" y="60.0" fill="#111" font-size="11" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">othe</text>
+<rect x="130" y="420" width="68" height="68" fill="rgb(217,141,151)" stroke="#111" stroke-width="1.6"/>
+<text x="165.0" y="459.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.49</text>
+<rect x="200" y="420" width="68" height="68" fill="rgb(205,220,236)" stroke="#111" stroke-width="1.6"/>
+<text x="235.0" y="459.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.22</text>
+<rect x="270" y="420" width="68" height="68" fill="rgb(214,227,240)" stroke="#111" stroke-width="1.6"/>
+<text x="305.0" y="459.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.18</text>
+<rect x="340" y="420" width="68" height="68" fill="rgb(165,193,221)" stroke="#111" stroke-width="1.6"/>
+<text x="375.0" y="459.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">-0.40</text>
+<rect x="410" y="420" width="68" height="68" fill="rgb(254,252,252)" stroke="#E1E0D9" stroke-width="0.8"/>
+<text x="445.0" y="459.0" fill="#111" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="middle">+0.01</text>
+<rect x="480" y="420" width="68" height="68" fill="#F4F4F2" stroke="#E1E0D9"/>
+<text x="40.0" y="540.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Black outline: 95% CI excludes 0. Oxide–halide is the manuscript headline cell.</text>
+</svg>

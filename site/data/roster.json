@@ -1,0 +1,358 @@
+{
+  "generation_counts": {
+    "all_MP": 27,
+    "all_OMat": 16,
+    "included_uip_MP": 16,
+    "included_uip_OMat": 16
+  },
+  "models": [
+    {
+      "argmax_gain_stratum": "pnictide",
+      "halide_gain": -0.04181,
+      "id": "alignn",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.40375
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.09068,
+      "id": "allegro_mp",
+      "included_uip": true,
+      "n": 256961,
+      "oxide_gain": 1.04515
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.05744,
+      "id": "allegro_oam",
+      "included_uip": true,
+      "n": 256961,
+      "oxide_gain": 1.37062
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02297,
+      "id": "alphanet_mp",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.51063
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02096,
+      "id": "alphanet_oma",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.7248
+    },
+    {
+      "argmax_gain_stratum": "chalcogenide",
+      "halide_gain": 0.26758,
+      "id": "bowsr_megnet",
+      "included_uip": false,
+      "n": 250779,
+      "oxide_gain": 0.18881
+    },
+    {
+      "argmax_gain_stratum": "other",
+      "halide_gain": 0.13995,
+      "id": "cgcnn",
+      "included_uip": true,
+      "n": 256961,
+      "oxide_gain": 0.41829
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.1328,
+      "id": "cgcnn_p",
+      "included_uip": true,
+      "n": 256961,
+      "oxide_gain": 0.65375
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.23722,
+      "id": "chgnet",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 1.13169
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02373,
+      "id": "dpa31_ft",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 1.15144
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.06691,
+      "id": "dpa3_v1_mptrj",
+      "included_uip": true,
+      "n": 256953,
+      "oxide_gain": 0.89455
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.01886,
+      "id": "dpa3_v1_openlam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.84923
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.05284,
+      "id": "dpa3_v2_mptrj",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 1.04225
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.00423,
+      "id": "dpa3_v2_openlam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.98277
+    },
+    {
+      "argmax_gain_stratum": "other",
+      "halide_gain": 0.09445,
+      "id": "eqnorm_mptrj",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.59173
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.01215,
+      "id": "eqv2_m_omat",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.91298
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.06739,
+      "id": "eqv2_s_mp",
+      "included_uip": true,
+      "n": 256614,
+      "oxide_gain": 1.22078
+    },
+    {
+      "argmax_gain_stratum": "other",
+      "halide_gain": 0.04209,
+      "id": "esen_mp",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.42737
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02454,
+      "id": "esen_oam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.72399
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.07044,
+      "id": "grace_1l_oam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.97763
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.32239,
+      "id": "grace_2l_mptrj",
+      "included_uip": true,
+      "n": 256862,
+      "oxide_gain": 1.23726
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.0172,
+      "id": "grace_2l_oam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.57116
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.01394,
+      "id": "grace_2l_oam_l",
+      "included_uip": true,
+      "n": 256958,
+      "oxide_gain": 0.32543
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.01418,
+      "id": "grace_3l_oam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.58272
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.10461,
+      "id": "hienet",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.84163
+    },
+    {
+      "argmax_gain_stratum": "other",
+      "halide_gain": 0.17776,
+      "id": "m3gnet",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.74586
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02968,
+      "id": "mace_mp_0",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.65032
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.0276,
+      "id": "mace_mpa",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.64613
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.01833,
+      "id": "matris_10m_mp",
+      "included_uip": true,
+      "n": 256932,
+      "oxide_gain": 0.59635
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.05467,
+      "id": "matris_mptrj",
+      "included_uip": true,
+      "n": 256959,
+      "oxide_gain": 1.06225
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.0135,
+      "id": "matris_oam",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.51836
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02997,
+      "id": "mattersim",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.85837
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.38607,
+      "id": "megnet",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.62467
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.14459,
+      "id": "nequip_mp",
+      "included_uip": true,
+      "n": 256961,
+      "oxide_gain": 0.7363
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02613,
+      "id": "nequip_oam",
+      "included_uip": true,
+      "n": 256961,
+      "oxide_gain": 0.56063
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.02732,
+      "id": "nequip_oam_xl",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.69285
+    },
+    {
+      "argmax_gain_stratum": "other",
+      "halide_gain": 0.16149,
+      "id": "nequix_mp",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.58444
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": -0.00488,
+      "id": "orb_mptrj",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.43215
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.01181,
+      "id": "orb_v3",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.65441
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.17988,
+      "id": "sevennet_0",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.65465
+    },
+    {
+      "argmax_gain_stratum": "oxide",
+      "halide_gain": 0.11896,
+      "id": "sevennet_l3i5",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.53102
+    },
+    {
+      "argmax_gain_stratum": "intermetallic",
+      "halide_gain": 0.10709,
+      "id": "voronoi_rf",
+      "included_uip": true,
+      "n": 256946,
+      "oxide_gain": -0.01127
+    },
+    {
+      "argmax_gain_stratum": "intermetallic",
+      "halide_gain": 0.0903,
+      "id": "wrenformer",
+      "included_uip": true,
+      "n": 256963,
+      "oxide_gain": 0.25183
+    }
+  ],
+  "n_included_uip": 32,
+  "n_models_total": 43,
+  "overall": "NO-GENERATIONAL-EFFECT (honest null)",
+  "perm_p": 0.68153
+}

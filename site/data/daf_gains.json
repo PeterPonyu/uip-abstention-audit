@@ -1,0 +1,172 @@
+{
+  "rows": [
+    {
+      "daf_loose": 6.10035,
+      "daf_tight": 7.24995,
+      "gain_median": 1.13766,
+      "model": "chgnet",
+      "stratum": "oxide"
+    },
+    {
+      "daf_loose": 6.2005,
+      "daf_tight": 6.62957,
+      "gain_median": 0.4186,
+      "model": "chgnet",
+      "stratum": "intermetallic"
+    },
+    {
+      "daf_loose": 3.79189,
+      "daf_tight": 4.24735,
+      "gain_median": 0.46269,
+      "model": "chgnet",
+      "stratum": "chalcogenide"
+    },
+    {
+      "daf_loose": 3.17047,
+      "daf_tight": 3.40635,
+      "gain_median": 0.23722,
+      "model": "chgnet",
+      "stratum": "halide"
+    },
+    {
+      "daf_loose": 4.69085,
+      "daf_tight": 5.35104,
+      "gain_median": 0.65151,
+      "model": "chgnet",
+      "stratum": "pnictide"
+    },
+    {
+      "daf_loose": 4.33925,
+      "daf_tight": 4.97822,
+      "gain_median": 0.63898,
+      "model": "chgnet",
+      "stratum": "other"
+    },
+    {
+      "daf_loose": 4.41907,
+      "daf_tight": 5.16992,
+      "gain_median": 0.75083,
+      "model": "m3gnet",
+      "stratum": "oxide"
+    },
+    {
+      "daf_loose": 5.63734,
+      "daf_tight": 6.24355,
+      "gain_median": 0.60957,
+      "model": "m3gnet",
+      "stratum": "intermetallic"
+    },
+    {
+      "daf_loose": 3.08562,
+      "daf_tight": 3.57734,
+      "gain_median": 0.49752,
+      "model": "m3gnet",
+      "stratum": "chalcogenide"
+    },
+    {
+      "daf_loose": 2.51137,
+      "daf_tight": 2.684,
+      "gain_median": 0.17691,
+      "model": "m3gnet",
+      "stratum": "halide"
+    },
+    {
+      "daf_loose": 4.07708,
+      "daf_tight": 4.75586,
+      "gain_median": 0.676,
+      "model": "m3gnet",
+      "stratum": "pnictide"
+    },
+    {
+      "daf_loose": 3.64516,
+      "daf_tight": 4.39811,
+      "gain_median": 0.76154,
+      "model": "m3gnet",
+      "stratum": "other"
+    },
+    {
+      "daf_loose": 6.35788,
+      "daf_tight": 7.02544,
+      "gain_median": 0.67003,
+      "model": "mace",
+      "stratum": "oxide"
+    },
+    {
+      "daf_loose": 6.67138,
+      "daf_tight": 6.6649,
+      "gain_median": -0.00432,
+      "model": "mace",
+      "stratum": "intermetallic"
+    },
+    {
+      "daf_loose": 4.66545,
+      "daf_tight": 4.78622,
+      "gain_median": 0.12077,
+      "model": "mace",
+      "stratum": "chalcogenide"
+    },
+    {
+      "daf_loose": 3.47639,
+      "daf_tight": 3.50717,
+      "gain_median": 0.02968,
+      "model": "mace",
+      "stratum": "halide"
+    },
+    {
+      "daf_loose": 5.58255,
+      "daf_tight": 5.67213,
+      "gain_median": 0.09495,
+      "model": "mace",
+      "stratum": "pnictide"
+    },
+    {
+      "daf_loose": 5.49543,
+      "daf_tight": 5.78196,
+      "gain_median": 0.28469,
+      "model": "mace",
+      "stratum": "other"
+    },
+    {
+      "daf_loose": 7.18137,
+      "daf_tight": 7.63193,
+      "gain_median": 0.44787,
+      "model": "orb",
+      "stratum": "oxide"
+    },
+    {
+      "daf_loose": 6.65612,
+      "daf_tight": 6.65361,
+      "gain_median": -0.00488,
+      "model": "orb",
+      "stratum": "intermetallic"
+    },
+    {
+      "daf_loose": 4.77738,
+      "daf_tight": 4.81352,
+      "gain_median": 0.03614,
+      "model": "orb",
+      "stratum": "chalcogenide"
+    },
+    {
+      "daf_loose": 3.51659,
+      "daf_tight": 3.50808,
+      "gain_median": -0.00548,
+      "model": "orb",
+      "stratum": "halide"
+    },
+    {
+      "daf_loose": 5.65938,
+      "daf_tight": 5.72845,
+      "gain_median": 0.07105,
+      "model": "orb",
+      "stratum": "pnictide"
+    },
+    {
+      "daf_loose": 5.68048,
+      "daf_tight": 5.8039,
+      "gain_median": 0.13152,
+      "model": "orb",
+      "stratum": "other"
+    }
+  ]
+}

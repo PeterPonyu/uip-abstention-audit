@@ -1,0 +1,82 @@
+{
+  "loeo": [
+    {
+      "element": "O",
+      "n_cells": 40,
+      "n_excl0": 37,
+      "n_rows": 229017
+    },
+    {
+      "element": "Ni",
+      "n_cells": 60,
+      "n_excl0": 50,
+      "n_rows": 237424
+    },
+    {
+      "element": "Al",
+      "n_cells": 60,
+      "n_excl0": 48,
+      "n_rows": 238313
+    },
+    {
+      "element": "Ge",
+      "n_cells": 60,
+      "n_excl0": 45,
+      "n_rows": 238370
+    },
+    {
+      "element": "Cu",
+      "n_cells": 60,
+      "n_excl0": 46,
+      "n_rows": 238476
+    },
+    {
+      "element": "Fe",
+      "n_cells": 60,
+      "n_excl0": 48,
+      "n_rows": 239338
+    },
+    {
+      "element": "Sn",
+      "n_cells": 60,
+      "n_excl0": 49,
+      "n_rows": 239547
+    },
+    {
+      "element": "Si",
+      "n_cells": 60,
+      "n_excl0": 39,
+      "n_rows": 239788
+    },
+    {
+      "element": "F",
+      "n_cells": 60,
+      "n_excl0": 45,
+      "n_rows": 246903
+    },
+    {
+      "element": "S",
+      "n_cells": 60,
+      "n_excl0": 47,
+      "n_rows": 246367
+    },
+    {
+      "element": "N",
+      "n_cells": 60,
+      "n_excl0": 46,
+      "n_rows": 247805
+    },
+    {
+      "element": "P",
+      "n_cells": 60,
+      "n_excl0": 48,
+      "n_rows": 246300
+    }
+  ],
+  "loeo_interaction_excl0": "548/700",
+  "loeo_splits_passing": "12/12",
+  "n_joined": 256963,
+  "round_interaction_excl0": "157/300",
+  "round_splits_passing": "3/5",
+  "shuffle_null_clean": true
+}

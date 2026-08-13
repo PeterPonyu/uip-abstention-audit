@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" role="img" aria-labelledby="w9-title w9-desc">
+<title id="w9-title">Scope of the audit</title>
+<desc id="w9-desc">Four scope facts: labels not validated, allocator falsified, temporal non-transfer, precision-point primary.</desc>
+<rect width="860" height="220" fill="#FCFCFB"/>
+<rect x="16" y="24" width="200" height="176" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="16" y="24" width="6" height="176" fill="#D55E00"/>
+<text x="34.0" y="56.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">DFT labels</text>
+<text x="34.0" y="84.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">The audit does not</text>
+<text x="34.0" y="100.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">validate the</text>
+<text x="34.0" y="116.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">MP2020-corrected DFT</text>
+<text x="34.0" y="132.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">stability labels.</text>
+<rect x="226" y="24" width="200" height="176" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="226" y="24" width="6" height="176" fill="#D55E00"/>
+<text x="244.0" y="56.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Allocator</text>
+<text x="244.0" y="84.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">A stratum-aware allocator</text>
+<text x="244.0" y="100.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">is falsified. This is a</text>
+<text x="244.0" y="116.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">diagnostic, not a policy.</text>
+<rect x="436" y="24" width="200" height="176" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="436" y="24" width="6" height="176" fill="#D55E00"/>
+<text x="454.0" y="56.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Temporal</text>
+<text x="454.0" y="84.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">The oxide-highest ordering</text>
+<text x="454.0" y="100.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">does not transfer to a</text>
+<text x="454.0" y="116.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">later acquisition window.</text>
+<rect x="646" y="24" width="200" height="176" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="646" y="24" width="6" height="176" fill="#D55E00"/>
+<text x="664.0" y="56.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Effect size</text>
+<text x="664.0" y="84.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Precision-point</text>
+<text x="664.0" y="100.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">interaction is primary;</text>
+<text x="664.0" y="116.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">DAF amplification is the</text>
+<text x="664.0" y="132.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">low-base-rate rewrite.</text>
+</svg>

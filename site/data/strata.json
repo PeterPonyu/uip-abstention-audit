@@ -1,0 +1,35 @@
+{
+  "n_joined": 256963,
+  "strata": [
+    {
+      "base_rate_stable": 0.12422,
+      "n": 25020,
+      "stratum": "oxide"
+    },
+    {
+      "base_rate_stable": 0.14178,
+      "n": 119012,
+      "stratum": "intermetallic"
+    },
+    {
+      "base_rate_stable": 0.20522,
+      "n": 23847,
+      "stratum": "chalcogenide"
+    },
+    {
+      "base_rate_stable": 0.27832,
+      "n": 26523,
+      "stratum": "halide"
+    },
+    {
+      "base_rate_stable": 0.1708,
+      "n": 34614,
+      "stratum": "pnictide"
+    },
+    {
+      "base_rate_stable": 0.1666,
+      "n": 27947,
+      "stratum": "other"
+    }
+  ]
+}

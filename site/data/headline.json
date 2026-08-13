@@ -1,0 +1,22 @@
+{
+  "blocked_excl0": "45/60",
+  "blocked_shuffle_excl0": "0/60",
+  "chgnet_halide_precision_lift": 0.06565012160000017,
+  "chgnet_oxide_halide_daf_ci95": [
+    0.7419,
+    1.03792
+  ],
+  "chgnet_oxide_halide_daf_median": 0.89624,
+  "chgnet_oxide_minus_halide_precision_lift": 0.0771531903999998,
+  "chgnet_oxide_precision_lift": 0.14280331199999996,
+  "confidence_signal": "|predicted hull margin|",
+  "generational_perm_p": 0.68153,
+  "halide_base_rate": 0.27832,
+  "hull_recipe": "hull_pred = hull_true + (e_form_pred - e_form_true_mp2020_corrected)",
+  "n_included_uip": 32,
+  "n_joined": 256963,
+  "n_models_total": 43,
+  "oxide_base_rate": 0.12422,
+  "y_loose": 2696,
+  "y_tight": 1348
+}

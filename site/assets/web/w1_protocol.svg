@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 280" role="img" aria-labelledby="w1-title w1-desc">
+<title id="w1-title">Matched-yield audit protocol</title>
+<desc id="w1-desc">FILES to SELECT to Stage 1 to Stage 2 to verdict, with a controls bus for shuffle, falsified allocator, and temporal hold-out.</desc>
+<rect width="860" height="280" fill="#FCFCFB"/>
+<rect x="40" y="36" width="140" height="88" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="40" y="36" width="6" height="88" fill="#0072B2"/>
+<text x="56.0" y="62.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">FILES</text>
+<text x="56.0" y="86.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Published UIP</text>
+<text x="56.0" y="102.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">predictions</text>
+<line x1="180" y1="80" x2="200" y2="80" stroke="#333" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="200" y="36" width="140" height="88" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="200" y="36" width="6" height="88" fill="#0072B2"/>
+<text x="216.0" y="62.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">SELECT</text>
+<text x="216.0" y="86.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Matched yield Y</text>
+<text x="216.0" y="102.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">loose / tight</text>
+<line x1="340" y1="80" x2="360" y2="80" stroke="#333" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="360" y="36" width="140" height="88" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="360" y="36" width="6" height="88" fill="#0072B2"/>
+<text x="376.0" y="62.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">STAGE 1</text>
+<text x="376.0" y="86.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Four UIPs</text>
+<text x="376.0" y="102.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">× six strata</text>
+<line x1="500" y1="80" x2="520" y2="80" stroke="#333" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="520" y="36" width="140" height="88" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="520" y="36" width="6" height="88" fill="#0072B2"/>
+<text x="536.0" y="62.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">STAGE 2</text>
+<text x="536.0" y="86.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">LOEO · WBM-round</text>
+<text x="536.0" y="102.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">multiplicity</text>
+<line x1="660" y1="80" x2="680" y2="80" stroke="#333" stroke-width="1.4" marker-end="url(#arr)"/>
+<rect x="680" y="36" width="140" height="88" rx="6" fill="#fff" stroke="#E1E0D9"/>
+<rect x="680" y="36" width="6" height="88" fill="#0072B2"/>
+<text x="696.0" y="62.0" fill="#111" font-size="14" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">VERDICT</text>
+<text x="696.0" y="86.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Diagnostic,</text>
+<text x="696.0" y="102.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">not a policy</text>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#333"/></marker></defs>
+<rect x="40" y="160" width="780" height="88" rx="6" fill="#fff" stroke="#666" stroke-dasharray="4 3"/>
+<text x="56.0" y="184.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Controls bus — evidence that bounds the reading, not a deployable action</text>
+<text x="56.0" y="208.0" fill="#333" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Within-stratum shuffle null  ·  stratum-aware allocator falsified  ·  oxide-highest ordering does not transfer temporally</text>
+<text x="56.0" y="232.0" fill="#D55E00" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Label on the allocator: falsified. The audit does not validate DFT labels.</text>
+</svg>
