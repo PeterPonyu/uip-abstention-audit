@@ -310,7 +310,7 @@ def write_svgs() -> None:
 
     # W1 protocol schematic
     stages = [
-        (40, "FILES", "Published UIP\npredictions"),
+        (40, "RECORDS", "Published UIP\npredictions"),
         (200, "SELECT", "Matched yield Y\nloose / tight"),
         (360, "STAGE 1", "Four UIPs\n× six strata"),
         (520, "STAGE 2", "LOEO · WBM-round\nmultiplicity"),
@@ -320,7 +320,7 @@ def write_svgs() -> None:
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 280" role="img" '
         'aria-labelledby="w1-title w1-desc">',
         '<title id="w1-title">Matched-yield audit protocol</title>',
-        '<desc id="w1-desc">FILES to SELECT to Stage 1 to Stage 2 to verdict, with a controls bus for shuffle, falsified allocator, and temporal hold-out.</desc>',
+        '<desc id="w1-desc">Records to SELECT to Stage 1 to Stage 2 to verdict, with a controls bus for shuffle, falsified allocator, and temporal hold-out.</desc>',
         '<rect width="860" height="280" fill="#FCFCFB"/>',
     ]
     for i, (x, title, body) in enumerate(stages):
