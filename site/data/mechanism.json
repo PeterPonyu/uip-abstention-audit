@@ -1,0 +1,67 @@
+{
+  "cation_class": {
+    "blocked_excl0": "17/60",
+    "ranked_by_gain": [
+      [
+        "main_group",
+        1.60957
+      ],
+      [
+        "alkaline_earth",
+        0.5131025
+      ],
+      [
+        "alkali",
+        0.0358025
+      ],
+      [
+        "4d5d",
+        0.0
+      ],
+      [
+        "3d",
+        -0.3441575
+      ],
+      [
+        "rare_earth",
+        -0.5140525
+      ]
+    ]
+  },
+  "mp2020_sensitive": {
+    "blocked_excl0": "3/4",
+    "ranked_by_gain": [
+      [
+        "corr_clean",
+        0.2176625
+      ],
+      [
+        "corr_sensitive",
+        0.17523249999999999
+      ]
+    ]
+  },
+  "oxstate": {
+    "blocked_excl0": "8/12",
+    "model_averaged_blocked_gain": {
+      "high": 0.1665925,
+      "mid": -0.9741975,
+      "very_high": 0.9710925
+    },
+    "ranked_by_gain": [
+      [
+        "very_high",
+        0.9710925
+      ],
+      [
+        "high",
+        0.1665925
+      ],
+      [
+        "mid",
+        -0.9741975
+      ]
+    ],
+    "shuffle_excl0": "0/12"
+  }
+}

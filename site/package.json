@@ -1,0 +1,12 @@
+{
+  "name": "uip-abstention-audit-companion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "gate-local": "eleventy && node scripts/leak-scan.mjs && node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

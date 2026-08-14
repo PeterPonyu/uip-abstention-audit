@@ -1,0 +1,15 @@
+{
+  "title": "Oxide-localized abstention value diagnoses UIP disagreement with corrected DFT stability labels",
+  "shortTitle": "UIP abstention audit",
+  "author": "Zeyu Fu",
+  "orcid": "https://orcid.org/0009-0001-8329-0108",
+  "affiliation": "State Key Laboratory of Trauma and Chemical Poisoning, Institute of Combined Injury, Army Medical University, Chongqing, China",
+  "status": "Matched-yield abstention diagnoses UIP–label disagreement, largest in oxides.",
+  "pathPrefix": "/uip-abstention-audit/",
+  "codeUrl": "https://github.com/PeterPonyu/uip-abstention-audit",
+  "authorHome": "https://peterponyu.github.io/",
+  "dataDoi": "https://doi.org/10.5281/zenodo.21130294",
+  "softwareDoi": "https://doi.org/10.5281/zenodo.21524096",
+  "conceptDoi": "https://doi.org/10.5281/zenodo.21130295",
+  "nJoined": "256,963"
+}

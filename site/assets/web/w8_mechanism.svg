@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-labelledby="w8-title w8-desc">
+<title id="w8-title">Oxidation-state bins, model-averaged blocked gain</title>
+<desc id="w8-desc">Charge-balance-resolved oxidation states localize abstention value to high formal valence.</desc>
+<rect width="640" height="280" fill="#FCFCFB"/>
+<text x="32.0" y="28.0" fill="#111" font-size="15" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">Oxidation-state bins  ·  model-averaged blocked gain</text>
+<text x="32.0" y="48.0" fill="#333" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Blocked cells excluding zero: 8/12</text>
+<rect x="320.0" y="80" width="182.7" height="36" fill="#D55E00"/>
+<text x="40.0" y="104.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">very high valence</text>
+<text x="514.7" y="104.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">+0.97</text>
+<rect x="320.0" y="136" width="31.4" height="36" fill="#D55E00"/>
+<text x="40.0" y="160.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">high valence</text>
+<text x="363.4" y="160.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">+0.17</text>
+<rect x="136.7" y="192" width="183.3" height="36" fill="#0072B2"/>
+<text x="40.0" y="216.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="600" text-anchor="start">mid valence</text>
+<text x="124.7" y="216.0" fill="#111" font-size="13" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="end">-0.97</text>
+<text x="32.0" y="260.0" fill="#333" font-size="12" font-family="Source Sans 3, Source Sans Pro, sans-serif" font-weight="400" text-anchor="start">Positive (vermillion) localizes to high formal valence. Not a coordination-environment proxy.</text>
+</svg>
