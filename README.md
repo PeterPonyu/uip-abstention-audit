@@ -1,133 +1,93 @@
-# materials-mlip-research (MT29)
+# UIP abstention audit
 
-Code archive: Zenodo DOI 10.5281/zenodo.21130295 (published and openly accessible).
+Code and frozen analysis records for a chemistry-stratified reliability audit
+of selective abstention on universal machine-learning interatomic potentials
+(UIPs). The object is **UIP–label disagreement**, largest in **oxides**,
+diagnosed by **matched-yield abstention**.
 
-**The chemistry-stratified value of selective abstention for machine-learned crystal-stability prediction.**
+Motif: *low regression error ≠ reliable decision.*
 
-Motif: *low regression error ≠ reliable decision.* A reliability/calibration/extrapolation
-audit of ML interatomic potentials (MLIP/UIP) for materials informatics, built entirely on
-the ready-made, auditable Matbench Discovery benchmark.
+Version 0.3.0 DOI: [10.5281/zenodo.21524096](https://doi.org/10.5281/zenodo.21524096).
+Concept DOI: [10.5281/zenodo.21130295](https://doi.org/10.5281/zenodo.21130295).
+Frozen analysis records: [10.5281/zenodo.21130294](https://doi.org/10.5281/zenodo.21130294).
 
-## Thesis
+Companion: [peterponyu.github.io/uip-abstention-audit](https://peterponyu.github.io/uip-abstention-audit/).
 
-This is a CPU-only, real-data audit of *frozen* Matbench Discovery predictions (four ML
-interatomic potentials — CHGNet, M3GNet, MACE, ORB — on n = 256,963 WBM structures; no
-model is trained and no DFT is run). The core claim: the benefit of confidence-based
-selective abstention (confidence = |predicted hull margin|) for the binary "is this crystal
-stable" decision is strongly **chemistry-dependent** — oxides gain the most discovery
-acceleration, halides and intermetallics essentially none — and this stratum-by-coverage
-interaction is not an artifact of surfaced-candidate yield, dominant elements, acquisition
-round, single-model quirks, or chance (matched-yield, leave-one-element-out, WBM-round,
-committee-variance, and shuffle-null controls, with formal BH-FDR / Holm multiplicity
-correction). A secondary result shows the native-Gaussian probability reading of the same
-margin is optimistic in every anion family.
+## Claim
 
-## Repository layout
+UIPs disagree with MP2020-corrected density-functional-theory (DFT) *stability
+labels* most in oxide chemistries. Selective abstention at a matched
+surfaced-candidate budget is a chemistry-localized *diagnostic* of that
+mismatch, not a deployable stratified policy. The audit does **not** validate
+DFT labels.
 
-```
-paper (manuscripts/)
-  paper.tex, paper.pdf     # canonical manuscript source and compiled PDF
-  jcp/                     # REVTeX source, cover letter, and verified source package
-  figures/                 # F1–F5 PDF/PNG and their canonical R generators
-  figures-src/             # TikZ source for the protocol overview
+The audit is CPU-only on frozen Matbench Discovery predictions. Four Stage-1/2
+UIPs — CHGNet, M3GNet, MACE, ORB — are joined to *n* = 256,963 WBM structures.
+No model is trained. No DFT is run. Confidence is the absolute predicted hull
+margin. Matched-yield equalizes the surfaced-candidate budget *Y* across six
+electronegativity-priority anion-class strata: oxide, intermetallic,
+chalcogenide, halide, pnictide, other.
 
-analysis (research/results/MT29/)
-  mt29_stage0_*.py          # Stage-0 precursor gate
-  mt29_stage1_chem_yield.py # canonical loader, strata, and abstention metrics
-  mt29_stage1_matched_yield_fix.py, mt29_stage2_robustness.py
-  mt29_stage1_yield_ratio_sensitivity.py
-  mt29_multiplicity_correction.py
-  mt29_committee_variance.py, mt29_sscs_stratified.py
-  *_result.json            # frozen result records used by the manuscript
-  *_manifest.json          # input/script/output SHA-256, seed, and bootstrap count
+## Frozen findings
 
-other
-  relmetrics/               # vendored MIT-licensed multiplicity/provenance helpers
-  DATA_MANIFEST.md          # external input files and SHA-256 checksums
-  requirements.txt, CITATION.cff, LICENSE, smoke_test.sh, tests/
-```
+| Quantity | Frozen value |
+| --- | --- |
+| Oxide stable base rate | 12.4% (lowest of the six anion classes) |
+| UIP called-stable rate on oxides | six times that base rate |
+| CHGNet matched-budget precision, oxides vs halides | +7.7 points |
+| Same contrast as DAF (low-base-rate rewrite) | +0.90 (95% CI [0.74, 1.04]) |
+| Prototype-blocked DAF interaction excluding zero | 45 of 60 cells (six strata × four UIPs) |
+| Published-potential models / included UIPs | 43 / 32 |
+| Generational difference on the oxide anchor | none detected (*p* = 0.68) |
 
-## How to reproduce
+Under every tail-robust estimator oxides are *not* the highest
+formation-energy-error stratum. The raw RMSE gap that suggests otherwise is
+99.7% due to one implausible published prediction. Precision-point interaction
+is primary; DAF amplification is the low-base-rate rewrite.
 
-### 1. Environment
+Mechanism reading: oxide reference energetics (including missing Hubbard-*U*)
+and fitting difficulty. Charge-balance-resolved oxidation states localize to
+**high formal valence**. The reading is not reducible to MP2020 corrections or
+a coordination-environment proxy.
 
-Python 3.13 was used for the frozen analysis. Install the pinned third-party dependencies:
+## Scope
+
+- DFT stability labels are not validated.
+- A stratum-aware allocator is **falsified**.
+- The oxide-highest *ordering* does not transfer temporally.
+- Within oxides the benefit does not localize to correction-sensitive cation
+  classes.
+- Native-Gaussian probability readings of the same hull margin are optimistic
+  in every anion family.
+
+Shuffle-null, leave-one-element-out, WBM-round, and committee-variance
+controls sit with the positive cells. They bound the interpretation; they are
+not a footnote.
+
+## Reproduce
+
+Python 3.13 was used for the frozen analysis:
 
 ```bash
 python -m pip install -r requirements.txt
-```
-
-The two `relmetrics` modules used by the analysis are vendored under `./relmetrics/` with their
-MIT license and provenance note, so the public release does not depend on a sibling checkout.
-Figure regeneration additionally requires R with `jsonlite`, `ggplot2`, `patchwork`, and `ragg`.
-
-### 2. Data (lives outside the repo)
-
-Input data are **not** redistributed here. They are the public Matbench Discovery
-prediction/summary CSVs (free Figshare mirror,
-<https://matbench-discovery.materialsproject.org/>). See **DATA_MANIFEST.md** for the exact
-files, sizes, and SHA-256 checksums. The upstream download command is not recorded in repo
-history (do not invent one); obtain the listed files from the upstream source, then point the
-scripts at them with two environment variables:
-
-```bash
-export MT_DATA_ROOT="$HOME/mt_stage0/data"   # dir holding 2023-12-13-wbm-summary.csv.gz (WBM ground truth)
-export MT_UIP_ROOT="$HOME/mt_uip"            # dir holding {chgnet,m3gnet,mace,orb}_pred.csv
-```
-
-Both default to the original `~/mt_stage0/data` and `~/mt_uip` paths, so on the original
-machine no export is needed. Verify integrity against the checksums in DATA_MANIFEST.md.
-
-### 3. Smoke test (no data required, < 2 min)
-
-```bash
 bash smoke_test.sh
 ```
 
-Checks that the dependency stack imports, the canonical analysis module imports data-free and
-its core helpers run on a tiny fixture, and the frozen result JSONs parse with expected keys.
-
-### 4. Run order (regenerate result JSONs)
-
-Run from `research/results/MT29/` (scripts import each other by local module name):
+Input prediction and WBM summary tables are **not** redistributed. They are
+the public Matbench Discovery files listed with sizes and SHA-256 in
+`DATA_MANIFEST.md` (<https://matbench-discovery.materialsproject.org/>).
+Point the loaders at local copies:
 
 ```bash
-cd research/results/MT29
-python mt29_stage1_chem_yield.py            # -> mt29_stage1_chem_yield_result.json
-python mt29_stage1_matched_yield_fix.py     # -> mt29_stage1_matched_yield_result.json
-python mt29_stage2_robustness.py            # -> mt29_stage2_robustness_result.json
-python mt29_stage1_yield_ratio_sensitivity.py
-python mt29_multiplicity_correction.py stage1
-python mt29_multiplicity_correction.py stage2
-python mt29_committee_variance.py
-python mt29_sscs_stratified.py
-# secondary: mt29_crossgen_reliability_exec_2026_06_29.py, mt29_b5_policy_spike.py, mt29_b5b_knapsack_constrained-exec-2026-06-29.py
+export MT_DATA_ROOT="$HOME/mt_stage0/data"   # WBM summary
+export MT_UIP_ROOT="$HOME/mt_uip"            # four UIP prediction tables
 ```
 
-Each writes a `*_result.json` plus a `*_manifest.json`; the multiplicity script re-asserts
-byte-identical reproduction of the frozen inputs before attaching corrected p-values.
+Analysis scripts live under `research/results/MT29/` and write frozen result
+records plus sibling manifests (input/script/output hashes, seed 20260621,
+bootstrap count). `relmetrics/` is a vendored MIT subset so the archive does
+not depend on a sibling checkout. `CITATION.cff` is the software record.
 
-### 5. Figures
+## License
 
-The checked-in figures are generated from the frozen result JSONs by the R scripts
-`manuscripts/figures/F1_daf_coverage.R` through `F5_committee_variance.R`. The protocol overview
-is built from `manuscripts/figures-src/fig0_overview.tex`.
-
-```bash
-make -C manuscripts figures
-```
-
-## Scope and limitations
-
-The analysis uses public Matbench Discovery prediction files whose filenames, sizes, and SHA-256
-values are recorded in `DATA_MANIFEST.md`; these external inputs are not redistributed. The
-fixed-hull reconstruction is validated for the reported stability calls, while the deeper
-assumption that competing hull phases are unaffected by UIP errors remains outside scope. The
-manuscript reports the negative allocator and temporal-transfer results alongside the positive
-chemistry-stratified findings.
-
-## Provenance
-
-Result records change only by rerunning analysis code. Frozen JSON outputs have sibling manifests
-recording inputs, script and output hashes, seed 20260621, and bootstrap count. `smoke_test.sh`
-checks imports, data-free helper behavior, vendored dependency resolution, and expected result keys.
+MIT (`LICENSE`).
