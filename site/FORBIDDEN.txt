@@ -32,3 +32,5 @@ crystal viewer
 peaceiris
 SCPortal
 GAHIB
+nested-readonly
+materials-mlip

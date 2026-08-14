@@ -1,6 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ assets: "assets" });
-  eleventyConfig.addPassthroughCopy({ data: "data" });
+  eleventyConfig.addPassthroughCopy({ "data/*.json": "data" });
   eleventyConfig.setUseGitIgnore(false);
   return {
     pathPrefix: "/uip-abstention-audit/",

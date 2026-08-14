@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Slim frozen-record extracts for the public Pages.
 
-Reads public-clone analysis records plus read-only mechanism/error
-records. Writes site/data/*.json and extract.sha256. Never invents
-numeric cells.
+Reads analysis records that already live in this public archive, plus
+optional extra frozen records for the error and mechanism extracts.
+Writes site/data/*.json and extract.sha256. Never invents numeric cells.
+The sidecar is a local hash log; it is not published on Pages.
 """
 
 from __future__ import annotations
@@ -14,8 +15,7 @@ import os
 from pathlib import Path
 
 PUBLIC = Path(__file__).resolve().parents[2]
-_default_nested = Path(__file__).resolve().parents[4] / "materials-mlip-research"
-NESTED = Path(os.environ.get("MATERIALS_NESTED", _default_nested))
+EXTRA = Path(os.environ["UIP_EXTRA_RECORDS"]) if os.environ.get("UIP_EXTRA_RECORDS") else None
 OUT = Path(__file__).resolve().parents[1] / "data"
 WEB = Path(__file__).resolve().parents[1] / "assets" / "web"
 
@@ -72,18 +72,21 @@ def extract() -> list[tuple[str, str, Path]]:
     )
     robust_p = PUBLIC / "research/results/MT29/mt29_stage2_robustness_result.json"
     roster_p = PUBLIC / "results_expansion_2026-07-14/mt29_roster_expansion_result.json"
-    m1_p = NESTED / "results_expansion_2026-07-29/m1_robust_error_result.json"
-    m2_p = NESTED / "results_expansion_2026-07-29/m2_oxide_subclass_result.json"
-    m3_p = NESTED / "results_expansion_2026-07-29/m3_oxstate_subclass_result.json"
+    m1_p = (EXTRA / "m1_robust_error_result.json") if EXTRA else None
+    m2_p = (EXTRA / "m2_oxide_subclass_result.json") if EXTRA else None
+    m3_p = (EXTRA / "m3_oxstate_subclass_result.json") if EXTRA else None
 
     chem = load(chem_p)
     match = load(match_p)
     proto = load(proto_p)
     robust = load(robust_p)
     roster = load(roster_p)
-    m1 = load(m1_p)
-    m2 = load(m2_p)
-    m3 = load(m3_p)
+    extra_ready = bool(
+        m1_p and m2_p and m3_p and m1_p.is_file() and m2_p.is_file() and m3_p.is_file()
+    )
+    m1 = load(m1_p) if extra_ready else None
+    m2 = load(m2_p) if extra_ready else None
+    m3 = load(m3_p) if extra_ready else None
 
     curves = chem["stratified_curves"]
     strata = []
@@ -97,7 +100,7 @@ def extract() -> list[tuple[str, str, Path]]:
             }
         )
     dest = dump("strata.json", {"n_joined": chem["meta"]["n_rows"], "strata": strata})
-    records.append(("public/chem_yield", sha256_file(chem_p), dest))
+    records.append(("chem_yield", sha256_file(chem_p), dest))
 
     chg = match["per_model_budgets"]["chgnet"]
     oxide_base = chg["base_rate_stable"]["oxide"]
@@ -130,7 +133,7 @@ def extract() -> list[tuple[str, str, Path]]:
         "confidence_signal": chem["meta"]["confidence_signal"],
     }
     dest = dump("headline.json", headline)
-    records.append(("public/matched+blocked+roster", sha256_file(match_p), dest))
+    records.append(("matched_blocked_roster", sha256_file(match_p), dest))
 
     daf_rows = []
     for model in MODELS:
@@ -146,7 +149,7 @@ def extract() -> list[tuple[str, str, Path]]:
                 }
             )
     dest = dump("daf_gains.json", {"rows": daf_rows})
-    records.append(("public/matched_yield", sha256_file(match_p), dest))
+    records.append(("matched_yield", sha256_file(match_p), dest))
 
     heat = []
     for cell in proto["interactions_blocked"]:
@@ -167,7 +170,7 @@ def extract() -> list[tuple[str, str, Path]]:
             "cells": heat,
         },
     )
-    records.append(("public/prototype_blocked", sha256_file(proto_p), dest))
+    records.append(("prototype_blocked", sha256_file(proto_p), dest))
 
     loeo = []
     for elem, block in robust["gate1_loeo"].items():
@@ -191,7 +194,7 @@ def extract() -> list[tuple[str, str, Path]]:
             "loeo": loeo,
         },
     )
-    records.append(("public/stage2_robustness", sha256_file(robust_p), dest))
+    records.append(("stage2_robustness", sha256_file(robust_p), dest))
 
     roster_models = []
     for short, row in roster["per_model"].items():
@@ -216,56 +219,65 @@ def extract() -> list[tuple[str, str, Path]]:
             "models": roster_models,
         },
     )
-    records.append(("public/roster_expansion", sha256_file(roster_p), dest))
+    records.append(("roster_expansion", sha256_file(roster_p), dest))
 
-    error = {
-        "oxide_highest_under_all_metrics": m1["verdict"]["oxide_highest_under_all_metrics"],
-        "metrics_where_oxide_not_highest": m1["verdict"]["metrics_where_oxide_not_highest"],
-        "oxide_vs_rest": {
-            key: {
-                "oxide": val["oxide"],
-                "mean_non_oxide": val["mean_non_oxide"],
-                "oxide_is_highest": val["oxide_is_highest"],
-            }
-            for key, val in m1["oxide_vs_rest_ratios"].items()
-        },
-        "model_averaged": {
-            name: {
-                "n": m1["model_averaged_per_stratum"][name]["n"],
-                "rmse": m1["model_averaged_per_stratum"][name]["rmse"],
-                "mae": m1["model_averaged_per_stratum"][name]["mae"],
-                "median_ae": m1["model_averaged_per_stratum"][name]["median_ae"],
-                "winsorized_rmse": m1["model_averaged_per_stratum"][name][
-                    "winsorized_rmse_5_95"
-                ],
-            }
-            for name in STRATA
-        },
-    }
-    dest = dump("error.json", error)
-    records.append(("nested-readonly/robust_error", sha256_file(m1_p), dest))
+    if extra_ready:
+        error = {
+            "oxide_highest_under_all_metrics": m1["verdict"]["oxide_highest_under_all_metrics"],
+            "metrics_where_oxide_not_highest": m1["verdict"]["metrics_where_oxide_not_highest"],
+            "oxide_vs_rest": {
+                key: {
+                    "oxide": val["oxide"],
+                    "mean_non_oxide": val["mean_non_oxide"],
+                    "oxide_is_highest": val["oxide_is_highest"],
+                }
+                for key, val in m1["oxide_vs_rest_ratios"].items()
+            },
+            "model_averaged": {
+                name: {
+                    "n": m1["model_averaged_per_stratum"][name]["n"],
+                    "rmse": m1["model_averaged_per_stratum"][name]["rmse"],
+                    "mae": m1["model_averaged_per_stratum"][name]["mae"],
+                    "median_ae": m1["model_averaged_per_stratum"][name]["median_ae"],
+                    "winsorized_rmse": m1["model_averaged_per_stratum"][name][
+                        "winsorized_rmse_5_95"
+                    ],
+                }
+                for name in STRATA
+            },
+        }
+        dest = dump("error.json", error)
+        records.append(("robust_error", sha256_file(m1_p), dest))
 
-    ox = m3["oxstate_class"]
-    dest = dump(
-        "mechanism.json",
-        {
-            "oxstate": {
-                "blocked_excl0": ox["summary"]["blocked_excl0"],
-                "shuffle_excl0": ox["summary"]["shuffle_excl0"],
-                "ranked_by_gain": ox["ranked_by_gain"],
-                "model_averaged_blocked_gain": ox["model_averaged_blocked_gain"],
+        ox = m3["oxstate_class"]
+        dest = dump(
+            "mechanism.json",
+            {
+                "oxstate": {
+                    "blocked_excl0": ox["summary"]["blocked_excl0"],
+                    "shuffle_excl0": ox["summary"]["shuffle_excl0"],
+                    "ranked_by_gain": ox["ranked_by_gain"],
+                    "model_averaged_blocked_gain": ox["model_averaged_blocked_gain"],
+                },
+                "cation_class": {
+                    "blocked_excl0": m2["axes"]["cation_class"]["summary"]["blocked_excl0"],
+                    "ranked_by_gain": m2["axes"]["cation_class"]["ranked_by_gain"],
+                },
+                "mp2020_sensitive": {
+                    "blocked_excl0": m2["axes"]["mp2020_sensitive"]["summary"]["blocked_excl0"],
+                    "ranked_by_gain": m2["axes"]["mp2020_sensitive"]["ranked_by_gain"],
+                },
             },
-            "cation_class": {
-                "blocked_excl0": m2["axes"]["cation_class"]["summary"]["blocked_excl0"],
-                "ranked_by_gain": m2["axes"]["cation_class"]["ranked_by_gain"],
-            },
-            "mp2020_sensitive": {
-                "blocked_excl0": m2["axes"]["mp2020_sensitive"]["summary"]["blocked_excl0"],
-                "ranked_by_gain": m2["axes"]["mp2020_sensitive"]["ranked_by_gain"],
-            },
-        },
-    )
-    records.append(("nested-readonly/oxstate+subclass", sha256_file(m3_p), dest))
+        )
+        records.append(("oxstate_subclass", sha256_file(m3_p), dest))
+    else:
+        for name, label in (("error.json", "robust_error"), ("mechanism.json", "oxstate_subclass")):
+            dest = OUT / name
+            if not dest.is_file():
+                raise FileNotFoundError(
+                    f"{name} extract is missing; set UIP_EXTRA_RECORDS to rebuild it"
+                )
+            records.append((label, sha256_file(dest), dest))
 
     sidecar = OUT / "extract.sha256"
     lines = [

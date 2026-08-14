@@ -14,7 +14,7 @@ function walk(dir) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name);
     if (statSync(p).isDirectory()) out.push(...walk(p));
-    else if ([".html", ".svg"].includes(extname(p))) out.push(p);
+    else if ([".html", ".svg", ".json", ".txt", ".md", ".sha256"].includes(extname(p))) out.push(p);
   }
   return out;
 }
