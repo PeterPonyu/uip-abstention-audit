@@ -31,7 +31,7 @@
   --ink: #111111;
   --muted: #333333;
   --line: #E1E0D9;
-  --paper: #FCFCFB;
+  --page: #FCFCFB;
   --oxide: #D55E00;
   --uip: #0072B2;
   --serif: "Source Serif 4", "Source Serif Pro", "Iowan Old Style", Palatino, serif;
@@ -43,7 +43,7 @@ html { font-size: 18px; }
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background: var(--page);
   font-family: var(--sans);
   line-height: 1.5;
 }

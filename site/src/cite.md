@@ -6,11 +6,7 @@ permalink: /cite/
 
 # Cite
 
-Submitted to <cite>The Journal of Chemical Physics</cite> on 13 August 2026. The submitted PDF is not posted here.
-
-## Status
-
-{{ site.status }}
+Frozen analysis records and the public code archive for the UIP abstention audit.
 
 ## Software record
 
@@ -24,11 +20,11 @@ Submitted to <cite>The Journal of Chemical Physics</cite> on 13 August 2026. The
   url = {https://github.com/PeterPonyu/uip-abstention-audit}
 }</code></pre>
 
-## DOIs, labeled by source
+## Records
 
 | Record | DOI |
 | --- | --- |
-| Manuscript data availability | <a href="{{ site.manuscriptDoi }}">10.5281/zenodo.21130294</a> |
+| Frozen analysis records | <a href="{{ site.dataDoi }}">10.5281/zenodo.21130294</a> |
 | Software version 0.3.0 | <a href="{{ site.softwareDoi }}">10.5281/zenodo.21524096</a> |
 | Concept (all versions) | <a href="{{ site.conceptDoi }}">10.5281/zenodo.21130295</a> |
 

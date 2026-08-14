@@ -1,4 +1,4 @@
-# Rendered HTML/SVG must not contain these stems (Materials companion).
+# Rendered HTML/SVG must not contain these stems.
 # Comments in source are allowed; this list is applied to built output.
 
 mt29_stage1
@@ -17,6 +17,14 @@ Launch->
 paper_jcp.pdf
 paper_kbs.pdf
 paper_rie.tex
+this paper
+JCP
+Journal of Chemical Physics
+PORTAL_PACK
+manuscript
+submitted
+submission
+journal
 AutoDL
 /home/zeyufu
 crystal viewer

@@ -1,9 +1,7 @@
-# JCP companion (Eleventy)
+# UIP abstention audit (Eleventy)
 
-Static companion for the public host `PeterPonyu/uip-abstention-audit`.
-Not a revised manuscript. Science IA follows the portfolio design note
-for this paper. Authoring lives here under `site/`, not in the private
-nested tree.
+Public Pages for oxide-localized UIP–label disagreement and matched-yield
+abstention. Authoring lives here under `site/`.
 
 ## Local build
 
@@ -19,4 +17,4 @@ Artifact: `site/_site/`. Project URL prefix is `/uip-abstention-audit/`.
 
 `scripts/extract_web_json.py` reads frozen analysis records and writes
 `data/*.json` plus `assets/web/*.svg`. Do not hand-edit the numeric
-JSON. Do not copy manuscript PDFs into this tree.
+JSON.

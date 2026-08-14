@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Slim frozen-record extracts for the public companion.
+"""Slim frozen-record extracts for the public Pages.
 
-Reads public-clone analysis records plus read-only nested mechanism/error
-records. Writes site/data/*.json and extract.sha256. Never writes manuscript
-PDFs. Never invents numeric cells.
+Reads public-clone analysis records plus read-only mechanism/error
+records. Writes site/data/*.json and extract.sha256. Never invents
+numeric cells.
 """
 
 from __future__ import annotations
@@ -405,7 +405,7 @@ def write_svgs() -> None:
                 f'<rect x="{x}" y="{y}" width="{cell - 2}" height="{cell - 2}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
             )
             parts.append(_text(x + cell / 2, y + cell / 2 + 4, f"{v:+.2f}", size=12, anchor="middle"))
-    parts.append(_text(40, h - 20, "Black outline: 95% CI excludes 0. Oxide–halide is the manuscript headline cell.", size=12, fill="#333"))
+    parts.append(_text(40, h - 20, "Black outline: 95% CI excludes 0. Oxide–halide is the largest positive cell.", size=12, fill="#333"))
     parts.append("</svg>")
     (WEB / "w3_heatmap.svg").write_text("\n".join(parts) + "\n")
 

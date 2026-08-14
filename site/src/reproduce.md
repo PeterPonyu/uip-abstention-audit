@@ -11,7 +11,7 @@ The audit is CPU-only. No model is trained and no DFT is run. Inputs are the pub
 ## What to obtain
 
 1. The public code archive for this audit.
-2. The software version DOI and the manuscript Data-availability DOI (labeled separately on <a href="{{ '/cite/' | url }}">Cite</a>).
+2. The software version DOI and the frozen-record DOI (labeled separately on <a href="{{ '/cite/' | url }}">Cite</a>).
 3. The listed prediction and WBM summary files from the upstream Matbench Discovery distribution. Checksums travel with the public archive.
 
 ## What is checked
