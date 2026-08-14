@@ -4,12 +4,12 @@ title: Protocol
 permalink: /protocol/
 ---
 
-# How the audit is built
+# Matched-yield protocol
 
 The object is a matched-yield reliability audit of frozen UIP predictions. The solid path carries evidence to a per-claim verdict. The dashed controls bus is not a deployable action recommendation.
 
 <figure class="figure">
-  <img src="{{ '/assets/web/w1_protocol.svg' | url }}" alt="FILES to SELECT to Stage 1 to Stage 2 to verdict, with a controls bus for shuffle, falsified allocator, and temporal hold-out.">
+  <img src="{{ '/assets/web/w1_protocol.svg' | url }}" alt="Records to SELECT to Stage 1 to Stage 2 to verdict, with a controls bus for shuffle, falsified allocator, and temporal hold-out.">
   <figcaption>Matched-yield protocol. SELECT equalizes the surfaced-candidate budget <em>Y</em> across strata. The allocator on the controls bus is labeled falsified.</figcaption>
 </figure>
 

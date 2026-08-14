@@ -37,13 +37,13 @@ permalink: /
 <section class="protocol-strip" aria-label="Protocol">
   <h2>Protocol</h2>
   <ol class="protocol-steps">
-    <li>FILES</li>
+    <li>Records</li>
     <li>SELECT (<em>Y</em> matched)</li>
     <li>Stage 1</li>
     <li>Stage 2</li>
     <li>Verdict</li>
   </ol>
-  <p><em>n</em> = {{ site.nJoined }} WBM structures after inner join. CPU-only; no model is trained; no DFT is run. Confidence is the absolute predicted hull margin. <a href="{{ '/protocol/' | url }}">How the audit is built</a>.</p>
+  <p><em>n</em> = {{ site.nJoined }} WBM structures after inner join. CPU-only; no model is trained; no DFT is run. Confidence is the absolute predicted hull margin. <a href="{{ '/protocol/' | url }}">Matched-yield protocol</a>.</p>
 </section>
 
 {% include "cite-box.njk" %}

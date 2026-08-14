@@ -6,13 +6,13 @@ permalink: /cite/
 
 # Cite
 
-Submitted to <cite>The Journal of Chemical Physics</cite> on 13 August 2026. This site is a companion, not a revised manuscript. The submitted PDF is not posted here.
+Submitted to <cite>The Journal of Chemical Physics</cite> on 13 August 2026. The submitted PDF is not posted here.
 
 ## Status
 
 {{ site.status }}
 
-## Software record (CITATION.cff)
+## Software record
 
 <pre><code>@software{fu_uip_abstention_audit_2026,
   author = {Fu, Zeyu},
@@ -26,10 +26,10 @@ Submitted to <cite>The Journal of Chemical Physics</cite> on 13 August 2026. Thi
 
 ## DOIs, labeled by source
 
-| Record | DOI | Source file |
-| --- | --- | --- |
-| Manuscript data availability | <a href="{{ site.manuscriptDoi }}">10.5281/zenodo.21130294</a> | manuscript Data availability |
-| Software version 0.3.0 | <a href="{{ site.softwareDoi }}">10.5281/zenodo.21524096</a> | CITATION.cff |
-| Concept (all versions) | <a href="{{ site.conceptDoi }}">10.5281/zenodo.21130295</a> | CITATION.cff |
+| Record | DOI |
+| --- | --- |
+| Manuscript data availability | <a href="{{ site.manuscriptDoi }}">10.5281/zenodo.21130294</a> |
+| Software version 0.3.0 | <a href="{{ site.softwareDoi }}">10.5281/zenodo.21524096</a> |
+| Concept (all versions) | <a href="{{ site.conceptDoi }}">10.5281/zenodo.21130295</a> |
 
 <p><a href="{{ site.codeUrl }}">Public code</a> · <a href="{{ site.orcid }}">ORCID</a> · <a href="{{ site.authorHome }}">Author</a></p>
