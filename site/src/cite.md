@@ -6,6 +6,8 @@ permalink: /cite/
 
 # Cite
 
+Record status: frozen science. Code and reserved DOI. Not a venue package.
+
 Frozen analysis records and the public code archive for the UIP abstention audit.
 
 ## Software record

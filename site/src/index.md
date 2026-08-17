@@ -1,6 +1,5 @@
 ---
 layout: base.njk
-title: Claim
 permalink: /
 ---
 
@@ -12,23 +11,29 @@ permalink: /
 <p>Universal machine-learning interatomic potentials (UIPs) surface false stability candidates most in oxide chemistries: against the MP2020-corrected density-functional-theory (DFT) labels used in Matbench Discovery, oxides have the lowest stable base rate (12.4%) of any anion class while UIPs call them stable at six times that rate. The audit does not validate DFT labels. Scoping: the oxide-highest ordering does not transfer temporally, a stratum-aware allocator is falsified, and within oxides the benefit does not localize to correction-sensitive cation classes.</p>
 
 <section class="routes" aria-label="Three scientific routes">
+  <p class="route-links">
+    Routes:
+    <a href="{{ '/potentials/' | url }}">potentials</a> ·
+    <a href="{{ '/error/' | url }}">error</a> ·
+    <a href="{{ '/mechanism/' | url }}">mechanism</a>.
+  </p>
   <article class="route">
-    <h2><a href="{{ '/potentials/' | url }}">Potentials</a></h2>
+    <h2>Potentials</h2>
     <p>Four canonical UIPs (CHGNet, M3GNet, MACE, ORB) and a 32-UIP roster. The oxide-highest DAF interaction is not a single-model quirk.</p>
     <p>Across six anion-class strata the prototype-blocked interaction excludes zero in 45 of 60 cells.</p>
-    <a href="{{ '/potentials/' | url }}"><img src="{{ '/assets/web/w2_daf.svg' | url }}" alt="CHGNet matched-yield DAF gain is largest in oxides."></a>
+    <img src="{{ '/assets/web/w2_daf.svg' | url }}" alt="CHGNet matched-yield DAF gain is largest in oxides.">
   </article>
   <article class="route">
-    <h2><a href="{{ '/error/' | url }}">Error</a></h2>
+    <h2>Error</h2>
     <p>This is a decision mismatch, not an RMSE ranking. Under every tail-robust estimator oxides are not the highest formation-energy-error stratum.</p>
     <p>The raw RMSE gap is 99.7% due to one implausible published prediction.</p>
-    <a href="{{ '/error/' | url }}"><img src="{{ '/assets/web/w4_error.svg' | url }}" alt="Oxide over rest error ratio exceeds one only for raw RMSE."></a>
+    <img src="{{ '/assets/web/w4_error.svg' | url }}" alt="Oxide over rest error ratio exceeds one only for raw RMSE.">
   </article>
   <article class="route">
-    <h2><a href="{{ '/mechanism/' | url }}">Mechanism</a></h2>
+    <h2>Mechanism</h2>
     <p>Oxide reference energetics, including missing Hubbard-U treatment, and fitting difficulty co-locate with the abstention signal.</p>
     <p>Charge-balance-resolved oxidation states localize the benefit to high formal valence. It is not reducible to MP2020 corrections.</p>
-    <a href="{{ '/mechanism/' | url }}"><img src="{{ '/assets/web/w8_mechanism.svg' | url }}" alt="Model-averaged blocked gain is largest in the very-high valence bin."></a>
+    <img src="{{ '/assets/web/w8_mechanism.svg' | url }}" alt="Model-averaged blocked gain is largest in the very-high valence bin.">
   </article>
 </section>
 
