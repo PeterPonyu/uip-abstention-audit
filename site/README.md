@@ -1,14 +1,12 @@
 # UIP abstention audit (web)
 
-Static pages for oxide-localized UIP–label disagreement and matched-yield
-abstention. Numbers come from the checked-in frozen extracts.
+The public GitHub Pages leaf is the static tree in `pages-landing/`.
+That leaf is a code description only. It does not publish figures or
+numerical findings.
 
-## Local build
+The Eleventy tree in this directory is retired from deploy. Do not upload
+`site/_site` to Pages.
 
-```bash
-cd site
-npm ci
-npx @11ty/eleventy --pathprefix=/uip-abstention-audit/
-```
+## Local preview of the public leaf
 
-Artifact: `site/_site/`. Project URL prefix is `/uip-abstention-audit/`.
+The deploy workflow uploads `pages-landing/` as-is (prefix `/uip-abstention-audit/`).
