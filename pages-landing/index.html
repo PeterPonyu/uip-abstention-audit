@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UIP abstention audit · public code</title>
+  <meta name="description" content="Code description for a chemistry-stratified reliability audit of selective abstention on universal machine-learning interatomic potentials.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://peterponyu.github.io/uip-abstention-audit/">
+  <link rel="stylesheet" href="/uip-abstention-audit/landing.css">
+</head>
+<body data-site-binding="uip-code-leaf">
+  <header class="uip-rail">
+    <a class="uip-mark" href="/uip-abstention-audit/">
+      <span class="uip-mark-box" aria-hidden="true"></span>
+      UIP abstention audit
+    </a>
+    <nav class="uip-nav" aria-label="Links">
+      <a href="https://peterponyu.github.io/">Homepage</a>
+      <a href="https://github.com/PeterPonyu/uip-abstention-audit">Code</a>
+    </nav>
+  </header>
+
+  <main class="uip-panel">
+    <p class="uip-kicker">Public code leaf</p>
+    <h1>Chemistry-stratified UIP abstention audit code</h1>
+    <p>
+      This page describes the public repository
+      <a href="https://github.com/PeterPonyu/uip-abstention-audit">PeterPonyu/uip-abstention-audit</a>.
+      It is a code leaf, not a results gallery, claims site, or paper-companion.
+    </p>
+    <p class="mute">
+      Figures, tables, and numerical findings are not hosted here.
+      Former companion routes on this leaf now return the same code description.
+    </p>
+
+    <h2>What the archive does</h2>
+    <p>
+      The repository holds analysis code for a chemistry-stratified reliability
+      audit of selective abstention on universal machine-learning interatomic
+      potentials (UIPs). The run is CPU-only on frozen public prediction tables.
+      No model is trained. No density-functional-theory calculation is run.
+    </p>
+    <ul>
+      <li>Join frozen UIP prediction tables to public WBM summary labels</li>
+      <li>Score selective abstention at a matched surfaced-candidate budget</li>
+      <li>Write frozen analysis records and sibling hash manifests</li>
+    </ul>
+
+    <h2>Install and smoke</h2>
+    <pre>python -m pip install -r requirements.txt
+bash smoke_test.sh</pre>
+    <p class="mute">
+      Input prediction and WBM summary tables are not redistributed. Point the
+      loaders at local copies of the public Matbench Discovery files listed in
+      <code>DATA_MANIFEST.md</code>. See the repository README for environment
+      variables.
+    </p>
+
+    <h2>What this leaf is not</h2>
+    <p>
+      Not a method-ranking page. Not a journal companion. Not an archive of
+      figures. Install or clone the GitHub repository if you want the code;
+      do not treat this leaf as a findings report.
+    </p>
+
+    <p class="uip-foot">
+      Source:
+      <a href="https://github.com/PeterPonyu/uip-abstention-audit">github.com/PeterPonyu/uip-abstention-audit</a>.
+      No article DOI is assigned on this leaf.
+    </p>
+  </main>
+</body>
+</html>

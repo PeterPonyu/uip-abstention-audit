@@ -11,7 +11,8 @@ Version 0.3.0 DOI: [10.5281/zenodo.21524096](https://doi.org/10.5281/zenodo.2152
 Concept DOI: [10.5281/zenodo.21130295](https://doi.org/10.5281/zenodo.21130295).
 Frozen analysis records: [10.5281/zenodo.21130294](https://doi.org/10.5281/zenodo.21130294).
 
-Companion: [peterponyu.github.io/uip-abstention-audit](https://peterponyu.github.io/uip-abstention-audit/).
+Public leaf: [peterponyu.github.io/uip-abstention-audit](https://peterponyu.github.io/uip-abstention-audit/)
+is a code description, not a results or paper-companion site.
 
 ## Claim
 
