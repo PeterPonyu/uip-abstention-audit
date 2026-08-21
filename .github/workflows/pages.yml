@@ -3,7 +3,7 @@ name: Pages companion
 
 on:
   push:
-    branches: [main, pages/materials-companion]
+    branches: [pages/materials-companion]
   workflow_dispatch:
 
 permissions:
