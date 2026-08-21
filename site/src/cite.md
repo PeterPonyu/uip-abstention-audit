@@ -6,9 +6,12 @@ permalink: /cite/
 
 # Cite
 
-Record status: frozen science. Code and reserved DOI. Not a venue package.
+Record status: frozen science. Public Zenodo archive. Not a venue package.
 
 Frozen analysis records and the public code archive for the UIP abstention audit.
+The frozen-analysis identifier <a href="{{ site.dataDoi }}">10.5281/zenodo.21130294</a>
+currently resolves to the public record at
+<a href="https://zenodo.org/records/21854313">https://zenodo.org/records/21854313</a>.
 
 ## Software record
 
